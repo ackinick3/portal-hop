@@ -12,7 +12,7 @@ func run() -> void:
 		scene.start_level(i)
 		await create_timer(0.12).timeout
 		root.get_texture().get_image().save_png("res://docs/room%d.png" % (i+1))
-	for i in [5,6]:
+	for i in [5,6,7]:
 		scene.enter_level(i)
 		await process_frame
 		await process_frame

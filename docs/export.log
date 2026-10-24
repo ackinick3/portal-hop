@@ -1,0 +1,96 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started 项目初始化 (5 steps)
+[   0% ] first_scan_filesystem | 正在扫描文件结构……
+[  16% ] first_scan_filesystem | 正在加载全局类名……
+[  33% ] first_scan_filesystem | 正在校验 GDExtension……
+[  50% ] first_scan_filesystem | 正在创建自动加载脚本……
+[  66% ] first_scan_filesystem | 正在初始化插件……
+[  83% ] first_scan_filesystem | 正在启动文件扫描……
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started 正在注册全局类…… (8 steps)
+[   0% ] update_scripts_classes |
+[  11% ] update_scripts_classes |
+[  22% ] update_scripts_classes |
+[  33% ] update_scripts_classes |
+[  44% ] update_scripts_classes |
+[  55% ] update_scripts_classes |
+[  66% ] update_scripts_classes |
+[  77% ] update_scripts_classes |
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started 正在扫描动作…… (13 steps)
+[   0% ] _update_scan_actions | level-select.png
+[   7% ] _update_scan_actions | menu.png
+[  14% ] _update_scan_actions | room1.png
+[  21% ] _update_scan_actions | room2.png
+[  28% ] _update_scan_actions | room3.png
+[  35% ] _update_scan_actions | room4.png
+[  42% ] _update_scan_actions | room5.png
+[  50% ] _update_scan_actions | room6-briefing.png
+[  57% ] _update_scan_actions | room6.png
+[  64% ] _update_scan_actions | room7-briefing.png
+[  71% ] _update_scan_actions | room7.png
+[  78% ] _update_scan_actions | room8-briefing.png
+[  85% ] _update_scan_actions | room8.png
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started 正在导入或重新导入资产 (13 steps)
+[   0% ] reimport | 正在准备重新导入文件……
+[   7% ] reimport | 正在准备重新导入文件……
+[  14% ] reimport | 正在准备重新导入文件……
+[  21% ] reimport | 正在准备重新导入文件……
+[  28% ] reimport | 正在准备重新导入文件……
+[  35% ] reimport | 正在准备重新导入文件……
+[  42% ] reimport | 正在准备重新导入文件……
+[  50% ] reimport | 正在准备重新导入文件……
+[  57% ] reimport | 正在准备重新导入文件……
+[  64% ] reimport | 正在准备重新导入文件……
+[  71% ] reimport | 正在准备重新导入文件……
+[  78% ] reimport | 正在准备重新导入文件……
+[  85% ] reimport | 正在准备重新导入文件……
+[   0% ] reimport | 正在执行重新导入的前置操作……
+[   0% ] reimport | level-select.png
+[   7% ] reimport | menu.png
+[  14% ] reimport | room1.png
+[  21% ] reimport | room2.png
+[  28% ] reimport | room3.png
+[  35% ] reimport | room4.png
+[  42% ] reimport | room5.png
+[  50% ] reimport | room6-briefing.png
+[  57% ] reimport | room6.png
+[  64% ] reimport | room7-briefing.png
+[  71% ] reimport | room7.png
+[  78% ] reimport | room8-briefing.png
+[  85% ] reimport | room8.png
+[  92% ] reimport | 正在结束资产导入……
+[ DONE ] reimport
+
+[   0% ] reimport | Started 正在导入或重新导入资产 (13 steps)
+[   0% ] reimport | 正在执行重新导入的后置操作……
+[ DONE ] reimport
+
+[   0% ] savepack | Started 打包中 (102 steps)
+[   1% ] savepack | 正在保存文件：res://actors/player.gdc
+[  12% ] savepack | 正在保存文件：res://actors/sentry.gdc
+[  23% ] savepack | 正在保存文件：res://assets/sounds.gdc
+[  33% ] savepack | 正在保存文件：res://levels/maps.gdc
+[  44% ] savepack | 正在保存文件：res://portals/system.gdc
+[  55% ] savepack | 正在保存文件：res://scenes/main.gdc
+[  66% ] savepack | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+[  76% ] savepack | 正在保存文件：res://ui/tutorial.gdc
+[  87% ] savepack | 正在保存文件：res://ui/landmarks.gdc
+[  87% ] savepack | 正在保存文件：res://actors/player.gd.remap
+[  87% ] savepack | 正在保存文件：res://actors/sentry.gd.remap
+[  87% ] savepack | 正在保存文件：res://assets/sounds.gd.remap
+[  87% ] savepack | 正在保存文件：res://levels/maps.gd.remap
+[  87% ] savepack | 正在保存文件：res://portals/system.gd.remap
+[  87% ] savepack | 正在保存文件：res://scenes/main.gd.remap
+[  87% ] savepack | 正在保存文件：res://scenes/main.tscn.remap
+[  87% ] savepack | 正在保存文件：res://ui/tutorial.gd.remap
+[  87% ] savepack | 正在保存文件：res://ui/landmarks.gd.remap
+[  87% ] savepack | 正在保存文件：res://.godot/global_script_class_cache.cfg
+[  87% ] savepack | 正在保存文件：res://.godot/uid_cache.bin
+[  87% ] savepack | 正在保存文件：res://project.binary
+[ DONE ] savepack

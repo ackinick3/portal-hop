@@ -19,7 +19,11 @@ PASS: Beating room 6 unlocks room 7
 PASS: Room 6 results offer room 7
 PASS: Room 7 entry explains the two airborne shots
 PASS: Briefing opens the actual seventh map
-PASS: Room 7 is the final room
+PASS: Beating room 7 unlocks room 8
+PASS: Room 7 results offer room 8
+PASS: Room 8 entry explains planning portal height
+PASS: Briefing opens the actual eighth map
+PASS: Room 8 is the final room
 PASS: Unlocked room 4 can be selected
 PASS: Old four-room progress is preserved without assuming completion
 PASS: Old save unlocks room 5 only after beating room 4
@@ -31,4 +35,7 @@ PASS: Selecting room 6 also shows its briefing
 PASS: Old six-room progress keeps room 7 locked until room 6 is completed
 PASS: Seven-room progress and volume restore correctly
 PASS: Seventh selection opens its own briefing, not room 6's
+PASS: Old seven-room save does not assume room 7 was completed
+PASS: Eight-room progress and volume restore correctly
+PASS: Eighth selection opens its own planning briefing
 PROGRESSION_TEST_FAILURES=0

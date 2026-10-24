@@ -98,11 +98,11 @@ func level_select() -> void:
 	label_at("SELECT A ROOM",Vector2(330,90),32)
 	for i in Maps.LEVEL_COUNT:
 		var level_index := i
-		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,145+i*46),func(): enter_level(level_index), i >= unlocked)
-	button("BACK",Vector2(340,480),menu)
+		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(130 if i < 4 else 530,165+(i%4)*62),func(): enter_level(level_index), i >= unlocked)
+	button("BACK",Vector2(340,450),menu)
 
 func enter_level(number: int) -> void:
-	if number not in [5,6]:
+	if number not in [5,6,7]:
 		start_level(number)
 		return
 	state = "briefing"
@@ -113,10 +113,14 @@ func enter_level(number: int) -> void:
 		label_at("AIRBORNE RELAY",Vector2(310,74),34)
 		label_at("YOU CAN SHOOT IN MIDAIR",Vector2(290,130),24)
 		label_at("1. BLUE on the ceiling; walk LEFT and shoot RED on the floor.\n2. Tap D to brake above RED, release movement, and fall in.\n3. In midair, move BLUE to the left wall. Fall through RED again.\n\nHold D toward the exit after the second launch.\nPortals redirect speed; gravity adds speed during the next fall.\nR retries immediately once you start.",Vector2(150,184),20)
-	else:
+	elif number == 6:
 		label_at("MIDAIR SWITCHBACK",Vector2(280,74),34)
 		label_at("TWO SHOTS, ONE FLIGHT",Vector2(300,130),24)
-		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and fall in.\n3. While flying: RED on the far wall, then BLUE on the lower side floor.\n\nThe lower BLUE floor gives more time to aim both shots.\nThe next exit points straight UP. Hold D immediately to reach the ledge.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
+		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and take the long fall.\n3. While flying: RED on the far wall, then BLUE on the lower RIGHT floor.\n\nThe next exit points straight UP beside the goal ledge.\nHold D immediately to land on it, then walk to the exit.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
+	else:
+		label_at("THE HIGH ROAD",Vector2(340,74),34)
+		label_at("PLAN FIRST. THEN WALK.",Vector2(310,130),24)
+		label_at("1. Before moving, place BLUE high on the left wall.\n2. Place RED on the pale floor below, also from the starting ledge.\n3. Hold D to walk off, fall through RED and fly to the exit.\n\nA high exit clears the wall. A low exit will fall short.\nNo jumping or midair shots are needed.\nMissed the landing? R resets both portals for another try.",Vector2(150,184),20)
 	button("START ROOM",Vector2(340,410),func(): start_level(number))
 	button("BACK",Vector2(340,462),level_select)
 

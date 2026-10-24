@@ -1,6 +1,6 @@
 extends RefCounted
 
-const LEVEL_COUNT := 7
+const LEVEL_COUNT := 8
 
 static func get_level(index: int) -> Dictionary:
 	match index:
@@ -17,7 +17,9 @@ static func get_level(index: int) -> Dictionary:
 		5:
 			return {"name":"AIRBORNE RELAY", "spawn":Vector2(665,115), "goal":Rect2(908,306,42,54), "blocks":[Rect2(0,480,560,60),Rect2(880,360,80,180),Rect2(600,130,140,18),Rect2(740,0,20,200),Rect2(390,25,160,35),Rect2(95,25,25,280)], "faces":[face(Vector2(420,480),Vector2(540,480),Vector2.UP),face(Vector2(390,60),Vector2(550,60),Vector2.DOWN),face(Vector2(120,35),Vector2(120,305),Vector2.RIGHT)], "hint":"BLUE ceiling, RED floor. After the first fall, shoot BLUE onto the left wall while airborne. Fall through RED again for a faster launch.", "enemy":false}
 		6:
-			return {"name":"MIDAIR SWITCHBACK", "spawn":Vector2(378,125), "goal":Rect2(360,6,42,54), "blocks":[Rect2(0,480,960,60),Rect2(340,140,120,18),Rect2(155,25,25,280),Rect2(780,300,20,180),Rect2(200,380,150,18),Rect2(290,60,150,18)], "faces":[face(Vector2(480,480),Vector2(600,480),Vector2.UP),face(Vector2(180,35),Vector2(180,305),Vector2.RIGHT),face(Vector2(780,330),Vector2(780,480),Vector2.LEFT),face(Vector2(200,380),Vector2(350,380),Vector2.UP)], "hint":"Launch right. In midair move RED to the far wall, then BLUE to the revealed floor. Ride the upward exit, then steer right onto the high goal.", "enemy":false}
+			return {"name":"MIDAIR SWITCHBACK", "spawn":Vector2(420,65), "goal":Rect2(850,66,42,54), "blocks":[Rect2(0,510,960,30),Rect2(400,80,110,18),Rect2(155,25,25,280),Rect2(820,300,20,210),Rect2(620,420,100,18),Rect2(750,120,200,18),Rect2(600,0,18,140)], "faces":[face(Vector2(535,510),Vector2(690,510),Vector2.UP),face(Vector2(180,35),Vector2(180,305),Vector2.RIGHT),face(Vector2(820,340),Vector2(820,510),Vector2.LEFT),face(Vector2(620,420),Vector2(720,420),Vector2.UP)], "hint":"Use the longer fall. In midair move RED to the right wall, then BLUE to the lower right floor. Hold right after the upward exit.", "enemy":false}
+		7:
+			return {"name":"THE HIGH ROAD", "spawn":Vector2(249,185), "goal":Rect2(866,346,42,54), "blocks":[Rect2(0,480,560,60),Rect2(70,200,180,18),Rect2(75,25,25,280),Rect2(620,350,30,190),Rect2(720,400,240,140)], "faces":[face(Vector2(385,480),Vector2(535,480),Vector2.UP),face(Vector2(100,35),Vector2(100,305),Vector2.RIGHT)], "hint":"Set both portals before moving: BLUE high on the left wall, RED on the floor. Walk right, then keep holding right. A low exit will not clear the obstacle.", "enemy":false}
 	return {}
 
 static func face(a: Vector2, b: Vector2, n: Vector2) -> Dictionary:

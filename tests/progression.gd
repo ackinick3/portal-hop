@@ -63,7 +63,16 @@ func run() -> void:
 	if start != null: start.pressed.emit()
 	check(game.index == 6 and game.data.name == "MIDAIR SWITCHBACK" and game.state == "playing","Briefing opens the actual seventh map")
 	game.complete()
-	check(find_button(game,"NEXT ROOM") == null,"Room 7 is the final room")
+	check(game.unlocked == 8,"Beating room 7 unlocks room 8")
+	next = find_button(game,"NEXT ROOM")
+	check(next != null,"Room 7 results offer room 8")
+	if next != null: next.pressed.emit()
+	check(game.state == "briefing","Room 8 entry explains planning portal height")
+	start = find_button(game,"START ROOM")
+	if start != null: start.pressed.emit()
+	check(game.index == 7 and game.data.name == "THE HIGH ROAD" and game.state == "playing","Briefing opens the actual eighth map")
+	game.complete()
+	check(find_button(game,"NEXT ROOM") == null,"Room 8 is the final room")
 	game.level_select()
 	fourth = find_button(game,"04")
 	check(fourth != null and not fourth.disabled,"Unlocked room 4 can be selected")
@@ -101,7 +110,20 @@ func run() -> void:
 	for child in game.panel.get_children():
 		if child is Label and child.text == "MIDAIR SWITCHBACK": seventh_title = true
 	check(game.state == "briefing" and seventh_title and find_button(game,"START ROOM") != null,"Seventh selection opens its own briefing, not room 6's")
-	# Unlike real UI input, the assertions above finish five rooms in the same frame.
+	game.level_select()
+	var eighth := find_button(game,"08")
+	check(eighth != null and eighth.disabled,"Old seven-room save does not assume room 7 was completed")
+	legacy.set_value("progress","unlocked",8)
+	game.restore_progress(legacy)
+	game.level_select()
+	eighth = find_button(game,"08")
+	check(game.unlocked == 8 and eighth != null and not eighth.disabled and is_equal_approx(game.volume,0.35),"Eight-room progress and volume restore correctly")
+	if eighth != null: eighth.pressed.emit()
+	var eighth_title := false
+	for child in game.panel.get_children():
+		if child is Label and child.text == "THE HIGH ROAD": eighth_title = true
+	check(game.state == "briefing" and eighth_title and find_button(game,"START ROOM") != null,"Eighth selection opens its own planning briefing")
+	# Unlike real UI input, the assertions above finish six rooms in the same frame.
 	# Let those overlapping result cues finish; immediate close is tested by audio_quit.
 	await create_timer(0.3).timeout
 	await game.drain_audio()

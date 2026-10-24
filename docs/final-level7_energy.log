@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+ENERGY_EXIT p=(635.0748, 404.0) v=(0.0, -808.0833)
+ENERGY_ROUTE first=892.5 second=808.083312988281 ceiling=false end=(840.5526, 93.97286)
+PASS: Initial energy has a generous natural-fall margin
+PASS: A less-centered entry still provides enough real upward speed
+PASS: Upward launch does not lose speed against the underside of a platform
+PASS: A wider legal exit placement still completes the room
+LEVEL7_ENERGY_FAILURES=0

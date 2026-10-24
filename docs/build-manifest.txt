@@ -1,10 +1,16 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms: 7; easier midair switchback; scalar speed follows exit normal; horizontal air-release drag 90
-Bytes: 109308456
-SHA256: BC9908F7E090781109F3DD311A58ABC29FCAAF7DEC82804E9F93B3CDB32A618E
-Source tests: 21 suites passed; all seven input routes passed; seven-room GPU previews and both briefings checked
-Display: final viewport/fullscreen/live-cursor positioning suite passed; two earlier changed-position failures retained in easier-display-first/second.log; mapping code unchanged
-Graphical standalone exit: 0; see standalone-gui.log
-Single EXE: builds/PortalHop.exe; desktop Portal Hop.lnk still targets this executable
+Rooms: 8; room 7 natural-fall energy and underside clearance fixed; room 8 preplanned high-exit landing puzzle
+Bytes: 109310280
+SHA256: 5E0BE5B68A826F47E0B6EE31CFFA5CFBDD372B0B922E2B22FC191A38E3B43FE3
+Physics: unchanged this iteration; scalar speed follows exit normal; horizontal air-release drag 90
+Source tests: all 23 suites passed with full stdout/stderr checked, no runtime errors or exit leaks
+Routes: room 7 four landing routes plus less-centered exit; room 8 three preplaced pairs with D only, low-exit failure and retry
+Progression: old 7 stays 7 until completing room 7; 7-to-8 briefing and final page verified
+GPU: eight room previews, three briefing previews, two-column selection; room 7/8, room 8 briefing and selection visually inspected
+Display: three window sizes, fullscreen, real cursor aim and restoration passed; docs/display.log
+Review: no substantive code findings; reviewer NUL log initialization error excluded from clean-output evidence
+Graphical standalone exit: 0; docs/standalone-gui.log
+Single EXE: builds/PortalHop.exe; desktop Portal Hop.lnk target verified
+Human acceptance: pending user playtest of revised room 7 and new room 8

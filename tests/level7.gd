@@ -21,8 +21,8 @@ func run() -> void:
 	root.add_child(game)
 	for setting in [Vector3(18,280,-8),Vector3(36,280,0),Vector3(54,280,8),Vector3(30,420,0),Vector3(-1,280,0)]:
 		var shot_gap := int(setting.x)
-		var wall_target := Vector2(780,440 + setting.z)
-		var floor_target := Vector2(240 + setting.z,380)
+		var wall_target := Vector2(820,420 + setting.z)
+		var floor_target := Vector2(670 + setting.z,420)
 		game.start_level(6)
 		await frames(4)
 		check(game.portals.candidate(game.gun_origin(),floor_target,1).is_empty(),"New floor exit is occluded from spawn")
@@ -38,12 +38,12 @@ func run() -> void:
 		for i in 750:
 			await physics_frame
 			if game.transfers == 0:
-				if not floor_placed and game.player.position.x > 474:
-					floor_placed = game.portals.shoot(game.gun_origin(),Vector2(530,480),0)
-				if game.player.position.x > 475 and game.player.velocity.x > 15:
+				if not floor_placed and game.player.position.x > 524:
+					floor_placed = game.portals.shoot(game.gun_origin(),Vector2(590,510),0)
+				if game.player.position.x > 535 and game.player.velocity.x > 15:
 					Input.action_release("move_right")
 					Input.action_press("move_left")
-				if game.player.position.x > 475 and absf(game.player.velocity.x) < 15:
+				if game.player.position.x > 535 and absf(game.player.velocity.x) < 15:
 					Input.action_release("move_left")
 			elif game.transfers == 1:
 				if first_speed == 0:
@@ -62,7 +62,7 @@ func run() -> void:
 					print("SWITCHBACK_EXIT ",game.player.position," v=",game.player.velocity)
 					check(absf(game.player.velocity.x) < 0.01,"Upward exit has no inherited sideways drift")
 					Input.action_press("move_right")
-				if game.player.is_on_floor() and absf(game.player.position.y - 45) < 1: landed = true
+				if game.player.is_on_floor() and absf(game.player.position.y - 105) < 1: landed = true
 			if game.state == "won" or game.deaths > 0: break
 		release()
 		print("ROOM7_ROUTE setting=",setting," first=",first_speed," up=",up_speed," landed=",landed," end=",game.player.position," deaths=",game.deaths)
@@ -82,13 +82,13 @@ func run() -> void:
 	var tutorial = load("res://ui/tutorial.gd")
 	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(180,170)),"Seventh guidance starts with its own initial wall")
 	game.portals.shoot(game.gun_origin(),Vector2(180,170),1)
-	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(530,480)),"Seventh guidance then suggests the initial floor")
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(780,440)),"First launch highlights replacement RED wall")
+	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(590,510)),"Seventh guidance then suggests the initial floor")
+	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(820,420)),"First launch highlights replacement RED wall")
 	# Inspect later marker states using the actual successful placement data already tested above.
-	game.portals.doors[0] = {"p":Vector2(780,440),"n":Vector2.LEFT}
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(240,380)),"Replacing RED advances to lower BLUE floor")
-	game.portals.doors[1] = {"p":Vector2(240,380),"n":Vector2.UP}
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(780,440)),"Completed airborne pair highlights entry wall")
+	game.portals.doors[0] = {"p":Vector2(820,420),"n":Vector2.LEFT}
+	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(670,420)),"Replacing RED advances to lower BLUE floor")
+	game.portals.doors[1] = {"p":Vector2(670,420),"n":Vector2.UP}
+	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(820,420)),"Completed airborne pair highlights entry wall")
 	check(tutorial.guidance(6,game.portals.doors,2,game.player.position).markers.is_empty(),"Upward launch clears setup markers")
 	for direction in ["move_left","move_right"]:
 		game.start_level(6)

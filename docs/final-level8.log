@@ -1,0 +1,32 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Eighth room exists as a distinct placement puzzle
+PORTAL_HOP_READY
+PASS: Eighth guidance suggests a high exit before moving
+PASS: Eighth guidance then suggests the prepared floor entry
+PASS: Low exit keeps the high-placement suggestion visible
+PASS: Eighth launch clears placement suggestions
+PASS: Wall exit is visible before movement: (90.0, 430.0)
+PASS: Floor entry is visible before movement: (90.0, 430.0)
+ROOM8_ROUTE (90.0, 430.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(858.2689, 384.9251) deaths=0
+PASS: Prepared portals are traversed with movement input
+PASS: High exit clears the obstacle and lands at the goal without midair shots or jumping
+PASS: Wall exit is visible before movement: (80.0, 420.0)
+PASS: Floor entry is visible before movement: (80.0, 420.0)
+ROOM8_ROUTE (80.0, 420.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(858.2689, 384.9251) deaths=0
+PASS: Prepared portals are traversed with movement input
+PASS: High exit clears the obstacle and lands at the goal without midair shots or jumping
+PASS: Wall exit is visible before movement: (95.0, 440.0)
+PASS: Floor entry is visible before movement: (95.0, 440.0)
+ROOM8_ROUTE (95.0, 440.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(857.1071, 384.9251) deaths=0
+PASS: Prepared portals are traversed with movement input
+PASS: High exit clears the obstacle and lands at the goal without midair shots or jumping
+PASS: Wall exit is visible before movement: (160.0, 430.0)
+PASS: Floor entry is visible before movement: (160.0, 430.0)
+ROOM8_ROUTE (160.0, 430.0) crossed=true cleared=false landed=false speed=757.760009765625 end=(608.9249, 521.6287) deaths=1
+PASS: Prepared portals are traversed with movement input
+PASS: Low exit demonstrates why placement height matters
+PASS: Eighth retry restores the starting ledge
+PASS: Eighth retry clears both prepared portals
+PASS: Ordinary jumping cannot bypass the placement puzzle
+LEVEL8_TEST_FAILURES=0

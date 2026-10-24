@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+ENERGY_EXIT p=(300.0384, 364.0) v=(0.0, -1007.036)
+ENERGY_CEILING_HIT p=(319.5926, 93.075) v=(120.3333, 0.0)
+ENERGY_ROUTE first=802.5 second=1007.03637695313 ceiling=true end=(768.9955, 464.9622)
+FAIL: Initial energy has a generous natural-fall margin
+PASS: Both midair shots create a real upward launch
+FAIL: Upward launch does not lose speed against the underside of a platform
+FAIL: A wider legal exit placement still completes the room
+LEVEL7_ENERGY_FAILURES=3
