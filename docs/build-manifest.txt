@@ -1,4 +1,4 @@
-Build: builds/PortalHop-五关版.exe
+Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
 Rooms: 5; selected B rounded landmark art; text-free gameplay overlay

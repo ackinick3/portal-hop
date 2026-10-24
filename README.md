@@ -6,7 +6,7 @@ Godot 4.7.2（官方稳定版）、GDScript、Windows x64，五关单机试玩�
 
 ## 直接游玩
 
-当前五关版双击 `builds/PortalHop-五关版.exe`，继续使用B美术。资源已嵌入 EXE，无须安装 Godot。
+双击 `builds/PortalHop.exe`，当前包含五关和B美术。后续持续更新同一个文件，不另分关卡版或美术版。资源已嵌入 EXE，无须安装 Godot。
 
 - A / D：移动、有限空中调整
 - Space：跳跃，长按跳得更高
@@ -50,7 +50,7 @@ Godot 4.7.2（官方稳定版）、GDScript、Windows x64，五关单机试玩�
 ## 导出 Windows
 
 ```powershell
-& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' 'builds/PortalHop-五关版.exe'
+& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
 使用 `export_presets.cfg` 指定的本地官方 Windows x64 模板；只从完整模板包提取 Windows 文件。

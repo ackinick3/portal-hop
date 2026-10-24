@@ -13,6 +13,7 @@
 - 本轮按用户“第五关开始”新增“The Final Relay / 终章接力”：高台下落→地板/墙门弹射→守卫区域→终点。减速踩踏与向右绕过守卫两种实际输入路线均通关，守卫击败不是过关条件。设计见`docs/level5-plan.md`。
 - 本轮美术反馈：用户从三张内置生图预览中选择第二张B“圆润玩具科技”。已按此方向绘制白色圆角起点旗帜/拱形终点门；按要求移除关卡顶部文字及建议点文字，关内只保留无文字瞄准/建议圆圈。预览与提示词归档于`docs/art-direction/`。
 - **当前下一步：让用户试玩五关版，重点反馈第五关弹射、踩踏和最后平台容错。B方向已选择，实际游戏内外观仍待用户验收。不要未经要求开始第六关。**
+- 用户明确要求只保留一个游戏入口：`builds/PortalHop.exe`。已用最新五关构建替换原文件，并删除并列的B美术版、五关版EXE；以后继续更新这个文件。
 
 ## 2. 已确认的规则和手感
 
@@ -101,10 +102,10 @@
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/display.gd
 
 # 导出
-& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' 'builds/PortalHop-五关版.exe'
+& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-工具和模板已在`tools/`，不修改系统PATH，也不进入Git。`builds/`同样被忽略，但本机已有EXE；重新克隆源码不能假定这两个目录存在。若试玩进程占用EXE，导出到另一个明确命名的文件，不擅自终止用户正在玩的进程。
+工具和模板已在`tools/`，不修改系统PATH，也不进入Git。`builds/`同样被忽略，但本机已有EXE；重新克隆源码不能假定这两个目录存在。交付固定为`builds/PortalHop.exe`，不再并列生成带版本后缀的游戏。若试玩进程占用文件，先完成其他工作，待游戏关闭后替换，不擅自终止试玩进程。历史源码用Git保留。
 
 玩家存档：`%APPDATA%/Godot/app_userdata/Portal Hop/progress.cfg`。测试使用`persistence_enabled=false`隔离正式进度；测试结束应使用`drain_audio()`，避免刚发声便直接销毁引擎造成清理时序误报。
 
@@ -121,9 +122,11 @@
 
 这些是本轮实际验证结果，不是未来修改后的自动担保。第四、五关处于人工试玩阶段；不要把自动通关等同于用户已经认可难度和引导。
 
-当前构建：`builds/PortalHop-五关版.exe`，109305160字节。
+当前构建：`builds/PortalHop.exe`，109305160字节。
 SHA-256：`0CF5EC94F3E26815BBDCF30996C03FD6C17FC4AB011C6DD513B4683255B51D6D`。
 这些文件大小/哈希在整理本指南时已重新读取核对；下一次导出后应同步本段和`docs/build-manifest.txt`。
+
+随后按用户要求整理交付入口：最新五关构建字节不变，统一到PortalHop.exe，删除两个旧命名副本。核对哈希一致、builds仅一个EXE，并以统一路径重新图形启动、正常退出0。本次仅整理构建与文档，没有修改游戏代码或重跑18组物理回归；上方结果属于第五关开发轮。
 
 剩余限制：UI英文；第二/四/五关仍有离台射击和空中调整的学习成本；复杂薄壁双面门洞、新地图和小时级循环尚未穷尽验证；未做全菜单鼠标自动点击或小时级性能/内存测试。流程测试在同帧模拟多次通关后等待结果音播放完成；真实立即关闭由audio_quit另测。详见`docs/已知问题.md`。
 
