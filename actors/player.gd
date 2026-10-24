@@ -3,7 +3,12 @@ extends CharacterBody2D
 signal died
 signal jumped
 signal landed
+const Materials = preload("res://world/materials.gd")
 var portal_system: Node2D
+var materials: Array[Dictionary] = []
+var bounces := 0
+var boost_distance := 0.0
+var material_airborne := false
 var previous_position := Vector2.ZERO
 var previous_velocity := Vector2.ZERO
 var spawn := Vector2.ZERO
@@ -40,7 +45,9 @@ func _physics_process(delta: float) -> void:
 			previous_velocity = Vector2.ZERO
 		queue_redraw()
 		return
-	var grounded := is_on_floor()
+	var grounded := is_on_floor() and not material_airborne
+	material_airborne = false
+	var boosting := grounded and Materials.has_patch(materials, position + Vector2(0, 15), Vector2.UP, "boost")
 	coyote = 0.1 if grounded else maxf(0.0, coyote - delta)
 	buffer = 0.1 if Input.is_action_just_pressed("jump") else maxf(0.0, buffer - delta)
 	var axis := Input.get_axis("move_left", "move_right")
@@ -48,7 +55,12 @@ func _physics_process(delta: float) -> void:
 		facing = axis
 	if grounded:
 		var acceleration := 2300.0 if axis == 0 else 1400.0
-		velocity.x = move_toward(velocity.x, axis * 210, acceleration * delta)
+		var speed := 210.0
+		if boosting:
+			speed = 650.0
+			if axis != 0:
+				acceleration = 1800.0
+		velocity.x = move_toward(velocity.x, axis * speed, acceleration * delta)
 	else:
 		# Gently settle released horizontal drift without clamping a fast launch.
 		if axis == 0:
@@ -68,6 +80,21 @@ func _physics_process(delta: float) -> void:
 	previous_position = position
 	previous_velocity = velocity
 	move_and_slide()
+	if boosting:
+		boost_distance += absf(position.x - previous_position.x)
+	for i in get_slide_collision_count():
+		var collision := get_slide_collision(i)
+		var normal := collision.get_normal()
+		var incoming := previous_velocity.dot(normal)
+		if incoming < -0.01 and Materials.has_patch(materials, collision.get_position(), normal, "bounce"):
+			var minimum := 580.0 if normal.y < -0.5 else 420.0
+			velocity = previous_velocity - normal * incoming + normal * clampf(-incoming, minimum, 900.0)
+			cut_jump = false
+			coyote = 0
+			buffer = 0
+			material_airborne = true
+			bounces += 1
+			break
 	if portal_system != null:
 		if portal_system.transport(self, previous_position):
 			portal_flash = 0.18
@@ -119,6 +146,9 @@ func die() -> void:
 	landing_squash = 0
 	stomp_stretch = 0
 	portal_flash = 0
+	bounces = 0
+	boost_distance = 0
+	material_airborne = false
 	died.emit()
 
 func _draw() -> void:

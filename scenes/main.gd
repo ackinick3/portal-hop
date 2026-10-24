@@ -7,6 +7,7 @@ var world: Node2D
 var portals: Node2D
 var player: CharacterBody2D
 var enemy: Node2D
+var stage: Node2D
 var audio: Node
 var panel: CanvasLayer
 var index := 0
@@ -92,17 +93,23 @@ func menu() -> void:
 	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  %d ROOMS" % Maps.LEVEL_COUNT,Vector2(260,474),15)
 	queue_redraw()
 
-func level_select() -> void:
+func level_select(page: int = 0) -> void:
 	clear_panel()
 	backdrop()
-	label_at("SELECT A ROOM",Vector2(330,90),32)
-	for i in Maps.LEVEL_COUNT:
+	page = clampi(page,0,(Maps.LEVEL_COUNT-1)/10)
+	label_at("SELECT A ROOM  /  %d" % (page+1),Vector2(290,62),32)
+	for i in range(page*10,mini(page*10+10,Maps.LEVEL_COUNT)):
 		var level_index := i
-		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(130 if i < 4 else 530,165+(i%4)*62),func(): enter_level(level_index), i >= unlocked)
-	button("BACK",Vector2(340,450),menu)
+		var slot := i-page*10
+		var item := button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(100 if slot < 5 else 520,125+(slot%5)*55),func(): enter_level(level_index), i >= unlocked)
+		item.size.x = 340
+		item.add_theme_font_size_override("font_size",16)
+	button("PREVIOUS PAGE",Vector2(100,425),func(): level_select(page-1),page==0)
+	button("NEXT PAGE",Vector2(580,425),func(): level_select(page+1),page*10+10>=Maps.LEVEL_COUNT)
+	button("BACK",Vector2(340,480),menu)
 
 func enter_level(number: int) -> void:
-	if number not in [5,6,7]:
+	if number not in [5,6,7] and number < 8:
 		start_level(number)
 		return
 	state = "briefing"
@@ -117,10 +124,19 @@ func enter_level(number: int) -> void:
 		label_at("MIDAIR SWITCHBACK",Vector2(280,74),34)
 		label_at("TWO SHOTS, ONE FLIGHT",Vector2(300,130),24)
 		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and take the long fall.\n3. While flying: RED on the far wall, then BLUE on the lower RIGHT floor.\n\nThe next exit points straight UP beside the goal ledge.\nHold D immediately to land on it, then walk to the exit.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
-	else:
+	elif number == 7:
 		label_at("THE HIGH ROAD",Vector2(340,74),34)
 		label_at("PLAN FIRST. THEN WALK.",Vector2(310,130),24)
 		label_at("1. Before moving, place BLUE high on the left wall.\n2. Place RED on the pale floor below, also from the starting ledge.\n3. Hold D to walk off, fall through RED and fly to the exit.\n\nA high exit clears the wall. A low exit will fall short.\nNo jumping or midair shots are needed.\nMissed the landing? R resets both portals for another try.",Vector2(150,184),20)
+	else:
+		var room := Maps.get_level(number)
+		if room.is_empty(): return
+		var heading := label_at("%02d  /  %s" % [number+1,room.name],Vector2(50,66),30)
+		heading.size.x = 860
+		heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		var body := label_at("\n".join(room.get("briefing",[room.hint])),Vector2(130,155),20)
+		body.size = Vector2(700,235)
+		body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	button("START ROOM",Vector2(340,410),func(): start_level(number))
 	button("BACK",Vector2(340,462),level_select)
 
@@ -129,7 +145,16 @@ func instructions() -> void:
 	backdrop()
 	label_at("HOW TO PLAY",Vector2(330,70),34)
 	label_at("A / D    Run and steer in the air (release to gently slow)\nSPACE    Jump (hold for a higher jump)\nLMB / RMB    Shoot red / blue portals, even in midair\nR    Retry from checkpoint\nESC    Pause     |     F11    Fullscreen\n\nPale surfaces accept portals. Walls block shots.\nPortals keep speed; the exit sets its direction.\nFalling farther gives a faster launch.\nLand on a guard from above; side contact is fatal.",Vector2(170,135),21)
-	button("BACK",Vector2(340,458),menu)
+	button("BACK",Vector2(100,458),menu)
+	button("MATERIALS & MACHINES",Vector2(580,458),machines_instructions)
+
+func machines_instructions() -> void:
+	clear_panel()
+	backdrop()
+	label_at("MATERIALS & MACHINES",Vector2(245,60),32)
+	label_at("BLUE coating rebounds you automatically. Steer with A / D.\nRED coating builds running speed while you hold A / D.\nKeep that speed when you leave the runway.\n\nAMBER beams travel through active portal pairs.\nA lit receiver stays powered until R or RESTART.\nFollow its cable to the door or platform it controls.\n\nGREEN surfaces reflect your portal shots at equal angles.\nPale surfaces still accept portals; colored coatings do not.\nMoving platforms carry you. Gears and grooves show their route.",Vector2(130,125),20)
+	button("CONTROLS",Vector2(100,458),instructions)
+	button("BACK",Vector2(580,458),menu)
 
 func settings() -> void:
 	clear_panel()
@@ -194,10 +219,14 @@ func start_level(number: int) -> void:
 	surfaces.assign(data.faces)
 	portals.configure(blocks,surfaces)
 	portals.feedback.connect(on_portal_feedback)
+	stage = load("res://world/mechanisms.gd").new()
+	world.add_child(stage)
+	stage.configure(data,portals)
 	player = load("res://actors/player.gd").new()
 	player.spawn = data.spawn
 	player.position = data.spawn
 	player.portal_system = portals
+	player.materials.assign(data.get("materials",[]))
 	player.died.connect(on_death)
 	player.jumped.connect(func(): audio.play("jump"))
 	player.landed.connect(func(): audio.play("land"))
@@ -218,6 +247,7 @@ func on_death() -> void:
 	deaths += 1
 	transfers = 0
 	portals.clear()
+	stage.reset()
 	if enemy != null: enemy.reset()
 	audio.play("death")
 
@@ -273,6 +303,11 @@ func _process(delta: float) -> void:
 	if state == "playing":
 		elapsed += delta
 		guidance = Tutorial.guidance(index, portals.doors, transfers, player.position)
+		if index >= 8:
+			guidance = {"text":"","markers":[]}
+			for mark in data.get("guide",[]):
+				if transfers >= mark.get("after",0) and transfers <= mark.get("before",99):
+					guidance.markers.append(mark)
 		preview = portals.candidate(gun_origin(),get_global_mouse_position(),0)
 		queue_redraw()
 
@@ -282,6 +317,8 @@ func _physics_process(_delta: float) -> void:
 		var kind: String = enemy.hit(player,player.previous_position,player.previous_velocity)
 		if kind == "stomp": audio.play("stomp")
 	if player.position.y + 15 >= 530: player.die()
+	for hazard in data.get("hazards",[]):
+		if hazard.intersects(Rect2(player.position-Vector2(11,15),Vector2(22,30))): player.die()
 	if data.goal.grow(10).has_point(player.position) and player.dead_time <= 0: complete()
 
 func _draw() -> void:
@@ -298,6 +335,9 @@ func _draw() -> void:
 				break
 		Landmarks.draw_flag(self, flag_foot, elapsed)
 		Landmarks.draw_gate(self, data.goal, elapsed)
+		for hazard in data.get("hazards",[]):
+			for x in range(int(hazard.position.x),int(hazard.end.x),16):
+				draw_colored_polygon(PackedVector2Array([Vector2(x,hazard.end.y),Vector2(x+8,hazard.position.y),Vector2(minf(x+16,hazard.end.x),hazard.end.y)]),Color("ff526b"))
 		for x in range(0,960,18):
 			var on_ground := false
 			for block in data.blocks:

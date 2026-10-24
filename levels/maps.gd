@@ -1,6 +1,6 @@
 extends RefCounted
 
-const LEVEL_COUNT := 8
+const LEVEL_COUNT := 50
 
 static func get_level(index: int) -> Dictionary:
 	match index:
@@ -20,6 +20,14 @@ static func get_level(index: int) -> Dictionary:
 			return {"name":"MIDAIR SWITCHBACK", "spawn":Vector2(420,65), "goal":Rect2(850,66,42,54), "blocks":[Rect2(0,510,960,30),Rect2(400,80,110,18),Rect2(155,25,25,280),Rect2(820,300,20,210),Rect2(620,420,100,18),Rect2(750,120,200,18),Rect2(600,0,18,140)], "faces":[face(Vector2(535,510),Vector2(690,510),Vector2.UP),face(Vector2(180,35),Vector2(180,305),Vector2.RIGHT),face(Vector2(820,340),Vector2(820,510),Vector2.LEFT),face(Vector2(620,420),Vector2(720,420),Vector2.UP)], "hint":"Use the longer fall. In midair move RED to the right wall, then BLUE to the lower right floor. Hold right after the upward exit.", "enemy":false}
 		7:
 			return {"name":"THE HIGH ROAD", "spawn":Vector2(249,185), "goal":Rect2(866,346,42,54), "blocks":[Rect2(0,480,560,60),Rect2(70,200,180,18),Rect2(75,25,25,280),Rect2(620,350,30,190),Rect2(720,400,240,140)], "faces":[face(Vector2(385,480),Vector2(535,480),Vector2.UP),face(Vector2(100,35),Vector2(100,305),Vector2.RIGHT)], "hint":"Set both portals before moving: BLUE high on the left wall, RED on the floor. Walk right, then keep holding right. A low exit will not clear the obstacle.", "enemy":false}
+	if index >= 9 and index <= 18 and ResourceLoader.exists("res://levels/coating_rooms.gd"):
+		return load("res://levels/coating_rooms.gd").get_level(index)
+	if index >= 19 and index <= 24 and ResourceLoader.exists("res://levels/laser_rooms.gd"):
+		return load("res://levels/laser_rooms.gd").get_level(index)
+	if index >= 35 and index < LEVEL_COUNT and ResourceLoader.exists("res://levels/advanced_rooms.gd"):
+		return load("res://levels/advanced_rooms.gd").get_level(index)
+	if index >= 8 and index < LEVEL_COUNT:
+		return load("res://levels/campaign.gd").get_level(index)
 	return {}
 
 static func face(a: Vector2, b: Vector2, n: Vector2) -> Dictionary:

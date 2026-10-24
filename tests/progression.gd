@@ -72,7 +72,7 @@ func run() -> void:
 	if start != null: start.pressed.emit()
 	check(game.index == 7 and game.data.name == "THE HIGH ROAD" and game.state == "playing","Briefing opens the actual eighth map")
 	game.complete()
-	check(find_button(game,"NEXT ROOM") == null,"Room 8 is the final room")
+	check(find_button(game,"NEXT ROOM") != null,"Room 8 now continues into the new campaign")
 	game.level_select()
 	fourth = find_button(game,"04")
 	check(fourth != null and not fourth.disabled,"Unlocked room 4 can be selected")

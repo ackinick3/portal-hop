@@ -4,6 +4,9 @@ signal feedback(kind: String)
 var solids: Array[Rect2] = []
 # Surface: endpoints a,b and outward normal n. Adjacent collinear faces merge.
 var faces: Array[Dictionary] = []
+# Green faces share real solid geometry; dynamic blockers never cut terrain.
+var mirrors: Array[Dictionary] = []
+var occluders: Array[Rect2] = []
 var doors: Array[Dictionary] = [{}, {}]
 var collision_root: Node2D
 var exit_lock := -1
@@ -106,7 +109,8 @@ func ray_hit(origin: Vector2, target: Vector2) -> Dictionary:
 		return {}
 	var best := 2000.0
 	var result := {}
-	for rect in solids:
+	# A gate flush with terrain still covers its aperture at an equal hit distance.
+	for rect in occluders + solids:
 		var near := -INF
 		var far := INF
 		var normal := Vector2.ZERO
@@ -128,15 +132,114 @@ func ray_hit(origin: Vector2, target: Vector2) -> Dictionary:
 		if valid and near >= 0 and near <= far and near < best:
 			best = near
 			result = {"p": origin + direction * near, "n": normal}
+			if occluders.has(rect):
+				result["occluder"] = true
 	return result
 
+# Use the original visible screen endpoint for every displayed gun segment.
+func _screen_distance(origin: Vector2, direction: Vector2) -> float:
+	var distance := 2000.0
+	for axis in 2:
+		if direction[axis] > 0:
+			distance = minf(distance, (Vector2(960, 540)[axis] - origin[axis]) / direction[axis])
+		elif direction[axis] < 0:
+			distance = minf(distance, -origin[axis] / direction[axis])
+	return maxf(0, distance)
+
+func _mirror_at(hit: Dictionary, direction: Vector2) -> bool:
+	if hit.is_empty() or hit.get("occluder", false):
+		return false
+	for face in mirrors:
+		if hit.n != face.n or direction.dot(face.n) >= 0 or absf((hit.p - face.a).dot(face.n)) > 0.1:
+			continue
+		var t := tangent(face.n)
+		var at: float = hit.p.dot(t)
+		if at >= minf(face.a.dot(t), face.b.dot(t)) - 0.01 and at <= maxf(face.a.dot(t), face.b.dot(t)) + 0.01:
+			return true
+	return false
+
+# Shared by preview, placement and the visible shot so none can skip an obstacle.
+func _shot_ray(origin: Vector2, target: Vector2) -> Dictionary:
+	var segments: Array[Dictionary] = []
+	var direction := (target - origin).normalized()
+	var cursor := origin
+	var start := origin
+	for bounce in 9:
+		var hit := ray_hit(cursor, target if bounce == 0 else cursor + direction * 2000)
+		var distance := _screen_distance(cursor, direction)
+		if not hit.is_empty() and cursor.distance_to(hit.p) <= distance + 0.01:
+			distance = minf(distance, cursor.distance_to(hit.p))
+		else:
+			hit = {}
+		segments.append({"a":start, "b":hit.p if not hit.is_empty() else cursor + direction * distance})
+		if not _mirror_at(hit, direction):
+			return {"segments":segments, "hit":hit, "direction":direction}
+		if bounce == 8:
+			break
+		direction = direction - 2 * direction.dot(hit.n) * hit.n
+		start = hit.p
+		cursor = start + direction * 0.01
+	return {"segments":segments, "hit":{}, "direction":direction}
+
+func shot_path(origin: Vector2, target: Vector2) -> Array[Dictionary]:
+	return _shot_ray(origin, target).segments
+
+func _inside_blocker(point: Vector2) -> bool:
+	for rect in solids + occluders:
+		if rect.grow(-0.001).has_point(point):
+			return true
+	return false
+
+# Continuous lasers pass through active real apertures, never through green paint.
+func beam_path(origin: Vector2, direction: Vector2) -> Array[Dictionary]:
+	var segments: Array[Dictionary] = []
+	if direction.is_zero_approx() or _inside_blocker(origin):
+		return segments
+	direction = direction.normalized()
+	var cursor := origin
+	var start := origin
+	var remaining := 4000.0
+	for hop in 17:
+		var hit := ray_hit(cursor, cursor + direction * 2000)
+		var distance := minf(remaining, _screen_distance(cursor, direction))
+		if not hit.is_empty() and cursor.distance_to(hit.p) <= distance + 0.01:
+			distance = minf(distance, cursor.distance_to(hit.p))
+		else:
+			hit = {}
+		segments.append({"a":start, "b":hit.p if not hit.is_empty() else cursor + direction * distance})
+		remaining -= distance
+		if hit.is_empty() or hit.get("occluder", false) or not active() or hop == 16 or remaining <= 0.01:
+			break
+		var entry := -1
+		var offset := 0.0
+		for i in 2:
+			var door: Dictionary = doors[i]
+			if hit.n != door.n or direction.dot(door.n) >= -0.0001 or absf((hit.p - door.p).dot(door.n)) > 0.1:
+				continue
+			offset = (hit.p - door.p).dot(tangent(door.n))
+			# Leave a two-pixel safety margin; grazing the frame stays blocked.
+			if absf(offset) <= 34:
+				entry = i
+				break
+		if entry < 0:
+			break
+		var output: Dictionary = doors[1 - entry]
+		direction = output.n
+		start = output.p + tangent(direction) * offset
+		cursor = start + direction * 0.01
+		if _inside_blocker(cursor):
+			break
+	return segments
+
 func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
-	var hit := ray_hit(origin, target)
-	if hit.is_empty() or not Rect2(0, 0, 960, 540).has_point(hit.p):
+	var shot := _shot_ray(origin, target)
+	var hit: Dictionary = shot.hit
+	var direction: Vector2 = shot.direction
+	if hit.is_empty() or hit.get("occluder", false) or not Rect2(0, 0, 960, 540).has_point(hit.p):
 		return {}
 	for face in faces:
 		# A corner can tie two ray normals; accept a front-facing valid face at that impact.
-		if (target - origin).dot(face.n) >= 0 or absf((hit.p - face.a).dot(face.n)) > 0.2:
+		if direction.dot(face.n) >= 0 or absf((hit.p - face.a).dot(face.n)) > 0.2:
 			continue
 		var t := tangent(face.n)
 		var low := minf(face.a.dot(t), face.b.dot(t))
@@ -154,7 +257,7 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 		var center: Vector2 = placement.p + face.n * (normal_half + 2)
 		var space := Vector2(72, 32) if face.n.y != 0 else Vector2(24, 72)
 		var clearance := Rect2(center - space / 2, space)
-		for solid in solids:
+		for solid in solids + occluders:
 			if solid.intersects(clearance):
 				return {}
 		return placement
@@ -162,18 +265,14 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 
 func shoot(origin: Vector2, target: Vector2, color: int) -> bool:
 	var hit := candidate(origin, target, color)
-	var impact := ray_hit(origin, target)
-	var direction := (target - origin).normalized()
-	var distance := 2000.0
-	for axis in 2:
-		if direction[axis] > 0:
-			distance = minf(distance, (Vector2(960, 540)[axis] - origin[axis]) / direction[axis])
-		elif direction[axis] < 0:
-			distance = minf(distance, -origin[axis] / direction[axis])
-	if not impact.is_empty():
-		distance = minf(distance, origin.distance_to(impact.p))
-	distance = maxf(0, distance)
-	shot_traces.append({"start":origin + direction * minf(24, distance), "end":origin + direction * distance, "color":color, "valid":not hit.is_empty(), "time":0.18})
+	var segments := shot_path(origin, target)
+	for i in segments.size():
+		var segment: Dictionary = segments[i]
+		var direction: Vector2 = (segment.b - segment.a).normalized()
+		var start: Vector2 = segment.a
+		if i == 0:
+			start += direction * minf(24, start.distance_to(segment.b))
+		shot_traces.append({"start":start, "end":segment.b, "color":color, "valid":not hit.is_empty(), "time":0.18})
 	queue_redraw()
 	if hit.is_empty():
 		hint = "INVALID SURFACE / OBSTRUCTED / NOT ENOUGH ROOM"
@@ -214,7 +313,17 @@ func transport(player: CharacterBody2D, before: Vector2) -> bool:
 			var out_half_t := 11.0 if out_n.y != 0 else 15.0
 			var out_half_n := 15.0 if out_n.y != 0 else 11.0
 			var safe_offset := clampf(offset, -36 + out_half_t, 36 - out_half_t)
-			player.position = output.p + tangent(out_n) * safe_offset + out_n * (out_half_n + 1)
+			var destination: Vector2 = output.p + tangent(out_n) * safe_offset + out_n * (out_half_n + 1)
+			var exit_box := Rect2(destination - Vector2(11,15),Vector2(22,30))
+			for blocker in occluders:
+				if blocker.intersects(exit_box):
+					# Dynamic geometry may have moved here since placement. Keep the
+					# player safely outside the entry rather than inside either solid.
+					var in_half_n := 15.0 if n.y != 0 else 11.0
+					player.position = entry.p + t * offset + n * (in_half_n + 1)
+					player.velocity -= n * player.velocity.dot(n)
+					return false
+			player.position = destination
 			player.velocity = transform_velocity(player.velocity, n, out_n)
 			exit_lock = 1 - i
 			pulse = 0.2
@@ -236,6 +345,8 @@ func _draw() -> void:
 		draw_rect(solid, Color("566579"))
 	for face in faces:
 		draw_line(face.a, face.b, Color("c6d9e5"), 5)
+	for face in mirrors:
+		draw_line(face.a, face.b, Color("65d58a"), 6)
 	for i in 2:
 		if doors[i].is_empty():
 			continue
