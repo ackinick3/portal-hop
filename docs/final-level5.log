@@ -1,0 +1,31 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Fifth map exists and is distinct
+PORTAL_HOP_READY
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=0 launch=780.0 guard_alive=false end=(894.4852, 290.4375) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Braking route stomps; forward route legally bypasses guard
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=20 launch=780.0 guard_alive=false end=(894.4852, 290.4375) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Braking route stomps; forward route legally bypasses guard
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=40 launch=780.0 guard_alive=true end=(895.972, 321.7999) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Braking route stomps; forward route legally bypasses guard
+PASS: Fifth guidance starts with its own wall marker
+PASS: Fifth guidance advances to its own floor marker
+PASS: Launch clears placement markers
+PASS: Retry fixture places wall portal
+PASS: Retry fixture places floor portal after leaving ledge
+PASS: Death restores fifth-room guard to its own patrol
+PASS: Fifth-room retry restores start and clears both placed portals
+PASS: Third-room guard keeps original spawn and patrol
+LEVEL5_TEST_FAILURES=0

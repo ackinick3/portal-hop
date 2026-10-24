@@ -61,7 +61,7 @@ func run() -> void:
 	await frames(50)
 	check(game.deaths == 1 and game.player.position.distance_to(game.player.spawn) < 1,"Fourth room retry returns to starting ledge")
 	check(game.portals.doors[0].is_empty() and game.portals.doors[1].is_empty(),"Fourth room retry clears both portals")
-	check(maps.get_level(-1).is_empty() and maps.get_level(4).is_empty(),"Invalid room indices return no room")
+	check(maps.get_level(-1).is_empty() and maps.get_level(maps.LEVEL_COUNT).is_empty(),"Invalid room indices return no room")
 	await game.drain_audio()
 	paused = false
 	game.queue_free()

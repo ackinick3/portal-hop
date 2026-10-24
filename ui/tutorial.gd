@@ -6,6 +6,14 @@ static func marker(point: Vector2, color: Color, text: String, normal: Vector2 =
 static func guidance(level: int, doors: Array[Dictionary], transfers: int, position: Vector2) -> Dictionary:
 	var red := Color("ff685e")
 	var blue := Color("4ba9ff")
+	if level == 4:
+		if transfers > 0:
+			return {"text":"Steer LEFT to descend onto the guard, then steer RIGHT after the bounce. Or land beyond it and jump to the exit.", "markers":[]}
+		if doors[1].is_empty():
+			return {"text":"Place BLUE high on the left wall to clear the starting ledge.", "markers":[marker(Vector2(120,90),blue,"BLUE HIGH",Vector2.RIGHT)]}
+		if doors[0].is_empty():
+			return {"text":"Leave the ledge to the RIGHT, then place RED on the floor below. Brake over the opening.", "markers":[marker(Vector2(440,470),red,"RED BELOW",Vector2.UP)]}
+		return {"text":"Fall into RED for the launch. R retries and restores the guard.", "markers":[marker(doors[0].p,red,"FALL IN",Vector2.UP)]}
 	if level == 3:
 		if transfers > 0:
 			return {"text":"TURN COMPLETE! Steer LEFT to land on the raised platform, then walk to the green exit. Missed it? R retries.", "markers":[]}

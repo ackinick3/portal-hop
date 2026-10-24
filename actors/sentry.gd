@@ -3,9 +3,10 @@ var alive := true
 var direction := 1.0
 var low := 440.0
 var high := 580.0
+var spawn := Vector2(510,413)
 
 func _ready() -> void:
-	position = Vector2(510,413)
+	position = spawn
 func _physics_process(delta: float) -> void:
 	if not alive: return
 	position.x += direction * 70 * delta
@@ -18,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	queue_redraw()
 func reset() -> void:
 	alive = true
-	position = Vector2(510,413)
+	position = spawn
 	direction = 1
 	show()
 func hit(player: CharacterBody2D, before: Vector2, incoming: Vector2) -> String:

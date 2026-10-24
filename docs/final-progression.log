@@ -8,7 +8,13 @@ PASS: Beating room 3 unlocks room 4
 PASS: Room 3 results now offer next room
 PASS: Next-room button starts actual fourth map
 PASS: Invalid room request leaves current room intact
-PASS: Room 4 is the final room; no nonexistent room 5 button
+PASS: Beating room 4 unlocks room 5
+PASS: Room 4 results offer room 5
+PASS: Next-room button starts actual fifth map
+PASS: Room 5 is the final room
 PASS: Unlocked room 4 can be selected
-PASS: New four-room progress restores correctly
+PASS: Old four-room progress is preserved without assuming completion
+PASS: Old save unlocks room 5 only after beating room 4
+PASS: Five-room progress and volume restore correctly
+PASS: Unlocked fifth room can be selected
 PROGRESSION_TEST_FAILURES=0

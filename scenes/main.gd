@@ -98,8 +98,8 @@ func level_select() -> void:
 	label_at("SELECT A ROOM",Vector2(330,90),32)
 	for i in Maps.LEVEL_COUNT:
 		var level_index := i
-		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,170+i*60),func(): start_level(level_index), i >= unlocked)
-	button("BACK",Vector2(340,400),menu)
+		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,150+i*52),func(): start_level(level_index), i >= unlocked)
+	button("BACK",Vector2(340,435),menu)
 
 func instructions() -> void:
 	clear_panel()
@@ -182,6 +182,10 @@ func start_level(number: int) -> void:
 	enemy = null
 	if data.enemy:
 		enemy = load("res://actors/sentry.gd").new()
+		if data.has("guard"):
+			enemy.spawn = data.guard.spawn
+			enemy.low = data.guard.low
+			enemy.high = data.guard.high
 		world.add_child(enemy)
 	clear_panel()
 	audio.play("checkpoint")
