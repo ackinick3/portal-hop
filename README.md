@@ -2,6 +2,8 @@
 
 Godot 4.7.2（官方稳定版）、GDScript、Windows x64，三关单机 MVP。
 
+**开发接续入口：[PROJECT_STATE.md](PROJECT_STATE.md)**。新对话先读这份项目现状与接续指南；`AGENTS.md`要求后续修改时同步维护它。历史开发记录仍保留在`docs/进度.md`。
+
 ## 直接游玩
 
 双击 `builds/PortalHop.exe`。资源已嵌入 EXE，无须安装 Godot。
