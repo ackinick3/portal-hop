@@ -6,6 +6,18 @@ static func marker(point: Vector2, color: Color, text: String, normal: Vector2 =
 static func guidance(level: int, doors: Array[Dictionary], transfers: int, position: Vector2) -> Dictionary:
 	var red := Color("ff685e")
 	var blue := Color("4ba9ff")
+	if level == 5:
+		if transfers >= 2:
+			return {"text":"Second launch! Steer toward the far exit. R retries immediately.", "markers":[]}
+		if transfers == 1:
+			if doors[1].is_empty() or doors[1].n != Vector2.RIGHT:
+				return {"text":"You can shoot in midair: move BLUE to the left wall now. Keep RED on the floor.", "markers":[marker(Vector2(120,100),blue,"BLUE IN MIDAIR",Vector2.RIGHT)]}
+			return {"text":"Keep falling into the same RED floor portal for the second, faster launch.", "markers":[marker(doors[0].p,red,"SECOND FALL",Vector2.UP)]}
+		if doors[1].is_empty():
+			return {"text":"Place BLUE on the ceiling first. The second fall will add speed.", "markers":[marker(Vector2(465,60),blue,"BLUE CEILING",Vector2.DOWN)]}
+		if doors[0].is_empty():
+			return {"text":"Walk LEFT off the starting ledge, then place RED on the floor and brake over it.", "markers":[marker(Vector2(465,480),red,"RED BELOW",Vector2.UP)]}
+		return {"text":"Fall through RED. After exiting the ceiling, shoot BLUE at the left wall while airborne.", "markers":[marker(doors[0].p,red,"FIRST FALL",Vector2.UP)]}
 	if level == 4:
 		if transfers > 0:
 			return {"text":"Steer LEFT to descend onto the guard, then steer RIGHT after the bounce. Or land beyond it and jump to the exit.", "markers":[]}

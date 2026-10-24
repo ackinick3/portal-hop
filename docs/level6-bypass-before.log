@@ -1,0 +1,17 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+LAND (128.0264, 204.9887)
+JUMP (141.6709, 204.9251)
+LAND (315.5878, 234.9253)
+JUMP (333.0878, 234.9251)
+LAND (564.0883, 454.9252)
+NO_PORTAL_BYPASS room=4 blocked=true final_position=(810.8383, 454.9251)
+LAND (260.0264, 129.9887)
+JUMP (312.0999, 129.9251)
+LAND (260.0264, 129.9887)
+JUMP (312.0999, 129.9251)
+NO_PORTAL_BYPASS room=5 blocked=true final_position=(523.8504, 250.9243)
+LAND (665.0264, 114.9887)
+JUMP (717.1002, 114.9251)
+NO_PORTAL_BYPASS room=6 blocked=false final_position=(948.9252, 297.7993)

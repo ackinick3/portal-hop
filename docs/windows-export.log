@@ -9,47 +9,45 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 [  83% ] first_scan_filesystem | 正在启动文件扫描……
 [ DONE ] first_scan_filesystem
 
-[   0% ] update_scripts_classes | Started 正在注册全局类…… (8 steps)
+[   0% ] update_scripts_classes | Started 正在注册全局类…… (2 steps)
 [   0% ] update_scripts_classes |
-[  11% ] update_scripts_classes |
-[  22% ] update_scripts_classes |
 [  33% ] update_scripts_classes |
-[  44% ] update_scripts_classes |
-[  55% ] update_scripts_classes |
-[  66% ] update_scripts_classes |
-[  77% ] update_scripts_classes |
 [ DONE ] update_scripts_classes
 
-[   0% ] _update_scan_actions | Started 正在扫描动作…… (7 steps)
+[   0% ] _update_scan_actions | Started 正在扫描动作…… (9 steps)
 [   0% ] _update_scan_actions | level-select.png
-[  12% ] _update_scan_actions | menu.png
-[  25% ] _update_scan_actions | room1.png
-[  37% ] _update_scan_actions | room2.png
-[  50% ] _update_scan_actions | room3.png
-[  62% ] _update_scan_actions | room4.png
-[  75% ] _update_scan_actions | room5.png
+[  10% ] _update_scan_actions | menu.png
+[  20% ] _update_scan_actions | room1.png
+[  30% ] _update_scan_actions | room2.png
+[  40% ] _update_scan_actions | room3.png
+[  50% ] _update_scan_actions | room4.png
+[  60% ] _update_scan_actions | room5.png
+[  70% ] _update_scan_actions | room6-briefing.png
+[  80% ] _update_scan_actions | room6.png
 [ DONE ] _update_scan_actions
 
-[   0% ] reimport | Started 正在导入或重新导入资产 (7 steps)
+[   0% ] reimport | Started 正在导入或重新导入资产 (8 steps)
 [   0% ] reimport | 正在准备重新导入文件……
-[  12% ] reimport | 正在准备重新导入文件……
-[  25% ] reimport | 正在准备重新导入文件……
-[  37% ] reimport | 正在准备重新导入文件……
-[  50% ] reimport | 正在准备重新导入文件……
-[  62% ] reimport | 正在准备重新导入文件……
-[  75% ] reimport | 正在准备重新导入文件……
+[  11% ] reimport | 正在准备重新导入文件……
+[  22% ] reimport | 正在准备重新导入文件……
+[  33% ] reimport | 正在准备重新导入文件……
+[  44% ] reimport | 正在准备重新导入文件……
+[  55% ] reimport | 正在准备重新导入文件……
+[  66% ] reimport | 正在准备重新导入文件……
+[  77% ] reimport | 正在准备重新导入文件……
 [   0% ] reimport | 正在执行重新导入的前置操作……
 [   0% ] reimport | level-select.png
-[  12% ] reimport | menu.png
-[  25% ] reimport | room1.png
-[  37% ] reimport | room2.png
-[  50% ] reimport | room3.png
-[  62% ] reimport | room4.png
-[  75% ] reimport | room5.png
-[  87% ] reimport | 正在结束资产导入……
+[  11% ] reimport | room1.png
+[  22% ] reimport | room2.png
+[  33% ] reimport | room3.png
+[  44% ] reimport | room4.png
+[  55% ] reimport | room5.png
+[  66% ] reimport | room6-briefing.png
+[  77% ] reimport | room6.png
+[  88% ] reimport | 正在结束资产导入……
 [ DONE ] reimport
 
-[   0% ] reimport | Started 正在导入或重新导入资产 (7 steps)
+[   0% ] reimport | Started 正在导入或重新导入资产 (8 steps)
 [   0% ] reimport | 正在执行重新导入的后置操作……
 [ DONE ] reimport
 

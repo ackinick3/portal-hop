@@ -11,10 +11,17 @@ PASS: Invalid room request leaves current room intact
 PASS: Beating room 4 unlocks room 5
 PASS: Room 4 results offer room 5
 PASS: Next-room button starts actual fifth map
-PASS: Room 5 is the final room
+PASS: Beating room 5 unlocks room 6
+PASS: Room 5 results offer room 6
+PASS: Room 6 entry teaches airborne replacement before starting
+PASS: Briefing opens the actual sixth map
+PASS: Room 6 is the final room
 PASS: Unlocked room 4 can be selected
 PASS: Old four-room progress is preserved without assuming completion
 PASS: Old save unlocks room 5 only after beating room 4
 PASS: Five-room progress and volume restore correctly
 PASS: Unlocked fifth room can be selected
+PASS: Old five-room save does not assume room 5 was completed
+PASS: Six-room progress, volume and selection restore correctly
+PASS: Selecting room 6 also shows its briefing
 PROGRESSION_TEST_FAILURES=0

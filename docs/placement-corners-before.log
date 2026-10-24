@@ -1,0 +1,100 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Edge shot accepted: (0.0, -1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (0.0, 1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (-1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+FAIL: Diagonal corner hit can use the visible valid floor face
+PASS: Blue portal can snap near wall edge
+PASS: Overlap uses shifted center and still rejects the second color
+PASS: Shifted portal still requires clearance for the full aperture
+PASS: Blocked edge placement never opens a collision gap
+PLACEMENT_EDGE_FAILURES=1

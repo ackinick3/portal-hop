@@ -1,7 +1,7 @@
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
 PASS: Invalid material rejected
-PASS: Short edge margin rejected
+PASS: Pale edge hit shifts whole portal inward
 PASS: Wall occludes target
 PASS: Valid red floor placement
 PASS: Single door stays inactive

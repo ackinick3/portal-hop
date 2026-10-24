@@ -12,7 +12,7 @@ func run() -> void:
 	var faces: Array[Dictionary] = [{"a":Vector2(100,400),"b":Vector2(300,400),"n":Vector2.UP},{"a":Vector2(650,400),"b":Vector2(850,400),"n":Vector2.UP}]
 	portals.configure(blocks, faces)
 	check(not portals.shoot(Vector2(100,300), Vector2(20,400), 0), "Invalid material rejected")
-	check(not portals.shoot(Vector2(100,300), Vector2(110,400), 0), "Short edge margin rejected")
+	check(portals.shoot(Vector2(100,300), Vector2(110,400), 0) and portals.doors[0].p.is_equal_approx(Vector2(136,400)), "Pale edge hit shifts whole portal inward")
 	check(not portals.shoot(Vector2(100,100), Vector2(750,400), 1), "Wall occludes target")
 	check(portals.shoot(Vector2(200,300), Vector2(200,400), 0), "Valid red floor placement")
 	check(not portals.active(), "Single door stays inactive")

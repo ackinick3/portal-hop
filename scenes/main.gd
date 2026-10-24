@@ -98,14 +98,28 @@ func level_select() -> void:
 	label_at("SELECT A ROOM",Vector2(330,90),32)
 	for i in Maps.LEVEL_COUNT:
 		var level_index := i
-		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,150+i*52),func(): start_level(level_index), i >= unlocked)
-	button("BACK",Vector2(340,435),menu)
+		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,145+i*46),func(): enter_level(level_index), i >= unlocked)
+	button("BACK",Vector2(340,450),menu)
+
+func enter_level(number: int) -> void:
+	if number != 5:
+		start_level(number)
+		return
+	state = "briefing"
+	get_tree().paused = true
+	clear_panel()
+	backdrop()
+	label_at("AIRBORNE RELAY",Vector2(310,74),34)
+	label_at("YOU CAN SHOOT IN MIDAIR",Vector2(290,130),24)
+	label_at("1. BLUE on the ceiling; walk LEFT and shoot RED on the floor.\n2. Tap D to brake above RED, release movement, and fall in.\n3. In midair, move BLUE to the left wall. Fall through RED again.\n\nHold D toward the exit after the second launch.\nPortals redirect speed; gravity adds speed during the next fall.\nR retries immediately once you start.",Vector2(150,184),20)
+	button("START ROOM",Vector2(340,410),func(): start_level(number))
+	button("BACK",Vector2(340,462),level_select)
 
 func instructions() -> void:
 	clear_panel()
 	backdrop()
 	label_at("HOW TO PLAY",Vector2(330,70),34)
-	label_at("A / D    Run and steer in the air\nSPACE    Jump (hold for a higher jump)\nLMB / RMB    Shoot red / blue portals\nR    Retry from checkpoint\nESC    Pause     |     F11    Fullscreen\n\nPale surfaces accept portals. Walls block shots.\nTwo portals open a passage; momentum changes direction.\nFalling farther gives a faster launch.\nLand on a guard from above; side contact is fatal.",Vector2(170,135),21)
+	label_at("A / D    Run and steer in the air\nSPACE    Jump (hold for a higher jump)\nLMB / RMB    Shoot red / blue portals, even in midair\nR    Retry from checkpoint\nESC    Pause     |     F11    Fullscreen\n\nPale surfaces accept portals. Walls block shots.\nTwo portals open a passage; momentum changes direction.\nFalling farther gives a faster launch.\nLand on a guard from above; side contact is fatal.",Vector2(170,135),21)
 	button("BACK",Vector2(340,458),menu)
 
 func settings() -> void:
@@ -228,7 +242,7 @@ func complete() -> void:
 	label_at("ROOM COMPLETE" if index < Maps.LEVEL_COUNT - 1 else "PROTOTYPE COMPLETE!",Vector2(265,85),36)
 	label_at("%02d / %s\n\nTIME  %.2f s     DEATHS  %d" % [index+1,data.name,elapsed,deaths],Vector2(260,160),23)
 	if index < Maps.LEVEL_COUNT - 1:
-		button("NEXT ROOM",Vector2(340,280),func(): start_level(index+1))
+		button("NEXT ROOM",Vector2(340,280),func(): enter_level(index+1))
 	button("REPLAY ROOM",Vector2(340,340),func(): start_level(index))
 	button("MAIN MENU",Vector2(340,400),menu)
 

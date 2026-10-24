@@ -1,6 +1,6 @@
 extends RefCounted
 
-const LEVEL_COUNT := 5
+const LEVEL_COUNT := 6
 
 static func get_level(index: int) -> Dictionary:
 	match index:
@@ -14,6 +14,8 @@ static func get_level(index: int) -> Dictionary:
 			return {"name":"THE VECTOR SWITCH", "spawn":Vector2(128,205), "goal":Rect2(560,231,42,54), "blocks":[Rect2(0,470,960,70),Rect2(60,220,140,18),Rect2(310,250,25,220),Rect2(750,300,170,20),Rect2(560,285,140,20),Rect2(360,140,240,20)], "faces":[face(Vector2(310,250),Vector2(310,390),Vector2.LEFT),face(Vector2(760,300),Vector2(900,300),Vector2.UP),face(Vector2(360,160),Vector2(600,160),Vector2.DOWN)], "hint":"BLUE on the right floor, then step off the ledge and shoot RED on the wall. Steer left after the turn.", "enemy":false}
 		4:
 			return {"name":"THE FINAL RELAY", "spawn":Vector2(260,130), "goal":Rect2(904,296,42,54), "blocks":[Rect2(0,470,490,70),Rect2(650,390,160,150),Rect2(865,350,95,190),Rect2(190,145,140,18),Rect2(95,25,25,280)], "faces":[face(Vector2(390,470),Vector2(490,470),Vector2.UP),face(Vector2(120,35),Vector2(120,305),Vector2.RIGHT)], "hint":"Launch from the left wall. Land above the guard, then bounce or jump across the last gap.", "enemy":true, "guard":{"spawn":Vector2(720,373),"low":680.0,"high":760.0}}
+		5:
+			return {"name":"AIRBORNE RELAY", "spawn":Vector2(665,115), "goal":Rect2(908,306,42,54), "blocks":[Rect2(0,480,560,60),Rect2(880,360,80,180),Rect2(600,130,140,18),Rect2(740,0,20,200),Rect2(390,25,160,35),Rect2(95,25,25,280)], "faces":[face(Vector2(420,480),Vector2(540,480),Vector2.UP),face(Vector2(390,60),Vector2(550,60),Vector2.DOWN),face(Vector2(120,35),Vector2(120,305),Vector2.RIGHT)], "hint":"BLUE ceiling, RED floor. After the first fall, shoot BLUE onto the left wall while airborne. Fall through RED again for a faster launch.", "enemy":false}
 	return {}
 
 static func face(a: Vector2, b: Vector2, n: Vector2) -> Dictionary:

@@ -1,0 +1,45 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Sixth room exists as a new map
+PORTAL_HOP_READY
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=2 p=(468.7237, 82.8125) success=true
+ROOM6_ROUTE delay=2 first=810.115295410156 second=1177.57934570313 transfers=2 end=(907.1875, 315.6495) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=16 p=(470.3182, 184.75) success=true
+ROOM6_ROUTE delay=16 first=810.115295410156 second=1177.57934570313 transfers=2 end=(907.1875, 315.6495) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=30 p=(471.9127, 298.9375) success=true
+ROOM6_ROUTE delay=30 first=810.115295410156 second=1177.57934570313 transfers=2 end=(907.1875, 315.6495) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=45 p=(473.6211, 434.875) success=true
+ROOM6_ROUTE delay=45 first=810.115295410156 second=1177.57934570313 transfers=2 end=(907.1875, 315.6495) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+ROOM6_ROUTE delay=-1 first=810.115295410156 second=0.0 transfers=0 end=(868.9249, 522.433) deaths=1
+PASS: Comparison route performs a real single launch from a high wall exit
+PASS: Standard single launch falls short of the final platform
+PASS: Sixth guidance begins with the ceiling target
+PASS: Sixth guidance advances to the floor target
+PASS: First transfer highlights airborne wall replacement
+PASS: Second transfer clears setup markers
+PASS: Retry fixture places floor portal from a legal airborne position
+PASS: After airborne replacement the retained red portal is highlighted
+PASS: Sixth retry clears both portals and transfer stage
+PASS: R returns to starting ledge directly without a new briefing
+PASS: Sixth room has an entry briefing before gameplay
+PASS: Briefing pauses gameplay and offers a clear start button
+PASS: Briefing start opens the real sixth map
+PASS: Paused sixth room restarts directly without a briefing
+LEVEL6_TEST_FAILURES=0

@@ -134,27 +134,30 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 	var hit := ray_hit(origin, target)
 	if hit.is_empty() or not Rect2(0, 0, 960, 540).has_point(hit.p):
 		return {}
-	var t := tangent(hit.n)
 	for face in faces:
-		if face.n != hit.n or absf((hit.p - face.a).dot(face.n)) > 0.2:
+		# A corner can tie two ray normals; accept a front-facing valid face at that impact.
+		if (target - origin).dot(face.n) >= 0 or absf((hit.p - face.a).dot(face.n)) > 0.2:
 			continue
+		var t := tangent(face.n)
 		var low := minf(face.a.dot(t), face.b.dot(t))
 		var high := maxf(face.a.dot(t), face.b.dot(t))
 		var at: float = hit.p.dot(t)
-		if at - 36 < low or at + 36 > high:
+		if high - low < 72 or at < low - 0.01 or at > high + 0.01:
 			continue
+		# An edge hit slides the full aperture inward along the same valid face.
+		var placement := {"p":hit.p + t * (clampf(at, low + 36, high - 36) - at), "n":face.n}
 		var other: Dictionary = doors[1 - color]
-		if not other.is_empty() and (other.p - hit.p).length() < 76:
+		if not other.is_empty() and (other.p - placement.p).length() < 76:
 			return {}
 		# Full upright player plus margin must fit immediately outside the door.
-		var normal_half := 15.0 if hit.n.y != 0 else 11.0
-		var center: Vector2 = hit.p + hit.n * (normal_half + 2)
-		var space := Vector2(72, 32) if hit.n.y != 0 else Vector2(24, 72)
+		var normal_half := 15.0 if face.n.y != 0 else 11.0
+		var center: Vector2 = placement.p + face.n * (normal_half + 2)
+		var space := Vector2(72, 32) if face.n.y != 0 else Vector2(24, 72)
 		var clearance := Rect2(center - space / 2, space)
 		for solid in solids:
 			if solid.intersects(clearance):
 				return {}
-		return hit
+		return placement
 	return {}
 
 func shoot(origin: Vector2, target: Vector2, color: int) -> bool:
