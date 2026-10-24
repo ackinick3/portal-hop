@@ -1,0 +1,24 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Ground release stops within 11px at full run speed
+PASS: Ground braking adjustment leaves airborne drift unchanged
+PASS: Ground braking adjustment leaves airborne reverse control unchanged
+PASS: No-input launch above run speed retains momentum
+PASS: Gun supports mouse-target aiming
+PASS: Gun aims toward (1.0, 0.0)
+PASS: Gun aims toward (0.0, -1.0)
+PASS: Gun aims toward (-1.0, 0.0)
+PASS: Gun aims toward (0.0, 1.0)
+PASS: Gun aims toward (0.707107, -0.707107)
+PASS: Cursor on hand keeps a finite aim direction
+PASS: Shot opens portal on first valid wall
+PASS: Shot creates visible trajectory data
+PASS: One shot creates one trace
+PASS: Trace stops at nearest wall, not a wall behind it
+PASS: Trace begins at visible muzzle
+PASS: Successful red shot keeps its color and impact state
+PASS: Shot trace fades out after 0.18 seconds
+PASS: Invalid material rejects portal
+PASS: Invalid shot still stops at the obstruction
+PASS: Death/reset clears shot feedback
+FEEDBACK_TEST_FAILURES=0

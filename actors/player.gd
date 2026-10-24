@@ -12,6 +12,7 @@ var buffer := 0.0
 var dead_time := 0.0
 var facing := 1.0
 var cut_jump := false
+var aim_direction := Vector2.RIGHT
 
 func _ready() -> void:
 	for pair in [["move_left", KEY_A], ["move_right", KEY_D], ["jump", KEY_SPACE]]:
@@ -43,7 +44,8 @@ func _physics_process(delta: float) -> void:
 	if axis != 0:
 		facing = axis
 	if grounded:
-		velocity.x = move_toward(velocity.x, axis * 210, 1400 * delta)
+		var acceleration := 2600.0 if axis == 0 else 1400.0
+		velocity.x = move_toward(velocity.x, axis * 210, acceleration * delta)
 	else:
 		# Preserve launch momentum; inputs change it gradually rather than clamping.
 		if axis != 0 and (absf(velocity.x) < 210 or signf(velocity.x) != axis):
@@ -71,6 +73,19 @@ func _physics_process(delta: float) -> void:
 		die()
 	queue_redraw()
 
+func gun_origin() -> Vector2:
+	# Aim from the hand inside the collider so an extended barrel cannot shoot through walls.
+	return global_position + Vector2(0, 4)
+
+func aim_at(target: Vector2) -> void:
+	var direction := target - gun_origin()
+	if direction.length_squared() > 0.001:
+		aim_direction = direction.normalized()
+	queue_redraw()
+
+func _process(_delta: float) -> void:
+	aim_at(get_global_mouse_position())
+
 func die() -> void:
 	if dead_time > 0:
 		return
@@ -91,7 +106,10 @@ func _draw() -> void:
 	draw_rect(Rect2(-10, -10, 20, 11), Color("131b2b"))
 	draw_circle(Vector2(-4 + facing, -5), 2, Color("4ba9ff"))
 	draw_circle(Vector2(4 + facing, -5), 2, Color("4ba9ff"))
-	draw_line(Vector2(facing * 10, 4), Vector2(facing * 21, 4), Color("c6d9e5"), 5)
+	var hand := Vector2(0, 4)
+	draw_line(hand + aim_direction * 8, hand + aim_direction * 24, Color("131b2b"), 8)
+	draw_line(hand + aim_direction * 8, hand + aim_direction * 24, Color("c6d9e5"), 5)
+	draw_circle(hand + aim_direction * 8, 3, Color("f8d66d"))
 
 func _body_style() -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()

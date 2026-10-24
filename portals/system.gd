@@ -10,6 +10,7 @@ var exit_lock := -1
 var pulse := 0.0
 var hint := ""
 var hint_time := 0.0
+var shot_traces: Array[Dictionary] = []
 
 static func tangent(n: Vector2) -> Vector2:
 	return Vector2(-n.y, n.x)
@@ -48,6 +49,7 @@ func active() -> bool:
 
 func clear() -> void:
 	doors = [{}, {}]
+	shot_traces.clear()
 	exit_lock = -1
 	rebuild()
 
@@ -157,6 +159,19 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 
 func shoot(origin: Vector2, target: Vector2, color: int) -> bool:
 	var hit := candidate(origin, target, color)
+	var impact := ray_hit(origin, target)
+	var direction := (target - origin).normalized()
+	var distance := 2000.0
+	for axis in 2:
+		if direction[axis] > 0:
+			distance = minf(distance, (Vector2(960, 540)[axis] - origin[axis]) / direction[axis])
+		elif direction[axis] < 0:
+			distance = minf(distance, -origin[axis] / direction[axis])
+	if not impact.is_empty():
+		distance = minf(distance, origin.distance_to(impact.p))
+	distance = maxf(0, distance)
+	shot_traces.append({"start":origin + direction * minf(24, distance), "end":origin + direction * distance, "color":color, "valid":not hit.is_empty(), "time":0.18})
+	queue_redraw()
 	if hit.is_empty():
 		hint = "INVALID SURFACE / OBSTRUCTED / NOT ENOUGH ROOM"
 		hint_time = 1.0
@@ -207,6 +222,10 @@ func transport(player: CharacterBody2D, before: Vector2) -> bool:
 func _process(delta: float) -> void:
 	pulse = maxf(0, pulse - delta)
 	hint_time = maxf(0, hint_time - delta)
+	for i in range(shot_traces.size() - 1, -1, -1):
+		shot_traces[i].time -= delta
+		if shot_traces[i].time <= 0:
+			shot_traces.remove_at(i)
 	queue_redraw()
 
 func _draw() -> void:
@@ -225,3 +244,12 @@ func _draw() -> void:
 		draw_line(door.p - t * 34, door.p + t * 34, color, 5 + pulse * 25)
 		draw_circle(door.p - t * 34, 5, color)
 		draw_circle(door.p + t * 34, 5, color)
+	for trace in shot_traces:
+		var strength: float = trace.time / 0.18
+		var color := Color("ff685e") if trace.color == 0 else Color("4ba9ff")
+		color.a = strength * 0.2
+		draw_line(trace.start, trace.end, color, 8)
+		color.a = strength
+		draw_line(trace.start, trace.end, color, 2)
+		var impact_color := color if trace.valid else Color(0.93, 0.95, 0.97, strength)
+		draw_arc(trace.end, 3 + 6 * (1 - strength), 0, TAU, 20, impact_color, 2)

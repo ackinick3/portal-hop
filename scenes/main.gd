@@ -215,8 +215,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			portals.shoot(gun_origin(),get_global_mouse_position(),0 if event.button_index == MOUSE_BUTTON_LEFT else 1)
 
 func gun_origin() -> Vector2:
-	# Center-height muzzle stays inside the player's collision footprint, preventing shots through walls.
-	return player.position + Vector2(player.facing * 8,0)
+	return player.gun_origin()
 
 func _process(delta: float) -> void:
 	if state == "playing":

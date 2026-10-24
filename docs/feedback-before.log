@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+FAIL: Ground release stops within 11px at full run speed
+FAIL: Normal airborne release reduces horizontal drift
+FAIL: Normal airborne reverse input responds faster
+PASS: No-input launch above run speed retains momentum
+FAIL: Gun supports mouse-target aiming
+PASS: Shot opens portal on first valid wall
+FAIL: Shot creates visible trajectory data
+FEEDBACK_TEST_FAILURES=5
