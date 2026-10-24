@@ -6,6 +6,20 @@ static func marker(point: Vector2, color: Color, text: String, normal: Vector2 =
 static func guidance(level: int, doors: Array[Dictionary], transfers: int, position: Vector2) -> Dictionary:
 	var red := Color("ff685e")
 	var blue := Color("4ba9ff")
+	if level == 6:
+		if transfers >= 2:
+			return {"text":"Ride the upward launch. Once above the goal ledge, steer RIGHT and land. R retries.", "markers":[]}
+		if transfers == 1:
+			if doors[0].is_empty() or doors[0].n != Vector2.LEFT:
+				return {"text":"First airborne shot: move RED to the far wall ahead.", "markers":[marker(Vector2(780,430),red,"RED AHEAD",Vector2.LEFT)]}
+			if doors[1].is_empty() or doors[1].n != Vector2.UP:
+				return {"text":"Second airborne shot: move BLUE to the floor revealed past the baffle.", "markers":[marker(Vector2(300,300),blue,"BLUE REVEALED",Vector2.UP)]}
+			return {"text":"Both shots ready. Keep your launch speed and enter the wall RED.", "markers":[marker(doors[0].p,red,"TURN UP",Vector2.LEFT)]}
+		if doors[1].is_empty():
+			return {"text":"Place BLUE on the left wall before leaving the starting ledge.", "markers":[marker(Vector2(180,170),blue,"BLUE WALL",Vector2.RIGHT)]}
+		if doors[0].is_empty():
+			return {"text":"Walk RIGHT off the starting ledge, place RED below, brake with A and release.", "markers":[marker(Vector2(530,480),red,"RED BELOW",Vector2.UP)]}
+		return {"text":"Fall through RED. During flight replace RED ahead, then BLUE on the hidden floor.", "markers":[marker(doors[0].p,red,"FIRST FALL",Vector2.UP)]}
 	if level == 5:
 		if transfers >= 2:
 			return {"text":"Second launch! Steer toward the far exit. R retries immediately.", "markers":[]}

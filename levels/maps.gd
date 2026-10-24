@@ -1,6 +1,6 @@
 extends RefCounted
 
-const LEVEL_COUNT := 6
+const LEVEL_COUNT := 7
 
 static func get_level(index: int) -> Dictionary:
 	match index:
@@ -16,6 +16,8 @@ static func get_level(index: int) -> Dictionary:
 			return {"name":"THE FINAL RELAY", "spawn":Vector2(260,130), "goal":Rect2(904,296,42,54), "blocks":[Rect2(0,470,490,70),Rect2(650,390,160,150),Rect2(865,350,95,190),Rect2(190,145,140,18),Rect2(95,25,25,280)], "faces":[face(Vector2(390,470),Vector2(490,470),Vector2.UP),face(Vector2(120,35),Vector2(120,305),Vector2.RIGHT)], "hint":"Launch from the left wall. Land above the guard, then bounce or jump across the last gap.", "enemy":true, "guard":{"spawn":Vector2(720,373),"low":680.0,"high":760.0}}
 		5:
 			return {"name":"AIRBORNE RELAY", "spawn":Vector2(665,115), "goal":Rect2(908,306,42,54), "blocks":[Rect2(0,480,560,60),Rect2(880,360,80,180),Rect2(600,130,140,18),Rect2(740,0,20,200),Rect2(390,25,160,35),Rect2(95,25,25,280)], "faces":[face(Vector2(420,480),Vector2(540,480),Vector2.UP),face(Vector2(390,60),Vector2(550,60),Vector2.DOWN),face(Vector2(120,35),Vector2(120,305),Vector2.RIGHT)], "hint":"BLUE ceiling, RED floor. After the first fall, shoot BLUE onto the left wall while airborne. Fall through RED again for a faster launch.", "enemy":false}
+		6:
+			return {"name":"MIDAIR SWITCHBACK", "spawn":Vector2(378,115), "goal":Rect2(330,6,42,54), "blocks":[Rect2(0,480,960,60),Rect2(340,130,120,18),Rect2(155,25,25,280),Rect2(780,300,20,180),Rect2(260,300,140,18),Rect2(250,210,10,60),Rect2(290,60,110,18)], "faces":[face(Vector2(480,480),Vector2(600,480),Vector2.UP),face(Vector2(180,35),Vector2(180,305),Vector2.RIGHT),face(Vector2(780,330),Vector2(780,480),Vector2.LEFT),face(Vector2(264,300),Vector2(396,300),Vector2.UP)], "hint":"Launch right. In midair move RED to the far wall, then BLUE to the revealed floor. Ride the upward exit, then steer right onto the high goal.", "enemy":false}
 	return {}
 
 static func face(a: Vector2, b: Vector2, n: Vector2) -> Dictionary:

@@ -1,9 +1,9 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms: 6; airborne relay entry briefing; selected B rounded landmark art; text-free gameplay overlay
-Bytes: 109306936
-SHA256: 941786F1763808B5D5EF9E921F8E822939E10D0B1F6C4578280C7FC8565A0098
-Source tests: 20 suites passed; mirrored placement-edge cases and strengthened room6 retry checks rerun; six-room GPU previews, briefing and display/mouse suite passed
+Rooms: 7; airborne relay and midair switchback briefings; selected B rounded landmark art; text-free gameplay overlay
+Bytes: 109308280
+SHA256: 4907EB828F35D2115D465C65A95DD91D53E066F04FCA033A74B31D8EE68EA56B
+Source tests: 21 suites passed; seven-room GPU previews, both briefings and display/mouse suite passed; final briefing copy clarified and visually rechecked
 Graphical standalone exit: 0; see standalone-gui.log
 Single EXE: builds/PortalHop.exe; desktop Portal Hop.lnk still targets this executable

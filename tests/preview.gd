@@ -12,10 +12,11 @@ func run() -> void:
 		scene.start_level(i)
 		await create_timer(0.12).timeout
 		root.get_texture().get_image().save_png("res://docs/room%d.png" % (i+1))
-	scene.enter_level(5)
-	await process_frame
-	await process_frame
-	root.get_texture().get_image().save_png("res://docs/room6-briefing.png")
+	for i in [5,6]:
+		scene.enter_level(i)
+		await process_frame
+		await process_frame
+		root.get_texture().get_image().save_png("res://docs/room%d-briefing.png" % (i+1))
 	scene.menu()
 	scene.unlocked = Maps.LEVEL_COUNT
 	scene.level_select()

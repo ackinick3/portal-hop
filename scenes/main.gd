@@ -99,19 +99,24 @@ func level_select() -> void:
 	for i in Maps.LEVEL_COUNT:
 		var level_index := i
 		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,145+i*46),func(): enter_level(level_index), i >= unlocked)
-	button("BACK",Vector2(340,450),menu)
+	button("BACK",Vector2(340,480),menu)
 
 func enter_level(number: int) -> void:
-	if number != 5:
+	if number not in [5,6]:
 		start_level(number)
 		return
 	state = "briefing"
 	get_tree().paused = true
 	clear_panel()
 	backdrop()
-	label_at("AIRBORNE RELAY",Vector2(310,74),34)
-	label_at("YOU CAN SHOOT IN MIDAIR",Vector2(290,130),24)
-	label_at("1. BLUE on the ceiling; walk LEFT and shoot RED on the floor.\n2. Tap D to brake above RED, release movement, and fall in.\n3. In midair, move BLUE to the left wall. Fall through RED again.\n\nHold D toward the exit after the second launch.\nPortals redirect speed; gravity adds speed during the next fall.\nR retries immediately once you start.",Vector2(150,184),20)
+	if number == 5:
+		label_at("AIRBORNE RELAY",Vector2(310,74),34)
+		label_at("YOU CAN SHOOT IN MIDAIR",Vector2(290,130),24)
+		label_at("1. BLUE on the ceiling; walk LEFT and shoot RED on the floor.\n2. Tap D to brake above RED, release movement, and fall in.\n3. In midair, move BLUE to the left wall. Fall through RED again.\n\nHold D toward the exit after the second launch.\nPortals redirect speed; gravity adds speed during the next fall.\nR retries immediately once you start.",Vector2(150,184),20)
+	else:
+		label_at("MIDAIR SWITCHBACK",Vector2(280,74),34)
+		label_at("TWO SHOTS, ONE FLIGHT",Vector2(300,130),24)
+		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and fall in.\n3. While flying: RED on the far wall, then BLUE on the revealed floor.\n\nPlace BLUE before falling below its floor. Keep your flight speed.\nThe next exit turns you upward; steer RIGHT above the high ledge.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
 	button("START ROOM",Vector2(340,410),func(): start_level(number))
 	button("BACK",Vector2(340,462),level_select)
 
