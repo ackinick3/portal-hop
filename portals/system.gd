@@ -1,0 +1,226 @@
+extends Node2D
+
+signal feedback(kind: String)
+var solids: Array[Rect2] = []
+# Surface: endpoints a,b and outward normal n. Adjacent collinear faces merge.
+var faces: Array[Dictionary] = []
+var doors: Array[Dictionary] = [{}, {}]
+var collision_root: Node2D
+var exit_lock := -1
+var pulse := 0.0
+var hint := ""
+var hint_time := 0.0
+
+static func tangent(n: Vector2) -> Vector2:
+	return Vector2(-n.y, n.x)
+
+static func transform_velocity(v: Vector2, n_in: Vector2, n_out: Vector2) -> Vector2:
+	return -v.dot(n_in) * n_out + v.dot(tangent(n_in)) * tangent(n_out)
+
+func configure(blocks: Array[Rect2], surfaces: Array[Dictionary]) -> void:
+	solids = blocks
+	faces = surfaces
+	# Merge connected valid faces; internal seams never constrain placement.
+	var merged := true
+	while merged:
+		merged = false
+		for i in range(faces.size()):
+			for j in range(i + 1, faces.size()):
+				var a: Dictionary = faces[i]
+				var b: Dictionary = faces[j]
+				var t := tangent(a.n)
+				if a.n == b.n and absf((a.a - b.a).dot(a.n)) < 0.1:
+					var lo_a := minf(a.a.dot(t), a.b.dot(t))
+					var hi_a := maxf(a.a.dot(t), a.b.dot(t))
+					var lo_b := minf(b.a.dot(t), b.b.dot(t))
+					var hi_b := maxf(b.a.dot(t), b.b.dot(t))
+					if lo_b <= hi_a + 0.1 and lo_a <= hi_b + 0.1:
+						faces[i] = {"a": a.n * a.a.dot(a.n) + t * minf(lo_a, lo_b), "b": a.n * a.a.dot(a.n) + t * maxf(hi_a, hi_b), "n": a.n}
+						faces.remove_at(j)
+						merged = true
+						break
+			if merged:
+				break
+	rebuild()
+
+func active() -> bool:
+	return not doors[0].is_empty() and not doors[1].is_empty()
+
+func clear() -> void:
+	doors = [{}, {}]
+	exit_lock = -1
+	rebuild()
+
+func subtract_rect(source: Rect2, cut: Rect2) -> Array[Rect2]:
+	var out: Array[Rect2] = []
+	if not source.intersects(cut):
+		out.append(source)
+		return out
+	var overlap := source.intersection(cut)
+	for rect in [Rect2(source.position, Vector2(source.size.x, overlap.position.y - source.position.y)), Rect2(Vector2(source.position.x, overlap.end.y), Vector2(source.size.x, source.end.y - overlap.end.y)), Rect2(Vector2(source.position.x, overlap.position.y), Vector2(overlap.position.x - source.position.x, overlap.size.y)), Rect2(Vector2(overlap.end.x, overlap.position.y), Vector2(source.end.x - overlap.end.x, overlap.size.y))]:
+		if rect.size.x > 0.01 and rect.size.y > 0.01:
+			out.append(rect)
+	return out
+
+func rebuild() -> void:
+	if collision_root != null:
+		remove_child(collision_root)
+		collision_root.queue_free()
+	collision_root = Node2D.new()
+	add_child(collision_root)
+	for solid in solids:
+		var pieces: Array[Rect2] = [solid]
+		if active():
+			for door in doors:
+				var p: Vector2 = door.p
+				var n: Vector2 = door.n
+				# Cut only the supporting solid, leaving every other wall intact.
+				if not solid.grow(0.1).has_point(p - n * 0.05):
+					continue
+				var cut: Rect2
+				if n.y != 0:
+					cut = Rect2(p.x - 36, solid.position.y - 1, 72, solid.size.y + 2)
+				else:
+					cut = Rect2(solid.position.x - 1, p.y - 36, solid.size.x + 2, 72)
+				var next: Array[Rect2] = []
+				for piece in pieces:
+					next.append_array(subtract_rect(piece, cut))
+				pieces = next
+		for piece in pieces:
+			var body := StaticBody2D.new()
+			var shape := CollisionShape2D.new()
+			var box := RectangleShape2D.new()
+			box.size = piece.size
+			shape.shape = box
+			body.position = piece.get_center()
+			body.add_child(shape)
+			collision_root.add_child(body)
+	queue_redraw()
+
+# Slab intersection returns the first solid face along the finite aim ray.
+func ray_hit(origin: Vector2, target: Vector2) -> Dictionary:
+	var direction := (target - origin).normalized()
+	if direction == Vector2.ZERO:
+		return {}
+	var best := 2000.0
+	var result := {}
+	for rect in solids:
+		var near := -INF
+		var far := INF
+		var normal := Vector2.ZERO
+		var valid := true
+		for axis in 2:
+			if absf(direction[axis]) < 0.00001:
+				if origin[axis] < rect.position[axis] or origin[axis] > rect.end[axis]:
+					valid = false
+					break
+			else:
+				var d1: float = (rect.position[axis] - origin[axis]) / direction[axis]
+				var d2: float = (rect.end[axis] - origin[axis]) / direction[axis]
+				var entry := minf(d1, d2)
+				if entry > near:
+					near = entry
+					normal = Vector2.ZERO
+					normal[axis] = -signf(direction[axis])
+				far = minf(far, maxf(d1, d2))
+		if valid and near >= 0 and near <= far and near < best:
+			best = near
+			result = {"p": origin + direction * near, "n": normal}
+	return result
+
+func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
+	var hit := ray_hit(origin, target)
+	if hit.is_empty() or not Rect2(0, 0, 960, 540).has_point(hit.p):
+		return {}
+	var t := tangent(hit.n)
+	for face in faces:
+		if face.n != hit.n or absf((hit.p - face.a).dot(face.n)) > 0.2:
+			continue
+		var low := minf(face.a.dot(t), face.b.dot(t))
+		var high := maxf(face.a.dot(t), face.b.dot(t))
+		var at: float = hit.p.dot(t)
+		if at - 36 < low or at + 36 > high:
+			continue
+		var other: Dictionary = doors[1 - color]
+		if not other.is_empty() and (other.p - hit.p).length() < 76:
+			return {}
+		# Full upright player plus margin must fit immediately outside the door.
+		var normal_half := 15.0 if hit.n.y != 0 else 11.0
+		var center: Vector2 = hit.p + hit.n * (normal_half + 2)
+		var clearance := Rect2(center - Vector2(12, 16), Vector2(24, 32))
+		for solid in solids:
+			if solid.intersects(clearance):
+				return {}
+		return hit
+	return {}
+
+func shoot(origin: Vector2, target: Vector2, color: int) -> bool:
+	var hit := candidate(origin, target, color)
+	if hit.is_empty():
+		hint = "INVALID SURFACE / OBSTRUCTED / NOT ENOUGH ROOM"
+		hint_time = 1.0
+		feedback.emit("invalid")
+		return false
+	doors[color] = hit
+	exit_lock = -1
+	rebuild()
+	feedback.emit("red" if color == 0 else "blue")
+	return true
+
+func transport(player: CharacterBody2D, before: Vector2) -> bool:
+	if not active():
+		return false
+	if exit_lock >= 0:
+		var locked: Dictionary = doors[exit_lock]
+		var n: Vector2 = locked.n
+		var extent := 15.0 if n.y != 0 else 11.0
+		if (player.position - locked.p).dot(n) > extent + 3 or absf((player.position - locked.p).dot(tangent(n))) > 36 + extent:
+			exit_lock = -1
+	for i in 2:
+		if i == exit_lock:
+			continue
+		var entry: Dictionary = doors[i]
+		var n: Vector2 = entry.n
+		var t := tangent(n)
+		var d0: float = (before - entry.p).dot(n)
+		var d1: float = (player.position - entry.p).dot(n)
+		if d0 >= 0 and d1 <= 0 and d1 < d0 and player.velocity.dot(n) < 0:
+			var crossing := before.lerp(player.position, d0 / (d0 - d1))
+			var offset: float = (crossing - entry.p).dot(t)
+			var half_t := 11.0 if n.y != 0 else 15.0
+			if absf(offset) + half_t > 36:
+				continue
+			var output: Dictionary = doors[1 - i]
+			var out_n: Vector2 = output.n
+			var out_half_t := 11.0 if out_n.y != 0 else 15.0
+			var out_half_n := 15.0 if out_n.y != 0 else 11.0
+			var safe_offset := clampf(offset, -36 + out_half_t, 36 - out_half_t)
+			player.position = output.p + tangent(out_n) * safe_offset + out_n * (out_half_n + 1)
+			player.velocity = transform_velocity(player.velocity, n, out_n)
+			exit_lock = 1 - i
+			pulse = 0.2
+			feedback.emit("teleport")
+			return true
+	return false
+
+func _process(delta: float) -> void:
+	pulse = maxf(0, pulse - delta)
+	hint_time = maxf(0, hint_time - delta)
+	queue_redraw()
+
+func _draw() -> void:
+	for solid in solids:
+		draw_rect(solid, Color("566579"))
+	for face in faces:
+		draw_line(face.a, face.b, Color("c6d9e5"), 5)
+	for i in 2:
+		if doors[i].is_empty():
+			continue
+		var door: Dictionary = doors[i]
+		var t := tangent(door.n)
+		var color := Color("ff685e") if i == 0 else Color("4ba9ff")
+		color.a = 1.0 if active() else 0.45
+		draw_line(door.p - t * 34, door.p + t * 34, Color("131b2b"), 11)
+		draw_line(door.p - t * 34, door.p + t * 34, color, 5 + pulse * 25)
+		draw_circle(door.p - t * 34, 5, color)
+		draw_circle(door.p + t * 34, 5, color)
