@@ -32,6 +32,7 @@ func shutdown() -> void:
 	for voice in voices.values():
 		voice.stop()
 		voice.stream = null
+		voice.queue_free()
 	voices.clear()
 
 func _exit_tree() -> void:

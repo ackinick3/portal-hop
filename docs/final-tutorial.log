@@ -9,4 +9,7 @@ PASS: Third room teaches ceiling shot while on high platform
 PASS: Third room retains ordinary action route
 PASS: Third room describes safe repositioning for floor shot
 PASS: Third room explains downward stomp after ceiling exit
+PASS: Fourth room begins with visible right floor exit
+PASS: Fourth room warns to step clear before wall shot
+PASS: Fourth room has its own post-transfer guidance
 TUTORIAL_TEST_FAILURES=0

@@ -23,5 +23,8 @@ func _initialize() -> void:
 	check(tutorial.guidance(2, blue, 0, Vector2(140,335)).text.to_lower().contains("left"), "Third room describes safe repositioning for floor shot")
 	var finish: Dictionary = tutorial.guidance(2, pair, 1, Vector2(510,240))
 	check(finish.text.contains("guard"), "Third room explains downward stomp after ceiling exit")
+	check(tutorial.guidance(3, empty, 0, Vector2(128,205)).text.contains("right floor"), "Fourth room begins with visible right floor exit")
+	check(tutorial.guidance(3, blue, 0, Vector2(128,205)).text.contains("ledge"), "Fourth room warns to step clear before wall shot")
+	check(not tutorial.guidance(3, pair, 1, Vector2(800,270)).text.contains("guard"), "Fourth room has its own post-transfer guidance")
 	print("TUTORIAL_TEST_FAILURES=",failures)
 	quit(0 if failures == 0 else 1)

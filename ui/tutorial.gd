@@ -1,11 +1,19 @@
 extends RefCounted
 
-static func marker(point: Vector2, color: Color, text: String) -> Dictionary:
-	return {"p":point, "color":color, "text":text}
+static func marker(point: Vector2, color: Color, text: String, normal: Vector2 = Vector2.ZERO) -> Dictionary:
+	return {"p":point, "color":color, "text":text, "normal":normal}
 
 static func guidance(level: int, doors: Array[Dictionary], transfers: int, position: Vector2) -> Dictionary:
 	var red := Color("ff685e")
 	var blue := Color("4ba9ff")
+	if level == 3:
+		if transfers > 0:
+			return {"text":"TURN COMPLETE! Steer LEFT to land on the raised platform, then walk to the green exit. Missed it? R retries.", "markers":[]}
+		if doors[1].is_empty():
+			return {"text":"1 / 3   RMB: place BLUE on the upper right floor. Optional: try the ceiling for a different exit direction.", "markers":[marker(Vector2(830,300),blue,"BLUE FLOOR",Vector2.UP)]}
+		if doors[0].is_empty():
+			return {"text":"2 / 3   Walk off the RIGHT ledge. Once clear, LMB the pale WALL near the red marker; keep moving right.", "markers":[marker(Vector2(310,300),red,"RED WALL",Vector2.LEFT)]}
+		return {"text":"3 / 3   Fall into the wall while holding D. Your fall becomes sideways motion. After exiting, steer LEFT onto the goal ledge.", "markers":[marker(doors[0].p,red,"FALL + RUN",Vector2.LEFT)]}
 	if level == 0:
 		if transfers > 0:
 			return {"text":"CROSSING COMPLETE! Steer onto the right bank, then walk to the green exit.", "markers":[]}

@@ -1,0 +1,40 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Index 3 is the new fourth room, not a copy of room 3
+PORTAL_HOP_READY
+PASS: Exit surface is visible from spawn: (300.0, 830.0)
+ROOM4_EXIT (819.9499, 284.0) v=(-435.0, -210.0)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (300.0, 830.0) ceiling=false exit_velocity=(-435.0, -210.0) end=(610.4919, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Route lands on the actual goal platform
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (295.0, 820.0)
+ROOM4_EXIT (804.95, 284.0) v=(-435.0, -210.0)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (295.0, 820.0) ceiling=false exit_velocity=(-435.0, -210.0) end=(609.9502, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Route lands on the actual goal platform
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (305.0, 840.0)
+ROOM4_EXIT (834.95, 284.0) v=(-435.0, -210.0)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (305.0, 840.0) ceiling=false exit_velocity=(-435.0, -210.0) end=(610.7975, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Route lands on the actual goal platform
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (300.0, 540.0)
+ROOM4_EXIT (550.05, 176.0) v=(435.0, 210.0)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (300.0, 540.0) ceiling=true exit_velocity=(435.0, 210.0) end=(611.4794, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Route lands on the actual goal platform
+PASS: Route completes without death
+PASS: Fourth room retry returns to starting ledge
+PASS: Fourth room retry clears both portals
+PASS: Invalid room indices return no room
+LEVEL4_TEST_FAILURES=0

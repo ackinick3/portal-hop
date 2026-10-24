@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Legacy progress is restored through the actual load path
+PASS: Old three-room progress and volume survive without clearing
+PASS: Fourth room appears locked before beating room 3
+PASS: Beating room 3 unlocks room 4
+PASS: Room 3 results now offer next room
+PASS: Next-room button starts actual fourth map
+PASS: Invalid room request leaves current room intact
+PASS: Room 4 is the final room; no nonexistent room 5 button
+PASS: Unlocked room 4 can be selected
+PASS: New four-room progress restores correctly
+PROGRESSION_TEST_FAILURES=0

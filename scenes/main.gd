@@ -30,11 +30,14 @@ func _ready() -> void:
 	add_child(audio)
 	var save := ConfigFile.new()
 	if persistence_enabled and save.load("user://progress.cfg") == OK:
-		unlocked = clampi(save.get_value("progress", "unlocked", 1), 1, 3)
-		volume = clampf(save.get_value("settings", "volume", 0.6), 0, 1)
+		restore_progress(save)
 	AudioServer.set_bus_volume_db(0, linear_to_db(maxf(volume,0.0001)))
 	menu()
 	print("PORTAL_HOP_READY")
+
+func restore_progress(save: ConfigFile) -> void:
+	unlocked = clampi(save.get_value("progress", "unlocked", 1), 1, Maps.LEVEL_COUNT)
+	volume = clampf(save.get_value("settings", "volume", 0.6), 0, 1)
 
 func save_progress() -> void:
 	if not persistence_enabled: return
@@ -87,14 +90,14 @@ func menu() -> void:
 	button("HOW TO PLAY",Vector2(340,274),instructions)
 	button("SETTINGS",Vector2(340,326),settings)
 	button("QUIT",Vector2(340,378),quit_game)
-	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  THREE ROOMS",Vector2(260,474),15)
+	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  %d ROOMS" % Maps.LEVEL_COUNT,Vector2(260,474),15)
 	queue_redraw()
 
 func level_select() -> void:
 	clear_panel()
 	backdrop()
 	label_at("SELECT A ROOM",Vector2(330,90),32)
-	for i in 3:
+	for i in Maps.LEVEL_COUNT:
 		var level_index := i
 		button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(340,170+i*60),func(): start_level(level_index), i >= unlocked)
 	button("BACK",Vector2(340,400),menu)
@@ -130,7 +133,7 @@ func toggle_fullscreen() -> void:
 func drain_audio() -> void:
 	audio.shutdown()
 	# Audio stop commands are consumed by the mixer, including while the game is paused.
-	await get_tree().create_timer(0.06).timeout
+	await get_tree().create_timer(0.3).timeout
 
 func quit_game() -> void:
 	if state == "closing": return
@@ -143,6 +146,8 @@ func _notification(what: int) -> void:
 		quit_game()
 
 func start_level(number: int) -> void:
+	var next_data := Maps.get_level(number)
+	if next_data.is_empty(): return
 	get_tree().paused = false
 	if world != null:
 		remove_child(world)
@@ -155,7 +160,7 @@ func start_level(number: int) -> void:
 	deaths = 0
 	state = "playing"
 	transfers = 0
-	data = Maps.get_level(index)
+	data = next_data
 	portals = load("res://portals/system.gd").new()
 	world.add_child(portals)
 	var blocks: Array[Rect2] = []
@@ -220,14 +225,14 @@ func resume() -> void:
 func complete() -> void:
 	state = "won"
 	get_tree().paused = true
-	unlocked = maxi(unlocked, mini(3,index+2))
+	unlocked = maxi(unlocked, mini(Maps.LEVEL_COUNT,index+2))
 	save_progress()
 	audio.play("win")
 	clear_panel()
 	backdrop()
-	label_at("ROOM COMPLETE" if index < 2 else "PROTOTYPE COMPLETE!",Vector2(265,85),36)
+	label_at("ROOM COMPLETE" if index < Maps.LEVEL_COUNT - 1 else "PROTOTYPE COMPLETE!",Vector2(265,85),36)
 	label_at("%02d / %s\n\nTIME  %.2f s     DEATHS  %d" % [index+1,data.name,elapsed,deaths],Vector2(260,160),23)
-	if index < 2:
+	if index < Maps.LEVEL_COUNT - 1:
 		button("NEXT ROOM",Vector2(340,280),func(): start_level(index+1))
 	button("REPLAY ROOM",Vector2(340,340),func(): start_level(index))
 	button("MAIN MENU",Vector2(340,400),menu)
@@ -285,7 +290,10 @@ func _draw() -> void:
 			var radius := 15 + sin(elapsed * 4) * 2
 			draw_arc(mark.p, radius, 0, TAU, 30, mark.color, 2)
 			var label_y: float = -20 if mark.p.y > 350 else maxf(16, 112 - mark.p.y)
-			draw_string(ThemeDB.fallback_font, mark.p + Vector2(18, label_y), mark.text, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, mark.color)
+			var label_offset := Vector2(18, label_y)
+			if mark.normal == Vector2.UP: label_offset.y = -20
+			if mark.normal == Vector2.LEFT: label_offset = Vector2(-95,-10)
+			draw_string(ThemeDB.fallback_font, mark.p + label_offset, mark.text, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, mark.color)
 		var mouse := get_global_mouse_position()
 		var color := Color("55e0ae") if not preview.is_empty() else Color("ff526b")
 		draw_arc(mouse,7,0,TAU,20,color,1.5)
