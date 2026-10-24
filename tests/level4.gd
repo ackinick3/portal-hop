@@ -42,7 +42,7 @@ func run() -> void:
 				crossed = true
 				exit_velocity = game.player.velocity
 				release()
-				Input.action_press("move_left")
+				Input.action_press("move_right" if ceiling else "move_left")
 			if crossed and game.player.is_on_floor() and absf(game.player.position.y - 270) < 1 and game.player.position.x > 480:
 				landed = true
 				release()
@@ -53,7 +53,7 @@ func run() -> void:
 		print("ROOM4_ROUTE ",setting," ceiling=",ceiling," exit_velocity=",exit_velocity," end=",game.player.position," landed=",landed," deaths=",game.deaths)
 		check(crossed,"Route physically traverses a portal")
 		check(exit_velocity.y > 0 if ceiling else exit_velocity.y < 0,"Exit vertical direction matches chosen surface")
-		check(landed,"Route lands on the actual goal platform")
+		check(landed or ceiling and game.state == "won","Floor route lands; downward ceiling route may touch the gate in midair")
 		check(game.state == "won" and game.deaths == 0,"Route completes without death")
 	game.start_level(3)
 	await frames(4)

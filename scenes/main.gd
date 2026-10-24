@@ -116,7 +116,7 @@ func enter_level(number: int) -> void:
 	else:
 		label_at("MIDAIR SWITCHBACK",Vector2(280,74),34)
 		label_at("TWO SHOTS, ONE FLIGHT",Vector2(300,130),24)
-		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and fall in.\n3. While flying: RED on the far wall, then BLUE on the revealed floor.\n\nPlace BLUE before falling below its floor. Keep your flight speed.\nThe next exit turns you upward; steer RIGHT above the high ledge.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
+		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and fall in.\n3. While flying: RED on the far wall, then BLUE on the lower side floor.\n\nThe lower BLUE floor gives more time to aim both shots.\nThe next exit points straight UP. Hold D immediately to reach the ledge.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
 	button("START ROOM",Vector2(340,410),func(): start_level(number))
 	button("BACK",Vector2(340,462),level_select)
 
@@ -124,7 +124,7 @@ func instructions() -> void:
 	clear_panel()
 	backdrop()
 	label_at("HOW TO PLAY",Vector2(330,70),34)
-	label_at("A / D    Run and steer in the air\nSPACE    Jump (hold for a higher jump)\nLMB / RMB    Shoot red / blue portals, even in midair\nR    Retry from checkpoint\nESC    Pause     |     F11    Fullscreen\n\nPale surfaces accept portals. Walls block shots.\nTwo portals open a passage; momentum changes direction.\nFalling farther gives a faster launch.\nLand on a guard from above; side contact is fatal.",Vector2(170,135),21)
+	label_at("A / D    Run and steer in the air (release to gently slow)\nSPACE    Jump (hold for a higher jump)\nLMB / RMB    Shoot red / blue portals, even in midair\nR    Retry from checkpoint\nESC    Pause     |     F11    Fullscreen\n\nPale surfaces accept portals. Walls block shots.\nPortals keep speed; the exit sets its direction.\nFalling farther gives a faster launch.\nLand on a guard from above; side contact is fatal.",Vector2(170,135),21)
 	button("BACK",Vector2(340,458),menu)
 
 func settings() -> void:

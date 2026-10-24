@@ -50,8 +50,10 @@ func _physics_process(delta: float) -> void:
 		var acceleration := 2300.0 if axis == 0 else 1400.0
 		velocity.x = move_toward(velocity.x, axis * 210, acceleration * delta)
 	else:
-		# Preserve launch momentum; inputs change it gradually rather than clamping.
-		if axis != 0 and (absf(velocity.x) < 210 or signf(velocity.x) != axis):
+		# Gently settle released horizontal drift without clamping a fast launch.
+		if axis == 0:
+			velocity.x = move_toward(velocity.x, 0, 90 * delta)
+		elif absf(velocity.x) < 210 or signf(velocity.x) != axis:
 			velocity.x += axis * 380 * delta
 	velocity.y += 900 * delta
 	if buffer > 0 and coyote > 0:

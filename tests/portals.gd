@@ -10,7 +10,10 @@ func _initialize() -> void:
 		for b in normals:
 			var v: Vector2 = -a * 765 + Vector2(-a.y, a.x) * 123
 			var out: Vector2 = script.transform_velocity(v, a, b)
-			if absf(out.length() - v.length()) > 0.01 or absf(out.dot(b) - 765) > 0.01:
+			if not out.is_equal_approx(b * v.length()):
 				failed += 1
+			for sample in [Vector2.ZERO, -a * 0.01 + Vector2(-a.y,a.x) * 40, -a * 2000]:
+				var redirected: Vector2 = script.transform_velocity(sample,a,b)
+				if not redirected.is_equal_approx(b * sample.length()): failed += 1
 	print("PORTAL_VECTOR_TEST_FAILURES=", failed)
 	quit(0 if failed == 0 else 1)

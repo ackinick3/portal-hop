@@ -9,7 +9,7 @@ PASS: Repeated room switches keep a fixed audio pool
 PASS: Nearby facing red wall portal places legally
 PASS: Nearby facing blue wall portal places legally
 PASS: Continuous traversal stays finite and active for 600 physics frames
-PASS: Close-portal loop preserves horizontal launch speed
+PASS: Close-portal loop remains bounded with gentle horizontal drag
 PASS: Close-portal loop does not trap or kill player
-CONTINUOUS_TRANSFERS=54
+CONTINUOUS_TRANSFERS=49
 STABILITY_TEST_FAILURES=0

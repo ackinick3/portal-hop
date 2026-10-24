@@ -15,8 +15,8 @@ var shot_traces: Array[Dictionary] = []
 static func tangent(n: Vector2) -> Vector2:
 	return Vector2(-n.y, n.x)
 
-static func transform_velocity(v: Vector2, n_in: Vector2, n_out: Vector2) -> Vector2:
-	return -v.dot(n_in) * n_out + v.dot(tangent(n_in)) * tangent(n_out)
+static func transform_velocity(v: Vector2, _n_in: Vector2, n_out: Vector2) -> Vector2:
+	return n_out * v.length()
 
 func configure(blocks: Array[Rect2], surfaces: Array[Dictionary]) -> void:
 	solids = blocks

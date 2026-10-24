@@ -1,0 +1,25 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 573.24 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060 Laptop GPU
+
+PORTAL_HOP_READY
+DISPLAY_PROBE requested=(1280, 720) visible=[P: (0.0, 0.0), S: (960.0, 540.0)] scale=(960, 540) aspect=1 transform=[X: (1.333333, 0.0), Y: (0.0, 1.333333), O: (0.0, 0.0)]
+PASS: Resizing preserves 960x540 logical view
+MOUSE_PROBE expected=(180.0, 90.0) actual=(116.25, 129.75)
+FAIL: Mouse aiming maps correctly through window letterboxing
+PASS: Same mouse target stays shootable at each window size
+DISPLAY_PROBE requested=(1000, 700) visible=[P: (0.0, 0.0), S: (960.0, 540.0)] scale=(960, 540) aspect=1 transform=[X: (1.041667, 0.0), Y: (0.0, 1.040741), O: (0.0, 69.0)]
+PASS: Resizing preserves 960x540 logical view
+MOUSE_PROBE expected=(180.0, 90.0) actual=(155.52, 100.8896)
+FAIL: Mouse aiming maps correctly through window letterboxing
+PASS: Same mouse target stays shootable at each window size
+DISPLAY_PROBE requested=(800, 800) visible=[P: (0.0, 0.0), S: (960.0, 540.0)] scale=(960, 540) aspect=1 transform=[X: (0.833333, 0.0), Y: (0.0, 0.833333), O: (0.0, 175.0)]
+PASS: Resizing preserves 960x540 logical view
+MOUSE_PROBE expected=(180.0, 90.0) actual=(223.2, 56.3999)
+FAIL: Mouse aiming maps correctly through window letterboxing
+FAIL: Same mouse target stays shootable at each window size
+FULLSCREEN_MODE=3 visible=[P: (0.0, 0.0), S: (960.0, 540.0)]
+PASS: Fullscreen keeps the same logical view
+WINDOWED_MODE=0 visible=[P: (0.0, 0.0), S: (960.0, 540.0)]
+PASS: Returning to window restores fixed logical view
+PASS: Display test restores original desktop cursor position
+DISPLAY_TEST_FAILURES=4

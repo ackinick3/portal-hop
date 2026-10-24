@@ -19,10 +19,10 @@ func run() -> void:
 	var game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
-	for setting in [Vector3(6,320,-4),Vector3(18,320,0),Vector3(30,320,4),Vector3(18,420,0),Vector3(-1,320,0)]:
+	for setting in [Vector3(18,280,-8),Vector3(36,280,0),Vector3(54,280,8),Vector3(30,420,0),Vector3(-1,280,0)]:
 		var shot_gap := int(setting.x)
-		var wall_target := Vector2(780,430 + setting.z)
-		var floor_target := Vector2(300 + setting.z,300)
+		var wall_target := Vector2(780,440 + setting.z)
+		var floor_target := Vector2(240 + setting.z,380)
 		game.start_level(6)
 		await frames(4)
 		check(game.portals.candidate(game.gun_origin(),floor_target,1).is_empty(),"New floor exit is occluded from spawn")
@@ -49,7 +49,7 @@ func run() -> void:
 				if first_speed == 0:
 					first_speed = game.player.velocity.length()
 					release()
-					check(game.portals.candidate(game.gun_origin(),floor_target,1).is_empty(),"Baffle hides new exit immediately after first launch")
+					check(not game.portals.candidate(game.gun_origin(),floor_target,1).is_empty(),"Lower exit can be aimed at immediately after the first launch")
 				if shot_gap >= 0 and not airborne_red and game.player.position.x > setting.y:
 					airborne_red = not game.player.is_on_floor() and game.portals.shoot(game.gun_origin(),wall_target,0)
 					if airborne_red: red_frame = i
@@ -60,7 +60,7 @@ func run() -> void:
 				if up_speed == 0:
 					up_speed = -game.player.velocity.y
 					print("SWITCHBACK_EXIT ",game.player.position," v=",game.player.velocity)
-				if game.player.position.y < 40:
+					check(absf(game.player.velocity.x) < 0.01,"Upward exit has no inherited sideways drift")
 					Input.action_press("move_right")
 				if game.player.is_on_floor() and absf(game.player.position.y - 45) < 1: landed = true
 			if game.state == "won" or game.deaths > 0: break
@@ -83,12 +83,12 @@ func run() -> void:
 	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(180,170)),"Seventh guidance starts with its own initial wall")
 	game.portals.shoot(game.gun_origin(),Vector2(180,170),1)
 	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(530,480)),"Seventh guidance then suggests the initial floor")
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(780,430)),"First launch highlights replacement RED wall")
+	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(780,440)),"First launch highlights replacement RED wall")
 	# Inspect later marker states using the actual successful placement data already tested above.
-	game.portals.doors[0] = {"p":Vector2(780,430),"n":Vector2.LEFT}
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(300,300)),"Replacing RED advances to revealed BLUE floor")
-	game.portals.doors[1] = {"p":Vector2(300,300),"n":Vector2.UP}
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(780,430)),"Completed airborne pair highlights entry wall")
+	game.portals.doors[0] = {"p":Vector2(780,440),"n":Vector2.LEFT}
+	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(240,380)),"Replacing RED advances to lower BLUE floor")
+	game.portals.doors[1] = {"p":Vector2(240,380),"n":Vector2.UP}
+	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(780,440)),"Completed airborne pair highlights entry wall")
 	check(tutorial.guidance(6,game.portals.doors,2,game.player.position).markers.is_empty(),"Upward launch clears setup markers")
 	for direction in ["move_left","move_right"]:
 		game.start_level(6)

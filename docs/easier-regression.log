@@ -1,0 +1,523 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gravity lands player on solid floor
+PASS: Right input moves player
+PASS: Jump rises above floor
+PASS: Jump returns to floor
+PASS: Player cannot cross solid wall
+PASS: Air control preserves launch speed above run cap
+PASS: Death restores spawn
+MOVEMENT_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_VECTOR_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Invalid material rejected
+PASS: Pale edge hit shifts whole portal inward
+PASS: Wall occludes target
+PASS: Valid red floor placement
+PASS: Single door stays inactive
+PASS: Valid blue floor placement
+PASS: Pair activates
+PASS: Floor exit reverses fall upwards
+PASS: Real floor opening permits physical traversal
+PASS: Same color replaces existing door
+PASS: Old same color door removed
+PASS: Overlapping doors rejected
+PASS: Failed placement retains previous door
+PASS: Reset removes both doors
+PORTAL_INTEGRATION_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PHYSICAL_ORIENTATION_PAIRS=16 FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Adjacent 50px faces merge into valid 100px portal surface
+PASS: Second continuous surface accepts portal
+PASS: Moving outwards cannot enter portal
+PASS: Low normal speed permits traversal
+PASS: Low speed traversal preserves total speed
+PASS: Stationary overlap cannot repeatedly trigger
+PASS: Reverse blue-to-red entry works after full exit separation
+PASS: No portals means no traversal
+PASS: Obstructed aperture edge rejects placement
+PASS: 30000px/s movement cannot tunnel through 2px solid wall
+EDGE_CASE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Edge shot accepted: (0.0, -1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, -1.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, -1.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (0.0, 1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, 1.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, 1.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (-1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (-1.0, 0.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (-1.0, 0.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (1.0, 0.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (1.0, 0.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Diagonal corner hit can use the visible valid floor face
+PASS: Corner placement keeps floor normal and whole inward aperture
+PASS: Blue portal can snap near wall edge
+PASS: Overlap uses shifted center and still rejects the second color
+PASS: Shifted portal still requires clearance for the full aperture
+PASS: Blocked edge placement never opens a collision gap
+PLACEMENT_EDGE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Menu starts room
+PASS: Room 1 red visible from spawn
+PASS: Room 1 blue visible from spawn
+PASS: Room 1 physically crosses via floor portals
+PASS: Room 1 reaches goal using movement input
+PASS: Room 2 wall target has line of sight
+ROOM2_END (867.9208, 435.5686) speed=780.0 deaths=0
+PASS: Room 2 produces real horizontal launch
+PASS: Room 2 launch lands and reaches goal
+ROOM3_END (856.6264, 386.0493) deaths=0
+PASS: Room 3 ordinary action route reaches goal
+PASS: Downward contact stomps guard
+PASS: Death resets guard and portals
+PASS: Fast side contact is fatal
+GAME_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room 3 ceiling target visible from upper position
+PASS: Room 3 player reaches lower firing position
+PASS: Room 3 floor target visible from lower position
+PASS: Ceiling portal survives repositioning
+PASS: Room 3 physically exits downward from ceiling
+CEILING_END (468.0016, 376.5625) guard=(462.7515, 413.0) alive=false deaths=0
+PASS: Ceiling drop stomps guard
+PASS: Room 3 portal route reaches goal
+CEILING_ROUTE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+RESPAWN_HISTORY_PASS=true deaths=1 position=(140.0, 335.0)
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Ground release has a small 8.2-10.2px slide at full run speed
+GROUND_SLIDE_PX=8.71528625488281
+PASS: Air release gently slows horizontal drift by about 15px/s over 20 frames
+PASS: Air drag leaves vertical gravity unchanged
+PASS: Reverse air control remains gradual
+PASS: No-input fast launch decays gently without being clamped to run speed
+PASS: Air release stops small drift without reversing it
+PASS: Air drag never damps an upward launch
+PASS: Gun supports mouse-target aiming
+PASS: Gun aims toward (1.0, 0.0)
+PASS: Gun aims toward (0.0, -1.0)
+PASS: Gun aims toward (-1.0, 0.0)
+PASS: Gun aims toward (0.0, 1.0)
+PASS: Gun aims toward (0.707107, -0.707107)
+PASS: Cursor on hand keeps a finite aim direction
+PASS: Shot opens portal on first valid wall
+PASS: Shot creates visible trajectory data
+PASS: One shot creates one trace
+PASS: Trace stops at nearest wall, not a wall behind it
+PASS: Trace begins at visible muzzle
+PASS: Successful red shot keeps its color and impact state
+PASS: Shot trace fades out after 0.18 seconds
+PASS: Invalid material rejects portal
+PASS: Invalid shot still stops at the obstruction
+PASS: Death/reset clears shot feedback
+FEEDBACK_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: First room teaches red shot first
+PASS: Second room starts with upper wall portal
+PASS: Second room explains floor shot is blocked until leaving ledge
+PASS: Second room explains braking above floor portal
+PASS: After launch tutorial guides player to exit
+PASS: Third room teaches ceiling shot while on high platform
+PASS: Third room retains ordinary action route
+PASS: Third room describes safe repositioning for floor shot
+PASS: Third room explains downward stomp after ceiling exit
+PASS: Fourth room begins with visible right floor exit
+PASS: Fourth room warns to step clear before wall shot
+PASS: Fourth room has its own post-transfer guidance
+TUTORIAL_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Player has visual-only action feedback
+PASS: Real landing triggers compression
+PASS: Landing compression settles back to normal
+PASS: Visual feedback leaves collision size unchanged
+PASS: Stomp retains original bounce velocity
+PASS: Stomp triggers upward stretch
+PASS: Death clears old action effects
+PASS: Real teleport triggers player flash
+POLISH_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: 200 cues use at most ten reusable players
+PASS: Audio has explicit resource shutdown
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Late cue cannot allocate players after shutdown
+AUDIO_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Pause freezes player and guard
+PASS: Pause freezes timer and action animation
+PASS: Resume advances timer and settles animation
+PASS: Death resets tutorial transfer state
+PASS: Repeated room switches keep a fixed audio pool
+PASS: Nearby facing red wall portal places legally
+PASS: Nearby facing blue wall portal places legally
+PASS: Continuous traversal stays finite and active for 600 physics frames
+PASS: Close-portal loop remains bounded with gentle horizontal drag
+PASS: Close-portal loop does not trap or kill player
+CONTINUOUS_TRANSFERS=49
+STABILITY_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+WINDOW_CLOSE_PATH_STARTED
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Index 3 is the new fourth room, not a copy of room 3
+PORTAL_HOP_READY
+PASS: Exit surface is visible from spawn: (300.0, 830.0)
+ROOM4_EXIT (819.9499, 284.0) v=(0.0, -483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (300.0, 830.0) ceiling=false exit_velocity=(0.0, -483.0373) end=(611.7882, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (295.0, 820.0)
+ROOM4_EXIT (804.95, 284.0) v=(0.0, -483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (295.0, 820.0) ceiling=false exit_velocity=(0.0, -483.0373) end=(610.7883, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (305.0, 840.0)
+ROOM4_EXIT (834.95, 284.0) v=(0.0, -483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (305.0, 840.0) ceiling=false exit_velocity=(0.0, -483.0373) end=(611.0383, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (300.0, 540.0)
+ROOM4_EXIT (550.05, 176.0) v=(0.0, 483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (300.0, 540.0) ceiling=true exit_velocity=(0.0, 483.0373) end=(551.7917, 224.4035) landed=false deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Fourth room retry returns to starting ledge
+PASS: Fourth room retry clears both portals
+PASS: Invalid room indices return no room
+LEVEL4_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Fifth map exists and is distinct
+PORTAL_HOP_READY
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=0 launch=780.001770019531 guard_alive=false end=(899.001, 293.6875) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Forward launch stomps the guard without the old early braking
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=20 launch=780.001770019531 guard_alive=false end=(899.001, 293.6875) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Forward launch stomps the guard without the old early braking
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=40 launch=780.001770019531 guard_alive=false end=(899.001, 293.6875) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Forward launch stomps the guard without the old early braking
+PASS: Fifth guidance starts with its own wall marker
+PASS: Fifth guidance advances to its own floor marker
+PASS: Launch clears placement markers
+PASS: Retry fixture places wall portal
+PASS: Retry fixture places floor portal after leaving ledge
+PASS: Death restores fifth-room guard to its own patrol
+PASS: Fifth-room retry restores start and clears both placed portals
+PASS: Third-room guard keeps original spawn and patrol
+LEVEL5_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Sixth room exists as a new map
+PORTAL_HOP_READY
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=2 p=(468.529, 82.813) success=true
+ROOM6_ROUTE delay=2 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=16 p=(468.529, 184.7576) success=true
+ROOM6_ROUTE delay=16 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=30 p=(468.529, 298.9522) success=true
+ROOM6_ROUTE delay=30 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=45 p=(468.529, 434.8975) success=true
+ROOM6_ROUTE delay=45 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+ROOM6_ROUTE delay=-1 first=810.060668945313 second=0.0 transfers=0 end=(868.9249, 521.2209) deaths=1
+PASS: Comparison route performs a real single launch from a high wall exit
+PASS: Standard single launch falls short of the final platform
+PASS: Sixth guidance begins with the ceiling target
+PASS: Sixth guidance advances to the floor target
+PASS: First transfer highlights airborne wall replacement
+PASS: Second transfer clears setup markers
+PASS: Retry fixture places floor portal from a legal airborne position
+PASS: After airborne replacement the retained red portal is highlighted
+PASS: Sixth retry clears both portals and transfer stage
+PASS: R returns to starting ledge directly without a new briefing
+PASS: Sixth room has an entry briefing before gameplay
+PASS: Briefing pauses gameplay and offers a clear start button
+PASS: Briefing start opens the real sixth map
+PASS: Paused sixth room restarts directly without a briefing
+LEVEL6_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Seventh room exists as a distinct map
+PORTAL_HOP_READY
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=18 p=(402.7, 198.0687)
+SWITCHBACK_EXIT (236.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(18.0, 280.0, -8.0) first=802.5 up=1007.03637695313 landed=true end=(350.6914, 44.92506) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=36 p=(518.4063, 252.7562)
+SWITCHBACK_EXIT (240.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(36.0, 280.0, 0.0) first=802.5 up=1007.03637695313 landed=true end=(351.1914, 44.92506) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=54 p=(632.0875, 327.6937)
+SWITCHBACK_EXIT (244.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(54.0, 280.0, 8.0) first=802.5 up=1007.03637695313 landed=true end=(351.6913, 44.92506) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=30 p=(613.2813, 307.1312)
+SWITCHBACK_EXIT (240.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(30.0, 420.0, 0.0) first=802.5 up=1007.03637695313 landed=true end=(351.1914, 44.92506) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+ROOM7_ROUTE setting=(-1.0, 280.0, 0.0) first=802.5 up=0.0 landed=false end=(768.925, 464.9805) deaths=0
+PASS: Initial pair alone cannot complete the standard route
+PASS: R clears both doors and relay stage after a failed first launch
+PASS: R directly restores seventh-room spawn
+PASS: Seventh guidance starts with its own initial wall
+PASS: Seventh guidance then suggests the initial floor
+PASS: First launch highlights replacement RED wall
+PASS: Replacing RED advances to lower BLUE floor
+PASS: Completed airborne pair highlights entry wall
+PASS: Upward launch clears setup markers
+PASS: Ordinary jump chain cannot bypass the relay: move_left
+PASS: Ordinary jump chain cannot bypass the relay: move_right
+LEVEL7_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Legacy progress is restored through the actual load path
+PASS: Old three-room progress and volume survive without clearing
+PASS: Fourth room appears locked before beating room 3
+PASS: Beating room 3 unlocks room 4
+PASS: Room 3 results now offer next room
+PASS: Next-room button starts actual fourth map
+PASS: Invalid room request leaves current room intact
+PASS: Beating room 4 unlocks room 5
+PASS: Room 4 results offer room 5
+PASS: Next-room button starts actual fifth map
+PASS: Beating room 5 unlocks room 6
+PASS: Room 5 results offer room 6
+PASS: Room 6 entry teaches airborne replacement before starting
+PASS: Briefing opens the actual sixth map
+PASS: Beating room 6 unlocks room 7
+PASS: Room 6 results offer room 7
+PASS: Room 7 entry explains the two airborne shots
+PASS: Briefing opens the actual seventh map
+PASS: Room 7 is the final room
+PASS: Unlocked room 4 can be selected
+PASS: Old four-room progress is preserved without assuming completion
+PASS: Old save unlocks room 5 only after beating room 4
+PASS: Five-room progress and volume restore correctly
+PASS: Unlocked fifth room can be selected
+PASS: Old five-room save does not assume room 5 was completed
+PASS: Six-room progress, volume and selection restore correctly
+PASS: Selecting room 6 also shows its briefing
+PASS: Old six-room progress keeps room 7 locked until room 6 is completed
+PASS: Seven-room progress and volume restore correctly
+PASS: Seventh selection opens its own briefing, not room 6's
+PROGRESSION_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+LAND (128.0264, 204.9887)
+JUMP (141.6709, 204.9251)
+LAND (315.5878, 234.9253)
+JUMP (333.0878, 234.9251)
+LAND (564.0883, 454.9252)
+NO_PORTAL_BYPASS room=4 blocked=true final_position=(810.8383, 454.9251)
+LAND (260.0264, 129.9887)
+JUMP (312.0999, 129.9251)
+LAND (260.0264, 129.9887)
+JUMP (312.0999, 129.9251)
+NO_PORTAL_BYPASS room=5 blocked=true final_position=(523.8504, 250.9243)
+LAND (665.0264, 114.9887)
+JUMP (717.1002, 114.9251)
+LAND (728.9249, 114.9243)
+JUMP (728.9999, 114.9725)
+LAND (728.9777, 114.9722)
+JUMP (728.9777, 114.9722)
+LAND (728.9777, 114.9719)
+JUMP (728.9777, 114.9719)
+LAND (728.9777, 114.9717)
+NO_PORTAL_BYPASS room=6 blocked=true final_position=(728.9777, 114.9717)
+JUMP (728.9777, 114.9717)
+ALL 21 HEADLESS TEST SUITES PASSED
+For GPU/window tests: run Godot --path . --script tests/display.gd

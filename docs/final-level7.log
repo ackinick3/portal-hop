@@ -4,51 +4,55 @@ PASS: Seventh room exists as a distinct map
 PORTAL_HOP_READY
 PASS: New floor exit is occluded from spawn
 PASS: Initial wall portal is visible from spawn
-PASS: Baffle hides new exit immediately after first launch
-AIR_PAIR gap=6 p=(360.75, 196.0973)
-SWITCHBACK_EXIT (303.2802, 284.0) v=(-673.6666, -810.0)
-ROOM7_ROUTE setting=(6.0, 320.0, -4.0) first=810.115295410156 up=810.0 landed=true end=(321.3709, 44.92506) deaths=0
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=18 p=(402.7, 198.0687)
+SWITCHBACK_EXIT (236.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(18.0, 280.0, -8.0) first=802.5 up=1007.03637695313 landed=true end=(350.6914, 44.92506) deaths=0
 PASS: Both replacement shots happen during the first flight
 PASS: Second passage converts horizontal launch into upward speed
 PASS: Route lands on final platform and completes without death
 PASS: New floor exit is occluded from spawn
 PASS: Initial wall portal is visible from spawn
-PASS: Baffle hides new exit immediately after first launch
-AIR_PAIR gap=18 p=(441.75, 225.089)
-SWITCHBACK_EXIT (303.2802, 284.0) v=(-673.6666, -810.0)
-ROOM7_ROUTE setting=(18.0, 320.0, 0.0) first=810.115295410156 up=810.0 landed=true end=(321.3709, 44.92506) deaths=0
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=36 p=(518.4063, 252.7562)
+SWITCHBACK_EXIT (240.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(36.0, 280.0, 0.0) first=802.5 up=1007.03637695313 landed=true end=(351.1914, 44.92506) deaths=0
 PASS: Both replacement shots happen during the first flight
 PASS: Second passage converts horizontal launch into upward speed
 PASS: Route lands on final platform and completes without death
 PASS: New floor exit is occluded from spawn
 PASS: Initial wall portal is visible from spawn
-PASS: Baffle hides new exit immediately after first launch
-AIR_PAIR gap=30 p=(522.75, 263.0807)
-SWITCHBACK_EXIT (307.2802, 284.0) v=(-673.6666, -810.0)
-ROOM7_ROUTE setting=(30.0, 320.0, 4.0) first=810.115295410156 up=810.0 landed=true end=(321.371, 44.92506) deaths=0
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=54 p=(632.0875, 327.6937)
+SWITCHBACK_EXIT (244.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(54.0, 280.0, 8.0) first=802.5 up=1007.03637695313 landed=true end=(351.6913, 44.92506) deaths=0
 PASS: Both replacement shots happen during the first flight
 PASS: Second passage converts horizontal launch into upward speed
 PASS: Route lands on final platform and completes without death
 PASS: New floor exit is occluded from spawn
 PASS: Initial wall portal is visible from spawn
-PASS: Baffle hides new exit immediately after first launch
-AIR_PAIR gap=18 p=(543.0, 268.9849)
-SWITCHBACK_EXIT (303.2802, 284.0) v=(-673.6666, -810.0)
-ROOM7_ROUTE setting=(18.0, 420.0, 0.0) first=810.115295410156 up=810.0 landed=true end=(321.3709, 44.92506) deaths=0
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=30 p=(613.2813, 307.1312)
+SWITCHBACK_EXIT (240.0384, 364.0) v=(0.0, -1007.036)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(30.0, 420.0, 0.0) first=802.5 up=1007.03637695313 landed=true end=(351.1914, 44.92506) deaths=0
 PASS: Both replacement shots happen during the first flight
 PASS: Second passage converts horizontal launch into upward speed
 PASS: Route lands on final platform and completes without death
 PASS: New floor exit is occluded from spawn
 PASS: Initial wall portal is visible from spawn
-PASS: Baffle hides new exit immediately after first launch
-ROOM7_ROUTE setting=(-1.0, 320.0, 0.0) first=810.115295410156 up=0.0 landed=false end=(768.9251, 464.998) deaths=0
+PASS: Lower exit can be aimed at immediately after the first launch
+ROOM7_ROUTE setting=(-1.0, 280.0, 0.0) first=802.5 up=0.0 landed=false end=(768.925, 464.9805) deaths=0
 PASS: Initial pair alone cannot complete the standard route
 PASS: R clears both doors and relay stage after a failed first launch
 PASS: R directly restores seventh-room spawn
 PASS: Seventh guidance starts with its own initial wall
 PASS: Seventh guidance then suggests the initial floor
 PASS: First launch highlights replacement RED wall
-PASS: Replacing RED advances to revealed BLUE floor
+PASS: Replacing RED advances to lower BLUE floor
 PASS: Completed airborne pair highlights entry wall
 PASS: Upward launch clears setup markers
 PASS: Ordinary jump chain cannot bypass the relay: move_left

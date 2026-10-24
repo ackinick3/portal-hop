@@ -55,7 +55,7 @@ func run() -> void:
 	root.add_child(player)
 	await frames(600)
 	check(count[0] >= 20 and count[0] <= 70,"Continuous traversal stays finite and active for 600 physics frames")
-	check(player.position.is_finite() and absf(player.velocity.x + 900) < 0.01,"Close-portal loop preserves horizontal launch speed")
+	check(player.position.is_finite() and player.velocity.x < -400 and player.velocity.x > -950,"Close-portal loop remains bounded with gentle horizontal drag")
 	check(player.dead_time == 0,"Close-portal loop does not trap or kill player")
 	print("CONTINUOUS_TRANSFERS=",count[0])
 	player.queue_free()

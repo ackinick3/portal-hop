@@ -32,6 +32,9 @@ func run() -> void:
 			if not crossed:
 				failures += 1
 				print("FAIL PHYSICAL ",n_in," -> ",n_out," pos=",player.position)
+			elif absf(player.velocity.dot(Vector2(-n_out.y,n_out.x))) > 0.01 or player.velocity.dot(n_out) <= 0:
+				failures += 1
+				print("FAIL EXIT DIRECTION ",n_in," -> ",n_out," velocity=",player.velocity)
 			room.queue_free()
 			await process_frame
 	print("PHYSICAL_ORIENTATION_PAIRS=16 FAILURES=",failures)

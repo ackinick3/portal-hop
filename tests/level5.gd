@@ -43,12 +43,6 @@ func run() -> void:
 					release()
 					Input.action_press("move_right")
 			else:
-				if delay < 40 and game.enemy.alive and game.player.position.x > 260:
-					Input.action_release("move_right")
-					Input.action_press("move_left")
-				elif not game.enemy.alive:
-					Input.action_release("move_left")
-					Input.action_press("move_right")
 				if game.player.is_on_floor() and not Input.is_action_pressed("jump") and game.player.position.x > 660:
 					Input.action_press("jump")
 					jump_hold = 50
@@ -63,7 +57,7 @@ func run() -> void:
 		print("ROOM5_ROUTE delay=",delay," launch=",max_speed," guard_alive=",game.enemy.alive," end=",game.player.position," deaths=",game.deaths)
 		check(floor_placed and launched and max_speed > 650,"Fifth route uses actual gravity launch")
 		check(game.state == "won" and game.deaths == 0,"Fifth route reaches the goal without death")
-		check(not game.enemy.alive if delay < 40 else game.enemy.alive,"Braking route stomps; forward route legally bypasses guard")
+		check(not game.enemy.alive,"Forward launch stomps the guard without the old early braking")
 	var tutorial = load("res://ui/tutorial.gd")
 	game.start_level(4)
 	await frames(4)

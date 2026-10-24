@@ -7,7 +7,7 @@ PASS: Room 1 blue visible from spawn
 PASS: Room 1 physically crosses via floor portals
 PASS: Room 1 reaches goal using movement input
 PASS: Room 2 wall target has line of sight
-ROOM2_END (926.9752, 454.9251) speed=780.0 deaths=0
+ROOM2_END (867.9208, 435.5686) speed=780.0 deaths=0
 PASS: Room 2 produces real horizontal launch
 PASS: Room 2 launch lands and reaches goal
 ROOM3_END (856.6264, 386.0493) deaths=0

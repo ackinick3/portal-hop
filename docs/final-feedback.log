@@ -2,9 +2,12 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
 PASS: Ground release has a small 8.2-10.2px slide at full run speed
 GROUND_SLIDE_PX=8.71528625488281
-PASS: Ground braking adjustment leaves airborne drift unchanged
-PASS: Ground braking adjustment leaves airborne reverse control unchanged
-PASS: No-input launch above run speed retains momentum
+PASS: Air release gently slows horizontal drift by about 15px/s over 20 frames
+PASS: Air drag leaves vertical gravity unchanged
+PASS: Reverse air control remains gradual
+PASS: No-input fast launch decays gently without being clamped to run speed
+PASS: Air release stops small drift without reversing it
+PASS: Air drag never damps an upward launch
 PASS: Gun supports mouse-target aiming
 PASS: Gun aims toward (1.0, 0.0)
 PASS: Gun aims toward (0.0, -1.0)

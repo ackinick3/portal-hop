@@ -24,11 +24,13 @@ func run() -> void:
 	var ceiling_exit := false
 	for i in 240:
 		await physics_frame
-		if game.player.position.x > 400 and game.player.position.y < 260:
+		if game.transfers > 0:
 			ceiling_exit = true
 			Input.action_release("move_right")
-			# Preserve the portal's tangential direction; allow normal air steering toward guard.
-			Input.action_press("move_right")
+			Input.action_release("move_left")
+			# Exit is purely downward; steer toward the moving guard after coming out.
+			if game.player.position.x > game.enemy.position.x + 6: Input.action_press("move_left")
+			elif game.player.position.x < game.enemy.position.x - 6: Input.action_press("move_right")
 		if game.deaths > 0 or not game.enemy.alive: break
 	for action in ["move_left","move_right","jump"]: Input.action_release(action)
 	check(ceiling_exit,"Room 3 physically exits downward from ceiling")

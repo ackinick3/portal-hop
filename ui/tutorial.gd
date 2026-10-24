@@ -8,12 +8,12 @@ static func guidance(level: int, doors: Array[Dictionary], transfers: int, posit
 	var blue := Color("4ba9ff")
 	if level == 6:
 		if transfers >= 2:
-			return {"text":"Ride the upward launch. Once above the goal ledge, steer RIGHT and land. R retries.", "markers":[]}
+			return {"text":"The exit points straight UP. Hold RIGHT now to land on the wide goal ledge. R retries.", "markers":[]}
 		if transfers == 1:
 			if doors[0].is_empty() or doors[0].n != Vector2.LEFT:
-				return {"text":"First airborne shot: move RED to the far wall ahead.", "markers":[marker(Vector2(780,430),red,"RED AHEAD",Vector2.LEFT)]}
+				return {"text":"First airborne shot: move RED to the far wall ahead.", "markers":[marker(Vector2(780,440),red,"RED AHEAD",Vector2.LEFT)]}
 			if doors[1].is_empty() or doors[1].n != Vector2.UP:
-				return {"text":"Second airborne shot: move BLUE to the floor revealed past the baffle.", "markers":[marker(Vector2(300,300),blue,"BLUE REVEALED",Vector2.UP)]}
+				return {"text":"Second airborne shot: move BLUE to the lower side floor. You have more time before dropping below it.", "markers":[marker(Vector2(240,380),blue,"BLUE LOWER FLOOR",Vector2.UP)]}
 			return {"text":"Both shots ready. Keep your launch speed and enter the wall RED.", "markers":[marker(doors[0].p,red,"TURN UP",Vector2.LEFT)]}
 		if doors[1].is_empty():
 			return {"text":"Place BLUE on the left wall before leaving the starting ledge.", "markers":[marker(Vector2(180,170),blue,"BLUE WALL",Vector2.RIGHT)]}
@@ -34,7 +34,7 @@ static func guidance(level: int, doors: Array[Dictionary], transfers: int, posit
 		return {"text":"Fall through RED. After exiting the ceiling, shoot BLUE at the left wall while airborne.", "markers":[marker(doors[0].p,red,"FIRST FALL",Vector2.UP)]}
 	if level == 4:
 		if transfers > 0:
-			return {"text":"Steer LEFT to descend onto the guard, then steer RIGHT after the bounce. Or land beyond it and jump to the exit.", "markers":[]}
+			return {"text":"Keep moving RIGHT to descend onto the guard, then continue after the bounce toward the exit.", "markers":[]}
 		if doors[1].is_empty():
 			return {"text":"Place BLUE high on the left wall to clear the starting ledge.", "markers":[marker(Vector2(120,90),blue,"BLUE HIGH",Vector2.RIGHT)]}
 		if doors[0].is_empty():
@@ -42,6 +42,8 @@ static func guidance(level: int, doors: Array[Dictionary], transfers: int, posit
 		return {"text":"Fall into RED for the launch. R retries and restores the guard.", "markers":[marker(doors[0].p,red,"FALL IN",Vector2.UP)]}
 	if level == 3:
 		if transfers > 0:
+			if not doors[1].is_empty() and doors[1].n == Vector2.DOWN:
+				return {"text":"The ceiling exit points DOWN. Steer RIGHT toward the raised goal.", "markers":[]}
 			return {"text":"TURN COMPLETE! Steer LEFT to land on the raised platform, then walk to the green exit. Missed it? R retries.", "markers":[]}
 		if doors[1].is_empty():
 			return {"text":"1 / 3   RMB: place BLUE on the upper right floor. Optional: try the ceiling for a different exit direction.", "markers":[marker(Vector2(830,300),blue,"BLUE FLOOR",Vector2.UP)]}
