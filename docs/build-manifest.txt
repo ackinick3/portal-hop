@@ -1,0 +1,7 @@
+Build: PortalHop.exe
+Godot: 4.7.2.stable.official.ed1daf0bf
+Architecture: Windows x86_64
+Bytes: 109295424
+SHA256: BA884BF11EE400B2D2083EBE000E2064CB19021A459FE29104336A0192469737
+Source tests: 8 suites passed; see final-*.log
+Graphical standalone exit: 0; see standalone-gui.log

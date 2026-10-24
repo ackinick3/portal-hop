@@ -1,17 +1,54 @@
 # Portal Hop
 
-Godot 4.7.2 / GDScript / Windows x64.
+Godot 4.7.2（官方稳定版）、GDScript、Windows x64，三关单机 MVP。
 
-## Current status
-Stage 0: environment and engine smoke test in progress. This is not yet a playable game.
+## 直接游玩
 
-## Run
-From this directory in PowerShell:
+双击 `builds/PortalHop.exe`。资源已嵌入 EXE，无须安装 Godot。
+
+- A / D：移动、有限空中调整
+- Space：跳跃，长按跳得更高
+- 鼠标左 / 右键：红 / 蓝门
+- R：死亡重试，清除门并复位敌人
+- Esc：暂停；F11：全屏切换
+- 只有浅色表面能放门；准星绿色表示当前红门可放，红色表示失败。
+- 设置支持主音量。进度与设置保存于 `%APPDATA%/Godot/app_userdata/Portal Hop/progress.cfg`。
+
+## 打开和运行源码
+
+在项目根目录运行 PowerShell：
 ```powershell
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64.exe --editor --path .
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path .
-& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --quit-after 120
 ```
 
-Original brief: docs/任务书.md. Downloaded tools are local and excluded from Git.
-Export templates and Windows export will be verified separately.
+逻辑视野 960×540，默认窗口 1280×720，保持 16:9。使用 OpenGL Compatibility。
+编辑器已通过实际启动检查。程序化几何图形和合成音效为本项目生成，无外部游戏素材。
+场景入口 `scenes/main.tscn`；地图 `levels/maps.gd`；角色和传送系统可复用。
+
+## 自动测试
+
+```powershell
+./tests/run.ps1
+```
+
+覆盖基础移动、墙碰撞、跳跃、真实门洞、射线遮挡、材质与边缘约束、同色替换、失败保留、相邻表面合并、全部 16 种朝向的向量及真实物理穿越、低速及双向传送、出口重入、30,000 px/s 薄墙、三关实际移动通关、敌人踩踏及侧面接触、死亡清门和敌人复位。
+第三关普通路线与天花板空降路线分别运行。测试不写入正式玩家进度。
+
+## 导出 Windows
+
+```powershell
+& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
+```
+
+使用 `export_presets.cfg` 指定的本地官方 Windows x64 模板；只从完整模板包提取 Windows 文件。
+便携引擎和模板在 tools 中，不修改系统 PATH，也不进入 Git。交给其他电脑开发时须自行从官方取得相同版本工具。
+
+## 试玩路线
+
+1. 第一关：起点直接向浅色地面 x≈300 放红门，向右岸 x≈720 放蓝门。向右移动并跳进红门，出蓝门后继续向右到绿色终点。左边阶梯可用于额外下落高度，不是必经路线。
+2. 第二关：从高台瞄准左墙靠近顶端 y≈90 放蓝门。走下高台右侧后，向下方 x≈465 放红门。用 A 逐渐刹住水平移动，落进红门。弹射后在右岸落地；越过终点时可以回走触发。
+3. 第三关普通路线：走下高台，在守卫附近跳起，从上方踩中或绕过，再跳过末端小坑。
+4. 第三关空降：先在高台向天花板 x≈510 放蓝门；从高台左侧下来，在下层向 x≈200 放红门。向右进入红门，从天花板下落时向守卫调整，踩踏后继续通关。
+
+完整阶段记录、地图调整原因、测试日志见 `docs/进度.md`；限制与人工验收见 `docs/已知问题.md`。

@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room 3 ceiling target visible from upper position
+PASS: Room 3 player reaches lower firing position
+PASS: Room 3 floor target visible from lower position
+PASS: Ceiling portal survives repositioning
+PASS: Room 3 physically exits downward from ceiling
+CEILING_END (441.8849, 376.5625) guard=(457.5014, 413.0) alive=false deaths=0
+PASS: Ceiling drop stomps guard
+PASS: Room 3 portal route reaches goal
+CEILING_ROUTE_FAILURES=0

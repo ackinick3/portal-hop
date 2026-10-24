@@ -147,7 +147,8 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 		# Full upright player plus margin must fit immediately outside the door.
 		var normal_half := 15.0 if hit.n.y != 0 else 11.0
 		var center: Vector2 = hit.p + hit.n * (normal_half + 2)
-		var clearance := Rect2(center - Vector2(12, 16), Vector2(24, 32))
+		var space := Vector2(72, 32) if hit.n.y != 0 else Vector2(24, 72)
+		var clearance := Rect2(center - space / 2, space)
 		for solid in solids:
 			if solid.intersects(clearance):
 				return {}
@@ -174,7 +175,7 @@ func transport(player: CharacterBody2D, before: Vector2) -> bool:
 		var locked: Dictionary = doors[exit_lock]
 		var n: Vector2 = locked.n
 		var extent := 15.0 if n.y != 0 else 11.0
-		if (player.position - locked.p).dot(n) > extent + 3 or absf((player.position - locked.p).dot(tangent(n))) > 36 + extent:
+		if (player.position - locked.p).dot(n) > extent + 0.5 or absf((player.position - locked.p).dot(tangent(n))) > 36 + extent:
 			exit_lock = -1
 	for i in 2:
 		if i == exit_lock:

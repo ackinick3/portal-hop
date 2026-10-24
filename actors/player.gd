@@ -32,6 +32,8 @@ func _physics_process(delta: float) -> void:
 		if dead_time <= 0:
 			position = spawn
 			velocity = Vector2.ZERO
+			previous_position = position
+			previous_velocity = Vector2.ZERO
 		queue_redraw()
 		return
 	var grounded := is_on_floor()
@@ -60,7 +62,9 @@ func _physics_process(delta: float) -> void:
 	previous_velocity = velocity
 	move_and_slide()
 	if portal_system != null:
-		portal_system.transport(self, previous_position)
+		if portal_system.transport(self, previous_position):
+			previous_position = position
+			previous_velocity = velocity
 	if not grounded and is_on_floor():
 		landed.emit()
 	if position.y > 600:
@@ -94,4 +98,3 @@ func _body_style() -> StyleBoxFlat:
 	style.bg_color = Color("f8d66d")
 	style.set_corner_radius_all(5)
 	return style
-
