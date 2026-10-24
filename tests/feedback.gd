@@ -32,7 +32,9 @@ func run() -> void:
 	Input.action_release("move_right")
 	var stop_start: float = player.position.x
 	await frames(20)
-	check(player.position.x - stop_start < 11, "Ground release stops within 11px at full run speed")
+	var slide_distance: float = player.position.x - stop_start
+	check(slide_distance > 8.2 and slide_distance < 10.2, "Ground release has a small 8.2-10.2px slide at full run speed")
+	print("GROUND_SLIDE_PX=", slide_distance)
 	player.position = Vector2(200, 150)
 	player.velocity = Vector2.ZERO
 	await frames(2)

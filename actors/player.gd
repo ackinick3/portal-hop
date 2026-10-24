@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	if axis != 0:
 		facing = axis
 	if grounded:
-		var acceleration := 2600.0 if axis == 0 else 1400.0
+		var acceleration := 2300.0 if axis == 0 else 1400.0
 		velocity.x = move_toward(velocity.x, axis * 210, acceleration * delta)
 	else:
 		# Preserve launch momentum; inputs change it gradually rather than clamping.
