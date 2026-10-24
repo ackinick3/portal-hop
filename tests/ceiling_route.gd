@@ -43,6 +43,7 @@ func run() -> void:
 		if game.state == "won" or game.deaths > 0: break
 	for action in ["move_right","jump"]: Input.action_release(action)
 	check(game.state == "won", "Room 3 portal route reaches goal")
+	await game.drain_audio()
 	game.get_tree().paused = false
 	game.queue_free()
 	await process_frame

@@ -1,0 +1,16 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: 200 cues use at most ten reusable players
+PASS: Audio has explicit resource shutdown
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Late cue cannot allocate players after shutdown
+AUDIO_TEST_FAILURES=0

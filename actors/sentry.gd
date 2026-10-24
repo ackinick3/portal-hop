@@ -36,6 +36,7 @@ func hit(player: CharacterBody2D, before: Vector2, incoming: Vector2) -> String:
 		hide()
 		player.position.y = position.y - 34
 		player.velocity.y = -300
+		player.stomp_feedback()
 		return "stomp"
 	player.die()
 	return "death"

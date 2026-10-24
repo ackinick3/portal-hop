@@ -103,6 +103,10 @@ func run() -> void:
 	var result: String = guard.hit(game.player,guard.position-Vector2(60,0),Vector2(2000,0))
 	check(result == "death", "Fast side contact is fatal")
 	print("GAME_TEST_FAILURES=",failures)
+	await game.drain_audio()
+	game.get_tree().paused = false
+	game.queue_free()
+	await process_frame
 	quit(0 if failures == 0 else 1)
 
 

@@ -13,6 +13,9 @@ var dead_time := 0.0
 var facing := 1.0
 var cut_jump := false
 var aim_direction := Vector2.RIGHT
+var landing_squash := 0.0
+var stomp_stretch := 0.0
+var portal_flash := 0.0
 
 func _ready() -> void:
 	for pair in [["move_left", KEY_A], ["move_right", KEY_D], ["jump", KEY_SPACE]]:
@@ -65,9 +68,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	if portal_system != null:
 		if portal_system.transport(self, previous_position):
+			portal_flash = 0.18
 			previous_position = position
 			previous_velocity = velocity
 	if not grounded and is_on_floor():
+		landing_squash = 0.12
 		landed.emit()
 	if position.y > 600:
 		die()
@@ -83,8 +88,23 @@ func aim_at(target: Vector2) -> void:
 		aim_direction = direction.normalized()
 	queue_redraw()
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	landing_squash = maxf(0, landing_squash - delta)
+	stomp_stretch = maxf(0, stomp_stretch - delta)
+	portal_flash = maxf(0, portal_flash - delta)
 	aim_at(get_global_mouse_position())
+
+func stomp_feedback() -> void:
+	landing_squash = 0
+	stomp_stretch = 0.16
+	queue_redraw()
+
+func feedback_scale() -> Vector2:
+	if stomp_stretch > 0:
+		return Vector2(1 - 0.14 * stomp_stretch / 0.16, 1 + 0.18 * stomp_stretch / 0.16)
+	if landing_squash > 0:
+		return Vector2(1 + 0.18 * landing_squash / 0.12, 1 - 0.16 * landing_squash / 0.12)
+	return Vector2.ONE
 
 func die() -> void:
 	if dead_time > 0:
@@ -94,6 +114,9 @@ func die() -> void:
 	cut_jump = false
 	buffer = 0
 	coyote = 0
+	landing_squash = 0
+	stomp_stretch = 0
+	portal_flash = 0
 	died.emit()
 
 func _draw() -> void:
@@ -102,10 +125,21 @@ func _draw() -> void:
 		return
 	if velocity.length() > 450:
 		draw_line(-velocity.normalized() * 16, -velocity.normalized() * 48, Color("4ba9ff"), 3)
+	if portal_flash > 0:
+		var glow := Color("c6d9e5")
+		glow.a = portal_flash / 0.18
+		draw_arc(Vector2.ZERO, 20 + 20 * (1 - glow.a), 0, TAU, 30, glow, 2)
+	if stomp_stretch > 0:
+		var ring := Color("55e0ae")
+		ring.a = stomp_stretch / 0.16
+		draw_arc(Vector2(0,15), 8 + 22 * (1 - ring.a), PI, TAU, 20, ring, 2)
+	var body_scale := feedback_scale()
+	draw_set_transform(Vector2(0,15 * (1 - body_scale.y)), 0, body_scale)
 	draw_style_box(_body_style(), Rect2(-13, -17, 26, 34))
 	draw_rect(Rect2(-10, -10, 20, 11), Color("131b2b"))
 	draw_circle(Vector2(-4 + facing, -5), 2, Color("4ba9ff"))
 	draw_circle(Vector2(4 + facing, -5), 2, Color("4ba9ff"))
+	draw_set_transform(Vector2.ZERO)
 	var hand := Vector2(0, 4)
 	draw_line(hand + aim_direction * 8, hand + aim_direction * 24, Color("131b2b"), 8)
 	draw_line(hand + aim_direction * 8, hand + aim_direction * 24, Color("c6d9e5"), 5)
@@ -113,6 +147,6 @@ func _draw() -> void:
 
 func _body_style() -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
-	style.bg_color = Color("f8d66d")
+	style.bg_color = Color("f8d66d").lerp(Color("edf3f8"), portal_flash / 0.18)
 	style.set_corner_radius_all(5)
 	return style

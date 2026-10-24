@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Pause freezes player and guard
+PASS: Pause freezes timer and action animation
+PASS: Resume advances timer and settles animation
+PASS: Death resets tutorial transfer state
+PASS: Repeated room switches keep a fixed audio pool
+PASS: Nearby facing red wall portal places legally
+PASS: Nearby facing blue wall portal places legally
+PASS: Continuous traversal stays finite and active for 600 physics frames
+PASS: Close-portal loop preserves horizontal launch speed
+PASS: Close-portal loop does not trap or kill player
+CONTINUOUS_TRANSFERS=54
+STABILITY_TEST_FAILURES=0

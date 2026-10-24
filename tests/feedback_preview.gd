@@ -18,6 +18,7 @@ func run() -> void:
 	game.portals.set_process(false)
 	await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png("res://docs/feedback-preview.png")
+	await game.drain_audio()
 	game.queue_free()
 	await process_frame
 	quit()

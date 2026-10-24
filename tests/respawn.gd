@@ -13,6 +13,7 @@ func run() -> void:
 	for i in 48: await physics_frame
 	var okay: bool = game.deaths == 1 and game.player.dead_time <= 0 and game.player.position.x < 250
 	print("RESPAWN_HISTORY_PASS=",okay," deaths=",game.deaths," position=",game.player.position)
+	await game.drain_audio()
 	game.queue_free()
 	paused = false
 	await process_frame

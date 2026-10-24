@@ -1,0 +1,45 @@
+WorkerThreadPool: 32 threads, 9 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+Loading resource: res://tests/ceiling_route.gd remapped: res://tests/ceiling_route.gd
+Completed load for: 'res://tests/ceiling_route.gd' remapped 'res://tests/ceiling_route.gd' at thread -1
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://scenes/main.tscn remapped: res://scenes/main.tscn
+Loading resource: res://scenes/main.gd remapped: res://scenes/main.gd
+Completed load for: 'res://scenes/main.gd' remapped 'res://scenes/main.gd' at thread -1
+Completed load for: 'res://scenes/main.tscn' remapped 'res://scenes/main.tscn' at thread -1
+Loading resource: res://assets/sounds.gd remapped: res://assets/sounds.gd
+Completed load for: 'res://assets/sounds.gd' remapped 'res://assets/sounds.gd' at thread -1
+PORTAL_HOP_READY
+Loading resource: res://portals/system.gd remapped: res://portals/system.gd
+Completed load for: 'res://portals/system.gd' remapped 'res://portals/system.gd' at thread -1
+Loading resource: res://actors/player.gd remapped: res://actors/player.gd
+Completed load for: 'res://actors/player.gd' remapped 'res://actors/player.gd' at thread -1
+Loading resource: res://actors/sentry.gd remapped: res://actors/sentry.gd
+Completed load for: 'res://actors/sentry.gd' remapped 'res://actors/sentry.gd' at thread -1
+PASS: Room 3 ceiling target visible from upper position
+PASS: Room 3 player reaches lower firing position
+PASS: Room 3 floor target visible from lower position
+PASS: Ceiling portal survives repositioning
+PASS: Room 3 physically exits downward from ceiling
+CEILING_END (441.885, 376.5625) guard=(457.5014, 413.0) alive=false deaths=0
+PASS: Ceiling drop stomps guard
+PASS: Room 3 portal route reaches goal
+CEILING_ROUTE_FAILURES=0
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Leaked instance: AudioStreamWAV:9223372064570738136 - Reference count: 1
+Leaked instance: AudioStreamPlaybackWAV:9223372102235588089 - Reference count: 1
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+Orphan StringName: Master (static: 0, total: 1)
+StringName: 1 unclaimed string names at exit.
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

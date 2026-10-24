@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: First room teaches red shot first
+PASS: Second room starts with upper wall portal
+PASS: Second room explains floor shot is blocked until leaving ledge
+PASS: Second room explains braking above floor portal
+PASS: After launch tutorial guides player to exit
+PASS: Third room teaches ceiling shot while on high platform
+PASS: Third room retains ordinary action route
+PASS: Third room describes safe repositioning for floor shot
+PASS: Third room explains downward stomp after ceiling exit
+TUTORIAL_TEST_FAILURES=0

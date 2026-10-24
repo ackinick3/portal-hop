@@ -1,7 +1,7 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Bytes: 109296928
-SHA256: 67AB24575AC20D8D4C471CB96B86ECE84304CE8CACFE881EE5E261F8C6F8E5DD
-Targeted regression: feedback, game, ceiling_route passed; previous full 9-suite baseline passed
+Bytes: 109301488
+SHA256: A2425FDC80D97C5E8B7E79B593C14BD15FDE6EF59DCD9370680D6EDEE04CA1BF
+Source tests: 14 headless suites passed; GPU display/fullscreen/mouse suite passed
 Graphical standalone exit: 0; see standalone-gui.log

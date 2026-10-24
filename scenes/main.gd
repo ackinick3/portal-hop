@@ -1,6 +1,7 @@
 extends Node2D
 
 const Maps = preload("res://levels/maps.gd")
+const Tutorial = preload("res://ui/tutorial.gd")
 var world: Node2D
 var portals: Node2D
 var player: CharacterBody2D
@@ -19,9 +20,12 @@ var data := {}
 var volume := 0.6
 var preview := {}
 var teleported_this_frame := false
+var transfers := 0
+var guidance := {"text":"", "markers":[]}
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	get_tree().auto_accept_quit = false
 	audio = load("res://assets/sounds.gd").new()
 	add_child(audio)
 	var save := ConfigFile.new()
@@ -82,7 +86,7 @@ func menu() -> void:
 	button("LEVEL SELECT",Vector2(340,222),level_select)
 	button("HOW TO PLAY",Vector2(340,274),instructions)
 	button("SETTINGS",Vector2(340,326),settings)
-	button("QUIT",Vector2(340,378),func(): get_tree().quit())
+	button("QUIT",Vector2(340,378),quit_game)
 	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  THREE ROOMS",Vector2(260,474),15)
 	queue_redraw()
 
@@ -123,6 +127,21 @@ func toggle_fullscreen() -> void:
 	var full := DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if full else DisplayServer.WINDOW_MODE_FULLSCREEN)
 
+func drain_audio() -> void:
+	audio.shutdown()
+	# Audio stop commands are consumed by the mixer, including while the game is paused.
+	await get_tree().create_timer(0.06).timeout
+
+func quit_game() -> void:
+	if state == "closing": return
+	state = "closing"
+	await drain_audio()
+	get_tree().quit()
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		quit_game()
+
 func start_level(number: int) -> void:
 	get_tree().paused = false
 	if world != null:
@@ -135,6 +154,7 @@ func start_level(number: int) -> void:
 	elapsed = 0
 	deaths = 0
 	state = "playing"
+	transfers = 0
 	data = Maps.get_level(index)
 	portals = load("res://portals/system.gd").new()
 	world.add_child(portals)
@@ -146,7 +166,7 @@ func start_level(number: int) -> void:
 	var surfaces: Array[Dictionary] = []
 	surfaces.assign(data.faces)
 	portals.configure(blocks,surfaces)
-	portals.feedback.connect(audio.play)
+	portals.feedback.connect(on_portal_feedback)
 	player = load("res://actors/player.gd").new()
 	player.spawn = data.spawn
 	player.position = data.spawn
@@ -160,16 +180,23 @@ func start_level(number: int) -> void:
 		enemy = load("res://actors/sentry.gd").new()
 		world.add_child(enemy)
 	clear_panel()
-	hud = label_at("",Vector2(28,16),19)
-	message = label_at(data.hint,Vector2(28,48),16)
+	hud = label_at("",Vector2(260,16),19)
+	message = label_at(data.hint,Vector2(260,48),16)
+	message.size = Vector2(672, 60)
+	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	audio.play("checkpoint")
 	queue_redraw()
 
 func on_death() -> void:
 	deaths += 1
+	transfers = 0
 	portals.clear()
 	if enemy != null: enemy.reset()
 	audio.play("death")
+
+func on_portal_feedback(kind: String) -> void:
+	audio.play(kind)
+	if kind == "teleport": transfers += 1
 
 func pause_menu() -> void:
 	state = "paused"
@@ -185,8 +212,10 @@ func resume() -> void:
 	get_tree().paused = false
 	state = "playing"
 	clear_panel()
-	hud = label_at("",Vector2(28,16),19)
-	message = label_at(data.hint,Vector2(28,48),16)
+	hud = label_at("",Vector2(260,16),19)
+	message = label_at(data.hint,Vector2(260,48),16)
+	message.size = Vector2(672, 60)
+	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
 func complete() -> void:
 	state = "won"
@@ -221,7 +250,8 @@ func _process(delta: float) -> void:
 	if state == "playing":
 		elapsed += delta
 		hud.text = "ROOM %02d    TIME %06.1f    DEATHS %02d    RED %s / BLUE %s" % [index+1,elapsed,deaths,"READY" if not portals.doors[0].is_empty() else "--","READY" if not portals.doors[1].is_empty() else "--"]
-		message.text = portals.hint if portals.hint_time > 0 else data.hint
+		guidance = Tutorial.guidance(index, portals.doors, transfers, player.position)
+		message.text = portals.hint if portals.hint_time > 0 else guidance.text
 		preview = portals.candidate(gun_origin(),get_global_mouse_position(),0)
 		queue_redraw()
 
@@ -251,6 +281,11 @@ func _draw() -> void:
 			if not on_ground:
 				draw_colored_polygon(PackedVector2Array([Vector2(x,540),Vector2(x+9,525),Vector2(x+18,540)]),Color("ff526b"))
 	if state == "playing":
+		for mark in guidance.markers:
+			var radius := 15 + sin(elapsed * 4) * 2
+			draw_arc(mark.p, radius, 0, TAU, 30, mark.color, 2)
+			var label_y: float = -20 if mark.p.y > 350 else maxf(16, 112 - mark.p.y)
+			draw_string(ThemeDB.fallback_font, mark.p + Vector2(18, label_y), mark.text, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, mark.color)
 		var mouse := get_global_mouse_position()
 		var color := Color("55e0ae") if not preview.is_empty() else Color("ff526b")
 		draw_arc(mouse,7,0,TAU,20,color,1.5)

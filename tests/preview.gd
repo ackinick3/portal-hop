@@ -13,6 +13,7 @@ func run() -> void:
 		await process_frame
 		root.get_texture().get_image().save_png("res://docs/room%d.png" % (i+1))
 	paused = false
+	await scene.drain_audio()
 	scene.queue_free()
 	await process_frame
 	quit()
