@@ -1,8 +1,8 @@
-Build: builds/PortalHop.exe
+Build: builds/PortalHop-B美术版.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms: 4 (fourth awaiting user playtest)
-Bytes: 109302608
-SHA256: 82EE57BEDDD895ECD83A97602245FC6313AE4A1D93BC5B87D3D90B7FA4FB04C0
-Source tests: 17 headless suites passed; GPU display/fullscreen/mouse suite passed
+Rooms: 4; selected B rounded landmark art; text-free gameplay overlay
+Bytes: 109304376
+SHA256: 55F069A74D1FB879D64E91089BB5FB9D8E7A704E15B8D4E74C57F329CE9E07B5
+Source tests: 17 suites passed; four-room GPU previews and display/mouse suite passed
 Graphical standalone exit: 0; see standalone-gui.log

@@ -2,14 +2,13 @@ extends Node2D
 
 const Maps = preload("res://levels/maps.gd")
 const Tutorial = preload("res://ui/tutorial.gd")
+const Landmarks = preload("res://ui/landmarks.gd")
 var world: Node2D
 var portals: Node2D
 var player: CharacterBody2D
 var enemy: Node2D
 var audio: Node
 var panel: CanvasLayer
-var hud: Label
-var message: Label
 var index := 0
 var unlocked := 1
 var persistence_enabled := true
@@ -185,10 +184,6 @@ func start_level(number: int) -> void:
 		enemy = load("res://actors/sentry.gd").new()
 		world.add_child(enemy)
 	clear_panel()
-	hud = label_at("",Vector2(260,16),19)
-	message = label_at(data.hint,Vector2(260,48),16)
-	message.size = Vector2(672, 60)
-	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	audio.play("checkpoint")
 	queue_redraw()
 
@@ -217,10 +212,6 @@ func resume() -> void:
 	get_tree().paused = false
 	state = "playing"
 	clear_panel()
-	hud = label_at("",Vector2(260,16),19)
-	message = label_at(data.hint,Vector2(260,48),16)
-	message.size = Vector2(672, 60)
-	message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
 func complete() -> void:
 	state = "won"
@@ -254,9 +245,7 @@ func gun_origin() -> Vector2:
 func _process(delta: float) -> void:
 	if state == "playing":
 		elapsed += delta
-		hud.text = "ROOM %02d    TIME %06.1f    DEATHS %02d    RED %s / BLUE %s" % [index+1,elapsed,deaths,"READY" if not portals.doors[0].is_empty() else "--","READY" if not portals.doors[1].is_empty() else "--"]
 		guidance = Tutorial.guidance(index, portals.doors, transfers, player.position)
-		message.text = portals.hint if portals.hint_time > 0 else guidance.text
 		preview = portals.candidate(gun_origin(),get_global_mouse_position(),0)
 		queue_redraw()
 
@@ -270,15 +259,18 @@ func _physics_process(_delta: float) -> void:
 
 func _draw() -> void:
 	if world == null: return
-	# Sparse background grid and the green destination arch.
+	# Sparse background grid and the selected rounded landmark style.
 	for x in range(0,960,40):
 		draw_line(Vector2(x,80),Vector2(x,540),Color(0.12,0.17,0.24,0.3))
 	if data.has("goal"):
-		draw_line(data.spawn + Vector2(0,15),data.spawn - Vector2(0,12),Color("55e0ae"),2)
-		draw_line(data.spawn - Vector2(0,12),data.spawn + Vector2(14,-7),Color("55e0ae"),4)
-		var goal: Rect2 = data.goal
-		draw_rect(goal,Color("55e0ae"),false,4)
-		draw_line(goal.get_center()+Vector2(-9,0),goal.get_center()+Vector2(9,0),Color("55e0ae"),3)
+		var flag_foot: Vector2 = data.spawn + Vector2(-38,15)
+		var flag_space := Rect2(flag_foot - Vector2(12,48),Vector2(24,48))
+		for block in data.blocks:
+			if block.intersects(flag_space):
+				flag_foot = data.spawn + Vector2(38,15)
+				break
+		Landmarks.draw_flag(self, flag_foot, elapsed)
+		Landmarks.draw_gate(self, data.goal, elapsed)
 		for x in range(0,960,18):
 			var on_ground := false
 			for block in data.blocks:
@@ -289,11 +281,6 @@ func _draw() -> void:
 		for mark in guidance.markers:
 			var radius := 15 + sin(elapsed * 4) * 2
 			draw_arc(mark.p, radius, 0, TAU, 30, mark.color, 2)
-			var label_y: float = -20 if mark.p.y > 350 else maxf(16, 112 - mark.p.y)
-			var label_offset := Vector2(18, label_y)
-			if mark.normal == Vector2.UP: label_offset.y = -20
-			if mark.normal == Vector2.LEFT: label_offset = Vector2(-95,-10)
-			draw_string(ThemeDB.fallback_font, mark.p + label_offset, mark.text, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, mark.color)
 		var mouse := get_global_mouse_position()
 		var color := Color("55e0ae") if not preview.is_empty() else Color("ff526b")
 		draw_arc(mouse,7,0,TAU,20,color,1.5)
