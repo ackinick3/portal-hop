@@ -1,6 +1,6 @@
 'use strict';
 const C=LevelCore,$=id=>document.getElementById(id),canvas=$('paper'),ctx=canvas.getContext('2d'),KEY='portal-hop-level-editor-v1';
-const names={start:'起点',goal:'终点','wall-gray':'灰墙','wall-white':'白墙','wall-blue':'蓝墙','wall-red':'红墙','wall-green':'绿墙',spikes:'地刺','laser-yellow':'黄色发射器','laser-purple':'紫色发射器','laser-red':'红色发射器',receiver:'激光接收器',enemy:'怪物',path:'曲线箭头'};
+const names={start:'起点',goal:'终点','wall-gray':'灰墙','wall-white':'白墙','wall-blue':'蓝墙','wall-red':'红墙','wall-green':'绿墙',spikes:'地刺','laser-yellow':'黄色发射器','laser-purple':'紫色发射器','laser-red':'红色发射器',receiver:'激光接收器',enemy:'怪物',path:'曲线箭头','moving-platform':'移动平台','gun-screen':'阻枪光幕'};
 const colors={'wall-gray':'#7b8591','wall-white':'#ffffff','wall-blue':'#448cdb','wall-red':'#e95c68','wall-green':'#49a579','laser-yellow':'#e6b82d','laser-purple':'#a571e2','laser-red':'#e95c68'};
 let H=C.history(C.create()),selected=null,tool='select',gesture=null,draft=null,recovery=null,toastTimer;
 function toast(t){$('toast').textContent=t;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,5500);}
@@ -10,7 +10,15 @@ function persist(){if(recovery!==null){$('save-state').textContent='旧数据受
 function arrow(g,a,b,color,width=2,head=11){const r=Math.atan2(b.y-a.y,b.x-a.x);g.strokeStyle=color;g.lineWidth=width;g.beginPath();g.moveTo(a.x,a.y);g.lineTo(b.x,b.y);g.stroke();g.beginPath();g.moveTo(b.x-head*Math.cos(r-.48),b.y-head*Math.sin(r-.48));g.lineTo(b.x,b.y);g.lineTo(b.x-head*Math.cos(r+.48),b.y-head*Math.sin(r+.48));g.stroke();}
 function drawItem(g,i,index){
  g.save();g.lineJoin='round';g.lineCap='round';g.font='12px "Microsoft YaHei",sans-serif';
- if(i.type==='path'){
+ if(i.type==='moving-platform'){
+  g.strokeStyle='#657c97';g.lineWidth=2;g.setLineDash([7,5]);g.beginPath();i.track.forEach((p,n)=>n?g.lineTo(p.x,p.y):g.moveTo(p.x,p.y));g.stroke();g.setLineDash([]);
+  i.track.forEach((p,n)=>{g.fillStyle='#657c97';g.beginPath();g.arc(p.x,p.y,3,0,Math.PI*2);g.fill();g.fillText(String(n+1),p.x+7,p.y-7);});
+  if(i.track.length>1)arrow(g,i.track[i.track.length-2],i.track.at(-1),'#657c97',1.5,9);
+  g.fillStyle=colors['wall-'+i.material];g.strokeStyle='#344b5e';g.lineWidth=2;g.fillRect(i.x-i.width/2,i.y-i.height/2,i.width,i.height);g.strokeRect(i.x-i.width/2,i.y-i.height/2,i.width,i.height);
+  g.fillStyle='#344b5e';g.fillText('移动平台 · '+(i.track.length>1?'往返':'待设轨迹'),i.x-i.width/2,i.y-i.height/2-9);
+ }else if(i.type==='gun-screen'){
+  g.strokeStyle='#299963';g.lineWidth=i.thickness;g.setLineDash([10,7]);g.beginPath();g.moveTo(i.a.x,i.a.y);g.lineTo(i.b.x,i.b.y);g.stroke();g.setLineDash([]);g.fillStyle='#248353';g.fillText('阻枪光幕',i.a.x+8,i.a.y-10);
+ }else if(i.type==='path'){
   g.strokeStyle='#278b6f';g.lineWidth=3;g.beginPath();g.moveTo(i.a.x,i.a.y);g.quadraticCurveTo(i.control.x,i.control.y,i.b.x,i.b.y);g.stroke();arrow(g,C.curve(i,.96),i.b,'#278b6f',3,14);
   g.fillStyle='#207b62';g.fillText('路线 '+index,i.a.x+8,i.a.y-10);
  }else if(C.segment(i.type)){
@@ -30,13 +38,15 @@ function drawItem(g,i,index){
  }
  g.restore();
 }
-function handles(i){if(!i||!C.segment(i.type))return [];return ['a','b',...(i.type==='path'?['control']:[])].map(key=>({key,p:i[key]}));}
+function handles(i){if(i?.type==='moving-platform')return i.track.map((p,key)=>({key,p}));if(!i||!C.segment(i.type))return [];return ['a','b',...(i.type==='path'?['control']:[])].map(key=>({key,p:i[key]}));}
 function render(helpers=true){
  ctx.setTransform(2,0,0,2,0,0);ctx.clearRect(0,0,960,540);ctx.fillStyle='#fff';ctx.fillRect(0,0,960,540);
  if(helpers&&$('grid').checked){ctx.lineWidth=.5;ctx.strokeStyle='#e9eef1';ctx.beginPath();for(let x=0;x<960;x+=20){ctx.moveTo(x,0);ctx.lineTo(x,540);}for(let y=0;y<540;y+=20){ctx.moveTo(0,y);ctx.lineTo(960,y);}ctx.stroke();}
  let pathIndex=0;H.doc.items.forEach(i=>drawItem(ctx,i,i.type==='path'?++pathIndex:0));if(draft){if(draft.type==='patrol'){ctx.save();ctx.setLineDash([5,4]);arrow(ctx,draft.a,draft.b,'#bc7444',2);ctx.restore();}else drawItem(ctx,draft,pathIndex+1);}
  const i=chosen();if(!helpers||!i)return;ctx.save();ctx.strokeStyle='#1ca6a0';ctx.lineWidth=1;ctx.setLineDash([4,3]);
- if(C.segment(i.type)){
+ if(i.type==='moving-platform'){
+  ctx.strokeRect(i.x-i.width/2-3,i.y-i.height/2-3,i.width+6,i.height+6);ctx.setLineDash([]);for(const h of handles(i)){ctx.fillStyle=h.key===0?'#ffc85d':'#e7fffd';ctx.beginPath();ctx.arc(h.p.x,h.p.y,6,0,Math.PI*2);ctx.fill();ctx.stroke();}
+ }else if(C.segment(i.type)){
   ctx.beginPath();ctx.moveTo(i.a.x,i.a.y);if(i.control)ctx.lineTo(i.control.x,i.control.y);ctx.lineTo(i.b.x,i.b.y);ctx.stroke();ctx.setLineDash([]);
   for(const h of handles(i)){ctx.fillStyle=h.key==='control'?'#ffc85d':'#e7fffd';ctx.beginPath();ctx.arc(h.p.x,h.p.y,6,0,Math.PI*2);ctx.fill();ctx.stroke();}
  }else ctx.strokeRect(i.x-25,i.y-(i.type==='start'||i.type==='goal'?49:25),50,i.type==='start'||i.type==='goal'?70:50);
@@ -47,9 +57,11 @@ function changed(){persist();sync();}
 function transact(fn){const before=structuredClone(H.doc);try{fn();C.parse(JSON.stringify(H.doc));const after=H.doc;H.doc=before;C.checkpoint(H);H.doc=after;changed();}catch(e){H.doc=before;sync();toast(e.message);}}
 function setTool(type){tool=type;document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',b.dataset.type===type));let hint='';
  if(type==='select')hint='点击部件选中；拖动移动。线段两端可拖动，曲线金色点控制弯曲。';
+ else if(type==='track')hint='依次点击添加平台中心轨迹点；按 Enter 或右侧按钮完成，Esc 返回选择。每点可撤销；轨迹依次往返。';
+ else if(type==='moving-platform')hint='拖出平台矩形；选中后可改宽高、灰/蓝/红材质，并点击设置中心点轨迹。';
  else if(type==='patrol')hint='拖出怪物移动范围，怪物会移到范围中点；方向与长度可再改。';
  else if(type==='path')hint='拖出路线起点和终点；完成后自动进入选择模式，拖金色控制点调整曲线。';
- else if(C.segment(type))hint='在白纸上拖动绘制'+names[type]+'；右侧可改长度、角度和粗细。'+(type==='spikes'?' 地刺可在属性中翻转朝向。':'');
+ else if(C.segment(type))hint='在白纸上拖动绘制'+names[type]+'；右侧可改长度、角度和粗细。'+(type==='spikes'?' 地刺可在属性中翻转朝向。':type==='gun-screen'?' 人可通过，枪射线被阻挡。':'');
  else hint='点击白纸放置'+names[type]+'。'+(type.startsWith('laser-')?'放置后在右侧修改朝向。':'');
  $('tool-hint').textContent=hint;canvas.style.cursor=type==='select'?'default':'crosshair';
 }
@@ -59,11 +71,16 @@ function inspector(){
  const panel=$('inspector');panel.replaceChildren();const i=chosen();if(!i){const p=document.createElement('p');p.className='muted';p.textContent='选中部件后可改位置、长度与方向。曲线的金色点控制弯曲。';panel.append(p);return;}
  const title=document.createElement('p');title.className='selected-title';title.textContent=names[i.type]+' #'+i.id;panel.append(title);const fields=document.createElement('div');fields.className='fields';panel.append(fields);const origin=C.segment(i.type)?i.a:i;
  field(fields,'位置 X',origin.x,0,960,(v,n)=>C.move(v,n-(C.segment(v.type)?v.a.x:v.x),0));field(fields,'位置 Y',origin.y,0,540,(v,n)=>C.move(v,0,n-(C.segment(v.type)?v.a.y:v.y)));
- if(C.segment(i.type)){
+ if(i.type==='moving-platform'){
+  field(fields,'平台宽',i.width,4,960,(v,n)=>v.width=n);field(fields,'平台高',i.height,4,540,(v,n)=>v.height=n);
+  const label=document.createElement('label');label.textContent='平台材质';const select=document.createElement('select');select.setAttribute('aria-label','平台材质');for(const [value,text]of [['gray','灰'],['blue','蓝'],['red','红']]){const o=document.createElement('option');o.value=value;o.textContent=text;select.append(o);}select.value=i.material;select.onchange=()=>transact(()=>chosen().material=select.value);label.append(select);fields.append(label);
+  const actions=document.createElement('div');actions.className='property-actions';action(actions,tool==='track'?'完成轨迹（Enter）':'添加轨迹点',()=>{setTool(tool==='track'?'select':'track');inspector();});action(actions,'重置轨迹',()=>{transact(()=>{const v=chosen();v.track=[{x:v.x,y:v.y}];});setTool('select');inspector();});panel.append(actions);
+  const nodes=document.createElement('div');nodes.className='fields';panel.append(nodes);i.track.forEach((p,n)=>{field(nodes,'轨迹点 '+(n+1)+' X',p.x,i.width/2,960-i.width/2,(v,x)=>C.trackPoint(v,n,[x,v.track[n].y]));field(nodes,'轨迹点 '+(n+1)+' Y',p.y,i.height/2,540-i.height/2,(v,y)=>C.trackPoint(v,n,[v.track[n].x,y]));if(n>0)action(nodes,'删除轨迹点 '+(n+1),()=>transact(()=>chosen().track.splice(n,1)));});
+ }else if(C.segment(i.type)){
   if(i.type==='path'){
    field(fields,'终点 X',i.b.x,0,960,(v,n)=>v.b.x=n);field(fields,'终点 Y',i.b.y,0,540,(v,n)=>v.b.y=n);field(fields,'控制点 X',i.control.x,0,960,(v,n)=>v.control.x=n);field(fields,'控制点 Y',i.control.y,0,540,(v,n)=>v.control.y=n);
   }else{
-   field(fields,'长度',C.length(i),1,1101,(v,n)=>C.resize(v,n,C.angle(v.a,v.b)));field(fields,'线段角度 °',C.angle(i.a,i.b),0,360,(v,n)=>C.resize(v,C.length(v),n));field(fields,i.type==='spikes'?'刺高':'墙厚',i.thickness,1,80,(v,n)=>v.thickness=n);
+   field(fields,'长度',C.length(i),1,1101,(v,n)=>C.resize(v,n,C.angle(v.a,v.b)));field(fields,'线段角度 °',C.angle(i.a,i.b),0,360,(v,n)=>C.resize(v,C.length(v),n));field(fields,i.type==='spikes'?'刺高':i.type==='gun-screen'?'光幕线宽':'墙厚',i.thickness,1,80,(v,n)=>v.thickness=n);
   }
   if(i.type==='spikes'){const p=document.createElement('p');p.className='direction-note';p.textContent='尖刺朝向 '+Math.round(C.spikeAngle(i))+'°（0右 · 90下 · 180左 · 270上）';panel.append(p);const actions=document.createElement('div');actions.className='property-actions';action(actions,'翻转地刺朝向',()=>transact(()=>chosen().side*=-1));panel.append(actions);}
  }else if(i.type.startsWith('laser-')){
@@ -73,12 +90,13 @@ function inspector(){
   if(i.patrol){field(fields,'范围长度',C.length(i.patrol),1,1101,(v,n)=>{const r=C.angle(v.patrol.a,v.patrol.b)*Math.PI/180;C.patrol(v,[v.x-Math.cos(r)*n/2,v.y-Math.sin(r)*n/2],[v.x+Math.cos(r)*n/2,v.y+Math.sin(r)*n/2]);});field(fields,'范围方向 °',C.angle(i.patrol.a,i.patrol.b),0,360,(v,n)=>{const r=n*Math.PI/180,len=C.length(v.patrol);C.patrol(v,[v.x-Math.cos(r)*len/2,v.y-Math.sin(r)*len/2],[v.x+Math.cos(r)*len/2,v.y+Math.sin(r)*len/2]);});}
   const a=document.createElement('div');a.className='property-actions';action(a,'在画布拖动设置范围',()=>setTool('patrol'));panel.append(a);
  }
- const note=document.createElement('p');note.className='direction-note';note.textContent=i.type==='path'?'路线按创建顺序编号。提交后由助手计算比例，不把箭头当作真实物理轨迹。':i.type.startsWith('laser-')?'0°向右，90°向下；短箭头只标朝向，不模拟传播。':'选择模式下可拖动部件；墙/刺可拖两端改变形状。';panel.append(note);
+ const note=document.createElement('p');note.className='direction-note';note.textContent=i.type==='moving-platform'?'轨迹点是平台中心，按编号依次往返；仅一个点时待配置。拖平台会整体平移轨迹，拖节点只改该点；点1同时是初始位置。平台全程须在白纸内，此处不播放运动。':i.type==='gun-screen'?'绿色虚线：人可通过，枪射线不可通过。与绿色反射墙不同；未定义激光阻挡或伤害。':i.type==='path'?'路线按创建顺序编号。提交后由助手计算比例，不把箭头当作真实物理轨迹。':i.type.startsWith('laser-')?'0°向右，90°向下；短箭头只标朝向，不模拟传播。':'选择模式下可拖动部件；墙/刺可拖两端改变形状。';panel.append(note);
 }
 function layers(){const list=$('layers');list.replaceChildren();for(const i of H.doc.items){const b=document.createElement('button');b.textContent=names[i.type]+' #'+i.id;b.className=i.id===selected?'selected':'';b.onclick=()=>{selected=i.id;setTool('select');sync();};list.append(b);}}
 function point(e){const r=canvas.getBoundingClientRect();return [Math.max(0,Math.min(960,(e.clientX-r.left)/r.width*960)),Math.max(0,Math.min(540,(e.clientY-r.top)/r.height*540))].map(Math.round);}
 canvas.onpointerdown=e=>{
  if(e.button!==0)return;const p=point(e);canvas.setPointerCapture(e.pointerId);
+ if(tool==='track'){if(chosen()?.type==='moving-platform')transact(()=>C.trackPoint(chosen(),chosen().track.length,p));else setTool('select');return;}
  if(tool==='select'){
   const i=chosen(),handle=handles(i).find(h=>Math.hypot(h.p.x-p[0],h.p.y-p[1])<=12);
   if(handle)gesture={mode:'handle',key:handle.key,before:structuredClone(H.doc),start:p};
@@ -86,24 +104,25 @@ canvas.onpointerdown=e=>{
   sync();return;
  }
  if(tool==='patrol'){if(!chosen()||chosen().type!=='enemy'){setTool('select');return;}gesture={mode:'patrol',start:p};draft={type:'patrol',a:{x:p[0],y:p[1]},b:{x:p[0],y:p[1]}};return;}
- if(C.segment(tool)){gesture={mode:'draw',type:tool,start:p};draft=C.place(C.create(),tool,p,p);render();}
+ if(C.segment(tool)||tool==='moving-platform'){gesture={mode:'draw',type:tool,start:p};draft=C.place(C.create(),tool,p,p);render();}
  else transact(()=>{selected=C.place(H.doc,tool,p).id;});
 };
 canvas.onpointermove=e=>{
  const p=point(e);$('cursor').textContent='X '+p[0]+' · Y '+p[1];if(!gesture)return;
  if(gesture.mode==='draw'||gesture.mode==='patrol'){
-  draft.b={x:p[0],y:p[1]};if(draft.type==='path')draft.control={x:(draft.a.x+draft.b.x)/2,y:Math.max(0,(draft.a.y+draft.b.y)/2-80)};
+  if(gesture.type==='moving-platform'){gesture.end={x:p[0],y:p[1]};draft=C.place(C.create(),'moving-platform',gesture.start,p);}
+  else{draft.b={x:p[0],y:p[1]};if(draft.type==='path')draft.control={x:(draft.a.x+draft.b.x)/2,y:Math.max(0,(draft.a.y+draft.b.y)/2-80)};}
  }else if(gesture.mode==='move'){
   const item=structuredClone(gesture.original);C.move(item,p[0]-gesture.start[0],p[1]-gesture.start[1]);H.doc.items[H.doc.items.findIndex(i=>i.id===item.id)]=item;
- }else if(gesture.mode==='handle'){chosen()[gesture.key]={x:p[0],y:p[1]};}
+ }else if(gesture.mode==='handle'){if(chosen().type==='moving-platform')C.trackPoint(chosen(),gesture.key,p);else chosen()[gesture.key]={x:p[0],y:p[1]};}
  render();
 };
 canvas.onpointerup=e=>{
  if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);if(!gesture)return;const g=gesture;gesture=null;
  if(g.mode==='draw'||g.mode==='patrol'){
-  const end=draft.b;draft=null;if(Math.hypot(end.x-g.start[0],end.y-g.start[1])<3){render();return;}
+  const end=g.end||draft.b||{x:g.start[0],y:g.start[1]};draft=null;if(Math.hypot(end.x-g.start[0],end.y-g.start[1])<3){render();return;}
   if(g.mode==='patrol'){transact(()=>C.patrol(chosen(),g.start,[end.x,end.y]));setTool('select');}
-  else{transact(()=>selected=C.place(H.doc,g.type,g.start,[end.x,end.y]).id);if(g.type==='path')setTool('select');}
+  else{transact(()=>selected=C.place(H.doc,g.type,g.start,[end.x,end.y]).id);if(g.type==='path'||g.type==='moving-platform')setTool('select');inspector();}
  }else{const after=H.doc;if(JSON.stringify(after)!==JSON.stringify(g.before)){H.doc=g.before;C.checkpoint(H);H.doc=after;changed();}else sync();}
 };
 canvas.onpointercancel=()=>{if(gesture&&gesture.before)H.doc=gesture.before;gesture=null;draft=null;sync();};
@@ -121,5 +140,5 @@ function loadFields(){$('title').value=H.doc.title;$('notes').value=H.doc.notes;
 $('new').onclick=async()=>{if(await confirmAction('新建空白关卡？','将清空当前画布。请先导出 JSON 保存；新建后仍可撤销。')){transact(()=>{const next=C.create();H.doc=next;selected=null;recovery=null;$('recover').hidden=true;});loadFields();setTool('select');}};
 $('import').onclick=()=>$('file').click();$('file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const next=C.parse(await file.text());if(await confirmAction('载入这张关卡草图？','会替换当前画布，可撤销。请先导出当前布局作为备份。')){transact(()=>{H.doc=next;selected=null;recovery=null;$('recover').hidden=true;});loadFields();setTool('select');}}catch(error){toast(error.message||'导入失败，当前地图未更改');}finally{e.target.value='';}};
 $('recover').onclick=()=>download(new Blob([recovery],{type:'application/json'}),'PortalHop-布局恢复备份-'+stamp()+'.json');
-document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||document.querySelector('dialog[open]'))return;if(e.key==='Delete'||e.key==='Backspace'){e.preventDefault();remove();}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();if(e.shiftKey)C.redo(H);else C.undo(H);loadFields();changed();}if(e.key==='Escape'){if(gesture&&gesture.before)H.doc=gesture.before;gesture=null;draft=null;setTool('select');sync();}});
+document.addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||document.querySelector('dialog[open]'))return;if(e.key==='Enter'&&tool==='track'){e.preventDefault();setTool('select');sync();}if(e.key==='Delete'||e.key==='Backspace'){e.preventDefault();remove();}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();if(e.shiftKey)C.redo(H);else C.undo(H);loadFields();changed();}if(e.key==='Escape'){if(gesture&&gesture.before)H.doc=gesture.before;gesture=null;draft=null;setTool('select');sync();}});
 loadFields();setTool('select');sync();$('save-state').textContent=recovery!==null?'旧数据受保护 · 请导出 JSON':'本地编辑器已就绪';
