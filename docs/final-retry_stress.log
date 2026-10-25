@@ -400,6 +400,21 @@ PASS: Room 53 phase 173 R respawns once without a death loop
 PASS: Room 53 phase 173 clears circuits, gates and portals
 PASS: Room 53 phase 173 returns near its actual spawn
 PASS: Room 53 retry leaves finite movement
+PASS: Room 54 phase 1 pause freezes rider and machinery
+PASS: Room 54 phase 1 R respawns once without a death loop
+PASS: Room 54 phase 1 clears circuits, gates and portals
+PASS: Room 54 phase 1 returns near its actual spawn
+PASS: Room 54 retry leaves finite movement
+PASS: Room 54 phase 47 pause freezes rider and machinery
+PASS: Room 54 phase 47 R respawns once without a death loop
+PASS: Room 54 phase 47 clears circuits, gates and portals
+PASS: Room 54 phase 47 returns near its actual spawn
+PASS: Room 54 retry leaves finite movement
+PASS: Room 54 phase 173 pause freezes rider and machinery
+PASS: Room 54 phase 173 R respawns once without a death loop
+PASS: Room 54 phase 173 clears circuits, gates and portals
+PASS: Room 54 phase 173 returns near its actual spawn
+PASS: Room 54 retry leaves finite movement
 PASS: Powered retry 38 prepares the real beam entrance
 PASS: Powered retry 38 reflects the real exit shot
 PASS: Powered retry 38 starts with its receivers lit
@@ -484,4 +499,4 @@ PASS: Room 50 phase 173 clears circuits, gates and portals
 PASS: Room 50 phase 173 returns near its actual spawn
 PASS: Room 50 retry leaves finite movement
 PASS: Powered mover 50 returns to its parked origin
-RETRY_STRESS_CASES=87 FAILURES=0
+RETRY_STRESS_CASES=90 FAILURES=0

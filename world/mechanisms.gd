@@ -16,6 +16,7 @@ func configure(data: Dictionary, portals: Node2D) -> void:
 	patches = data.get("materials",[])
 	emitters = data.get("emitters",[])
 	portal_system.mirrors.assign(data.get("mirrors",[]))
+	portal_system.gun_screens.assign(data.get("gun_screens",[]))
 	for spec in data.get("receivers",[]):
 		receivers.append({"p":spec.p,"id":spec.id,"active":false})
 	for spec in data.get("gates",[]):
@@ -92,6 +93,14 @@ func _physics_process(delta: float) -> void:
 
 func _draw() -> void:
 	Materials.draw(self,patches,time)
+	if portal_system != null:
+		for screen in portal_system.gun_screens:
+			var a: Vector2 = screen.a
+			var b: Vector2 = screen.b
+			var direction := (b-a).normalized()
+			for distance in range(0,ceili(a.distance_to(b)),17):
+				var end := minf(distance+10,a.distance_to(b))
+				draw_line(a+direction*distance,a+direction*end,Color("63ed9e"),4,true)
 	for receiver in receivers:
 		var tint := Color("63edbd") if receiver.active else Color("8b6b42")
 		for gate in gates:

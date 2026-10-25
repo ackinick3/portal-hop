@@ -182,6 +182,7 @@ func start_level(number: int) -> void:
 	stage = load("res://world/mechanisms.gd").new()
 	world.add_child(stage)
 	stage.configure(data,portals)
+	update_moving_goal()
 	player = load("res://actors/player.gd").new()
 	player.spawn = data.spawn
 	player.position = data.spawn
@@ -209,6 +210,7 @@ func on_death() -> void:
 	transfers = 0
 	portals.clear()
 	stage.reset()
+	update_moving_goal()
 	if enemy != null: enemy.reset()
 	audio.play("death")
 
@@ -260,6 +262,11 @@ func _unhandled_input(event: InputEvent) -> void:
 func gun_origin() -> Vector2:
 	return player.gun_origin()
 
+func update_moving_goal() -> void:
+	if data.has("goal_mover"):
+		var platform: Rect2 = stage.movers[data.goal_mover].platform.bounds()
+		data.goal = Rect2(platform.position+data.goal_offset,data.goal.size)
+
 func _process(delta: float) -> void:
 	if state == "playing":
 		elapsed += delta
@@ -267,14 +274,20 @@ func _process(delta: float) -> void:
 		queue_redraw()
 
 func _physics_process(_delta: float) -> void:
-	if state != "playing" or player.dead_time > 0: return
+	if state != "playing": return
+	update_moving_goal()
+	if player.dead_time > 0: return
 	if enemy != null:
 		var kind: String = enemy.hit(player,player.previous_position,player.previous_velocity)
 		if kind == "stomp": audio.play("stomp")
 	if player.position.y + 15 >= 530: player.die()
 	for hazard in data.get("hazards",[]):
 		if hazard.intersects(Rect2(player.position-Vector2(11,15),Vector2(22,30))): player.die()
-	if data.goal.grow(10).has_point(player.position) and player.dead_time <= 0: complete()
+	var supported_goal := true
+	if data.has("goal_mover"):
+		var platform: Rect2 = stage.movers[data.goal_mover].platform.bounds()
+		supported_goal = player.is_on_floor() and absf(player.position.y+15-platform.position.y)<2 and player.position.x>=platform.position.x and player.position.x<=platform.end.x
+	if supported_goal and data.goal.grow(10).has_point(player.position) and player.dead_time <= 0: complete()
 
 func _draw() -> void:
 	if world == null: return

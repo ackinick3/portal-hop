@@ -1,0 +1,34 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 573.24 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060 Laptop GPU
+
+PASS: New user sketch is room27 stableID54
+PORTAL_HOP_READY
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Birth inputs, two real portal transfers, red run and actual moving-platform landing reach the moving goal
+WANDER_ROUTE delay=0 wall=-6.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 171.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1776), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 223.748657226563 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=6.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 183.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 257 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 239.99853515625 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=0.0 slope=-3.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (812.1448, 176.2989), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (528.7675, 74.92523), "end": (528.7675, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=0.0 slope=3.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (816.3873, 172.0564), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (523.5737, 74.9252), "end": (523.5737, 74.9252), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=30 wall=0.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=60 wall=0.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=no_red { "won": false, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-148.4924, -148.4924), "frame": 290 }, "landed": false, "landing": (0.0, 0.0), "end": (740.28, 334.9252), "minimum_y": 33.0495147705078, "boost_distance": 0.0 }
+PASS: Without red acceleration the same second launch cannot reach the moving goal
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=first_only { "won": false, "deaths": 0, "transfers": 1, "max_transfers": 1, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (788.9957, 334.9851), "minimum_y": 33.0495147705078, "boost_distance": 218.120361328125 }
+PASS: First horizontal fling alone cannot finish the upper moving gate
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=direct { "won": false, "deaths": 0, "transfers": 0, "max_transfers": 0, "first_exit": {  }, "second_exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (203.4128, 319.9259), "minimum_y": 33.0495147705078, "boost_distance": 0.0 }
+PASS: Jumping to pre-place the right slope cannot skip the red relay
+WANDER_ROUTE delay=330 wall=0.0 slope=0.0 mode=normal { "won": false, "deaths": 1, "transfers": 0, "max_transfers": 1, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (356.5003, 219.1164), "minimum_y": 33.0495147705078, "boost_distance": 0.0 }
+PASS: A later guard phase really collides with the first cross-pit flight
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=normal { "won": false, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": false, "landing": (0.0, 0.0), "end": (814.266, 174.1777), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Retry fixture reaches the actual second portal exit
+PASS: Pause freezes the actual route, target gate and platform together
+PASS: R immediately restores the moving goal and platform origin
+PASS: R restores spawn, doors, red count and guard without a spawn death loop
+PASS: Reset target continues following the restarted platform phase
+WANDERING_GOAL_FAILURES=0

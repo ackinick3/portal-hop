@@ -1,0 +1,1923 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gravity lands player on solid floor
+PASS: Right input moves player
+PASS: Jump rises above floor
+PASS: Jump returns to floor
+PASS: Player cannot cross solid wall
+PASS: Air control preserves launch speed above run cap
+PASS: Death restores spawn
+MOVEMENT_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_VECTOR_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Invalid material rejected
+PASS: Pale edge hit shifts whole portal inward
+PASS: Wall occludes target
+PASS: Valid red floor placement
+PASS: Single door stays inactive
+PASS: Valid blue floor placement
+PASS: Pair activates
+PASS: Floor exit reverses fall upwards
+PASS: Real floor opening permits physical traversal
+PASS: Same color replaces existing door
+PASS: Old same color door removed
+PASS: Overlapping doors rejected
+PASS: Failed placement retains previous door
+PASS: Reset removes both doors
+PORTAL_INTEGRATION_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PHYSICAL_ORIENTATION_PAIRS=16 FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Adjacent 50px faces merge into valid 100px portal surface
+PASS: Second continuous surface accepts portal
+PASS: Moving outwards cannot enter portal
+PASS: Low normal speed permits traversal
+PASS: Low speed traversal preserves total speed
+PASS: Stationary overlap cannot repeatedly trigger
+PASS: Reverse blue-to-red entry works after full exit separation
+PASS: No portals means no traversal
+PASS: Obstructed aperture edge rejects placement
+PASS: 30000px/s movement cannot tunnel through 2px solid wall
+EDGE_CASE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Edge shot accepted: (0.0, -1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, -1.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, -1.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (0.0, 1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, 1.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, 1.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (-1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (-1.0, 0.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (-1.0, 0.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (1.0, 0.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (1.0, 0.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Diagonal corner hit can use the visible valid floor face
+PASS: Corner placement keeps floor normal and whole inward aperture
+PASS: Blue portal can snap near wall edge
+PASS: Overlap uses shifted center and still rejects the second color
+PASS: Shifted portal still requires clearance for the full aperture
+PASS: Blocked edge placement never opens a collision gap
+PLACEMENT_EDGE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Convex slope geometry is available
+PASS: Slope15 returns its true first surface and normal
+PASS: Slope15 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 cannot be shot through an intervening solid
+PASS: Slope15 checks clearance across the full aperture, not only its center ray
+PASS: Slope15 pair activates using actual ray placement
+PASS: Slope15 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope15 active center is a real physical opening
+SLOPE_FRAME 15 collided=true normal=8.09491729736328 tangent=23.4526996612549
+PASS: Slope15 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope15 clearing doors restores the closed slope
+PASS: Slope15 real character traverses slope to floor
+PASS: Slope15 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope45 returns its true first surface and normal
+PASS: Slope45 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 cannot be shot through an intervening solid
+PASS: Slope45 checks clearance across the full aperture, not only its center ray
+PASS: Slope45 pair activates using actual ray placement
+PASS: Slope45 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope45 active center is a real physical opening
+SLOPE_FRAME 45 collided=true normal=-16.1747856140137 tangent=16.1754341125488
+PASS: Slope45 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope45 clearing doors restores the closed slope
+PASS: Slope45 real character traverses slope to floor
+PASS: Slope45 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope75 returns its true first surface and normal
+PASS: Slope75 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 cannot be shot through an intervening solid
+PASS: Slope75 checks clearance across the full aperture, not only its center ray
+PASS: Slope75 pair activates using actual ray placement
+PASS: Slope75 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope75 active center is a real physical opening
+SLOPE_FRAME 75 collided=true normal=17.4022445678711 tangent=35.0006065368652
+PASS: Slope75 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope75 clearing doors restores the closed slope
+PASS: Slope75 real character traverses slope to floor
+PASS: Slope75 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope135 returns its true first surface and normal
+PASS: Slope135 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 cannot be shot through an intervening solid
+PASS: Slope135 checks clearance across the full aperture, not only its center ray
+PASS: Slope135 pair activates using actual ray placement
+PASS: Slope135 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope135 active center is a real physical opening
+SLOPE_FRAME 135 collided=true normal=18.3863086700439 tangent=35.002326965332
+PASS: Slope135 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope135 clearing doors restores the closed slope
+PASS: Slope135 real character traverses slope to floor
+PASS: Slope135 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope195 returns its true first surface and normal
+PASS: Slope195 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 cannot be shot through an intervening solid
+PASS: Slope195 checks clearance across the full aperture, not only its center ray
+PASS: Slope195 pair activates using actual ray placement
+PASS: Slope195 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope195 active center is a real physical opening
+SLOPE_FRAME 195 collided=true normal=8.0949182510376 tangent=23.4526996612549
+PASS: Slope195 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope195 clearing doors restores the closed slope
+PASS: Slope195 real character traverses slope to floor
+PASS: Slope195 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope225 returns its true first surface and normal
+PASS: Slope225 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 cannot be shot through an intervening solid
+PASS: Slope225 checks clearance across the full aperture, not only its center ray
+PASS: Slope225 pair activates using actual ray placement
+PASS: Slope225 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope225 active center is a real physical opening
+SLOPE_FRAME 225 collided=true normal=-16.1750679016113 tangent=16.1750659942627
+PASS: Slope225 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope225 clearing doors restores the closed slope
+PASS: Slope225 real character traverses slope to floor
+PASS: Slope225 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope255 returns its true first surface and normal
+PASS: Slope255 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 cannot be shot through an intervening solid
+PASS: Slope255 checks clearance across the full aperture, not only its center ray
+PASS: Slope255 pair activates using actual ray placement
+PASS: Slope255 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope255 active center is a real physical opening
+SLOPE_FRAME 255 collided=true normal=17.4024524688721 tangent=34.993896484375
+PASS: Slope255 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope255 clearing doors restores the closed slope
+PASS: Slope255 real character traverses slope to floor
+PASS: Slope255 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope315 returns its true first surface and normal
+PASS: Slope315 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 cannot be shot through an intervening solid
+PASS: Slope315 checks clearance across the full aperture, not only its center ray
+PASS: Slope315 pair activates using actual ray placement
+PASS: Slope315 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope315 active center is a real physical opening
+SLOPE_FRAME 315 collided=true normal=18.3867568969727 tangent=34.9997177124023
+PASS: Slope315 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope315 clearing doors restores the closed slope
+PASS: Slope315 real character traverses slope to floor
+PASS: Slope315 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+SLOPE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Released red-ramp input uses the existing deliberate braking
+SLOPE_BOOST_EXIT p=(456.5218, 377.9818) v=(598.4678, -127.0691) distance=286.72331237793
+PASS: Red ramp keeps existing boost speed and naturally launches upward
+PASS: Boost contact continues across the slope instead of stopping at the flat seam
+PASS: Real character traverses flat-to-ramp boost geometry
+SLOPE_BOOST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Menu starts room
+PASS: Room 1 red visible from spawn
+PASS: Room 1 blue visible from spawn
+PASS: Room 1 physically crosses via floor portals
+PASS: Room 1 reaches goal using movement input
+PASS: Room 2 wall target has line of sight
+ROOM2_END (867.9208, 435.5686) speed=780.0 deaths=0
+PASS: Room 2 produces real horizontal launch
+PASS: Room 2 launch lands and reaches goal
+ROOM3_END (856.6264, 386.0493) deaths=0
+PASS: Room 3 ordinary action route reaches goal
+PASS: Downward contact stomps guard
+PASS: Death resets guard and portals
+PASS: Fast side contact is fatal
+GAME_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room 3 ceiling target visible from upper position
+PASS: Room 3 player reaches lower firing position
+PASS: Room 3 floor target visible from lower position
+PASS: Ceiling portal survives repositioning
+PASS: Room 3 physically exits downward from ceiling
+CEILING_END (468.0016, 376.5625) guard=(462.7515, 413.0) alive=false deaths=0
+PASS: Ceiling drop stomps guard
+PASS: Room 3 portal route reaches goal
+CEILING_ROUTE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+RESPAWN_HISTORY_PASS=true deaths=1 position=(140.0, 335.0)
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Ground release has a small 8.2-10.2px slide at full run speed
+GROUND_SLIDE_PX=8.71528625488281
+PASS: Air release gently slows horizontal drift by about 15px/s over 20 frames
+PASS: Air drag leaves vertical gravity unchanged
+PASS: Reverse air control remains gradual
+PASS: No-input fast launch decays gently without being clamped to run speed
+PASS: Air release stops small drift without reversing it
+PASS: Air drag never damps an upward launch
+PASS: Gun supports mouse-target aiming
+PASS: Gun aims toward (1.0, 0.0)
+PASS: Gun aims toward (0.0, -1.0)
+PASS: Gun aims toward (-1.0, 0.0)
+PASS: Gun aims toward (0.0, 1.0)
+PASS: Gun aims toward (0.707107, -0.707107)
+PASS: Cursor on hand keeps a finite aim direction
+PASS: Shot opens portal on first valid wall
+PASS: Shot creates visible trajectory data
+PASS: One shot creates one trace
+PASS: Trace stops at nearest wall, not a wall behind it
+PASS: Trace begins at visible muzzle
+PASS: Successful red shot keeps its color and impact state
+PASS: Shot trace fades out after 0.18 seconds
+PASS: Invalid material rejects portal
+PASS: Invalid shot still stops at the obstruction
+PASS: Death/reset clears shot feedback
+FEEDBACK_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Player has visual-only action feedback
+PASS: Real landing triggers compression
+PASS: Landing compression settles back to normal
+PASS: Visual feedback leaves collision size unchanged
+PASS: Stomp retains original bounce velocity
+PASS: Stomp triggers upward stretch
+PASS: Death clears old action effects
+PASS: Real teleport triggers player flash
+POLISH_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: 200 cues use at most ten reusable players
+PASS: Audio has explicit resource shutdown
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Shutdown stops voice and releases stream
+PASS: Late cue cannot allocate players after shutdown
+AUDIO_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Pause freezes player and guard
+PASS: Pause freezes timer and action animation
+PASS: Resume advances timer and settles animation
+PASS: Death resets tutorial transfer state
+PASS: Repeated room switches keep a fixed audio pool
+PASS: Nearby facing red wall portal places legally
+PASS: Nearby facing blue wall portal places legally
+PASS: Continuous traversal stays finite and active for 600 physics frames
+PASS: Close-portal loop remains bounded with gentle horizontal drag
+PASS: Close-portal loop does not trap or kill player
+CONTINUOUS_TRANSFERS=49
+STABILITY_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+WINDOW_CLOSE_PATH_STARTED
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Index 3 is the new fourth room, not a copy of room 3
+PORTAL_HOP_READY
+PASS: Exit surface is visible from spawn: (300.0, 830.0)
+ROOM4_EXIT (819.9499, 284.0) v=(0.0, -483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (300.0, 830.0) ceiling=false exit_velocity=(0.0, -483.0373) end=(611.7882, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (295.0, 820.0)
+ROOM4_EXIT (804.95, 284.0) v=(0.0, -483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (295.0, 820.0) ceiling=false exit_velocity=(0.0, -483.0373) end=(610.7883, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (305.0, 840.0)
+ROOM4_EXIT (834.95, 284.0) v=(0.0, -483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (305.0, 840.0) ceiling=false exit_velocity=(0.0, -483.0373) end=(611.0383, 269.9251) landed=true deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Exit surface is visible from spawn: (300.0, 540.0)
+ROOM4_EXIT (550.05, 176.0) v=(0.0, 483.0373)
+PASS: Wall entry is visible after stepping clear of the starting ledge
+ROOM4_ROUTE (300.0, 540.0) ceiling=true exit_velocity=(0.0, 483.0373) end=(551.7917, 224.4035) landed=false deaths=0
+PASS: Route physically traverses a portal
+PASS: Exit vertical direction matches chosen surface
+PASS: Floor route lands; downward ceiling route may touch the gate in midair
+PASS: Route completes without death
+PASS: Fourth room retry returns to starting ledge
+PASS: Fourth room retry clears both portals
+PASS: Invalid room indices return no room
+LEVEL4_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Fifth map exists and is distinct
+PORTAL_HOP_READY
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=0 launch=780.001770019531 guard_alive=false end=(899.001, 293.6875) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Forward launch stomps the guard without the old early braking
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=20 launch=780.001770019531 guard_alive=false end=(899.001, 293.6875) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Forward launch stomps the guard without the old early braking
+PASS: Fifth room creates its own guard on the correct platform
+PASS: Wall portal is shootable from starting ledge
+ROOM5_ROUTE delay=40 launch=780.001770019531 guard_alive=false end=(899.001, 293.6875) deaths=0
+PASS: Fifth route uses actual gravity launch
+PASS: Fifth route reaches the goal without death
+PASS: Forward launch stomps the guard without the old early braking
+PASS: Retry fixture places wall portal
+PASS: Retry fixture places floor portal after leaving ledge
+PASS: Death restores fifth-room guard to its own patrol
+PASS: Fifth-room retry restores start and clears both placed portals
+PASS: Third-room guard keeps original spawn and patrol
+LEVEL5_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Sixth room exists as a new map
+PORTAL_HOP_READY
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=2 p=(468.529, 82.813) success=true
+ROOM6_ROUTE delay=2 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=16 p=(468.529, 184.7576) success=true
+ROOM6_ROUTE delay=16 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=30 p=(468.529, 298.9522) success=true
+ROOM6_ROUTE delay=30 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+AIR_SWITCH delay=45 p=(468.529, 434.8975) success=true
+ROOM6_ROUTE delay=45 first=810.060668945313 second=1177.56066894531 transfers=2 end=(907.2271, 301.029) deaths=0
+PASS: Route shoots replacement blue while airborne
+PASS: Second fall adds real speed before the second launch
+PASS: Two-stage relay reaches exit without death
+PASS: Initial blue portal is visible from spawn
+ROOM6_ROUTE delay=-1 first=810.060668945313 second=0.0 transfers=0 end=(868.9249, 521.2209) deaths=1
+PASS: Comparison route performs a real single launch from a high wall exit
+PASS: Standard single launch falls short of the final platform
+PASS: Retry fixture places floor portal from a legal airborne position
+PASS: Sixth retry clears both portals and transfer stage
+PASS: R returns to starting ledge directly without a new briefing
+PASS: Sixth room enters directly without a tutorial
+PASS: Paused sixth room restarts directly
+LEVEL6_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Seventh room exists as a distinct map
+PORTAL_HOP_READY
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=18 p=(412.2188, 195.3813)
+SWITCHBACK_EXIT (664.5482, 404.0) v=(0.0, -1057.687)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(18.0, 280.0, -8.0) first=892.5 up=1057.68725585938 landed=true end=(840.939, 104.9251) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=36 p=(541.65, 247.8188)
+SWITCHBACK_EXIT (672.5482, 404.0) v=(0.0, -1057.687)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(36.0, 280.0, 0.0) first=892.5 up=1057.68725585938 landed=true end=(840.189, 104.9251) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=54 p=(669.0563, 320.5063)
+SWITCHBACK_EXIT (680.5482, 404.0) v=(0.0, -1057.687)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(54.0, 280.0, 8.0) first=892.5 up=1057.68725585938 landed=true end=(841.189, 104.9251) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+AIR_PAIR gap=30 p=(640.9188, 296.3813)
+SWITCHBACK_EXIT (672.5483, 404.0) v=(0.0, -1057.687)
+PASS: Upward exit has no inherited sideways drift
+ROOM7_ROUTE setting=(30.0, 420.0, 0.0) first=892.5 up=1057.68725585938 landed=true end=(840.189, 104.9251) deaths=0
+PASS: Both replacement shots happen during the first flight
+PASS: Second passage converts horizontal launch into upward speed
+PASS: Route lands on final platform and completes without death
+PASS: New floor exit is occluded from spawn
+PASS: Initial wall portal is visible from spawn
+PASS: Lower exit can be aimed at immediately after the first launch
+ROOM7_ROUTE setting=(-1.0, 280.0, 0.0) first=892.5 up=0.0 landed=false end=(808.9252, 494.9741) deaths=0
+PASS: Initial pair alone cannot complete the standard route
+PASS: R clears both doors and relay stage after a failed first launch
+PASS: R directly restores seventh-room spawn
+PASS: Ordinary jump chain cannot bypass the relay: move_left
+PASS: Ordinary jump chain cannot bypass the relay: move_right
+LEVEL7_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+ENERGY_EXIT p=(635.0748, 404.0) v=(0.0, -808.0833)
+ENERGY_ROUTE first=892.5 second=808.083312988281 ceiling=false end=(840.5526, 93.97286)
+PASS: Initial energy has a generous natural-fall margin
+PASS: A less-centered entry still provides enough real upward speed
+PASS: Upward launch does not lose speed against the underside of a platform
+PASS: A wider legal exit placement still completes the room
+LEVEL7_ENERGY_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Eighth room exists as a distinct placement puzzle
+PORTAL_HOP_READY
+PASS: Wall exit is visible before movement: (90.0, 430.0)
+PASS: Floor entry is visible before movement: (90.0, 430.0)
+ROOM8_ROUTE (90.0, 430.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(858.2689, 384.9251) deaths=0
+PASS: Prepared portals are traversed with movement input
+PASS: High exit clears the obstacle and lands at the goal without midair shots or jumping
+PASS: Wall exit is visible before movement: (80.0, 420.0)
+PASS: Floor entry is visible before movement: (80.0, 420.0)
+ROOM8_ROUTE (80.0, 420.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(858.2689, 384.9251) deaths=0
+PASS: Prepared portals are traversed with movement input
+PASS: High exit clears the obstacle and lands at the goal without midair shots or jumping
+PASS: Wall exit is visible before movement: (95.0, 440.0)
+PASS: Floor entry is visible before movement: (95.0, 440.0)
+ROOM8_ROUTE (95.0, 440.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(857.1071, 384.9251) deaths=0
+PASS: Prepared portals are traversed with movement input
+PASS: High exit clears the obstacle and lands at the goal without midair shots or jumping
+PASS: Wall exit is visible before movement: (160.0, 430.0)
+PASS: Floor entry is visible before movement: (160.0, 430.0)
+ROOM8_ROUTE (160.0, 430.0) crossed=true cleared=false landed=false speed=757.760009765625 end=(608.9249, 521.6287) deaths=1
+PASS: Prepared portals are traversed with movement input
+PASS: Low exit demonstrates why placement height matters
+PASS: Eighth retry restores the starting ledge
+PASS: Eighth retry clears both prepared portals
+PASS: Ordinary jumping cannot bypass the placement puzzle
+LEVEL8_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+LAND (128.0264, 204.9887)
+JUMP (141.6709, 204.9251)
+LAND (315.5878, 234.9253)
+JUMP (333.0878, 234.9251)
+LAND (564.0883, 454.9252)
+NO_PORTAL_BYPASS room=4 blocked=true final_position=(810.8383, 454.9251)
+LAND (260.0264, 129.9887)
+JUMP (312.0999, 129.9251)
+LAND (260.0264, 129.9887)
+JUMP (312.0999, 129.9251)
+NO_PORTAL_BYPASS room=5 blocked=true final_position=(523.8504, 250.9243)
+LAND (665.0264, 114.9887)
+JUMP (717.1002, 114.9251)
+LAND (728.9249, 114.9243)
+JUMP (728.9999, 114.9725)
+LAND (728.9777, 114.9722)
+JUMP (728.9777, 114.9722)
+LAND (728.9777, 114.9719)
+JUMP (728.9777, 114.9719)
+LAND (728.9777, 114.9717)
+NO_PORTAL_BYPASS room=6 blocked=true final_position=(728.9777, 114.9717)
+JUMP (728.9777, 114.9717)
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Player supports optional material patches
+FLOOR_REBOUND=(123.5, -580.0) INCOMING=(123.5, 565.0)
+PASS: Blue floor automatically rebounds from a real landing
+PASS: Blue floor preserves incoming horizontal velocity
+PASS: Automatic bounce cannot be shortened by jump release
+PASS: Separating floor contact and released jump do not alter automatic rebound
+PASS: Death immediately resets material route evidence
+WALL_REBOUND=(-800.0, 105.0) INCOMING=(800.0, 105.0)
+PASS: Blue wall reflects pre-slide normal speed rather than zeroed slide velocity
+PASS: Blue wall preserves vertical velocity
+PASS: Separating wall contact does not rebound twice
+PASS: Blue rebound caps excessive incoming normal speed
+PASS: Slow wall impact receives a useful automatic rebound
+PASS: A remote blue patch does not coat the rest of a wall
+RED_SPEED=650.0 RED_DISTANCE=237.416534423828
+PASS: Held red runway accelerates beyond ordinary running with a bounded speed
+PASS: Red runway records actual traveled distance
+PASS: Released red runway movement deliberately brakes
+RED_AIR_SPEED=626.666625976563
+PASS: Leaving red runway retains high speed under existing held air control
+PASS: Empty material list preserves ordinary ground speed
+ORDINARY_SLIDE=8.71528625488281
+PASS: Empty material list preserves ordinary release braking distance
+PASS: A remote red patch cannot leak acceleration onto normal floor
+PASS: Leaving red coating onto ordinary floor restores ordinary ground running
+MATERIAL_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gun exposes the shared reflected shot path
+PASS: Laser exposes a portal aperture path
+PASS: A visible green first hit reflects into a second segment
+PASS: Gun uses geometric equal-angle reflection
+PASS: Reflected final ray places on the pale floor
+PASS: Actual reflected shot accepts preview
+PASS: Actual shot draws every reflected segment with compatible trace records
+PASS: Reflected preview and actual placement match
+PASS: Reflected edge impact clamps the full aperture inward
+PASS: A floating green line does not invent collision or reflect
+PASS: An opaque first hit hides the green mirror behind it
+PASS: External dynamic occluder is a first ray blocker
+PASS: Gun cannot place through a dynamic occluder
+PASS: Default empty optics preserve direct placement
+PASS: Facing green mirrors reject after eight reflections
+PASS: Laser fixture red wall door is real
+PASS: Inactive single portal remains solid to a laser
+PASS: Laser fixture blue floor door is real
+PASS: Active portal pair routes a continuous laser
+PASS: Beam leaves output along its outward normal
+PASS: Portal routing works in the reverse color direction
+PASS: Aperture edge or outside grazing ray stays blocked: 164.0
+PASS: Aperture edge or outside grazing ray stays blocked: 165.0
+PASS: Aperture edge or outside grazing ray stays blocked: 235.0
+PASS: Aperture edge or outside grazing ray stays blocked: 236.0
+PASS: Safe off-center ray retains its tangential aperture offset
+PASS: Laser originating inside collision is rejected
+PASS: A dynamic blocker also stops a beam after its portal exit
+PASS: Inside an external occluder is invalid too
+PASS: Beam portal cycles stop within the hop and distance bounds
+PASS: Green gun mirrors never reflect lasers
+PASS: Dynamic exit fixture starts with a genuinely clear portal pair
+PASS: An exit occupied after placement refuses transport
+PASS: Refused transport never places any part of the player inside the dynamic blocker
+PASS: Blocked exit keeps the player on the entry side and removes only inward normal velocity
+PASS: An obstacle touching only the player's exit edge still blocks transport
+PASS: Moving the blocker away restores unchanged ordinary transport
+PASS: A flush dynamic blocker wins an equal-distance solid hit
+PASS: A blocker flush with the aperture stops the laser before routing
+PASS: A flush dynamic blocker also prevents gun placement
+OPTICS_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gun-only screens are represented separately from physical and laser blockers
+PASS: Screen blocks actual portal placement and preview
+PASS: Visible gun path stops at green screen
+PASS: Gun-only screen does not invent laser blocking
+PASS: After crossing the screen the same white face is shootable
+PASS: Shots really pass around a finite screen endpoint
+PASS: A collinear gun ray also stops at the screen endpoint
+PASS: Nearer solid still wins over a screen
+PASS: Reflected gun ray is blocked on its return path
+PASS: Ordinary character passes through the gun screen without a physical collider
+GUN_SCREEN_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Ordinary player settles on parked platform
+PASS: Disabled platform stays at origin
+PASS: Horizontal mover crosses the unsupported gap at configured speed
+PASS: Grounded ordinary player rides horizontally without input
+PASS: Pause freezes platform rider and rotating gears
+PASS: Platform reverses at endpoint and carries rider back
+PASS: Reset restores phase origin and finite zero gear angle
+PASS: Disabled mover returns to and remains at origin
+PASS: Elevator carries an ordinary player upward
+PASS: Elevator carries an ordinary player downward after reversal
+PASS: Actual motion rotates finite undercarriage gears
+PASS: Elevator stops before squeezing a rider through the ceiling
+PASS: Blocked elevator leaves its rider alive and supported
+PASS: Ping-pong preserves travel distance when a tick crosses the endpoint
+PASS: Reset produces the same motion and gear phase for the same elapsed ticks
+PASS: Platform sweep cannot tunnel through a thin solid at extreme speed
+MOVING_PLATFORM_TEST_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: A moving goal follows an explicit platform anchor
+PASS: Gate position follows the real collider, not a separate clock
+PASS: Pause freezes the platform and its goal together
+PASS: Death resets the goal immediately with its platform
+PASS: Goal keeps following its platform during the death animation
+PASS: Entering the moving gate in midair cannot skip actually landing on its platform
+PASS: Ordinary floor contact on the anchored platform completes its gate
+PASS: Old static goals retain their geometry
+MOVING_GOAL_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Scene mechanisms exist to receive real portal beams
+PASS: Opaque wall blocks initial beam and leaves receiver off
+PASS: Unpowered gate has real collision
+PASS: Laser entry portal placed from real visible side
+PASS: Laser exit portal placed from real visible side
+PASS: Beam traverses active pair and lights receiver
+PASS: Real receiver opens linked gate
+PASS: Opened gate is removed from gun occlusion
+PASS: Receiver latches without holding player in a timing trap
+PASS: Retry resets power and real gate collision
+PASS: Reset gate blocks shots again
+PASS: A receiver close behind a thin wall cannot be stimulated through the wall
+MECHANISMS_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: First relay exit is visible at the starting lip
+PASS: Initial low entry can be prepared
+PASS: Next floor is hidden below the high-point window
+RELAY_TRANSFER 1 p=(378.8777, 414.0) v=(0.0, -727.5)
+RELAY_TRANSFER 2 p=(588.8777, 414.0) v=(0.0, -742.5)
+RELAY_TRANSFER 3 p=(788.8777, 414.0) v=(0.0, -757.5)
+RELAY_END p=(948.9249, 236.5624) transfers=3 speed=727.5 death=0
+PASS: High-point shots advance both relay exits
+PASS: Initial gravity energy carries the complete spike relay
+RELAY_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Curated coating chapter exists
+PASS: Coating chapter is connected to the live game
+PORTAL_HOP_READY
+COATING_ROUTE room=10 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 0, "speed": 210.0, "shot": true, "end": (601.3754, 244.9251) }
+PASS: Room10 completes through real movement and visible portal shots
+PASS: Room10 route physically uses blue coating
+COATING_ROUTE room=11 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 351.166351318359, "transfers": 1, "speed": 650.0, "shot": true, "end": (851.5977, 434.9251) }
+PASS: Room11 completes through real movement and visible portal shots
+PASS: Room11 route physically uses red coating
+PASS: Room11 route physically crosses prepared portals
+COATING_EVENT room=14 p=(208.625, 434.9251) v=(210.0, -580.0) incoming=(210.0, 7.5)
+COATING_EVENT room=14 p=(112.0, 53.06982) v=(675.9484, 0.0) incoming=(675.9484, 0.0)
+COATING_ROUTE room=14 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 1, "speed": 675.948425292969, "shot": true, "end": (840.7413, 344.9251) }
+PASS: Room14 completes through real movement and visible portal shots
+PASS: Room14 route physically uses blue coating
+PASS: Room14 route physically crosses prepared portals
+COATING_EVENT room=17 p=(631.7929, 434.0) v=(0.0, -688.4301) incoming=(0.0, -688.4301)
+COATING_ROUTE room=17 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 150.750030517578, "transfers": 1, "speed": 650.0, "shot": true, "end": (875.3339, 264.9251) }
+PASS: Room17 completes through real movement and visible portal shots
+PASS: Room17 route physically uses red coating
+PASS: Room17 route physically crosses prepared portals
+COATING_ROUTE room=19 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 208.041870117188, "transfers": 0, "speed": 650.0, "shot": true, "end": (878.5851, 266.1749) }
+PASS: Room19 completes through real movement and visible portal shots
+PASS: Room19 route physically uses blue coating
+PASS: Room19 route physically uses red coating
+COATING_ROUTE room=10 plain=true { "won": false, "deaths": 1, "bounces": 0, "distance": 0.0, "transfers": 0, "speed": 210.0, "shot": true, "end": (388.9249, 515.8626) }
+PASS: Room10 same-input control fails without coatings
+COATING_ROUTE room=11 plain=true { "won": false, "deaths": 0, "bounces": 0, "distance": 0.0, "transfers": 4, "speed": 210.0, "shot": true, "end": (414.25, 384.9251) }
+PASS: Room11 same-input control fails without coatings
+PASS: Room10 retry fixture physically uses coating first
+PASS: Room10 R resets coating evidence and spawn
+PASS: Room10 R clears portals and retains the map coating
+PASS: Room11 retry fixture physically uses coating first
+PASS: Room11 R resets coating evidence and spawn
+PASS: Room11 R clears portals and retains the map coating
+COATING_ROUTE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Curated laser chapter exists
+PORTAL_HOP_READY
+PASS: Room 20 is delegated through Maps
+PASS: Room 20 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 20 closed gate physically stops the player
+PASS: Room 15 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 15 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 20 powers every receiver by real portal beams
+PASS: Room 20 R clears power and portals
+PASS: Room 20 R restores actual spawn
+PASS: Room 20 R restores closed gate collision
+PASS: Room 15 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 15 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=20 state=won deaths=0 end=(891.625, 464.9251) transfers=0
+PASS: Room 20 real-input standard route reaches its exit
+PASS: Room 21 is delegated through Maps
+PASS: Room 21 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 21 closed gate physically stops the player
+PASS: Room 16 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 16 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 21 powers every receiver by real portal beams
+PASS: Room 21 R clears power and portals
+PASS: Room 21 R restores actual spawn
+PASS: Room 21 R restores closed gate collision
+PASS: Room 16 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 16 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=21 state=won deaths=0 end=(891.2648, 464.9251) transfers=0
+PASS: Room 21 real-input standard route reaches its exit
+PASS: Room 25 is delegated through Maps
+PASS: Room 25 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 25 closed gate physically stops the player
+PASS: Room 17 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 17 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: First circuit unlocks access but cannot open the final gate
+PASS: Room 17 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 17 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+PASS: Room 25 powers every receiver by real portal beams
+PASS: Room 25 R clears power and portals
+PASS: Room 25 R restores actual spawn
+PASS: Room 25 R restores closed gate collision
+PASS: Room 25 R restores closed gate collision
+PASS: Room 17 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 17 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: First circuit unlocks access but cannot open the final gate
+PASS: Room 17 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 17 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+LASER_ROOM=25 state=won deaths=0 end=(890.1326, 464.9251) transfers=0
+PASS: Room 25 real-input standard route reaches its exit
+LASER_ROUTE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: New18 places the real laser entrance
+PASS: New18 powers the first circuit with a real shot
+PASS: First light leaves the final circuit unpowered
+PASS: New18 opens both circuits through actual beam paths
+PASS: New18 uses both coatings
+PASS: New18 actual-input route completes
+PASS: Without power the first real gate blocks the route
+MIXED_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Advanced room 36 has a concrete map
+PASS: Room 36 direct shot to the hidden face is blocked
+PASS: Room 36 gun follows 1 actual green reflections
+PASS: Room 36 actual gun shot color 1 toward (370.4783, 60.0)
+PASS: Room 36 reflected shot reaches the intended hidden face
+PASS: Room 36 actual gun shot color 0 toward (180.0, 400.0)
+PASS: Room 36 traverses a real portal pair
+ADVANCED_ROOM 36 state=won pos=(871.6223, 384.9251) velocity=(210.0, 0.0) transfers=1 bounces=0 boost=0.0 carried=0.0 deaths=0
+PASS: Room 36 authentic standard route reaches the exit without deaths
+PASS: Room 36 standard route actually uses green reflection
+PASS: Advanced room 37 has a concrete map
+ADVANCED_ROOM 37 state=won pos=(880.8885, 384.9251) velocity=(210.0, 0.0) transfers=0 bounces=0 boost=0.0 carried=434.249963188173 deaths=0
+PASS: Room 37 authentic standard route reaches the exit without deaths
+PASS: Room 37 standard route rides the real platform
+PASS: Advanced room 38 has a concrete map
+PASS: Room 38 actual gun shot color 0 toward (400.0, 220.0)
+PASS: Room 38 gun follows 1 actual green reflections
+PASS: Room 38 actual gun shot color 1 toward (379.1575, 480.0)
+PASS: Room 38 reflected shot reaches the intended hidden face
+PASS: Room 38 actual routed laser latches the platform receiver
+PASS: Room 38 receiver enables the real mover
+ADVANCED_ROOM 38 state=won pos=(890.1119, 384.9252) velocity=(28.5, 0.0) transfers=0 bounces=0 boost=0.0 carried=637.999939155571 deaths=0
+PASS: Room 38 authentic standard route reaches the exit without deaths
+PASS: Room 38 standard route actually uses green reflection
+PASS: Room 38 standard route rides the real platform
+PASS: Advanced room 48 has a concrete map
+PASS: Room 48 actual gun shot color 0 toward (400.0, 220.0)
+PASS: Room 48 gun follows 1 actual green reflections
+PASS: Room 48 actual gun shot color 1 toward (411.799, 500.0)
+PASS: Room 48 reflected shot reaches the intended hidden face
+PASS: Room 48 actual routed laser latches the platform receiver
+PASS: Room 48 receiver enables the real mover
+PASS: Room 48 gun follows 1 actual green reflections
+PASS: Room 48 actual gun shot color 1 toward (437.1407, 40.0)
+PASS: Room 48 reflected shot reaches the intended hidden face
+PASS: Room 48 actual gun shot color 0 toward (50.0, 200.0)
+ADVANCED_ROOM 48 state=won pos=(860.7414, 184.0) velocity=(0.0, -182.5788) transfers=1 bounces=0 boost=0.0 carried=207.999980163575 deaths=0
+PASS: Room 48 authentic standard route reaches the exit without deaths
+PASS: Room 48 standard route actually uses green reflection
+PASS: Room 48 standard route rides the real platform
+PASS: Advanced room 50 has a concrete map
+PASS: Room 50 actual gun shot color 0 toward (400.0, 220.0)
+PASS: Room 50 gun follows 1 actual green reflections
+PASS: Room 50 actual gun shot color 1 toward (379.1575, 480.0)
+PASS: Room 50 reflected shot reaches the intended hidden face
+PASS: Room 50 actual routed laser latches the platform receiver
+PASS: Room 50 receiver enables the real mover
+PASS: Room 50 actual gun shot color 1 toward (900.0, 260.0)
+PASS: Final room second laser signal opens the blue landing dock
+ADVANCED_ROOM 50 state=won pos=(130.4116, 234.9251) velocity=(-334.9999, 0.0) transfers=0 bounces=1 boost=187.100708007813 carried=587.999943923947 deaths=0
+PASS: Room 50 authentic standard route reaches the exit without deaths
+PASS: Room 50 standard route actually uses green reflection
+PASS: Room 50 standard route rides the real platform
+PASS: Room 50 standard route uses bounce coating
+PASS: Room 50 standard route uses boost coating
+PASS: Room36 hidden shot fails with green reflection disabled
+PASS: Room36 ordinary jumping cannot cross its central barrier without portals
+PASS: Room37 ordinary jump cannot cross the ferry gap with the mover parked
+PASS: Room 50 actual gun shot color 0 toward (400.0, 220.0)
+PASS: Room 50 gun follows 1 actual green reflections
+PASS: Room 50 actual gun shot color 1 toward (379.1575, 480.0)
+PASS: Room 50 reflected shot reaches the intended hidden face
+PASS: Room 50 actual routed laser latches the platform receiver
+PASS: Room 50 receiver enables the real mover
+PASS: Room 50 actual gun shot color 1 toward (900.0, 260.0)
+PASS: Final reset fixture powers both receivers using real routed beams
+PASS: Pause freezes campaign mover rider and mechanism clock
+PASS: R clears latched receivers and closes the final gate
+PASS: R parks the signal-powered mover at its original phase
+PASS: R clears both reflected/routed portals
+ADVANCED_ROUTE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Original26 rooms plus the approved room27
+PASS: Original curated order is preserved and stableIDs51/52/53/54 appended
+PASS: Invalid tail indices cannot be loaded
+PORTAL_HOP_READY
+PASS: Tutorial entries are removed
+PASS: New room01 has no hint metadata
+PASS: New room01 enters gameplay directly
+PASS: New room01 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room02 has no hint metadata
+PASS: New room02 enters gameplay directly
+PASS: New room02 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room03 has no hint metadata
+PASS: New room03 enters gameplay directly
+PASS: New room03 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room04 has no hint metadata
+PASS: New room04 enters gameplay directly
+PASS: New room04 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room05 has no hint metadata
+PASS: New room05 enters gameplay directly
+PASS: New room05 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room06 has no hint metadata
+PASS: New room06 enters gameplay directly
+PASS: New room06 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room07 has no hint metadata
+PASS: New room07 enters gameplay directly
+PASS: New room07 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room08 has no hint metadata
+PASS: New room08 enters gameplay directly
+PASS: New room08 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room09 has no hint metadata
+PASS: New room09 enters gameplay directly
+PASS: New room09 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room10 has no hint metadata
+PASS: New room10 enters gameplay directly
+PASS: New room10 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room11 has no hint metadata
+PASS: New room11 enters gameplay directly
+PASS: New room11 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room12 has no hint metadata
+PASS: New room12 enters gameplay directly
+PASS: New room12 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room13 has no hint metadata
+PASS: New room13 enters gameplay directly
+PASS: New room13 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room14 has no hint metadata
+PASS: New room14 enters gameplay directly
+PASS: New room14 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room15 has no hint metadata
+PASS: New room15 enters gameplay directly
+PASS: New room15 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room16 has no hint metadata
+PASS: New room16 enters gameplay directly
+PASS: New room16 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room17 has no hint metadata
+PASS: New room17 enters gameplay directly
+PASS: New room17 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room18 has no hint metadata
+PASS: New room18 enters gameplay directly
+PASS: New room18 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room19 has no hint metadata
+PASS: New room19 enters gameplay directly
+PASS: New room19 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room20 has no hint metadata
+PASS: New room20 enters gameplay directly
+PASS: New room20 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room21 has no hint metadata
+PASS: New room21 enters gameplay directly
+PASS: New room21 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room22 has no hint metadata
+PASS: New room22 enters gameplay directly
+PASS: New room22 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room23 has no hint metadata
+PASS: New room23 enters gameplay directly
+PASS: New room23 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room24 has no hint metadata
+PASS: New room24 enters gameplay directly
+PASS: New room24 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room25 has no hint metadata
+PASS: New room25 enters gameplay directly
+PASS: New room25 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room26 has no hint metadata
+PASS: New room26 enters gameplay directly
+PASS: New room26 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: New room27 has no hint metadata
+PASS: New room27 enters gameplay directly
+PASS: New room27 has no tutorial panel
+PASS: Only room27 ends the campaign
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Selection controls fit on page1
+PASS: Selection controls fit on page1
+PASS: Page1 has the correct room count
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Selection controls fit on page2
+PASS: Selection controls fit on page2
+PASS: Page2 has the correct room count
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Selection controls fit on page3
+PASS: Selection controls fit on page3
+PASS: Page3 has the correct room count
+PASS: Legacy unlock1 migrates to new1 without replaying completed survivors
+PASS: Legacy unlock8 migrates to new8 without replaying completed survivors
+PASS: Legacy unlock12 migrates to new12 without replaying completed survivors
+PASS: Legacy unlock14 migrates to new12 without replaying completed survivors
+PASS: Legacy unlock22 migrates to new17 without replaying completed survivors
+PASS: Legacy unlock34 migrates to new18 without replaying completed survivors
+PASS: Legacy unlock44 migrates to new22 without replaying completed survivors
+PASS: Legacy unlock49 migrates to new23 without replaying completed survivors
+PASS: Legacy unlock50 migrates to new23 without replaying completed survivors
+PASS: Version2 unlock1 is not migrated twice
+PASS: Version2 unlock12 is not migrated twice
+PASS: Version2 unlock20 is not migrated twice
+PASS: Version2 unlock23 is not migrated twice
+PASS: Version2 unlock24 is not migrated twice
+PASS: Version2 unlock25 is not migrated twice
+PASS: Version2 unlock26 is not migrated twice
+PASS: Version2 unlock27 is not migrated twice
+PASS: Existing version2 room23 progress does not auto-complete the new room
+PASS: Progression fixture: completing room23 unlocks room24 and NEXT
+PASS: NEXT actually enters the appended slope room without a tutorial
+PASS: Existing room24 unlock stays24 without completing the new room
+PASS: Progression fixture: room24 unlocks25 and NEXT
+PASS: NEXT enters room25 without tutorial
+PASS: Existing room25 progress stays25 until the new room is unlocked
+PASS: Progression fixture: completing25 unlocks26
+PASS: NEXT enters26 directly
+PASS: Existing room26 progress stays26 until the moving-goal room is unlocked
+PASS: Progression fixture: completing26 unlocks27
+PASS: NEXT enters27 directly
+CURATION_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room24 contains the requested moving guard
+PASS: Guard follows the straightened user patrol, with existing speed
+PASS: Guard really reverses vertically and remains within the patrol
+PASS: Pause freezes the vertical guard
+PASS: Death resets the vertical guard immediately
+PASS: Guard does not cause a spawn death loop
+PASS: Original third-room guard still patrols horizontally
+VERTICAL_GUARD_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Approved sketch is appended as room24 with stable ID51
+PORTAL_HOP_READY
+PASS: Spawn sightline cannot pass through the starting ledge
+FALL_EXIT dx=-8.0 ds=-8.0 p=(614.0419, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(570.4417, 289.3395) guard=(542.0, 137.2492)
+FALL_BLUE dx=-8.0 ds=-8.0 p=(260.5486, 307.4916) v=(508.2939, -543.2379)
+GUARD_ROUTE3 wait=320 player=(514.8074, 148.2874) guard=(542.0, 70.16566)
+FALL_ROUTE dx=-8.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.23, 184.9253), "end": (784.6989, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route -8/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=-8.0 ds=0.0 p=(616.1831, 292.0413) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(572.5829, 281.6314) guard=(542.0, 137.2492)
+FALL_BLUE dx=-8.0 ds=0.0 p=(256.8877, 301.7741) v=(514.6451, -539.5544)
+GUARD_ROUTE3 wait=320 player=(514.4816, 144.5024) guard=(542.0, 69.58233)
+FALL_ROUTE dx=-8.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (686.8934, 184.9253), "end": (784.2128, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route -8/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=-8.0 ds=8.0 p=(618.3242, 284.3331) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(568.5204, 272.6862) guard=(542.0, 136.6658)
+FALL_BLUE dx=-8.0 ds=8.0 p=(253.2721, 296.1236) v=(521.3357, -535.5458)
+GUARD_ROUTE3 wait=320 player=(514.3783, 140.9573) guard=(542.0, 68.99899)
+FALL_ROUTE dx=-8.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (693.012, 184.9253), "end": (784.2719, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route -8/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=-8.0 p=(611.9008, 307.4575) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(568.3006, 297.0477) guard=(542.0, 137.2492)
+FALL_BLUE dx=0.0 ds=-8.0 p=(264.2367, 313.258) v=(501.6995, -547.1501)
+GUARD_ROUTE3 wait=320 player=(511.2473, 152.6205) guard=(542.0, 71.33234)
+FALL_ROUTE dx=0.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (675.4786, 184.9252), "end": (783.3209, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route 0/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(570.4418, 289.3395) guard=(542.0, 137.2492)
+FALL_BLUE dx=0.0 ds=0.0 p=(260.5486, 307.4917) v=(508.3071, -543.2258)
+GUARD_ROUTE3 wait=320 player=(514.8143, 148.2932) guard=(542.0, 70.16566)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route 0/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=8.0 p=(616.1831, 292.0413) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(572.5829, 281.6314) guard=(542.0, 137.2492)
+FALL_BLUE dx=0.0 ds=8.0 p=(256.8877, 301.7741) v=(514.6451, -539.5544)
+GUARD_ROUTE3 wait=320 player=(514.4816, 144.5024) guard=(542.0, 69.58233)
+FALL_ROUTE dx=0.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (686.8934, 184.9253), "end": (784.2128, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route 0/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=-8.0 p=(609.7596, 315.1656) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(572.3693, 306.0554) guard=(542.0, 137.8325)
+FALL_BLUE dx=8.0 ds=-8.0 p=(267.9704, 319.0912) v=(495.2682, -550.912)
+GUARD_ROUTE3 wait=320 player=(511.6579, 156.5104) guard=(542.0, 71.91567)
+FALL_ROUTE dx=8.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (670.0187, 184.9253), "end": (784.044, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route 8/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=0.0 p=(611.9008, 307.4575) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(568.3006, 297.0477) guard=(542.0, 137.2492)
+FALL_BLUE dx=8.0 ds=0.0 p=(264.2367, 313.258) v=(501.6995, -547.1501)
+GUARD_ROUTE3 wait=320 player=(511.2473, 152.6205) guard=(542.0, 71.33234)
+FALL_ROUTE dx=8.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (675.4786, 184.9252), "end": (783.3209, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route 8/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=8.0 p=(614.0419, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=320 player=(570.4417, 289.3395) guard=(542.0, 137.2492)
+FALL_BLUE dx=8.0 ds=8.0 p=(260.5486, 307.4916) v=(508.2939, -543.2379)
+GUARD_ROUTE3 wait=320 player=(514.8074, 148.2874) guard=(542.0, 70.16566)
+FALL_ROUTE dx=8.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.23, 184.9253), "end": (784.6989, 184.9251), "danger_stage": 0 }
+PASS: Room24 safe-phase real input route 8/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=0 player=(570.4418, 289.3395) guard=(542.0, 323.916)
+FALL_ROUTE dx=0.0 ds=0.0 plain=true { "won": false, "deaths": 0, "shot": true, "transfers": 1, "bounced": false, "landed": false, "landing": (0.0, 0.0), "end": (321.2775, 484.9882), "danger_stage": 0 }
+PASS: The same real-input route cannot win without blue reflection
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=80 player=(570.4418, 289.3395) guard=(542.0, 277.2485)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": false, "deaths": 1, "shot": true, "transfers": 1, "bounced": false, "landed": false, "landing": (0.0, 0.0), "end": (570.4418, 289.3395), "danger_stage": 2 }
+GUARD_PHASE wait=80 result={ "won": false, "deaths": 1, "shot": true, "transfers": 1, "bounced": false, "landed": false, "landing": (0.0, 0.0), "end": (570.4418, 289.3395), "danger_stage": 2 }
+PASS: Real-input guard contact threatens route2
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=200 player=(570.4418, 289.3395) guard=(542.0, 207.2486)
+FALL_BLUE dx=0.0 ds=0.0 p=(260.5486, 307.4917) v=(508.3071, -543.2258)
+GUARD_ROUTE3 wait=200 player=(514.8143, 148.2932) guard=(542.0, 140.1658)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": false, "deaths": 1, "shot": true, "transfers": 1, "bounced": true, "landed": false, "landing": (0.0, 0.0), "end": (514.8143, 148.2932), "danger_stage": 3 }
+GUARD_PHASE wait=200 result={ "won": false, "deaths": 1, "shot": true, "transfers": 1, "bounced": true, "landed": false, "landing": (0.0, 0.0), "end": (514.8143, 148.2932), "danger_stage": 3 }
+PASS: Real-input guard contact threatens route3
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=290 player=(570.4418, 289.3395) guard=(542.0, 154.749)
+FALL_BLUE dx=0.0 ds=0.0 p=(260.5486, 307.4917) v=(508.3071, -543.2258)
+GUARD_ROUTE3 wait=290 player=(514.8143, 148.2932) guard=(542.0, 87.66574)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251), "danger_stage": 0 }
+GUARD_PHASE wait=290 result={ "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251), "danger_stage": 0 }
+PASS: Nearby safe departure phase 290 still reaches the platform and goal
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+GUARD_ROUTE2 wait=350 player=(570.4418, 289.3395) guard=(542.0, 119.7492)
+FALL_BLUE dx=0.0 ds=0.0 p=(260.5486, 307.4917) v=(508.3071, -543.2258)
+GUARD_ROUTE3 wait=350 player=(514.8143, 148.2932) guard=(542.0, 55.16666)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251), "danger_stage": 0 }
+GUARD_PHASE wait=350 result={ "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251), "danger_stage": 0 }
+PASS: Nearby safe departure phase 350 still reaches the platform and goal
+PASS: Retry fixture prepares real portals from a legal standing place
+PASS: 120px floor band cannot hold both full72px portals
+PASS: Pause freezes player/guard and retains the active slope pair
+PASS: R restores the guard position and travel direction
+PASS: R restores spawn and counters without a death loop
+PASS: R closes every real slope opening
+FALL_BOUNCE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: New sketch is room25 stableID52
+PORTAL_HOP_READY
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (261.1569, 197.8669), "v": (566.1982, -539.9854) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (705.5134, 64.92525), "minimum_y": 38.1255798339844, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }, { "p": (261.1569, 197.8669), "v": (566.1982, -539.9854) }], "end": (863.6862, 64.92506) }
+PASS: Real-input two-stage relay reaches the final platform and goal
+SECOND_ASCENT_EXIT 1 { "p": (265.7571, 202.6904), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (259.9211, 196.5711), "v": (566.1982, -539.9854) }
+SECOND_ASCENT_ROUTE 359.0/641.0/0.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (708.3585, 64.92523), "minimum_y": 36.8298034667969, "events": [{ "p": (265.7571, 202.6904), "v": (532.3328, -507.6878) }, { "p": (259.9211, 196.5711), "v": (566.1982, -539.9854) }], "end": (862.8837, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (257.4753, 194.0065), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (262.3826, 199.1521), "v": (571.6653, -545.1994) }
+SECOND_ASCENT_ROUTE 371.0/629.0/0.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (719.5872, 64.92519), "minimum_y": 36.2823791503906, "events": [{ "p": (257.4753, 194.0065), "v": (532.3328, -507.6878) }, { "p": (262.3826, 199.1521), "v": (571.6653, -545.1994) }], "end": (862.8032, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (258.8555, 195.4538), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (256.4532, 192.9349), "v": (571.6653, -545.1994) }
+SECOND_ASCENT_ROUTE 365.0/635.0/-4.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (725.9807, 64.92522), "minimum_y": 30.0651550292969, "events": [{ "p": (258.8555, 195.4538), "v": (532.3328, -507.6878) }, { "p": (256.4532, 192.9349), "v": (571.6653, -545.1994) }], "end": (863.4968, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (264.3769, 201.2431), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (265.8544, 202.7924), "v": (566.1982, -539.9854) }
+SECOND_ASCENT_ROUTE 365.0/635.0/4.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (702.0306, 64.92526), "minimum_y": 43.0510864257813, "events": [{ "p": (264.3769, 201.2431), "v": (532.3328, -507.6878) }, { "p": (265.8544, 202.7924), "v": (566.1982, -539.9854) }], "end": (862.2532, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=no_replace jump=false { "won": false, "deaths": 0, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 57.2646141052246, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }], "end": (632.2126, 384.989) }
+PASS: Real-input bypass/control fails: no_replace
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=one_pass jump=false { "won": false, "deaths": 1, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 57.2646217346191, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }], "end": (948.9513, 518.9876) }
+PASS: Real-input bypass/control fails: one_pass
+SECOND_ASCENT_EXIT 1 { "p": (597.6877, 384.0), "v": (0.0, -735.612) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=floor_pair jump=true { "won": false, "deaths": 1, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 86.4379348754883, "events": [{ "p": (597.6877, 384.0), "v": (0.0, -735.612) }], "end": (948.9513, 518.9876) }
+PASS: Real-input bypass/control fails: floor_pair
+SECOND_ASCENT_EXIT 1 { "p": (261.6165, 198.3488), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=one_pass jump=true { "won": false, "deaths": 1, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 57.2649421691895, "events": [{ "p": (261.6165, 198.3488), "v": (532.3328, -507.6878) }], "end": (948.9513, 518.9876) }
+PASS: Starting jump cannot skip the second relay through the low roof
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=checkpoint jump=false { "won": false, "deaths": 0, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 124.925064086914, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }], "end": (261.6162, 198.3485) }
+PASS: Retry fixture reaches the first actual slope exit
+PASS: Pause freezes the relay with both actual doors retained
+PASS: R restores the starting tunnel and closes doors without a death loop
+SECOND_ASCENT_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: New sketch is room26 stableID53
+PORTAL_HOP_READY
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(506.5987, 234.9253) v=(251.0083, -602.9052)
+BOOST_ARC_ROUTE 0.0/0.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (712.2324, 84.92521), "minimum_y": 31.4420146942139, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.3217, 84.92506) }
+PASS: Red ramp, spike crossing, sloped portal, blue bounce and actual goal landing all occur
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (109.7585, 211.0173), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(511.6318, 234.9251) v=(251.0083, -602.9052)
+BOOST_ARC_ROUTE -6.0/0.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (717.2655, 84.92521), "minimum_y": 34.7081985473633, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (109.7585, 211.0173), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.1047, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (99.69225, 204.485), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(503.651, 234.9253) v=(250.2583, -610.4052)
+BOOST_ARC_ROUTE 6.0/0.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (712.5037, 84.92521), "minimum_y": 28.1758060455322, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (99.69225, 204.485), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.4929, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (101.3484, 205.5597), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(505.3072, 234.9252) v=(250.2583, -610.4052)
+BOOST_ARC_ROUTE 0.0/-4.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (714.1599, 84.92521), "minimum_y": 29.250560760498, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (101.3484, 205.5597), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.399, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (108.0454, 209.9056), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(509.9187, 234.9253) v=(251.0083, -602.9052)
+BOOST_ARC_ROUTE 0.0/4.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (715.5524, 84.92521), "minimum_y": 33.5964965820313, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (108.0454, 209.9056), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.1417, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.066, 386.2926), "v": (210.0, 37.5) }
+BOOST_ARC_ROUTE 0.0/0.0 mode=no_red { "won": false, "deaths": 1, "in_shot": true, "out_shot": true, "transferred": false, "transfers": 0, "bounced": false, "bounces": 0, "landed": false, "landing": (0.0, 0.0), "minimum_y": 385.295379638672, "launch": { "p": (456.066, 386.2926), "v": (210.0, 37.5) }, "exit": {  }, "boost_distance": 0.0, "end": (499.816, 414.4176) }
+PASS: Without red acceleration the same input cannot clear the spike pit
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }
+BOOST_ARC_ROUTE 0.0/0.0 mode=no_blue { "won": false, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": false, "bounces": 0, "landed": false, "landing": (0.0, 0.0), "minimum_y": 31.4420146942139, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (519.2566, 234.9261) }
+PASS: Without blue rebound the same input cannot reach the upper goal
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }
+BOOST_ARC_ROUTE 0.0/0.0 mode=normal { "won": false, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": false, "bounces": 0, "landed": false, "landing": (0.0, 0.0), "minimum_y": 207.751174926758, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (104.7254, 207.7512) }
+PASS: Retry fixture reaches the actual post-spike slope exit
+PASS: Pause freezes the full boost relay and retains doors
+PASS: R restores spawn, boost/bounce evidence and closed doors without a spike death loop
+BOOST_ARC_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: New user sketch is room27 stableID54
+PORTAL_HOP_READY
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Birth inputs, two real portal transfers, red run and actual moving-platform landing reach the moving goal
+WANDER_ROUTE delay=0 wall=-6.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 171.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1776), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 223.748657226563 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=6.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 183.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 257 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 239.99853515625 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=0.0 slope=-3.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (812.1448, 176.2989), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (528.7675, 74.92523), "end": (528.7675, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=0.0 slope=3.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (816.3873, 172.0564), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (523.5737, 74.9252), "end": (523.5737, 74.9252), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=30 wall=0.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=60 wall=0.0 slope=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": true, "landing": (527.737, 74.92523), "end": (527.737, 74.92523), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Nearby doors or short launch delays preserve the complete moving-target route
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=no_red { "won": false, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-148.4924, -148.4924), "frame": 290 }, "landed": false, "landing": (0.0, 0.0), "end": (740.28, 334.9252), "minimum_y": 33.0495147705078, "boost_distance": 0.0 }
+PASS: Without red acceleration the same second launch cannot reach the moving goal
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=first_only { "won": false, "deaths": 0, "transfers": 1, "max_transfers": 1, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (788.9957, 334.9851), "minimum_y": 33.0495147705078, "boost_distance": 218.120361328125 }
+PASS: First horizontal fling alone cannot finish the upper moving gate
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=direct { "won": false, "deaths": 0, "transfers": 0, "max_transfers": 0, "first_exit": {  }, "second_exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (203.4128, 319.9259), "minimum_y": 33.0495147705078, "boost_distance": 0.0 }
+PASS: Jumping to pre-place the right slope cannot skip the red relay
+WANDER_ROUTE delay=330 wall=0.0 slope=0.0 mode=normal { "won": false, "deaths": 1, "transfers": 0, "max_transfers": 1, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (356.5003, 219.1164), "minimum_y": 33.0495147705078, "boost_distance": 0.0 }
+PASS: A later guard phase really collides with the first cross-pit flight
+WANDER_ROUTE delay=0 wall=0.0 slope=0.0 mode=normal { "won": false, "deaths": 0, "transfers": 2, "max_transfers": 2, "first_exit": { "p": (136.0, 177.4914), "v": (735.0009, 0.0), "frame": 143 }, "second_exit": { "p": (814.266, 174.1777), "v": (-459.6194, -459.6194), "frame": 256 }, "landed": false, "landing": (0.0, 0.0), "end": (814.266, 174.1777), "minimum_y": 33.0495147705078, "boost_distance": 229.165283203125 }
+PASS: Retry fixture reaches the actual second portal exit
+PASS: Pause freezes the actual route, target gate and platform together
+PASS: R immediately restores the moving goal and platform origin
+PASS: R restores spawn, doors, red count and guard without a spawn death loop
+PASS: Reset target continues following the restarted platform phase
+WANDERING_GOAL_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room 1 phase 1 pause freezes rider and machinery
+PASS: Room 1 phase 1 R respawns once without a death loop
+PASS: Room 1 phase 1 clears circuits, gates and portals
+PASS: Room 1 phase 1 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 1 phase 47 pause freezes rider and machinery
+PASS: Room 1 phase 47 R respawns once without a death loop
+PASS: Room 1 phase 47 clears circuits, gates and portals
+PASS: Room 1 phase 47 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 1 phase 173 pause freezes rider and machinery
+PASS: Room 1 phase 173 R respawns once without a death loop
+PASS: Room 1 phase 173 clears circuits, gates and portals
+PASS: Room 1 phase 173 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 2 phase 1 pause freezes rider and machinery
+PASS: Room 2 phase 1 R respawns once without a death loop
+PASS: Room 2 phase 1 clears circuits, gates and portals
+PASS: Room 2 phase 1 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 2 phase 47 pause freezes rider and machinery
+PASS: Room 2 phase 47 R respawns once without a death loop
+PASS: Room 2 phase 47 clears circuits, gates and portals
+PASS: Room 2 phase 47 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 2 phase 173 pause freezes rider and machinery
+PASS: Room 2 phase 173 R respawns once without a death loop
+PASS: Room 2 phase 173 clears circuits, gates and portals
+PASS: Room 2 phase 173 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 3 phase 1 pause freezes rider and machinery
+PASS: Room 3 phase 1 R respawns once without a death loop
+PASS: Room 3 phase 1 clears circuits, gates and portals
+PASS: Room 3 phase 1 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 3 phase 47 pause freezes rider and machinery
+PASS: Room 3 phase 47 R respawns once without a death loop
+PASS: Room 3 phase 47 clears circuits, gates and portals
+PASS: Room 3 phase 47 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 3 phase 173 pause freezes rider and machinery
+PASS: Room 3 phase 173 R respawns once without a death loop
+PASS: Room 3 phase 173 clears circuits, gates and portals
+PASS: Room 3 phase 173 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 4 phase 1 pause freezes rider and machinery
+PASS: Room 4 phase 1 R respawns once without a death loop
+PASS: Room 4 phase 1 clears circuits, gates and portals
+PASS: Room 4 phase 1 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 4 phase 47 pause freezes rider and machinery
+PASS: Room 4 phase 47 R respawns once without a death loop
+PASS: Room 4 phase 47 clears circuits, gates and portals
+PASS: Room 4 phase 47 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 4 phase 173 pause freezes rider and machinery
+PASS: Room 4 phase 173 R respawns once without a death loop
+PASS: Room 4 phase 173 clears circuits, gates and portals
+PASS: Room 4 phase 173 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 5 phase 1 pause freezes rider and machinery
+PASS: Room 5 phase 1 R respawns once without a death loop
+PASS: Room 5 phase 1 clears circuits, gates and portals
+PASS: Room 5 phase 1 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 5 phase 47 pause freezes rider and machinery
+PASS: Room 5 phase 47 R respawns once without a death loop
+PASS: Room 5 phase 47 clears circuits, gates and portals
+PASS: Room 5 phase 47 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 5 phase 173 pause freezes rider and machinery
+PASS: Room 5 phase 173 R respawns once without a death loop
+PASS: Room 5 phase 173 clears circuits, gates and portals
+PASS: Room 5 phase 173 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 6 phase 1 pause freezes rider and machinery
+PASS: Room 6 phase 1 R respawns once without a death loop
+PASS: Room 6 phase 1 clears circuits, gates and portals
+PASS: Room 6 phase 1 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 6 phase 47 pause freezes rider and machinery
+PASS: Room 6 phase 47 R respawns once without a death loop
+PASS: Room 6 phase 47 clears circuits, gates and portals
+PASS: Room 6 phase 47 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 6 phase 173 pause freezes rider and machinery
+PASS: Room 6 phase 173 R respawns once without a death loop
+PASS: Room 6 phase 173 clears circuits, gates and portals
+PASS: Room 6 phase 173 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 7 phase 1 pause freezes rider and machinery
+PASS: Room 7 phase 1 R respawns once without a death loop
+PASS: Room 7 phase 1 clears circuits, gates and portals
+PASS: Room 7 phase 1 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 7 phase 47 pause freezes rider and machinery
+PASS: Room 7 phase 47 R respawns once without a death loop
+PASS: Room 7 phase 47 clears circuits, gates and portals
+PASS: Room 7 phase 47 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 7 phase 173 pause freezes rider and machinery
+PASS: Room 7 phase 173 R respawns once without a death loop
+PASS: Room 7 phase 173 clears circuits, gates and portals
+PASS: Room 7 phase 173 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 8 phase 1 pause freezes rider and machinery
+PASS: Room 8 phase 1 R respawns once without a death loop
+PASS: Room 8 phase 1 clears circuits, gates and portals
+PASS: Room 8 phase 1 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 8 phase 47 pause freezes rider and machinery
+PASS: Room 8 phase 47 R respawns once without a death loop
+PASS: Room 8 phase 47 clears circuits, gates and portals
+PASS: Room 8 phase 47 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 8 phase 173 pause freezes rider and machinery
+PASS: Room 8 phase 173 R respawns once without a death loop
+PASS: Room 8 phase 173 clears circuits, gates and portals
+PASS: Room 8 phase 173 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 9 phase 1 pause freezes rider and machinery
+PASS: Room 9 phase 1 R respawns once without a death loop
+PASS: Room 9 phase 1 clears circuits, gates and portals
+PASS: Room 9 phase 1 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 9 phase 47 pause freezes rider and machinery
+PASS: Room 9 phase 47 R respawns once without a death loop
+PASS: Room 9 phase 47 clears circuits, gates and portals
+PASS: Room 9 phase 47 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 9 phase 173 pause freezes rider and machinery
+PASS: Room 9 phase 173 R respawns once without a death loop
+PASS: Room 9 phase 173 clears circuits, gates and portals
+PASS: Room 9 phase 173 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 10 phase 1 pause freezes rider and machinery
+PASS: Room 10 phase 1 R respawns once without a death loop
+PASS: Room 10 phase 1 clears circuits, gates and portals
+PASS: Room 10 phase 1 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 10 phase 47 pause freezes rider and machinery
+PASS: Room 10 phase 47 R respawns once without a death loop
+PASS: Room 10 phase 47 clears circuits, gates and portals
+PASS: Room 10 phase 47 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 10 phase 173 pause freezes rider and machinery
+PASS: Room 10 phase 173 R respawns once without a death loop
+PASS: Room 10 phase 173 clears circuits, gates and portals
+PASS: Room 10 phase 173 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 11 phase 1 pause freezes rider and machinery
+PASS: Room 11 phase 1 R respawns once without a death loop
+PASS: Room 11 phase 1 clears circuits, gates and portals
+PASS: Room 11 phase 1 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 11 phase 47 pause freezes rider and machinery
+PASS: Room 11 phase 47 R respawns once without a death loop
+PASS: Room 11 phase 47 clears circuits, gates and portals
+PASS: Room 11 phase 47 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 11 phase 173 pause freezes rider and machinery
+PASS: Room 11 phase 173 R respawns once without a death loop
+PASS: Room 11 phase 173 clears circuits, gates and portals
+PASS: Room 11 phase 173 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 14 phase 1 pause freezes rider and machinery
+PASS: Room 14 phase 1 R respawns once without a death loop
+PASS: Room 14 phase 1 clears circuits, gates and portals
+PASS: Room 14 phase 1 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 14 phase 47 pause freezes rider and machinery
+PASS: Room 14 phase 47 R respawns once without a death loop
+PASS: Room 14 phase 47 clears circuits, gates and portals
+PASS: Room 14 phase 47 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 14 phase 173 pause freezes rider and machinery
+PASS: Room 14 phase 173 R respawns once without a death loop
+PASS: Room 14 phase 173 clears circuits, gates and portals
+PASS: Room 14 phase 173 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 17 phase 1 pause freezes rider and machinery
+PASS: Room 17 phase 1 R respawns once without a death loop
+PASS: Room 17 phase 1 clears circuits, gates and portals
+PASS: Room 17 phase 1 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 17 phase 47 pause freezes rider and machinery
+PASS: Room 17 phase 47 R respawns once without a death loop
+PASS: Room 17 phase 47 clears circuits, gates and portals
+PASS: Room 17 phase 47 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 17 phase 173 pause freezes rider and machinery
+PASS: Room 17 phase 173 R respawns once without a death loop
+PASS: Room 17 phase 173 clears circuits, gates and portals
+PASS: Room 17 phase 173 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 19 phase 1 pause freezes rider and machinery
+PASS: Room 19 phase 1 R respawns once without a death loop
+PASS: Room 19 phase 1 clears circuits, gates and portals
+PASS: Room 19 phase 1 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 19 phase 47 pause freezes rider and machinery
+PASS: Room 19 phase 47 R respawns once without a death loop
+PASS: Room 19 phase 47 clears circuits, gates and portals
+PASS: Room 19 phase 47 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 19 phase 173 pause freezes rider and machinery
+PASS: Room 19 phase 173 R respawns once without a death loop
+PASS: Room 19 phase 173 clears circuits, gates and portals
+PASS: Room 19 phase 173 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 20 phase 1 pause freezes rider and machinery
+PASS: Room 20 phase 1 R respawns once without a death loop
+PASS: Room 20 phase 1 clears circuits, gates and portals
+PASS: Room 20 phase 1 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 20 phase 47 pause freezes rider and machinery
+PASS: Room 20 phase 47 R respawns once without a death loop
+PASS: Room 20 phase 47 clears circuits, gates and portals
+PASS: Room 20 phase 47 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 20 phase 173 pause freezes rider and machinery
+PASS: Room 20 phase 173 R respawns once without a death loop
+PASS: Room 20 phase 173 clears circuits, gates and portals
+PASS: Room 20 phase 173 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 21 phase 1 pause freezes rider and machinery
+PASS: Room 21 phase 1 R respawns once without a death loop
+PASS: Room 21 phase 1 clears circuits, gates and portals
+PASS: Room 21 phase 1 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 21 phase 47 pause freezes rider and machinery
+PASS: Room 21 phase 47 R respawns once without a death loop
+PASS: Room 21 phase 47 clears circuits, gates and portals
+PASS: Room 21 phase 47 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 21 phase 173 pause freezes rider and machinery
+PASS: Room 21 phase 173 R respawns once without a death loop
+PASS: Room 21 phase 173 clears circuits, gates and portals
+PASS: Room 21 phase 173 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 25 phase 1 pause freezes rider and machinery
+PASS: Room 25 phase 1 R respawns once without a death loop
+PASS: Room 25 phase 1 clears circuits, gates and portals
+PASS: Room 25 phase 1 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 25 phase 47 pause freezes rider and machinery
+PASS: Room 25 phase 47 R respawns once without a death loop
+PASS: Room 25 phase 47 clears circuits, gates and portals
+PASS: Room 25 phase 47 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 25 phase 173 pause freezes rider and machinery
+PASS: Room 25 phase 173 R respawns once without a death loop
+PASS: Room 25 phase 173 clears circuits, gates and portals
+PASS: Room 25 phase 173 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 34 phase 1 pause freezes rider and machinery
+PASS: Room 34 phase 1 R respawns once without a death loop
+PASS: Room 34 phase 1 clears circuits, gates and portals
+PASS: Room 34 phase 1 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 34 phase 47 pause freezes rider and machinery
+PASS: Room 34 phase 47 R respawns once without a death loop
+PASS: Room 34 phase 47 clears circuits, gates and portals
+PASS: Room 34 phase 47 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 34 phase 173 pause freezes rider and machinery
+PASS: Room 34 phase 173 R respawns once without a death loop
+PASS: Room 34 phase 173 clears circuits, gates and portals
+PASS: Room 34 phase 173 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 36 phase 1 pause freezes rider and machinery
+PASS: Room 36 phase 1 R respawns once without a death loop
+PASS: Room 36 phase 1 clears circuits, gates and portals
+PASS: Room 36 phase 1 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 36 phase 47 pause freezes rider and machinery
+PASS: Room 36 phase 47 R respawns once without a death loop
+PASS: Room 36 phase 47 clears circuits, gates and portals
+PASS: Room 36 phase 47 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 36 phase 173 pause freezes rider and machinery
+PASS: Room 36 phase 173 R respawns once without a death loop
+PASS: Room 36 phase 173 clears circuits, gates and portals
+PASS: Room 36 phase 173 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 37 phase 1 pause freezes rider and machinery
+PASS: Room 37 phase 1 R respawns once without a death loop
+PASS: Room 37 phase 1 clears circuits, gates and portals
+PASS: Room 37 phase 1 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 37 phase 47 pause freezes rider and machinery
+PASS: Room 37 phase 47 R respawns once without a death loop
+PASS: Room 37 phase 47 clears circuits, gates and portals
+PASS: Room 37 phase 47 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 37 phase 173 pause freezes rider and machinery
+PASS: Room 37 phase 173 R respawns once without a death loop
+PASS: Room 37 phase 173 clears circuits, gates and portals
+PASS: Room 37 phase 173 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 38 phase 1 pause freezes rider and machinery
+PASS: Room 38 phase 1 R respawns once without a death loop
+PASS: Room 38 phase 1 clears circuits, gates and portals
+PASS: Room 38 phase 1 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 38 phase 47 pause freezes rider and machinery
+PASS: Room 38 phase 47 R respawns once without a death loop
+PASS: Room 38 phase 47 clears circuits, gates and portals
+PASS: Room 38 phase 47 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 38 phase 173 pause freezes rider and machinery
+PASS: Room 38 phase 173 R respawns once without a death loop
+PASS: Room 38 phase 173 clears circuits, gates and portals
+PASS: Room 38 phase 173 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 48 phase 1 pause freezes rider and machinery
+PASS: Room 48 phase 1 R respawns once without a death loop
+PASS: Room 48 phase 1 clears circuits, gates and portals
+PASS: Room 48 phase 1 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 48 phase 47 pause freezes rider and machinery
+PASS: Room 48 phase 47 R respawns once without a death loop
+PASS: Room 48 phase 47 clears circuits, gates and portals
+PASS: Room 48 phase 47 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 48 phase 173 pause freezes rider and machinery
+PASS: Room 48 phase 173 R respawns once without a death loop
+PASS: Room 48 phase 173 clears circuits, gates and portals
+PASS: Room 48 phase 173 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 50 phase 1 pause freezes rider and machinery
+PASS: Room 50 phase 1 R respawns once without a death loop
+PASS: Room 50 phase 1 clears circuits, gates and portals
+PASS: Room 50 phase 1 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 50 phase 47 pause freezes rider and machinery
+PASS: Room 50 phase 47 R respawns once without a death loop
+PASS: Room 50 phase 47 clears circuits, gates and portals
+PASS: Room 50 phase 47 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 50 phase 173 pause freezes rider and machinery
+PASS: Room 50 phase 173 R respawns once without a death loop
+PASS: Room 50 phase 173 clears circuits, gates and portals
+PASS: Room 50 phase 173 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 51 phase 1 pause freezes rider and machinery
+PASS: Room 51 phase 1 R respawns once without a death loop
+PASS: Room 51 phase 1 clears circuits, gates and portals
+PASS: Room 51 phase 1 returns near its actual spawn
+PASS: Room 51 retry leaves finite movement
+PASS: Room 51 phase 47 pause freezes rider and machinery
+PASS: Room 51 phase 47 R respawns once without a death loop
+PASS: Room 51 phase 47 clears circuits, gates and portals
+PASS: Room 51 phase 47 returns near its actual spawn
+PASS: Room 51 retry leaves finite movement
+PASS: Room 51 phase 173 pause freezes rider and machinery
+PASS: Room 51 phase 173 R respawns once without a death loop
+PASS: Room 51 phase 173 clears circuits, gates and portals
+PASS: Room 51 phase 173 returns near its actual spawn
+PASS: Room 51 retry leaves finite movement
+PASS: Room 52 phase 1 pause freezes rider and machinery
+PASS: Room 52 phase 1 R respawns once without a death loop
+PASS: Room 52 phase 1 clears circuits, gates and portals
+PASS: Room 52 phase 1 returns near its actual spawn
+PASS: Room 52 retry leaves finite movement
+PASS: Room 52 phase 47 pause freezes rider and machinery
+PASS: Room 52 phase 47 R respawns once without a death loop
+PASS: Room 52 phase 47 clears circuits, gates and portals
+PASS: Room 52 phase 47 returns near its actual spawn
+PASS: Room 52 retry leaves finite movement
+PASS: Room 52 phase 173 pause freezes rider and machinery
+PASS: Room 52 phase 173 R respawns once without a death loop
+PASS: Room 52 phase 173 clears circuits, gates and portals
+PASS: Room 52 phase 173 returns near its actual spawn
+PASS: Room 52 retry leaves finite movement
+PASS: Room 53 phase 1 pause freezes rider and machinery
+PASS: Room 53 phase 1 R respawns once without a death loop
+PASS: Room 53 phase 1 clears circuits, gates and portals
+PASS: Room 53 phase 1 returns near its actual spawn
+PASS: Room 53 retry leaves finite movement
+PASS: Room 53 phase 47 pause freezes rider and machinery
+PASS: Room 53 phase 47 R respawns once without a death loop
+PASS: Room 53 phase 47 clears circuits, gates and portals
+PASS: Room 53 phase 47 returns near its actual spawn
+PASS: Room 53 retry leaves finite movement
+PASS: Room 53 phase 173 pause freezes rider and machinery
+PASS: Room 53 phase 173 R respawns once without a death loop
+PASS: Room 53 phase 173 clears circuits, gates and portals
+PASS: Room 53 phase 173 returns near its actual spawn
+PASS: Room 53 retry leaves finite movement
+PASS: Room 54 phase 1 pause freezes rider and machinery
+PASS: Room 54 phase 1 R respawns once without a death loop
+PASS: Room 54 phase 1 clears circuits, gates and portals
+PASS: Room 54 phase 1 returns near its actual spawn
+PASS: Room 54 retry leaves finite movement
+PASS: Room 54 phase 47 pause freezes rider and machinery
+PASS: Room 54 phase 47 R respawns once without a death loop
+PASS: Room 54 phase 47 clears circuits, gates and portals
+PASS: Room 54 phase 47 returns near its actual spawn
+PASS: Room 54 retry leaves finite movement
+PASS: Room 54 phase 173 pause freezes rider and machinery
+PASS: Room 54 phase 173 R respawns once without a death loop
+PASS: Room 54 phase 173 clears circuits, gates and portals
+PASS: Room 54 phase 173 returns near its actual spawn
+PASS: Room 54 retry leaves finite movement
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 1 pause freezes rider and machinery
+PASS: Room 38 phase 1 R respawns once without a death loop
+PASS: Room 38 phase 1 clears circuits, gates and portals
+PASS: Room 38 phase 1 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 47 pause freezes rider and machinery
+PASS: Room 38 phase 47 R respawns once without a death loop
+PASS: Room 38 phase 47 clears circuits, gates and portals
+PASS: Room 38 phase 47 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 173 pause freezes rider and machinery
+PASS: Room 38 phase 173 R respawns once without a death loop
+PASS: Room 38 phase 173 clears circuits, gates and portals
+PASS: Room 38 phase 173 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 1 pause freezes rider and machinery
+PASS: Room 48 phase 1 R respawns once without a death loop
+PASS: Room 48 phase 1 clears circuits, gates and portals
+PASS: Room 48 phase 1 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 47 pause freezes rider and machinery
+PASS: Room 48 phase 47 R respawns once without a death loop
+PASS: Room 48 phase 47 clears circuits, gates and portals
+PASS: Room 48 phase 47 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 173 pause freezes rider and machinery
+PASS: Room 48 phase 173 R respawns once without a death loop
+PASS: Room 48 phase 173 clears circuits, gates and portals
+PASS: Room 48 phase 173 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 1 pause freezes rider and machinery
+PASS: Room 50 phase 1 R respawns once without a death loop
+PASS: Room 50 phase 1 clears circuits, gates and portals
+PASS: Room 50 phase 1 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 47 pause freezes rider and machinery
+PASS: Room 50 phase 47 R respawns once without a death loop
+PASS: Room 50 phase 47 clears circuits, gates and portals
+PASS: Room 50 phase 47 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 173 pause freezes rider and machinery
+PASS: Room 50 phase 173 R respawns once without a death loop
+PASS: Room 50 phase 173 clears circuits, gates and portals
+PASS: Room 50 phase 173 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+RETRY_STRESS_CASES=90 FAILURES=0
+ALL 41 HEADLESS TEST SUITES PASSED
+For GPU/window tests: run Godot --path . --script tests/display.gd

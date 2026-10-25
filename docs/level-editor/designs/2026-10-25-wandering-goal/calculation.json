@@ -1,0 +1,78 @@
+{
+  "input_sha256": "38f81b86207d686739c43afac272b39982831c7dc6e7c537f13cc6078ed88a3b",
+  "physics": {
+    "gravity": 900,
+    "jump": -330,
+    "red_target": 650,
+    "player": [
+      22,
+      30
+    ],
+    "portal_width": 72
+  },
+  "geometry": {
+    "red_top": 350,
+    "slope_degrees": 45,
+    "platform_center": [
+      [
+        380,
+        100
+      ],
+      [
+        850,
+        100
+      ]
+    ],
+    "platform_size": [
+      180,
+      20
+    ],
+    "platform_speed": 50
+  },
+  "analytical_second_exit_velocity": [
+    -459.6194077712559,
+    -459.6194077712559
+  ],
+  "analytical_second_exit_rise": 117.36111111111113,
+  "measured_second_flight_minimum_center_y": 58.7253265380859,
+  "measured": {
+    "boost_distance": 229.165283203125,
+    "deaths": 0,
+    "end": [
+      527.736999511719,
+      74.9252319335938
+    ],
+    "first_exit": {
+      "frame": 143,
+      "p": [
+        136,
+        177.491363525391
+      ],
+      "v": [
+        735.000915527344,
+        0
+      ]
+    },
+    "landed": true,
+    "landing": [
+      527.736999511719,
+      74.9252319335938
+    ],
+    "max_transfers": 2,
+    "minimum_y": 33.0495147705078,
+    "second_exit": {
+      "frame": 256,
+      "p": [
+        814.265991210938,
+        174.177658081055
+      ],
+      "v": [
+        -459.619384765625,
+        -459.619384765625
+      ]
+    },
+    "transfers": 2,
+    "won": true
+  },
+  "limits": "Finite door and phase samples; no exhaustive shortcut or human-difficulty proof"
+}

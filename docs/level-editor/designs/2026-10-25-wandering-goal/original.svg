@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5 0 10z" fill="#278b6f"/></marker></defs><rect width="960" height="540" fill="white"/><style>text{font:13px "Microsoft YaHei",sans-serif}</style>
+<line x1="10" y1="121" x2="107" y2="120" stroke="#5e6a75" stroke-width="22" />
+<line x1="10" y1="121" x2="107" y2="120" stroke="#7b8591" stroke-width="20" />
+<path d="M58 100v-40l28 10-28 10" fill="none" stroke="#238b69" stroke-width="2"/>
+<line x1="113" y1="128" x2="114" y2="344" stroke="#5e6a75" stroke-width="22" />
+<line x1="113" y1="128" x2="114" y2="344" stroke="white" stroke-width="20" />
+<line x1="114" y1="347" x2="238" y2="345" stroke="#5e6a75" stroke-width="22" />
+<line x1="114" y1="347" x2="238" y2="345" stroke="white" stroke-width="20" />
+<line x1="238" y1="341" x2="237" y2="443" stroke="#5e6a75" stroke-width="22" />
+<line x1="238" y1="341" x2="237" y2="443" stroke="#7b8591" stroke-width="20" />
+<path d="M239 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M255 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M271 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M287 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M303 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M319 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M335 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M351 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M367 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M383 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M399 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M415 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M431 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M447 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M463 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M479 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M495 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M511 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M527 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M543 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M559 448l8 -22 8 22Z" fill="#e57983"/>
+<path d="M575 448l8 -22 8 22Z" fill="#e57983"/>
+<line x1="587" y1="332" x2="588" y2="438" stroke="#5e6a75" stroke-width="22" />
+<line x1="587" y1="332" x2="588" y2="438" stroke="#7b8591" stroke-width="20" />
+<line x1="589" y1="336" x2="792" y2="337" stroke="#5e6a75" stroke-width="22" />
+<line x1="589" y1="336" x2="792" y2="337" stroke="#e95c68" stroke-width="20" />
+<line x1="805" y1="331" x2="803" y2="259" stroke="#5e6a75" stroke-width="22" />
+<line x1="805" y1="331" x2="803" y2="259" stroke="white" stroke-width="20" />
+<line x1="809" y1="256" x2="871" y2="188" stroke="#5e6a75" stroke-width="22" />
+<line x1="809" y1="256" x2="871" y2="188" stroke="white" stroke-width="20" />
+<line x1="572" y1="112" x2="578" y2="317" stroke="#299963" stroke-width="4" stroke-dasharray="10 7"/>
+<text x="580" y="128" fill="#248353">阻枪光幕</text>
+<polyline points="382.5,100.5 378,103 858,100" fill="none" stroke="#657c97" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="323" y="90" width="119" height="21" fill="#7b8591" stroke="#344b5e"/>
+<text x="323" y="133" fill="#486179">平台与终点一起往返</text>
+<rect x="368" y="21" width="42" height="54" rx="8" fill="#d7e8fa" stroke="#345f8b"/>
+<line x1="385" y1="133" x2="392" y2="398" stroke="#bc7444" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="374.5" y="249.5" width="28" height="30" rx="8" fill="#efb7a3" stroke="#344b5e"/>
+<path d="M65 109Q199 41 189 328" fill="none" stroke="#278b6f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="77" y="99" fill="#207b62">路线 1</text>
+<path d="M114 165Q368 162.5 622 320" fill="none" stroke="#278b6f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="126" y="155" fill="#207b62">路线 2</text>
+<path d="M650 301Q722.5 224 795 307" fill="none" stroke="#278b6f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="662" y="291" fill="#207b62">路线 3</text>
+<path d="M825 214Q812 0 419 61" fill="none" stroke="#278b6f" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="837" y="204" fill="#207b62">路线 4</text>
+</svg>

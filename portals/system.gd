@@ -9,6 +9,7 @@ var faces: Array[Dictionary] = []
 # Green faces share real solid geometry; dynamic blockers never cut terrain.
 var mirrors: Array[Dictionary] = []
 var occluders: Array[Rect2] = []
+var gun_screens: Array[Dictionary] = []
 var doors: Array[Dictionary] = [{}, {}]
 var collision_root: Node2D
 var exit_lock := -1
@@ -170,7 +171,7 @@ func rebuild() -> void:
 	queue_redraw()
 
 # Slab intersection returns the first solid face along the finite aim ray.
-func ray_hit(origin: Vector2, target: Vector2) -> Dictionary:
+func ray_hit(origin: Vector2, target: Vector2, include_gun_screens: bool = false) -> Dictionary:
 	var direction := (target - origin).normalized()
 	if direction == Vector2.ZERO:
 		return {}
@@ -223,6 +224,16 @@ func ray_hit(origin: Vector2, target: Vector2) -> Dictionary:
 		if valid and near>=0 and near<=far+0.0001 and near<best:
 			best = near
 			result = {"p":origin+direction*near,"n":normal}
+	if include_gun_screens:
+		for screen in gun_screens:
+			var contact = Geometry2D.segment_intersects_segment(origin,origin+direction*2000,screen.a,screen.b)
+			if contact == null and absf(direction.cross(screen.b-screen.a))<0.000001 and absf(direction.cross(screen.a-origin))<0.000001:
+				var first: float = (screen.a-origin).dot(direction)
+				var last: float = (screen.b-origin).dot(direction)
+				if maxf(first,last)>=0: contact = origin+direction*maxf(0,minf(first,last))
+			if contact != null and origin.distance_to(contact)<=best:
+				best = origin.distance_to(contact)
+				result = {"p":contact,"n":tangent((screen.b-screen.a).normalized()),"occluder":true}
 	return result
 
 # Use the original visible screen endpoint for every displayed gun segment.
@@ -254,7 +265,7 @@ func _shot_ray(origin: Vector2, target: Vector2) -> Dictionary:
 	var cursor := origin
 	var start := origin
 	for bounce in 9:
-		var hit := ray_hit(cursor, target if bounce == 0 else cursor + direction * 2000)
+		var hit := ray_hit(cursor, target if bounce == 0 else cursor + direction * 2000,true)
 		var distance := _screen_distance(cursor, direction)
 		if not hit.is_empty() and cursor.distance_to(hit.p) <= distance + 0.01:
 			distance = minf(distance, cursor.distance_to(hit.p))

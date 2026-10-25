@@ -1,8 +1,8 @@
 extends RefCounted
 
-const LEVEL_COUNT := 26
+const LEVEL_COUNT := 27
 # Stable source IDs preserve legacy progress while displayed indices stay consecutive.
-const ROOM_IDS := [1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53]
+const ROOM_IDS := [1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53,54]
 
 static func index_for_id(id: int) -> int:
 	return ROOM_IDS.find(id)
@@ -43,6 +43,8 @@ static func _get_original_level(index: int) -> Dictionary:
 		return load("res://levels/designed_rooms.gd").second_ascent()
 	if index == 52:
 		return load("res://levels/designed_rooms.gd").crimson_arc()
+	if index == 53:
+		return load("res://levels/designed_rooms.gd").wandering_finish()
 	return {}
 
 static func face(a: Vector2, b: Vector2, n: Vector2) -> Dictionary:

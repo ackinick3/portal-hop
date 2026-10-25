@@ -51,3 +51,20 @@ static func crimson_arc() -> Dictionary:
 		"materials":[{"a":Vector2(140,430),"b":Vector2(340,430),"n":Vector2.UP,"kind":"boost"},{"a":red_a+red_n*10,"b":red_b+red_n*10,"n":red_n,"kind":"boost"},{"a":Vector2(400,250),"b":Vector2(550,250),"n":Vector2.UP,"kind":"bounce"}],
 		"hazards":[Rect2(450,428,220,22)]
 	}
+
+static func wandering_finish() -> Dictionary:
+	var a := Vector2(810,220)
+	var b := Vector2(885,145)
+	var n := Vector2(-1,-1).normalized()
+	return {
+		"name":"THE WANDERING FINISH", "spawn":Vector2(58,95), "goal":Rect2(365.5,36,42,54), "enemy":true,
+		"goal_mover":0,"goal_offset":Vector2(75.5,-54),
+		"guard":{"spawn":Vector2(385,265.5),"low":133.0,"high":398.0,"vertical":true},
+		"blocks":[Rect2(0,110,114,20),Rect2(104,128,20,217),Rect2(114,335,134,20),Rect2(238,335,20,113),Rect2(490,350,20,98),Rect2(500,350,310,20),Rect2(800,220,20,140)],
+		"polygons":[strip(a,b)],
+		"faces":[{"a":Vector2(124,128),"b":Vector2(124,335),"n":Vector2.RIGHT},{"a":Vector2(124,335),"b":Vector2(238,335),"n":Vector2.UP},{"a":Vector2(800,220),"b":Vector2(800,350),"n":Vector2.LEFT},{"a":a+n*10,"b":b+n*10,"n":n}],
+		"materials":[{"a":Vector2(500,350),"b":Vector2(800,350),"n":Vector2.UP,"kind":"boost"}],
+		"hazards":[Rect2(258,426,232,22)],
+		"gun_screens":[{"a":Vector2(575,0),"b":Vector2(575,330)}],
+		"movers":[{"rect":Rect2(290,90,180,20),"to":Vector2(760,90),"speed":50.0}]
+	}

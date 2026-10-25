@@ -1,0 +1,12 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: A moving goal follows an explicit platform anchor
+PASS: Gate position follows the real collider, not a separate clock
+PASS: Pause freezes the platform and its goal together
+PASS: Death resets the goal immediately with its platform
+PASS: Goal keeps following its platform during the death animation
+PASS: Entering the moving gate in midair cannot skip actually landing on its platform
+PASS: Ordinary floor contact on the anchored platform completes its gate
+PASS: Old static goals retain their geometry
+MOVING_GOAL_FAILURES=0

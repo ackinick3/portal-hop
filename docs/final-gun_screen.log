@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gun-only screens are represented separately from physical and laser blockers
+PASS: Screen blocks actual portal placement and preview
+PASS: Visible gun path stops at green screen
+PASS: Gun-only screen does not invent laser blocking
+PASS: After crossing the screen the same white face is shootable
+PASS: Shots really pass around a finite screen endpoint
+PASS: A collinear gun ray also stops at the screen endpoint
+PASS: Nearer solid still wins over a screen
+PASS: Reflected gun ray is blocked on its return path
+PASS: Ordinary character passes through the gun screen without a physical collider
+GUN_SCREEN_FAILURES=0

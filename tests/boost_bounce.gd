@@ -90,7 +90,7 @@ func route(game,entrance_shift: float=0,exit_shift: float=0,mode: String="normal
 	return result
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
-	check(maps.LEVEL_COUNT==26 and maps.index_for_id(53)==25,"New sketch is room26 stableID53")
+	check(maps.LEVEL_COUNT>=26 and maps.index_for_id(53)==25,"New sketch is room26 stableID53")
 	if maps.index_for_id(53)<0:
 		quit(1)
 		return

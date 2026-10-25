@@ -1,24 +1,28 @@
-Build: builds/PortalHop.exe
+Build: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop.exe
 Godot:4.7.2.stable.official.ed1daf0bf; Windows x86_64
-Rooms:26; new THE CRIMSON ARC/stableID53; original25 map data/order unchanged
-StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53
-Bytes:109334176
-SHA256:4D4D7D28A3844E5FFAC4B39E339E1B5EA42DFC2C59375DCF55DCBED870FC023D
-Room26: red flat+ramp naturally launch over spikes, right slope entry/left slope exit, middle blue rebound, actual goal-platform landing; red ramp16.7deg, blue top250/x400..550, goal top100/x650..820
-Player addition: only real grounded floor-normal/contact-point red-slope matches use tangent drive; existing target650/input1800/release2300; horizontal/non-red/ordinary branches and blue/portal formulas retained
-Source tests: ALL38 HEADLESS TEST SUITES PASSED in real time, stdout/stderr clean, no runtime errors or exit leaks; docs/final-all-tests.log
-Retry stress:87cases passed; docs/final-retry_stress.log
-Slope boost TDD: old code vx277/vy+30/distance196 fails; new real up-ramp input, release braking/reacceleration natural exit vx598/vy-127/distance286 passes; docs/slope-boost-before.log and final-slope_boost.log
-Room26 real route: nominal+4nearby door targets all0death/1transfer/1blue bounce/actual landing/win; nominal landing(712.26,84.93), body top min about16.4px; docs/final-boost_bounce.log
-Controls: no-red same input dies in spikes without transfer; no-blue transfers but stays at middle platform; post-transfer pause/R restores spawn/counters/doors without death loop; no forced position/velocity/complete in real route
-Original25: ordinary movement, horizontal red, blue/portal/optics/platforms/enemies and prior relay routes re-run passed
-Progress: order_version2 unchanged; old25 stays25, completing25 NEXT unlocks26;3pages10/10/6, only26final; persistence_enabled=false, actual player cfg unchanged
-GPU: initial/ramp launch/slope exit/blue bounce/goal contact checked; docs/boost-bounce-preview, boost-bounce-gpu.log; actual route archived separately from analytic target/Bezier fits
-Review: independent read-only review no confirmed important issues; docs/boost-bounce-review.log
-Native GUI exit:0; docs/standalone-gui.log and standalone-gui-exit.log
-Embedded identity: EMBEDDED_PROJECT=true,26rooms enter directly without hints, room24vertical guard/room25retained, final THE CRIMSON ARC has3polygons and sloped red patch; docs/standalone-pack.log and standalone-room26.png
-Embedded route: same5route targets/no-red/no-blue/pause/R all passed from thisEXE; docs/standalone-boost-bounce.log
-Single entry: buildsEXEcount1; existing desktop Portal Hop.lnk points to this exact executable
-Design: docs/level-editor/designs/2026-10-25-boost-bounce; originalSHA b59347f2cef8bf34fda51685165d3ce19a59baa6937d3da7140c2bdeae25c5ab;17IDs preserved, original/adjusted JSON and comparison page archived
-Boundaries: reverse red slopes, slope jump/mixed-material boundaries not specially exhausted; finite tested targets do not exclude all clever routes; no new display/old25image verification; human slope-shooting difficulty pending
-Documentation validation: raw SHA/IDs, editor parse, HTML embedded JSON/JS syntax/SVG IDs/Markdown links, runner actual38 names and EXE hash passed.
+Rooms:27; new THE WANDERING FINISH/stableID54; original26 map data/order and ordinary player physics unchanged
+StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53,54
+Bytes:109336672
+SHA256:CFC1B7527CC21BF129E8A37EE42B87B3B3707FFBAC4574047754BC28ADA580D2
+Room27: jump/drop through left floor, left-wall horizontal fling over spikes/vertical guard, right red run, right wall entrance/slope exit, actual moving-platform goal landing
+Calibration: red top350/start500, white exit45deg(810,220)..(885,145), complete72px doorway, platform180x20/center380..850/speed50; goal attached to real collider
+Necessary support: gun-only finite screen in shared preview/shot/reflection path; humans and continuous lasers unaffected; moving goal follows real platform and requires supported contact
+TDD: gun_screen and moving_goal first missing-feature failures then pass; collinear screen ray and death-animation goal-following reproduced failures then pass
+Source tests: ALL41 HEADLESS TEST SUITES PASSED in real time, no runtime errors or exit leaks; docs/wandering-all-tests.log and docs/final-*.log
+Retry stress:90cases passed; docs/final-retry_stress.log
+Room27 real route: nominal+left-door +/-6px+slope +/-3px+departure delays0.25/0.5s all0death/2transfers/actual landing/win; docs/final-wandering_goal.log
+Nominal: first exit(136,177.49),v(735,0); second exit(814.27,174.18),v(-459.62,-459.62); landing(527.74,74.93); boost distance229.17; minimum body top18.05
+Controls: no-red same input cannot reach upper target; first transfer alone cannot finish; original screen top allowed a real single-transfer bypass, fixed by extending screen to y0, actual control now cannot place its slope exit
+Guard phases: departure delay330frames dies near(356.50,219.12) during first fling; delay300frames can stomp under existing rules, not mislabeled as lethal
+Pause/R/death: actual second-exit pause freezes player/platform/goal; R resets portals/material evidence/guard/platform/goal and restores spawn without death loop; goal also follows during death animation
+Progress: order_version2 unchanged; old26 stays26, completing26 NEXT unlocks27;3pages10/10/7; persistence_enabled=false; actual cfg remains45bytes,2026-10-24 19:08:28
+GPU: initial/two exits/actual supported landing checked; docs/wandering-goal-preview and wandering-goal-gpu.log; unobscured landing targeted capture in wandering-goal-capture.log
+Native GUI: normal EXE menu launch with --quit-after120, exit0; docs/wandering-native-gui.log and wandering-native-gui-exit.log
+Embedded identity: EMBEDDED_PROJECT=true,27rooms direct entry, retained room24vertical guard/room25/26, final gun screen+mover+moving goal/vertical guard; docs/wandering-standalone-pack.log; room27/third-page screenshots decoded and checked
+Embedded real route: same7complete routes, controls, guard phase, pause/R all passed using this EXE as --main-pack and absolute external test script; docs/wandering-standalone-route.log
+Export: exit0, docs/wandering-export.log; single buildsEXEcount1, existing desktop Portal Hop.lnk still points to the same absolute EXE
+Design: docs/level-editor/designs/2026-10-25-wandering-goal; inputSHA38F81B86207D686739C43AFAC272B39982831C7DC6E7C537F13CC6078ED88A3B; original18IDs/nextId21 and4ordered paths retained; previous no-arrow input archived separately
+Artifacts: original/adjusted JSON, comparison HTML/SVG, measured paths/door targets and calculation.json generated; diagram shows platform and gate at actual landing time, JSON retains initial anchor
+Review: independent read-only source review no confirmed important code issues; stale adjusted curtain finding fixed by regeneration and validated y0; docs/wandering-goal-review.log
+Static/tool checks: raw hashes/18IDs/editor parse/4actual phases/HTML JSON+JS/SVG IDs/Markdown links/runner41 and22editor+annotation tests passed; comparison original/revised toggle and actual downloaded JSON deep-equal verified in separate localhost tab, user file-editor layout untouched
+Boundaries: finite tested doors/phases and controls do not exclude every clever route or establish human difficulty; no new display-mapping/old26image/hour-scale checks; blue/red moving platforms and general multi-point runtime not added for this gray straight-track sketch
