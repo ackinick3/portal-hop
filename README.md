@@ -1,6 +1,6 @@
 # Portal Hop
 
-Godot4.7.2 / GDScript，Windows x64，23关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md。
+Godot4.7.2 / GDScript，Windows x64，23关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
 
 双击`builds/PortalHop.exe`或桌面Portal Hop快捷方式，持续使用同一个文件。用户指定的27关已删，剩余关卡连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
 
