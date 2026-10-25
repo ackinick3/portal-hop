@@ -1,26 +1,23 @@
 Build: builds/PortalHop.exe
-Godot: 4.7.2.stable.official.ed1daf0bf
-Architecture: Windows x86_64
-Rooms:24; room24/stableID51 updated with vertical guard; original23 and all room geometry unchanged
-Stable IDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51
-Bytes:109332384
-SHA256:A28B44DD243D5A0E48B3BB3527F331E2D50CF81E2C8EC60CFB1A4EE7E9501337
-Room24 guard: x542, spawn y208.5 facing down; patrol y54..363, speed70px/s; original enemy side-death/downward-stomp rules retained
-Geometry/physics: same57.4deg blue slope,74.5deg pale slope,120px band, polygons/real72px apertures; player/material/portal physics unchanged
-Compatibility: sentry.vertical defaults false; original guards retain horizontal70px/s behavior, including third-room ordinary stomp
-Progress: same24/order_version2; existing unlock/audio not reset; tests persistence_enabled=false, actual cfg unchanged from2026-10-24
-Source tests: ALL35 HEADLESS TEST SUITES PASSED; real-time full stdout/stderr, no runtime errors/exit leaks; docs/final-all-tests.log
-Retry stress:81 cases passed; docs/final-retry_stress.log
-Vertical guard: bounds/reversals, pause, death reset/no spawn loop, original third-room horizontal patrol passed; docs/final-vertical_guard.log
-Real room24: safe wait320 fixture passed9 +/-8px gate variants with one transfer, blue reflection, actual platform landing and zero-death win; nearby wait290/350 samples also won. Nominal geometry landing x681.24 retained.
-Real danger: wait80 fixture collides/dies on route2; wait200 fixture collides/dies on route3 after blue reflection. Waiting measured after legal standing/gun-origin placement and retreat; no actor position/velocity forcing in route.
-Controls: no-blue same-input control cannot win; floor dual-door rejection, pause player/guard freeze and R guard/spawn/doors reset passed; docs/final-fall_bounce.log
-GPU: current guard, actual blue bounce/landing and all above phases passed; docs/fall-bounce-gpu.log and docs/sloped-preview; curated-preview/room24.png refreshed. Display/other23screens not re-tested this round; prior results remain historical.
-Review: independent read-only review no important defects; docs/vertical-guard-review.log
-Native GUI exit:0; docs/standalone-gui.log and docs/standalone-gui-exit.log
-Embedded identity: EMBEDDED_PROJECT=true,24 rooms started, final has2polygons and vertical guard spawn(542,208.5)/range54..363; docs/standalone-pack.log and standalone-room24.png
-Embedded playable route: same9safe gate variants,290/350safe samples,2/3danger contacts, no-blue control and R/pause all passed from thisEXE pack; docs/standalone-fall-bounce.log
-Single entry: builds/PortalHop.exe only1EXE; existing desktop Portal Hop.lnk target verified
-Design: raw input SHA256 5a1229aff18d8ec5dd6aa3393bbc2559a4d9c505f629cc7580cca64900adfe72; docs/level-editor/designs/2026-10-25-fall-bounce-guard. All prior adjusted items preserved; enemy remapped toID17 to avoid gray-fillIDs15/16.
-Documentation: original SHA, editor parse of adjusted JSON, retained geometry/ID mapping, HTML embedded JSON/JS syntax/SVG IDs/local links verified
-Human acceptance: waiting/dodging difficulty and all shortcuts not exhaustively tested; user playtest pending
+Godot:4.7.2.stable.official.ed1daf0bf; Windows x86_64
+Rooms:25; new THE SECOND ASCENT/stableID52; original24 maps and ordinary physics unchanged
+StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52
+Bytes:109332848
+SHA256:E2129518599CA91CE228B5B7F34261F68F1D21021A263E762435E5D06CB471DE
+Room25: two slope exits with in-air floor-door relocation; pale slope46.357deg, floor y400, goal platform x680..930/y80; added starting low roof to limit jump bypass and extended ledge to clear aperture frame
+Physics: no player/material/portal/enemy physics modifications; actual full72px opening and free placement retained
+Progress: order_version2 unchanged; old24 remains24, completion24 NEXT unlocks25;3pages10/10/5; only25 final settlement; actual cfg not written
+Source tests: ALL36 HEADLESS TEST SUITES PASSED, ordinary real-time stdout/stderr, no runtime errors or exit leaks; docs/final-all-tests.log
+Retry stress:84cases passed; docs/final-retry_stress.log
+Room25 actual route: nominal+4nearby targets all0death/2transfers/actual final-platform contact/win; total exit speed735.61->782.41, nominal landing(705.51,64.93), minimum body top23.13px; docs/final-double_return.log
+Controls/bypasses: no floor relocation, single slope pass, starting jump+single slope pass, double floor+starting jump all fail in tested actual inputs; not an exhaustive shortcut proof
+R/pause: first actual exit fixture freezes with live pair; R clears/reset to tunnel without death loop; other24routes/mechanisms/guard phases pass in full runner
+Review: independent read-only review no confirmed important issues; docs/double-return-review.log
+GPU: initial/two-exit/actual landing captures and actual-route JSON checked; docs/double-return-preview and docs/double-return-gpu.log; current selection page3 from embeddedEXE checked in docs/curated-preview/select3.png
+Native GUI exit:0; docs/standalone-gui.log and standalone-gui-exit.log
+Embedded identity: EMBEDDED_PROJECT=true,25rooms enter directly without hints, room24vertical guard retained, final THE SECOND ASCENT has1polygon; docs/standalone-pack.log and standalone-room25.png
+Embedded playable route: same5relay variants/4controls/first-exit pause/R all passed from thisEXE pack; docs/standalone-double-return.log
+Single entry: buildsEXEcount1; desktop Portal Hop.lnk points to this exact absolute executable
+Design: docs/level-editor/designs/2026-10-25-double-return; originalSHA256 26534f984f16a76611c07f594e190749cfd7d87f65bdc525806a7836fcd8e0fc, IDs1..10 retained, new11/12, adjusted JSON and original/comparison page kept; actual Godot record separately labelled from analytic estimate/Bezier fit
+Boundaries: finite targets/inputs, not all clever routes or human difficulty; old display/other24previews not rerun this round; player feedback pending
+Documentation validation: originalSHA/ID preservation, editor-core parsing, embedded adjustedJSON equality, inlineJS syntax, SVG IDs and Markdown links passed.

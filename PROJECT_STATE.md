@@ -4,29 +4,23 @@
 
 ## 最新接续方向
 
-用户最新要求“小修24关，增加一个上下移动的怪，让路线二三可能碰到”。已按新JSON增加本关guard：x542、y54–363上下往返，出生y208.5向下，速度沿用70px/s。地形、普通物理、编号/存档不变；旧怪默认水平巡逻。原稿/修订稿及对照图在docs/level-editor/designs/2026-10-25-fall-bounce-guard。新原稿怪物ID15与旧修订补灰地冲突，修订稿使用ID17，旧地形ID保留。
+已按用户通过portalhop-level-builder提交的新草图追加**第25关 THE SECOND ASCENT（二次蓄势），稳定ID52**。三段路线为：起点下落入底门→同一白斜面出门、按A收落点并在空中移动底门→第二次斜面出门松键，实际落右上台后走到终点。地形接齐，白坡约46.4°，底面外沿y400，终点台x680–930/y80；增加起点灰低顶限制起跳绕过二次蓄势，延长起点台避免斜面门下框挂角。普通物理/门规则和原24关数据未改，无新机关。
 
-本轮35组实时回归全部通过，81个重试案例通过，无运行错误/退出泄漏。安全出发采样下9组门位偏差及两个邻近出发时机均零死亡通关；另两个真实输入时机分别在路线②/③碰撞死亡。暂停/R/死亡与旧第三关水平/踩踏回归通过，独立审阅无重要问题。GPU画面、普通EXE启动（退出0）、内嵌包24关/新怪身份与同组真实路线全部验证。唯一EXE已更新：109332384字节，SHA256 A28B44DD243D5A0E48B3BB3527F331E2D50CF81E2C8EC60CFB1A4EE7E9501337，见docs/build-manifest.txt。原无怪版相同出发时机的容差保证已被动态障碍取代；待用户试玩评价观察/等待难度。
+原件、修订JSON、原/修订对照网页、估算与独立标明的真实输入轨迹在[第25关设计目录](docs/level-editor/designs/2026-10-25-double-return/README.md)。原件SHA256为26534f984f16a76611c07f594e190749cfd7d87f65bdc525806a7836fcd8e0fc，ID1–10保留，新增灰低顶11/接缝帽沿12。图上参考门位不是定点吸附；未覆盖用户浏览器布局。
 
-已按用户要求封装并安装`portalhop-level-builder`技能；版本控制源在skills/portalhop-level-builder，安装于C:/Users/XH/.codex/skills/portalhop-level-builder。调用时提交设计器JSON，授权保持原思路自主分析/调整比例、实装、真实通关/容差/重试/回归、更新唯一EXE并汇报，不默认停在比例确认。仅评图的请求仍只评图；关键玩法语义不明时集中询问，继续其余分析。原稿保留、普通物理与真实存档保护不变，不给未定义激光颜色发明玩法。
+**本次36组实时完整回归、84个R/暂停压力案例通过，无运行错误或退出泄漏。** 新关名义+4组邻近门位均零死亡/两传送/实际落台胜利；不换底门、单次斜面直飞（含起跳）、双底门起跳向上发射等已测对照均未通关。传送中暂停/R清门回出生通过。名义出口总速约736→782px/s，落台约(705.51,64.93)，角色上沿最高约23.13px，无顶屏。独立只读审阅无重要问题，非所有巧解的穷尽证明。
 
-此前技能封装轮只改技能/文档，3项工具测试、格式与只读试用通过；游戏状态以本次怪物版35组结果为准。技能细节见[技能入口](skills/portalhop-level-builder/SKILL.md)。
+GPU初始/两次出口/实际落台、导出包第3页5关及最终地图已查看。唯一EXE已导出，普通启动退出0，内嵌包25关身份及第25关同组真实路线/对照/R/暂停均通过。构建109332848字节，SHA256 E2129518599CA91CE228B5B7F34261F68F1D21021A263E762435E5D06CB471DE，见docs/build-manifest.txt。待用户评价空中放门/反向收速度的人手难度；未重测显示映射/旧24张图。
 
-用户已确认首份编辑器草图的比例修订，并要求“符合，开始”。已按批准方案追加**第24关 THE FALLING RETURN（落差折返），稳定ID51**：蓝面约57.4°、右白面约74.5°、底部白带120px，两侧灰地相接。原23关布局和稳定ID顺序保留；角色跑速、跳跃、重力、空中控制、蓝反弹公式及传送速度规则未改。没有加入方块、按钮、新激光或其余四份草图。
+第24关上下怪保持x542/y54–363、出生y208.5向下、70px/s；路线②/③有危险相位，等待安全采样后仍可通关，本轮继续回归通过。[第24关小修记录](docs/level-editor/designs/2026-10-25-fall-bounce-guard/README.md)。原23关保留布局，其他五图A–E仍未实装。
 
-原稿与批准方案见[设计目录](docs/level-editor/designs/2026-10-25-fall-bounce/README.md)，input.json原样保留，adjusted.json与原/修订对照网页继续可用。[实施计划](docs/superpowers/plans/2026-10-25-slopes-and-room24.md)记录范围与检查。网页绿色路径仍是模型，真实结果以Godot测试为准。
-
-标准路线：先从出生走到起点右沿放底门和右侧斜面门，再退回助跑；按D下落直到进底门，出门松横向键，碰左蓝面反弹，实际落上右平台后走到终点。新增上下怪后可先观察巡逻时机再助跑；R清门回出生并复位怪物，游戏内不添加解法提示。
-
-新增凸多边形斜面实体、首表面射线、自由放门、完整72px真实碰撞开口及关闭复原；斜向出口按22×30直立角色的法线/切线投影留出空间。激光通过斜面门沿用首表面遮挡及出口法线。本轮只需要白斜面与蓝反弹；红斜坡加速仍未实现，不能把斜面碰撞能力当成所有斜坡材质已完成。
-
-首次无怪版曾通过34组/81例及GPU/显示/导出；该轮构建109332080字节，SHA256为F21D40F7F314E5ED3FC2014C8F040EFE5AF5E8ED168E70DC364F2CECA01B2C02，属于历史身份。本次怪物版的检查和构建身份在顶部及build-manifest单独更新，不沿用无怪版结论。
+已安装技能portalhop-level-builder，版本控制源skills/portalhop-level-builder，安装目录C:/Users/XH/.codex/skills/portalhop-level-builder。调用并提供设计JSON即授权自主校准至实装/测试/导出，普通只评图请求仍只评图，关键玩法语义不明时集中询问。技能封装轮仅做工具/格式/只读试用，未伪称当轮完成游戏端到端验证；本次为实际新关实施，细节见[技能入口](skills/portalhop-level-builder/SKILL.md)。
 
 ## 当前版本与约束
 
 - Godot4.7.2/GDScript，Windows x64，单人离线、960×540固定单屏、120Hz、Compatibility。
-- 当前源码24关。原50关按用户指令删除27关、保留23关后追加本关；[编号对照](docs/编号对照.md)中1–23不变，第24为新作，不复用被删编号。
-- 选关3页（10/10/4），选关与NEXT直接入关。第23完成后NEXT到24，第24才显示最终结算。无入关说明卡、建议圈、教程/机关说明菜单；准星、放门预览、枪线及机关反馈保留。
+- 当前源码25关。原50关按用户指令删除27关、保留23关后追加24/25；[编号对照](docs/编号对照.md)中1–24不变，第25追加新作，不复用被删编号。
+- 选关3页（10/10/5），选关与NEXT直接入关。第24完成后NEXT到25，第25显示最终结算。无入关说明卡、建议圈、教程/机关说明菜单；准星、放门预览、枪线及机关反馈保留。
 - 唯一交付入口builds/PortalHop.exe；桌面C:\Users\XH\Desktop\Portal Hop.lnk指向它。禁止并列版本EXE，不终止用户试玩来替换文件。
 - 自动通关不代表人手难度认可或所有巧解已穷尽。后续按用户反馈改地图，不自动改手感或实装其他草图。
 
@@ -51,28 +45,29 @@ A/D移动、Space跳跃、左右鼠标红/蓝门、R重试、Esc暂停、F11全�
 
 ## 工程与存档接续
 
-- levels/maps.gd唯一数量LEVEL_COUNT=24，get_level接受0..23；ROOM_IDS是稳定ID列表，不是另一套游玩编号，index_for_id用于迁移/测试。
-- 原地图仍在maps/campaign/coating_rooms/laser_rooms/advanced_rooms；levels/designed_rooms.gd保存新ID51。章节路由使用稳定ID减一，旧23关地形/机关源码未改。
+- levels/maps.gd唯一数量LEVEL_COUNT=25，get_level接受0..24；ROOM_IDS是稳定ID列表，不是另一套游玩编号，index_for_id用于迁移/测试。
+- 原地图仍在maps/campaign/coating_rooms/laser_rooms/advanced_rooms；levels/designed_rooms.gd保存新增ID51/52。章节路由使用稳定ID减一，旧23关地形/机关源码未改。
 - scenes/main.gd管菜单/分页/进度/结算及交互，将可选polygons交给门系统。actors/player.gd与world/materials.gd本轮未改；actors/sentry.gd支持可选vertical；portals/system.gd保留旧Rect2及凸多边形路径。
 - 地图必需name/spawn/goal/blocks/faces/enemy，可选polygons:Array[PackedVector2Array]、guard/materials/mirrors/emitters/receivers/gates/movers/hazards。polygons仅凸多边形，面与外法线须贴合实体；不添加hint/guide/briefing。
-- progress.order_version仍为2，存当前编号unlocked/音量；版本2按1..24限幅，不重复迁移。已有23解锁保持23，完成23后解锁24，不自动修改玩家进度。
-- 缺版本的旧50关存档迁移到首个保留原ID≥旧最高解锁ID。旧12→新12（原14）、旧22→新17（原25）、旧49/50→新23，新增ID51不改变这些映射。
+- progress.order_version仍为2，存当前编号unlocked/音量；版本2按1..25限幅，不重复迁移。已有24解锁保持24，完成24后解锁25，不自动修改玩家进度。
+- 缺版本的旧50关存档迁移到首个保留原ID≥旧最高解锁ID。旧12→新12（原14）、旧22→新17（原25）、旧49/50→新23，新增ID51/52不改变这些映射。
 - 测试persistence_enabled=false，不写实际%APPDATA%/Godot/app_userdata/Portal Hop/progress.cfg。
 
 ## 验证与运行
 
-本次35组实时全回归通过（docs/final-all-tests.log），81个R/暂停压力案例通过。新vertical_guard检查上下折返/范围、暂停、死亡复位及第三关仍水平；fall_bounce从出生真实输入验证9门位在安全相位下零死亡通关，290/350帧邻近安全采样也通关，80/200帧分别在路线②/③碰撞死亡。上述等待值为准备门和退回助跑位置后的开发夹具，非关内提示或保证所有连续相位安全。
+本轮tests/run.ps1实时运行36组通过，84个重试压力案例通过（docs/final-all-tests.log、final-retry_stress.log）。double_return先确认旧代码缺少25失败；实装后5组真实门位路线、4项对照/绕路、传送中暂停和R通过，见final-double_return.log；旧24上下怪危险/安全相位及第三关踩踏等也继续通过。调试曾发现下落擦斜面门框而清落速，改起点台长度解决，未改碰撞或角色物理。
 
-GPU新怪、反弹、实际落台已查看；普通EXE启动退出0，内嵌包24关/最后2斜面及新怪身份检查通过，内嵌包同组真实路线也通过。独立审阅无重要问题，详见vertical-guard-review.log。未重测显示/其他23张图；旧显示测试属于首次实装轮。真实存档未写入。首次斜面基线和无怪版结果留于进度/计划，不替代本次结果；当前8方向斜面回归仍通过，极限切向偏移及全部巧解未穷尽。
+GPU新关/两次出口/落台记录见docs/double-return-preview，录制轨迹另存在设计目录；图形测试成功不代替导出版。普通EXE启动退出0，standalone-pack.log确认EMBEDDED_PROJECT及25关/最后白斜面，standalone-double-return.log用该内嵌包实际重跑新关全部案例通过。独立审阅见double-return-review.log，未穷尽自由放门/输入巧解，未重测显示映射（之前结果仅历史）。所有测试隔离真实进度。
+
 ```powershell
 ./tests/run.ps1
-& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/fall_bounce.gd -- --capture
+& ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/double_return.gd -- --capture
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/campaign_preview.gd
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/display.gd
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-GPU目录docs/sloped-preview（新关）和docs/curated-preview（当前全图/选关），docs/campaign-preview为旧50关历史。构建大小/SHA256、启动/内嵌包身份统一见docs/build-manifest.txt。tools/builds忽略，新克隆须准备引擎/模板。实时回归不使用--fixed-fps120加速，避免音频线程清理计时失真。
+GPU目录docs/double-return-preview（25关）、docs/sloped-preview（24关）及docs/curated-preview（当前新图/选关；其他图有旧版本历史），docs/campaign-preview为旧50关历史。构建大小/SHA256、启动/内嵌包身份统一见docs/build-manifest.txt。tools/builds忽略，新克隆须准备引擎/模板。实时回归不使用--fixed-fps120加速，避免音频线程清理计时失真。
 
 ## 创作工具与后续范围
 

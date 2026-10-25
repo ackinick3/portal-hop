@@ -1,0 +1,195 @@
+{
+  "input": "D:\\常用文件\\codex_project\\pop_Mario开发\\docs\\level-editor\\designs\\2026-10-25-double-return\\adjusted.json",
+  "sha256": "04e5abfc0c5f787cc50606e67ab99ac9dfeecc9f34e1bf40a6c21e42cbbc0d68",
+  "format": "portal-hop-level-sketch",
+  "version": 1,
+  "width": 960,
+  "height": 540,
+  "title": "第25关 · 二次蓄势",
+  "notes": "",
+  "itemCount": 12,
+  "counts": {
+    "wall-gray": 4,
+    "start": 1,
+    "wall-white": 3,
+    "goal": 1,
+    "path": 3
+  },
+  "start": {
+    "id": 2,
+    "type": "start",
+    "x": 118,
+    "y": 140,
+    "angle": 0
+  },
+  "goal": {
+    "id": 7,
+    "type": "goal",
+    "x": 893,
+    "y": 80,
+    "angle": 0
+  },
+  "hasBothAnchors": true,
+  "walls": [
+    {
+      "id": 1,
+      "type": "wall-gray",
+      "a": {
+        "x": 56,
+        "y": 150
+      },
+      "b": {
+        "x": 190,
+        "y": 150
+      },
+      "thickness": 20,
+      "length": 134,
+      "angle": 0
+    },
+    {
+      "id": 3,
+      "type": "wall-white",
+      "a": {
+        "x": 175,
+        "y": 150
+      },
+      "b": {
+        "x": 278,
+        "y": 258
+      },
+      "thickness": 20,
+      "length": 149.24141516348604,
+      "angle": 46.35746584453062
+    },
+    {
+      "id": 4,
+      "type": "wall-white",
+      "a": {
+        "x": 278,
+        "y": 258
+      },
+      "b": {
+        "x": 278,
+        "y": 410
+      },
+      "thickness": 20,
+      "length": 152,
+      "angle": 90
+    },
+    {
+      "id": 5,
+      "type": "wall-white",
+      "a": {
+        "x": 278,
+        "y": 410
+      },
+      "b": {
+        "x": 900,
+        "y": 410
+      },
+      "thickness": 20,
+      "length": 622,
+      "angle": 0
+    },
+    {
+      "id": 6,
+      "type": "wall-gray",
+      "a": {
+        "x": 680,
+        "y": 90
+      },
+      "b": {
+        "x": 930,
+        "y": 90
+      },
+      "thickness": 20,
+      "length": 250,
+      "angle": 0
+    },
+    {
+      "id": 11,
+      "type": "wall-gray",
+      "a": {
+        "x": 0,
+        "y": 90
+      },
+      "b": {
+        "x": 256,
+        "y": 90
+      },
+      "thickness": 20,
+      "length": 256,
+      "angle": 0
+    },
+    {
+      "id": 12,
+      "type": "wall-gray",
+      "a": {
+        "x": 278,
+        "y": 248
+      },
+      "b": {
+        "x": 278,
+        "y": 258
+      },
+      "thickness": 20,
+      "length": 10,
+      "angle": 90
+    }
+  ],
+  "routes": [
+    {
+      "id": 8,
+      "type": "path",
+      "a": {
+        "x": 118.097221374512,
+        "y": 124.947799682617
+      },
+      "b": {
+        "x": 362.125,
+        "y": 398.112548828125
+      },
+      "control": {
+        "x": 223.78133690698206,
+        "y": 23.01033955586614
+      },
+      "order": 1
+    },
+    {
+      "id": 9,
+      "type": "path",
+      "a": {
+        "x": 266.025909423828,
+        "y": 194.180236816406
+      },
+      "b": {
+        "x": 632.116088867188,
+        "y": 394.018463134766
+      },
+      "control": {
+        "x": 636.4681959628679,
+        "y": 0
+      },
+      "order": 2
+    },
+    {
+      "id": 10,
+      "type": "path",
+      "a": {
+        "x": 265.868988037109,
+        "y": 193.429534912109
+      },
+      "b": {
+        "x": 705.513427734375,
+        "y": 64.9252548217773
+      },
+      "control": {
+        "x": 495.7405797299164,
+        "y": 0
+      },
+      "order": 3
+    }
+  ],
+  "objects": [],
+  "zeroLengthSegments": []
+}

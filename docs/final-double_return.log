@@ -1,0 +1,42 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: New sketch is room25 stableID52
+PORTAL_HOP_READY
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (261.1569, 197.8669), "v": (566.1982, -539.9854) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (705.5134, 64.92525), "minimum_y": 38.1255798339844, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }, { "p": (261.1569, 197.8669), "v": (566.1982, -539.9854) }], "end": (863.6862, 64.92506) }
+PASS: Real-input two-stage relay reaches the final platform and goal
+SECOND_ASCENT_EXIT 1 { "p": (265.7571, 202.6904), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (259.9211, 196.5711), "v": (566.1982, -539.9854) }
+SECOND_ASCENT_ROUTE 359.0/641.0/0.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (708.3585, 64.92523), "minimum_y": 36.8298034667969, "events": [{ "p": (265.7571, 202.6904), "v": (532.3328, -507.6878) }, { "p": (259.9211, 196.5711), "v": (566.1982, -539.9854) }], "end": (862.8837, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (257.4753, 194.0065), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (262.3826, 199.1521), "v": (571.6653, -545.1994) }
+SECOND_ASCENT_ROUTE 371.0/629.0/0.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (719.5872, 64.92519), "minimum_y": 36.2823791503906, "events": [{ "p": (257.4753, 194.0065), "v": (532.3328, -507.6878) }, { "p": (262.3826, 199.1521), "v": (571.6653, -545.1994) }], "end": (862.8032, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (258.8555, 195.4538), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (256.4532, 192.9349), "v": (571.6653, -545.1994) }
+SECOND_ASCENT_ROUTE 365.0/635.0/-4.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (725.9807, 64.92522), "minimum_y": 30.0651550292969, "events": [{ "p": (258.8555, 195.4538), "v": (532.3328, -507.6878) }, { "p": (256.4532, 192.9349), "v": (571.6653, -545.1994) }], "end": (863.4968, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (264.3769, 201.2431), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_EXIT 2 { "p": (265.8544, 202.7924), "v": (566.1982, -539.9854) }
+SECOND_ASCENT_ROUTE 365.0/635.0/4.0 mode=relay jump=false { "won": true, "deaths": 0, "transfers": 2, "slope_shot": true, "first_shot": true, "second_shot": true, "landed": true, "landing": (702.0306, 64.92526), "minimum_y": 43.0510864257813, "events": [{ "p": (264.3769, 201.2431), "v": (532.3328, -507.6878) }, { "p": (265.8544, 202.7924), "v": (566.1982, -539.9854) }], "end": (862.2532, 64.92506) }
+PASS: Nearby gate targets preserve two real transfers, headroom and landing
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=no_replace jump=false { "won": false, "deaths": 0, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 57.2646141052246, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }], "end": (632.2126, 384.989) }
+PASS: Real-input bypass/control fails: no_replace
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=one_pass jump=false { "won": false, "deaths": 1, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 57.2646217346191, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }], "end": (948.9513, 518.9876) }
+PASS: Real-input bypass/control fails: one_pass
+SECOND_ASCENT_EXIT 1 { "p": (597.6877, 384.0), "v": (0.0, -735.612) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=floor_pair jump=true { "won": false, "deaths": 1, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 86.4379348754883, "events": [{ "p": (597.6877, 384.0), "v": (0.0, -735.612) }], "end": (948.9513, 518.9876) }
+PASS: Real-input bypass/control fails: floor_pair
+SECOND_ASCENT_EXIT 1 { "p": (261.6165, 198.3488), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=one_pass jump=true { "won": false, "deaths": 1, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 57.2649421691895, "events": [{ "p": (261.6165, 198.3488), "v": (532.3328, -507.6878) }], "end": (948.9513, 518.9876) }
+PASS: Starting jump cannot skip the second relay through the low roof
+SECOND_ASCENT_EXIT 1 { "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }
+SECOND_ASCENT_ROUTE 365.0/635.0/0.0 mode=checkpoint jump=false { "won": false, "deaths": 0, "transfers": 1, "slope_shot": true, "first_shot": true, "second_shot": false, "landed": false, "landing": (0.0, 0.0), "minimum_y": 124.925064086914, "events": [{ "p": (261.6162, 198.3485), "v": (532.3328, -507.6878) }], "end": (261.6162, 198.3485) }
+PASS: Retry fixture reaches the first actual slope exit
+PASS: Pause freezes the relay with both actual doors retained
+PASS: R restores the starting tunnel and closes doors without a death loop
+SECOND_ASCENT_FAILURES=0

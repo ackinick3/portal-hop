@@ -1,0 +1,54 @@
+{
+  "method": "Analytical estimate plus separately labelled Godot real-input measurements",
+  "physics_snapshot": {
+    "gravity": 900,
+    "ground_speed": 210,
+    "air_release_drag": 90,
+    "opposite_air_acceleration": 380,
+    "character": [
+      22,
+      30
+    ],
+    "hz": 120
+  },
+  "slope_degrees": 46.35746584453061,
+  "exit_normal": [
+    0.7236597152452068,
+    -0.6901569506505213
+  ],
+  "estimated_first_entry_speed": 734.234295031225,
+  "actual_exit_speeds": [
+    735.6120667838211,
+    782.4095023440676
+  ],
+  "actual_events": [
+    {
+      "p": [
+        261.616180419922,
+        198.34846496582
+      ],
+      "v": [
+        532.332824707031,
+        -507.687774658203
+      ]
+    },
+    {
+      "p": [
+        261.156921386719,
+        197.866912841797
+      ],
+      "v": [
+        566.1982421875,
+        -539.9853515625
+      ]
+    }
+  ],
+  "actual_landing": [
+    705.513427734375,
+    64.9252548217773
+  ],
+  "actual_minimum_top_y": 23.125579833984403,
+  "input_source": "input.json",
+  "measurement_source": "actual-route.json",
+  "limits": "Recorded finite route and nearby variants; not an exhaustive solver or human acceptance"
+}

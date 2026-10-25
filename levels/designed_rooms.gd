@@ -21,3 +21,14 @@ static func fall_bounce() -> Dictionary:
 		"faces":[{"a":Vector2(360,500),"b":Vector2(480,500),"n":Vector2.UP},{"a":white_a+white_n*10,"b":white_b+white_n*10,"n":white_n}],
 		"materials":[{"a":blue_a+blue_n*10,"b":blue_b+blue_n*10,"n":blue_n,"kind":"bounce"}]
 	}
+
+static func second_ascent() -> Dictionary:
+	var a := Vector2(175,150)
+	var b := Vector2(278,258)
+	var n := Vector2(108,-103).normalized()
+	return {
+		"name":"THE SECOND ASCENT", "spawn":Vector2(118,125), "goal":Rect2(872,26,42,54), "enemy":false,
+		"blocks":[Rect2(56,140,134,20),Rect2(0,80,256,20),Rect2(268,248,20,162),Rect2(278,400,622,20),Rect2(680,80,250,20)],
+		"polygons":[strip(a,b)],
+		"faces":[{"a":a+n*10,"b":b+n*10,"n":n},{"a":Vector2(288,258),"b":Vector2(288,400),"n":Vector2.RIGHT},{"a":Vector2(288,400),"b":Vector2(900,400),"n":Vector2.UP}]
+	}

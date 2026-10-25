@@ -82,7 +82,7 @@ func route(game,dx: float,ds: float,plain: bool=false,wait_frames: int=0) -> Dic
 	return result
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
-	check(maps.LEVEL_COUNT==24 and maps.index_for_id(51)==23,"Approved sketch is appended as room24 with stable ID51")
+	check(maps.LEVEL_COUNT>=24 and maps.index_for_id(51)==23,"Approved sketch is appended as room24 with stable ID51")
 	if maps.index_for_id(51)<0:
 		quit(1)
 		return
