@@ -27,11 +27,16 @@ func _ready() -> void:
 	get_tree().auto_accept_quit = false
 	audio = load("res://assets/sounds.gd").new()
 	add_child(audio)
+	var challenge := OS.get_cmdline_user_args().has("--challenge")
+	if challenge: persistence_enabled = false
 	var save := ConfigFile.new()
 	if persistence_enabled and save.load("user://progress.cfg") == OK:
 		restore_progress(save)
 	AudioServer.set_bus_volume_db(0, linear_to_db(maxf(volume,0.0001)))
-	menu()
+	if challenge:
+		start_level(Maps.index_for_id(56))
+	else:
+		menu()
 	print("PORTAL_HOP_READY")
 
 func restore_progress(save: ConfigFile) -> void:

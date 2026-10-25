@@ -4,27 +4,21 @@
 
 ## 最新接续方向
 
-已按用户调用portalhop-level-builder提交的11-09-18 JSON追加第28关THE KINETIC CHAMBER（流动密室），稳定ID55。用户明确确认自由解法：四面白墙自由放门，避开六只独立巡逻怪和移动刺台，追上另一块平台上的终点；不强制固定传送顺序/次数。保留15部件ID/nextId16，没有给原图追加强制路线箭头。
+已按用户“助手选择最难解谜、直接生成试玩”的请求追加第29关THE BORROWED EXIT（借来的出口），稳定ID56。本轮由助手原创，不来自用户JSON。采用既有反射枪线、三接收器锁存、机关门与高低落差；不新增底层玩法，不改普通物理/传送公式或原1–28地图。用户希望先自行探索，游戏内不提供解法提示；详细解法仅在[开发设计记录](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)，不要在试玩汇报中剧透。
 
-[原/修订/计算与实测](docs/level-editor/designs/2026-10-25-kinetic-chamber/README.md)。原件SHA256 6E8628CB09A038A4034839EDB4F3209CD9A6B48DC8C62A07A7F462AB35224AF4。四面白墙内沿校准为x40–920/y40–510；终点绑定ID11的120×20灰台，保留五节点；尖刺绑定ID12的148×12灰台，保留三节点，左端中心74→116以容纳全台/墙缝。平台速度60/75，怪速仍70。参考解法：出生跳入地面门，顶门向下出门，实际落上移动终点；允许其他合法门位、踩怪和解法。
+真实路线：出生反射射门→复用激光入口依次点亮三接收器→改造回程出口→下井、真实传送回右侧上层、落台进入终点。9组实际输入/反射目标/第二出口/底门/返回高度均0死亡、1传送、实际落台通关。初始所有采样直射点被挡，无反射对照、普通翻门/跨井、错误返回、三阶段暂停/R及实际死亡复位已通过。初稿终点x790在较高返回门位落台前擦中，校准到x780后9组均先落台；没有改碰撞尺寸或速度。独立只读审阅无剩余已确认实质问题，并扫查初始可达范围在禁反射时无直射入口。
 
-必要支撑：旧平台三参API兼容可选折线，逐边扫掠/末端原路返回；六怪名单兼容旧guard字段和enemy首只别名，两点向量巡逻；moving_hazards按真实mover位置供绘制/伤害共用。人物普通物理/传送公式、旧1–27地图均未改。修复两项实际复现问题：出生previous_position为零导致假扫过怪群；斜向平台接触恢复量投影错误造成交汇穿入约0.545px，改按阻挡法线限制推进后长相位重叠面积0并继续下一段。轨道遮住尖刺的审阅P2也已修复并重拍。
+增加命令行`PortalHop.exe -- --challenge`，直接进入29，整个该进程禁用存档写入；正常双击行为不变，完成28解锁29。生产入口先缺失失败再实现，源码和包内夹具均确认通关/菜单/保存前后cfg哈希与修改时间不变。真实cfg仍45字节/2026-10-24 19:08:28，SHA256 41EE993434F948612C6DBD5566D478FDDB59E775B6AA48B18D36B74D7EA6D790。
 
-最新43组实时完整回归、93例重试/暂停压力通过，无运行错误/退出泄漏；docs/kinetic-all-tests.log及final-*.log。7组实际参考门位/近门位/短延迟都0死亡、1传送并实际落台；无门/远顶门不达，顶门350确实落在移动刺台死亡。机制夹具另验转角载人、高速逐边不剪角、薄墙、非首怪伤害、六怪速度/有界反向、2500帧平台交汇及重试出生安全，未把摆位当通关证据。
+源码完整45组回归、96例重试压力已实际通过，退出0，无SCRIPT ERROR/ERROR或退出泄漏。目标路线完整通过日志docs/borrowed-exit-route.log；GPU初始/点亮/实际返回落台及包内29/第三页9关图已查看。EXE已更新为109341168字节，SHA256 37471FC6FB61BDF1FD23AA583F9CA66BA03D057B3E9F843FC993EA395A013D7E。普通EXE菜单启动退出0，内嵌29关身份、原24–28关键组件保留、新29核心真实路线及隔离试玩入口均通过；不把源码测试当作导出版测试。唯一EXE/桌面原快捷方式保持。
 
-GPU初始/顶门出口/实落台及包内第28关/第三页8关图已查看；对照网页原/修订切换和实际下载JSON一致。名义GPU出口(225,56)/v(0,375)，实际落台约(225,176.06)，身体上沿最低约41。普通EXE菜单启动退出0，内嵌包28关身份、保留24–27及新28核心真实路线和整组kinetic_stage机制都通过。构建109340000字节，SHA256 CA3ACDB0DA9046E1F11B0A9263773E0DB16100FB05EB24305CC88C72411B3BE0。唯一入口/快捷方式保持，真实cfg仍45字节/2026-10-24 19:08:28；用户原file编辑器布局未操作。
-
-独立只读审阅重跑旧moving_platform/vertical_guard，无其他已确认实质问题。自由参考解法较快，难度待用户评价；未穷尽全部门位/相位/巧解、极端速度下斜向载人挤压、长时间运行或显示映射。构建身份和实际证据统一见docs/build-manifest.txt。
-
-此前24–27的实现与证据：[24上下怪](docs/level-editor/designs/2026-10-25-fall-bounce-guard/README.md)、[25二次蓄势](docs/level-editor/designs/2026-10-25-double-return/README.md)、[26赤坡接力](docs/level-editor/designs/2026-10-25-boost-bounce/README.md)、[27流动终点](docs/level-editor/designs/2026-10-25-wandering-goal/README.md)。此前27关轮41组/90例、26关轮38组/87例属于相应旧版本，不能替代本轮43组/93例。
-
-技能portalhop-level-builder已安装，版本控制源skills/portalhop-level-builder，安装目录C:/Users/XH/.codex/skills/portalhop-level-builder。提供JSON调用即授权保持思路自主校准/实装/测试/导出；仅评图仍只评图，关键玩法语义不明时询问。[技能入口](skills/portalhop-level-builder/SKILL.md)。
+第28关历史轮为43组/93例，不能替代本轮。其自由解法、多折点平台/独立六怪/移动刺及原稿证据见[28开发记录](docs/level-editor/designs/2026-10-25-kinetic-chamber/README.md)。本轮没改这些底层机制。第29关人手思考时长、是否满足用户“最难”的感受及全部巧解尚待试玩，未穷尽所有门位/长期运行/显示映射。
 
 ## 当前版本与约束
 
 - Godot4.7.2/GDScript，Windows x64，单人离线、960×540固定单屏、120Hz、Compatibility。
-- 当前源码28关。原50关按用户指令删除27关、保留23关后追加24/25/26/27/28；[编号对照](docs/编号对照.md)保留原顺序，新增稳定ID55，不复用被删编号。
-- 选关3页（10/10/8），选关与NEXT直接入关。第27完成后NEXT到28，第28显示最终结算。无入关说明卡、建议圈、教程/机关说明菜单；准星、放门预览、枪线及机关反馈保留。
+- 当前源码29关。原50关按用户指令删除27关、保留23关后追加24–29；[编号对照](docs/编号对照.md)保留原顺序，新增稳定ID56，不复用被删编号。
+- 选关3页（10/10/9），选关与NEXT直接入关。第28完成后NEXT到29，第29显示最终结算。无入关说明卡、建议圈、教程/机关说明菜单；准星、放门预览、枪线及机关反馈保留。
 - 唯一交付入口builds/PortalHop.exe；桌面C:\Users\XH\Desktop\Portal Hop.lnk指向它。禁止并列版本EXE，不终止用户试玩来替换文件。
 - 自动通关不代表人手难度认可或所有巧解已穷尽。后续按用户反馈改地图，不自动改手感或实装其他草图。
 
@@ -50,22 +44,20 @@ A/D移动、Space跳跃、左右鼠标红/蓝门、R重试、Esc暂停、F11全�
 
 ## 工程与存档接续
 
-- levels/maps.gd唯一数量LEVEL_COUNT=28，get_level接受0..27；ROOM_IDS是稳定ID列表，不是另一套游玩编号，index_for_id用于迁移/测试。
-- 原地图仍在maps/campaign/coating_rooms/laser_rooms/advanced_rooms；levels/designed_rooms.gd保存新增ID51/52/53/54/55。章节路由使用稳定ID减一，旧27关地图数据未改。
+- levels/maps.gd唯一数量LEVEL_COUNT=29，get_level接受0..28；ROOM_IDS是稳定ID列表，不是另一套游玩编号，index_for_id用于迁移/测试。
+- 原地图仍在maps/campaign/coating_rooms/laser_rooms/advanced_rooms；levels/designed_rooms.gd保存新增ID51/52/53/54/55/56。章节路由使用稳定ID减一，旧28关地图数据未改。
 - scenes/main.gd管菜单/分页/进度/结算及交互，将可选polygons交给门系统。actors/player.gd新增红坡接触/切向分支，world/materials.gd未改；actors/sentry.gd支持可选vertical；portals/system.gd保留旧Rect2及凸多边形路径。
 - 地图必需name/spawn/goal/blocks/faces/enemy，可选polygons:Array[PackedVector2Array]、guard/guards/materials/mirrors/emitters/receivers/gates/movers/hazards/moving_hazards/gun_screens。移动终点用goal_mover（movers索引）及goal_offset（相对平台左上角）绑定；polygons仅凸多边形，面与外法线须贴合实体；不添加hint/guide/briefing。
 - movers可选path为包含起点的左上角点数组，省略时沿用rect→to；guards为spawn/patrol两点向量名单，旧guard和enemy别名保留。moving_hazards条目为mover索引及相对左上角rect，伤害/绘制使用同一hazard_rects。出生先初始化previous_position，避免虚假首帧扫掠。
-- progress.order_version仍为2，存当前编号unlocked/音量；版本2按1..28限幅，不重复迁移。已有27解锁保持27，完成27后解锁28，不自动修改玩家进度。
-- 缺版本的旧50关存档迁移到首个保留原ID≥旧最高解锁ID。旧12→新12（原14）、旧22→新17（原25）、旧49/50→新23，新增ID51/52/53/54/55不改变这些映射。
+- progress.order_version仍为2，存当前编号unlocked/音量；版本2按1..29限幅，不重复迁移。已有28解锁保持28，完成28后解锁29，不自动修改玩家进度。
+- 缺版本的旧50关存档迁移到首个保留原ID≥旧最高解锁ID。旧12→新12（原14）、旧22→新17（原25）、旧49/50→新23，新增ID51/52/53/54/55/56不改变这些映射。
 - 测试persistence_enabled=false，不写实际%APPDATA%/Godot/app_userdata/Portal Hop/progress.cfg。
 
 ## 验证与运行
 
-最新第28关轮：tests/run.ps1实际43组通过，93例重试压力通过；kinetic_stage/kinetic_chamber涵盖必要机制与真实路线，原运动/传送/斜面/材料/光路/旧移动平台/旧27关路线/存档边界全部继续通过。源码完整日志docs/kinetic-all-tests.log，包内实际路线与新机制分别在kinetic-standalone-kinetic_chamber.log、kinetic-standalone-kinetic_stage.log，均退出0/失败数0/无运行错误或退出泄漏。独立审阅记录kinetic-chamber-review.log。
+本轮第29关：目标borrowed_exit完整9组真实输入与对照/恢复通过，challenge_entry源码/内嵌包通过，curation通过；完整45组回归、96例重试压力通过，runner退出0且无运行错误/退出泄漏。旧28关轮43组/93例是历史结果。
 
-GPU全组通过，P2尖刺可读性修复后单独重拍参考路线，初始/出口/实落台以及包内关卡/选关图已解码查看。普通EXE菜单启动--quit-after120退出0；包内28关直接进入、保留24怪/25/26/27身份及最后两台5/3节点/六怪/移动刺验证通过。没有修改真实进度；没有重新验证显示映射/逐张重拍旧27图，未声称人手难度或全部自由解法通过。
-
-静态核对原件SHA/15IDs/nextId16、编辑器JSON往返、平台5/3点完整范围、六怪/实测落台/终点与尖刺相对绑定、HTML嵌入JSON/脚本、SVG唯一ID/文档链接、runner43。对照网页实际切换和下载核对通过；22项编辑器/旧批注Node回归通过。原用户file页未操作。
+本轮日志docs/borrowed-exit-all-tests.log、borrowed-exit-route.log、borrowed-exit-gpu.log、borrowed-exit-pack-route.log、borrowed-exit-pack-entry.log、borrowed-exit-pack-smoke.log及borrowed-exit-exe-start.log。GPU初始/全部点亮/实落台/包内关卡与第三页9关均已解码查看，图片在docs/borrowed-exit-preview。未重测显示映射/全部旧关GPU，也未声称人手难度验收。
 
 ```powershell
 ./tests/run.ps1
@@ -75,7 +67,7 @@ GPU全组通过，P2尖刺可读性修复后单独重拍参考路线，初始/�
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-最新GPU在docs/kinetic-chamber-preview；历史27在wandering-goal-preview、26在boost-bounce-preview、25在double-return-preview、24在sloped-preview，其他历史图不能冒充本轮。EXE大小/SHA/启动/内嵌包/单一入口统一见docs/build-manifest.txt。tools/builds忽略，新克隆须准备引擎/模板。实时回归不使用--fixed-fps加速。
+最新GPU在docs/borrowed-exit-preview；历史28在kinetic-chamber-preview、27在wandering-goal-preview、26在boost-bounce-preview、25在double-return-preview、24在sloped-preview，其他历史图不能冒充本轮。EXE大小/SHA/启动/内嵌包/单一入口统一见docs/build-manifest.txt。tools/builds忽略，新克隆须准备引擎/模板。实时回归不使用--fixed-fps加速。
 
 ## 创作工具与后续范围
 

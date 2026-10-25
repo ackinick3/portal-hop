@@ -1,31 +1,24 @@
 Build: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop.exe
 Godot:4.7.2.stable.official.ed1daf0bf; Windows x86_64
-Rooms:28; new THE KINETIC CHAMBER/stableID55; original27 map data/order and ordinary player parameters/portal velocity formula unchanged
-StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53,54,55
-Bytes:109340000
-SHA256:CA3ACDB0DA9046E1F11B0A9263773E0DB16100FB05EB24305CC88C72411B3BE0
-Intent: explicitly confirmed free solutions, no forced portal order/count; four white walls,6independent patrols,goal on5point mover11,spikes on3point mover12
-Calibration: white interior40..920/40..510; target120x20/60px/s; spike148x12/75px/s, left endpoint74->116 for full wall clearance; all5/3points retained, whole path ping-pongs under editor semantics
-Necessary support: optional ordered mover path preserves legacy3arg API, sweeps each leg/reverses with remaining distance; vector two-point guard roster preserves legacy guard/first-enemy alias; moving_hazards shares real platform-bound Rect for damage/draw
-TDD: missing multi-segment platform support first failed; new kinetic_stage suite passes rider corner/highspeed per-leg/no corner chord/thin wall/roster/hazard/pause/death/reset tests
-Spawn fix: previous_position ZERO created a real first-tick phantom sweep through the guard field; failing reproduction then initialization to spawn; docs/kinetic-before-spawn-fix.log
-Diagonal blocker fix: projected get_travel included sideways recovery and penetrated about0.545px; now restrict along blocking normal,2500frame platform crossing overlap area0 and progression resumes; docs/kinetic-before-crossing-fix.log and final-kinetic_stage.log
-Source tests: ALL43 HEADLESS TEST SUITES PASSED in real time, no runtime errors or exit leaks; docs/kinetic-all-tests.log and docs/final-*.log
-Retry stress:93cases passed; docs/final-retry_stress.log
-Room28 actual route: birth jump+real floor(488,510)/ceiling(225,40) shots; nominal+ceiling +/-12px+floor +/-8px+departure delays0.2/0.4s all0death/1transfer/actual platform contact/win; docs/final-kinetic_chamber.log
-Nominal GPU: exit(225,56),v(0,375); actual landing about(225,176.06); minimum body top41; measured separately from analytical floor-entry estimate368.65
-Controls: no portals ordinary jump cannot reach target; ceiling800 misses moving goal; ceiling350 actually dies on moving spikes near(350,330.75), moving hazard witness retained
-Mechanisms: full6guards follow finite independent segments70px/s and reverse; non-first guard side contact lethal; real moving spike area lethal; both paths/goal/spikes/guards freeze/reset without birth loop
-Progress: order_version2 unchanged; old27 stays27, completing27 NEXT unlocks28;3pages10/10/8; persistence_enabled=false; actual cfg remains45bytes,2026-10-24 19:08:28
-GPU: initial/ceiling exit/actual supported landing checked; docs/kinetic-chamber-preview and kinetic-chamber-gpu.log; final reference capture in kinetic-chamber-capture.log
-Review: independent read-only review ran legacy moving_platform/vertical_guard exit0; P2 decorative rails obscured spikes fixed with mover z_index=-1, GPU re-recorded and full spike extent visibly clear; docs/kinetic-chamber-review.log
-Native GUI: normal EXE menu launch --quit-after120 exit0; docs/kinetic-native-gui.log and kinetic-native-gui-exit.log
-Embedded identity: EMBEDDED_PROJECT=true,28rooms direct entry, retained room24guard/25/26/27, final2movers(5/3points)/6guards/attached spike+goal; docs/kinetic-standalone-pack.log; room28 and third-page screenshots decoded/checked
-Embedded route: same7complete routes,wrong/no-door/spike controls,pause/R passed with this EXE as --main-pack and absolute external script; docs/kinetic-standalone-kinetic_chamber.log
-Embedded mechanisms: full kinetic_stage suite also passes from this pack, including first-frame, polyline sweep, platform crossing, complete roster and moving hazard behavior; docs/kinetic-standalone-kinetic_stage.log
-Export: exit0, docs/kinetic-export.log; single buildsEXEcount1, existing desktop Portal Hop.lnk still points to same absolute EXE
-Design: docs/level-editor/designs/2026-10-25-kinetic-chamber; inputSHA6E8628CB09A038A4034839EDB4F3209CD9A6B48DC8C62A07A7F462AB35224AF4;15original IDs/nextId16 preserved, no forced path items added; .gitattributes protects raw bytes
-Artifacts: input/adjusted JSON, original/revised HTML/SVG, measured paths+dynamic snapshots and calculation.json; revised picture shows landing-time objects, JSON retains initial positions
-Static/tool validation: rawSHA/15IDs/editor parse/5+3inside tracks/6guards/actual landing/goal+spike offsets/HTML JSON+JS/uniqueSVG IDs/Markdown links/runner43 passed;22editor+annotation tests passed
-Browser QA: separate localhost page toggled original/revised and downloaded actual JSON deep-equal to adjusted file; user file editor layout untouched
-Boundaries: confirmed free mode retains a quick safe reference solution; finite tested targets/phases do not prove every free route or human difficulty; no exhaustive highspeed diagonal-rider crush/hour-scale/display-mapping/old27image check; blue/red moving materials not added for this gray sketch
+Rooms:29; new THE BORROWED EXIT/stableID56; original1-28 maps/order and ordinary player parameters/portal velocity unchanged
+StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53,54,55,56
+Bytes:109341168
+SHA256:37471FC6FB61BDF1FD23AA583F9CA66BA03D057B3E9F843FC993EA395A013D7E
+Intent:user requested autonomous hard puzzle generation for immediate play; existing reflection, three latched receivers/gates, high portal outputs, wide well, reuse optical input as human return exit
+Geometry:interior40..920/60..500; upperfloor250, well560..780 width220; bottomfloor500, green ceiling150..260, initial screen210/85..160, firstgate210/160..250; terminal goalx780 calibrated from790 for landing before win
+TDD:borrowed_exit first failed on missing stableID56; challenge_entry first failed on missing production flag; both now pass
+Source targeted:borrowed_exit nine real-input nearby variants,0deaths/1transfer/actual lower visit/right upper landing/real terminal contact; no direct position/velocity changes or direct complete for route
+Controls:no-reflector/direct-face endpoints, ordinary jump over first gate and upper well, omitted terminal exit, lower shot blocked by upper floor,3powered phase R/pause,actual death reset
+Source full regression:tests/run.ps1 exit0, ALL45HEADLESS TEST SUITES PASSED, RETRY_STRESS_CASES=96 FAILURES=0; no SCRIPT ERROR/ERROR/leaked-at-exit in docs/borrowed-exit-all-tests.log
+GPU:initial,all receivers lit,actual upper landing inspected in docs/borrowed-exit-preview; exported room29 and3rd selection page9buttons inspected
+Independent review:docs/borrowed-exit-review.md, no confirmed remaining actionable defect; separate initial reachable-space/no-reflection sweep and challenge-entry/core route rerun
+Export:Godot Windows Desktop release export exit0, docs/borrowed-exit-export.log
+Embedded pack:project.binary=true,29rooms started; old24-28 key components retained, final3receivers/3gates/mirror/curtain confirmed; docs/borrowed-exit-pack-smoke.log
+Embedded actual route:birth/reflected gun/3circuits/lower movement/1transfer/upper landing/terminal won with0deaths; docs/borrowed-exit-pack-route.log
+Embedded challenge entry:real --challenge flag disables persistence before play; completion/menu/save fixtures preserve real cfg hash/mtime, docs/borrowed-exit-pack-entry.log
+Normal EXE:menu --quit-after120 exit0, docs/borrowed-exit-exe-start.log; challenge --quit-after120 exit0, docs/borrowed-exit-exe-challenge.log
+Launch:PortalHop.exe -- --challenge enters29 without changing persistent unlocks; normal double click retains saved campaign progression,28 unlocks29
+Unique entry:builds/PortalHop.exe only playable EXE in builds; C:/Users/XH/Desktop/Portal Hop.lnk target unchanged
+Real progress:45bytes,modified2026-10-24T19:08:28.0857433+08:00; SHA256 41EE993434F948612C6DBD5566D478FDDB59E775B6AA48B18D36B74D7EA6D790 unchanged across source/pack/normal/challenge smoke
+Limits:not human-rated hardest,not all solutions/portal positions,long runs,display mappings or all old-room GPU recaptured; editor/browser layouts untouched
+Prior28 release43suites/93cases is historical,not this build's current regression evidence

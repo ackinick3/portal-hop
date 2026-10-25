@@ -89,3 +89,21 @@ static func kinetic_chamber() -> Dictionary:
 		],
 		"moving_hazards":[{"mover":1,"rect":Rect2(0,-22,148,22)}]
 	}
+
+static func borrowed_exit() -> Dictionary:
+	return {
+		"name":"THE BORROWED EXIT", "spawn":Vector2(90,235), "goal":Rect2(780,196,42,54), "enemy":false,
+		"blocks":[Rect2(20,40,920,20),Rect2(20,40,20,480),Rect2(920,40,20,480),Rect2(20,500,920,20),Rect2(40,250,520,20),Rect2(780,250,140,20),Rect2(260,60,20,130),Rect2(540,60,20,110),Rect2(780,60,20,110)],
+		"faces":[
+			{"a":Vector2(60,60),"b":Vector2(140,60),"n":Vector2.DOWN},
+			{"a":Vector2(260,84),"b":Vector2(260,164),"n":Vector2.LEFT},
+			{"a":Vector2(400,60),"b":Vector2(500,60),"n":Vector2.DOWN},
+			{"a":Vector2(800,500),"b":Vector2(900,500),"n":Vector2.UP},
+			{"a":Vector2(920,150),"b":Vector2(920,240),"n":Vector2.LEFT}
+		],
+		"mirrors":[{"a":Vector2(150,60),"b":Vector2(260,60),"n":Vector2.DOWN}],
+		"gun_screens":[{"a":Vector2(210,85),"b":Vector2(210,160)}],
+		"emitters":[{"p":Vector2(235,128),"d":Vector2.RIGHT}],
+		"receivers":[{"p":Vector2(100,215),"id":"access"},{"p":Vector2(450,215),"id":"well"},{"p":Vector2(840,370),"id":"return"}],
+		"gates":[{"rect":Rect2(210,160,20,90),"requires":["access"]},{"rect":Rect2(540,170,20,80),"requires":["well"]},{"rect":Rect2(780,170,20,80),"requires":["return"]}]
+	}

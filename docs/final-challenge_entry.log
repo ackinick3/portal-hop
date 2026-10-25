@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Challenge startup test receives the real command-line flag
+PORTAL_HOP_READY
+PASS: --challenge enters room29 with persistence disabled before any play
+PASS: Completion and menu in challenge mode preserve real save bytes and modification time
+CHALLENGE_ENTRY_FAILURES=0
