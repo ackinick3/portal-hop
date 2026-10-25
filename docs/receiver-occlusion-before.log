@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Scene mechanisms exist to receive real portal beams
+PASS: Opaque wall blocks initial beam and leaves receiver off
+PASS: Unpowered gate has real collision
+PASS: Laser entry portal placed from real visible side
+PASS: Laser exit portal placed from real visible side
+PASS: Beam traverses active pair and lights receiver
+PASS: Real receiver opens linked gate
+PASS: Opened gate is removed from gun occlusion
+PASS: Receiver latches without holding player in a timing trap
+PASS: Retry resets power and real gate collision
+PASS: Reset gate blocks shots again
+FAIL: A receiver close behind a thin wall cannot be stimulated through the wall
+MECHANISMS_FAILURES=1

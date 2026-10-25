@@ -10,7 +10,7 @@ func button(game: Node2D,prefix: String) -> Button:
 	return null
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
-	var complete_maps := maps.LEVEL_COUNT == 50
+	var complete_maps: bool = maps.LEVEL_COUNT == 50
 	for i in 50:
 		if maps.get_level(i).is_empty():
 			print("MISSING_MAP=",i+1)
@@ -61,6 +61,7 @@ func run() -> void:
 		for child in game.panel.get_children():
 			if child is Label and child.position.y == 155:
 				check(child.get_rect().end.y < 405,"Room %02d explanation does not cover START" % (i+1))
+				check(child.get_rect().end.x <= 850,"Room %02d explanation wraps inside the viewport" % (i+1))
 		var start := button(game,"START ROOM")
 		check(start != null,"Room %02d briefing starts the actual level" % (i+1))
 		if start != null: start.pressed.emit()

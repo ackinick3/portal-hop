@@ -101,16 +101,17 @@ func _safe_fraction(movement: Vector2) -> float:
 	return clampf(fraction, 0.0, 1.0)
 
 func _draw() -> void:
-	var under := Vector2(_size.x * 0.5, _size.y + 9)
-	var rail_start := _start + under
-	var rail_end := _end + under
-	draw_line(rail_start, rail_end, Color("070f1b"), 21, true)
-	draw_line(rail_start, rail_end, Color("273b50"), 13, true)
-	draw_line(rail_start, rail_end, Color("111f30"), 5, true)
-	for point in [rail_start, rail_end]:
-		draw_circle(point, 11, Color("070f1b"))
-		draw_circle(point, 6, Color("526779"))
-		draw_circle(point, 2, Color("111f30"))
+	for wheel in [19.0, _size.x - 19.0]:
+		var under := Vector2(wheel, _size.y + 5)
+		var rail_start := _start + under
+		var rail_end := _end + under
+		draw_line(rail_start, rail_end, Color("070f1b"), 21, true)
+		draw_line(rail_start, rail_end, Color("273b50"), 13, true)
+		draw_line(rail_start, rail_end, Color("111f30"), 5, true)
+		for endpoint in [rail_start, rail_end]:
+			draw_circle(endpoint, 11, Color("070f1b"))
+			draw_circle(endpoint, 6, Color("526779"))
+			draw_circle(endpoint, 2, Color("111f30"))
 	var point := _body.position if _body != null else _start
 	for x in [19.0, _size.x - 19.0]:
 		var center := point + Vector2(x, _size.y + 5)

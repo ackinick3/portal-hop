@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Player supports optional material patches
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/materials.gd:13)
+       [1] run (res://tests/materials.gd:55)
+MATERIAL_TEST_FAILURES=1

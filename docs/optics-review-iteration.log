@@ -1,0 +1,41 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Advanced room 36 has a concrete map
+PASS: Room 36 direct shot to the hidden face is blocked
+PASS: Room 36 gun follows 1 actual green reflections
+PASS: Room 36 actual gun shot color 1 toward (370.4783, 60.0)
+PASS: Room 36 reflected shot reaches the intended hidden face
+PASS: Room 36 actual gun shot color 0 toward (180.0, 400.0)
+PASS: Room 36 traverses a real portal pair
+ADVANCED_ROOM 36 state=won pos=(871.6223, 384.9251) velocity=(210.0, 0.0) transfers=1 bounces=0 boost=0.0 carried=0.0 deaths=0
+PASS: Room 36 authentic standard route reaches the exit without deaths
+PASS: Room 36 standard route actually uses green reflection
+PASS: Advanced room 37 has a concrete map
+ADVANCED_ROOM 37 state=won pos=(880.8885, 384.9251) velocity=(210.0, 0.0) transfers=0 bounces=0 boost=0.0 carried=434.249963188173 deaths=0
+PASS: Room 37 authentic standard route reaches the exit without deaths
+PASS: Room 37 standard route rides the real platform
+PASS: Advanced room 38 has a concrete map
+PASS: Room 38 actual gun shot color 0 toward (400.0, 220.0)
+PASS: Room 38 gun follows 1 actual green reflections
+PASS: Room 38 actual gun shot color 1 toward (379.1575, 480.0)
+PASS: Room 38 reflected shot reaches the intended hidden face
+PASS: Room 38 actual routed laser latches the platform receiver
+PASS: Room 38 receiver enables the real mover
+ADVANCED_ROOM 38 state=won pos=(890.1119, 384.9252) velocity=(28.5, 0.0) transfers=0 bounces=0 boost=0.0 carried=637.999939155571 deaths=0
+PASS: Room 38 authentic standard route reaches the exit without deaths
+PASS: Room 38 standard route actually uses green reflection
+PASS: Room 38 standard route rides the real platform
+PASS: Advanced room 39 has a concrete map
+PASS: Room 39 direct shot to the hidden face is blocked
+PASS: Room 39 gun follows 1 actual green reflections
+PASS: Room 39 actual gun shot color 1 toward (370.4783, 60.0)
+PASS: Room 39 reflected shot reaches the intended hidden face
+PASS: Room 39 actual gun shot color 0 toward (180.0, 400.0)
+PASS: Room 39 traverses a real portal pair
+BOARD_START 39 pos=(742.1599, 384.9259) mover=[P: (780.0, 294.9167), S: (100.0, 20.0)]
+BOARD_LOW 39 pos=(742.1599, 384.9259) mover=[P: (780.0, 386.2083), S: (100.0, 20.0)] grounded=true
+BOARD_TICK 39 i=10 pos=(745.3892, 360.2365) v=(51.83334, -262.5) mover=[P: (780.0, 392.1667), S: (100.0, 20.0)]
+BOARD_TICK 39 i=30 pos=(759.5698, 329.6115) v=(115.1666, -112.5) mover=[P: (780.0, 397.0), S: (100.0, 20.0)]
+BOARD_TICK 39 i=60 pos=(798.7322, 330.549) v=(159.5, 112.5) mover=[P: (780.0, 380.75), S: (100.0, 20.0)]
+PASS: Room 39 boards the elevator/ferry with a real jump

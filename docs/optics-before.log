@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+FAIL: Gun exposes the shared reflected shot path
+FAIL: Laser exposes a portal aperture path
+OPTICS_FAILURES=2

@@ -1,0 +1,19 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Ordinary player settles on parked platform
+PASS: Disabled platform stays at origin
+PASS: Horizontal mover crosses the unsupported gap at configured speed
+PASS: Grounded ordinary player rides horizontally without input
+PASS: Pause freezes platform rider and rotating gears
+PASS: Platform reverses at endpoint and carries rider back
+PASS: Reset restores phase origin and finite zero gear angle
+PASS: Disabled mover returns to and remains at origin
+PASS: Elevator carries an ordinary player upward
+PASS: Elevator carries an ordinary player downward after reversal
+PASS: Actual motion rotates finite undercarriage gears
+PASS: Elevator stops before squeezing a rider through the ceiling
+PASS: Blocked elevator leaves its rider alive and supported
+PASS: Ping-pong preserves travel distance when a tick crosses the endpoint
+PASS: Reset produces the same motion and gear phase for the same elapsed ticks
+PASS: Platform sweep cannot tunnel through a thin solid at extreme speed
+MOVING_PLATFORM_TEST_FAILURES=0

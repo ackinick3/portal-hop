@@ -1,0 +1,103 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Six-room laser chapter exists
+PORTAL_HOP_READY
+PASS: Room 20 is delegated through Maps
+PASS: Room 20 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 20 closed gate physically stops the player
+PASS: Room 20 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 20 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 20 powers every receiver by real portal beams
+PASS: Room 20 R clears power and portals
+PASS: Room 20 R restores actual spawn
+PASS: Room 20 R restores closed gate collision
+PASS: Room 20 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 20 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=20 state=won deaths=0 end=(891.625, 464.9251) transfers=0
+PASS: Room 20 real-input standard route reaches its exit
+PASS: Room 21 is delegated through Maps
+PASS: Room 21 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 21 closed gate physically stops the player
+PASS: Room 21 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 21 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 21 powers every receiver by real portal beams
+PASS: Room 21 R clears power and portals
+PASS: Room 21 R restores actual spawn
+PASS: Room 21 R restores closed gate collision
+PASS: Room 21 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 21 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=21 state=won deaths=0 end=(891.2648, 464.9251) transfers=0
+PASS: Room 21 real-input standard route reaches its exit
+PASS: Room 22 is delegated through Maps
+PASS: Room 22 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 22 closed gate physically stops the player
+PASS: Room 22 real gun shot (150.0, 480.0) color0 at (220.0, 465.0)
+PASS: Room 22 real gun shot (500.0, 280.0) color1 at (220.0, 465.0)
+PASS: Room 22 powers every receiver by real portal beams
+PASS: Room 22 R clears power and portals
+PASS: Room 22 R restores actual spawn
+PASS: Room 22 R restores closed gate collision
+PASS: Room 22 real gun shot (150.0, 480.0) color0 at (220.0, 465.0)
+PASS: Room 22 real gun shot (500.0, 280.0) color1 at (220.0, 465.0)
+LASER_ROOM=22 state=won deaths=0 end=(891.125, 464.9251) transfers=0
+PASS: Room 22 real-input standard route reaches its exit
+PASS: Room 23 is delegated through Maps
+PASS: Room 23 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 23 closed gate physically stops the player
+PASS: Room 23 real gun shot (300.0, 260.0) color0 at (140.0, 465.0)
+PASS: Room 23 real gun shot (520.0, 480.0) color1 at (140.0, 465.0)
+PASS: First receiver alone leaves the two-input gate shut
+PASS: Two-input gate requires its second actual beam
+PASS: Room 23 real gun shot (660.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 23 powers every receiver by real portal beams
+PASS: Room 23 R clears power and portals
+PASS: Room 23 R restores actual spawn
+PASS: Room 23 R restores closed gate collision
+PASS: Room 23 real gun shot (300.0, 260.0) color0 at (140.0, 465.0)
+PASS: Room 23 real gun shot (520.0, 480.0) color1 at (140.0, 465.0)
+PASS: First receiver alone leaves the two-input gate shut
+PASS: Two-input gate requires its second actual beam
+PASS: Room 23 real gun shot (660.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=23 state=won deaths=0 end=(891.4449, 464.9251) transfers=0
+PASS: Room 23 real-input standard route reaches its exit
+PASS: Room 24 is delegated through Maps
+PASS: Room 24 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 24 closed gate physically stops the player
+PASS: Room 24 real gun shot (300.0, 240.0) color0 at (140.0, 465.0)
+PASS: First gate obstructs the far ceiling shot before power
+PASS: Room 24 real gun shot (480.0, 100.0) color1 at (410.3402, 464.9252)
+PASS: Near light opens only its own gate
+PASS: Room 24 real gun shot (760.0, 100.0) color1 at (670.1804, 464.9252)
+PASS: Room 24 powers every receiver by real portal beams
+PASS: Room 24 R clears power and portals
+PASS: Room 24 R restores actual spawn
+PASS: Room 24 R restores closed gate collision
+PASS: Room 24 R restores closed gate collision
+PASS: Room 24 real gun shot (300.0, 240.0) color0 at (140.0, 465.0)
+PASS: First gate obstructs the far ceiling shot before power
+PASS: Room 24 real gun shot (480.0, 100.0) color1 at (410.3402, 464.9252)
+PASS: Near light opens only its own gate
+PASS: Room 24 real gun shot (760.0, 100.0) color1 at (670.1804, 464.9252)
+LASER_ROOM=24 state=won deaths=0 end=(891.5557, 464.9251) transfers=0
+PASS: Room 24 real-input standard route reaches its exit
+PASS: Room 25 is delegated through Maps
+PASS: Room 25 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 25 closed gate physically stops the player
+PASS: Room 25 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 25 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: First circuit unlocks access but cannot open the final gate
+PASS: Room 25 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 25 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+PASS: Room 25 powers every receiver by real portal beams
+PASS: Room 25 R clears power and portals
+PASS: Room 25 R restores actual spawn
+PASS: Room 25 R restores closed gate collision
+PASS: Room 25 R restores closed gate collision
+PASS: Room 25 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 25 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: First circuit unlocks access but cannot open the final gate
+PASS: Room 25 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 25 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+LASER_ROOM=25 state=won deaths=0 end=(890.1326, 464.9251) transfers=0
+PASS: Room 25 real-input standard route reaches its exit
+LASER_ROUTE_FAILURES=0

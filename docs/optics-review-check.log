@@ -1,0 +1,306 @@
+SUITE=optics EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gun exposes the shared reflected shot path
+PASS: Laser exposes a portal aperture path
+PASS: A visible green first hit reflects into a second segment
+PASS: Gun uses geometric equal-angle reflection
+PASS: Reflected final ray places on the pale floor
+PASS: Actual reflected shot accepts preview
+PASS: Actual shot draws every reflected segment with compatible trace records
+PASS: Reflected preview and actual placement match
+PASS: Reflected edge impact clamps the full aperture inward
+PASS: A floating green line does not invent collision or reflect
+PASS: An opaque first hit hides the green mirror behind it
+PASS: External dynamic occluder is a first ray blocker
+PASS: Gun cannot place through a dynamic occluder
+PASS: Default empty optics preserve direct placement
+PASS: Facing green mirrors reject after eight reflections
+PASS: Laser fixture red wall door is real
+PASS: Inactive single portal remains solid to a laser
+PASS: Laser fixture blue floor door is real
+PASS: Active portal pair routes a continuous laser
+PASS: Beam leaves output along its outward normal
+PASS: Portal routing works in the reverse color direction
+PASS: Aperture edge or outside grazing ray stays blocked: 164.0
+PASS: Aperture edge or outside grazing ray stays blocked: 165.0
+PASS: Aperture edge or outside grazing ray stays blocked: 235.0
+PASS: Aperture edge or outside grazing ray stays blocked: 236.0
+PASS: Safe off-center ray retains its tangential aperture offset
+PASS: Laser originating inside collision is rejected
+PASS: A dynamic blocker also stops a beam after its portal exit
+PASS: Inside an external occluder is invalid too
+PASS: Beam portal cycles stop within the hop and distance bounds
+PASS: Green gun mirrors never reflect lasers
+PASS: Dynamic exit fixture starts with a genuinely clear portal pair
+PASS: An exit occupied after placement refuses transport
+PASS: Refused transport never places any part of the player inside the dynamic blocker
+PASS: Blocked exit keeps the player on the entry side and removes only inward normal velocity
+PASS: An obstacle touching only the player's exit edge still blocks transport
+PASS: Moving the blocker away restores unchanged ordinary transport
+PASS: A flush dynamic blocker wins an equal-distance solid hit
+PASS: A blocker flush with the aperture stops the laser before routing
+PASS: A flush dynamic blocker also prevents gun placement
+OPTICS_FAILURES=0
+SUITE=portals EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_VECTOR_TEST_FAILURES=0
+SUITE=portal_integration EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Invalid material rejected
+PASS: Pale edge hit shifts whole portal inward
+PASS: Wall occludes target
+PASS: Valid red floor placement
+PASS: Single door stays inactive
+PASS: Valid blue floor placement
+PASS: Pair activates
+PASS: Floor exit reverses fall upwards
+PASS: Real floor opening permits physical traversal
+PASS: Same color replaces existing door
+PASS: Old same color door removed
+PASS: Overlapping doors rejected
+PASS: Failed placement retains previous door
+PASS: Reset removes both doors
+PORTAL_INTEGRATION_FAILURES=0
+SUITE=physical_orientations EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PHYSICAL_ORIENTATION_PAIRS=16 FAILURES=0
+SUITE=edge_cases EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Adjacent 50px faces merge into valid 100px portal surface
+PASS: Second continuous surface accepts portal
+PASS: Moving outwards cannot enter portal
+PASS: Low normal speed permits traversal
+PASS: Low speed traversal preserves total speed
+PASS: Stationary overlap cannot repeatedly trigger
+PASS: Reverse blue-to-red entry works after full exit separation
+PASS: No portals means no traversal
+PASS: Obstructed aperture edge rejects placement
+PASS: 30000px/s movement cannot tunnel through 2px solid wall
+EDGE_CASE_FAILURES=0
+SUITE=placement_edges EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Edge shot accepted: (0.0, -1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, -1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, -1.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, -1.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (0.0, 1.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (0.0, 1.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, 1.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (0.0, 1.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (-1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (-1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (-1.0, 0.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (-1.0, 0.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Edge shot accepted: (1.0, 0.0) / -100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / -95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 0.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 95.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Edge shot accepted: (1.0, 0.0) / 100.0
+PASS: Whole portal shifts inward and stays on the hit face
+PASS: Preview matches actual edge placement
+PASS: Beam still stops at actual wall impact
+PASS: Diagonal physical corner accepts the visible pale face: (1.0, 0.0) / -100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Diagonal physical corner accepts the visible pale face: (1.0, 0.0) / 100.0
+PASS: Mirrored corner uses the correct inward center and surface normal
+PASS: Non-pale region beside the edge stays invalid
+PASS: Surface shorter than 72px stays invalid
+PASS: Exactly 72px surface fits by centering the portal
+PASS: Diagonal corner hit can use the visible valid floor face
+PASS: Corner placement keeps floor normal and whole inward aperture
+PASS: Blue portal can snap near wall edge
+PASS: Overlap uses shifted center and still rejects the second color
+PASS: Shifted portal still requires clearance for the full aperture
+PASS: Blocked edge placement never opens a collision gap
+PLACEMENT_EDGE_FAILURES=0
+SUITE=laser_routes EXIT=0 FIXED_FPS=120
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Six-room laser chapter exists
+PORTAL_HOP_READY
+PASS: Room 20 is delegated through Maps
+PASS: Room 20 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 20 closed gate physically stops the player
+PASS: Room 20 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 20 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 20 powers every receiver by real portal beams
+PASS: Room 20 R clears power and portals
+PASS: Room 20 R restores actual spawn
+PASS: Room 20 R restores closed gate collision
+PASS: Room 20 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 20 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=20 state=won deaths=0 end=(891.625, 464.9251) transfers=0
+PASS: Room 20 real-input standard route reaches its exit
+PASS: Room 21 is delegated through Maps
+PASS: Room 21 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 21 closed gate physically stops the player
+PASS: Room 21 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 21 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 21 powers every receiver by real portal beams
+PASS: Room 21 R clears power and portals
+PASS: Room 21 R restores actual spawn
+PASS: Room 21 R restores closed gate collision
+PASS: Room 21 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 21 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=21 state=won deaths=0 end=(891.2648, 464.9251) transfers=0
+PASS: Room 21 real-input standard route reaches its exit
+PASS: Room 22 is delegated through Maps
+PASS: Room 22 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 22 closed gate physically stops the player
+PASS: Room 22 real gun shot (150.0, 480.0) color0 at (220.0, 465.0)
+PASS: Room 22 real gun shot (500.0, 280.0) color1 at (220.0, 465.0)
+PASS: Room 22 powers every receiver by real portal beams
+PASS: Room 22 R clears power and portals
+PASS: Room 22 R restores actual spawn
+PASS: Room 22 R restores closed gate collision
+PASS: Room 22 real gun shot (150.0, 480.0) color0 at (220.0, 465.0)
+PASS: Room 22 real gun shot (500.0, 280.0) color1 at (220.0, 465.0)
+LASER_ROOM=22 state=won deaths=0 end=(891.125, 464.9251) transfers=0
+PASS: Room 22 real-input standard route reaches its exit
+PASS: Room 23 is delegated through Maps
+PASS: Room 23 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 23 closed gate physically stops the player
+PASS: Room 23 real gun shot (300.0, 260.0) color0 at (140.0, 465.0)
+PASS: Room 23 real gun shot (520.0, 480.0) color1 at (140.0, 465.0)
+PASS: First receiver alone leaves the two-input gate shut
+PASS: Two-input gate requires its second actual beam
+PASS: Room 23 real gun shot (660.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 23 powers every receiver by real portal beams
+PASS: Room 23 R clears power and portals
+PASS: Room 23 R restores actual spawn
+PASS: Room 23 R restores closed gate collision
+PASS: Room 23 real gun shot (300.0, 260.0) color0 at (140.0, 465.0)
+PASS: Room 23 real gun shot (520.0, 480.0) color1 at (140.0, 465.0)
+PASS: First receiver alone leaves the two-input gate shut
+PASS: Two-input gate requires its second actual beam
+PASS: Room 23 real gun shot (660.0, 480.0) color1 at (140.0, 465.0)
+LASER_ROOM=23 state=won deaths=0 end=(891.4449, 464.9251) transfers=0
+PASS: Room 23 real-input standard route reaches its exit
+PASS: Room 24 is delegated through Maps
+PASS: Room 24 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 24 closed gate physically stops the player
+PASS: Room 24 real gun shot (300.0, 240.0) color0 at (140.0, 465.0)
+PASS: First gate obstructs the far ceiling shot before power
+PASS: Room 24 real gun shot (480.0, 100.0) color1 at (410.3402, 464.9252)
+PASS: Near light opens only its own gate
+PASS: Room 24 real gun shot (760.0, 100.0) color1 at (670.1804, 464.9252)
+PASS: Room 24 powers every receiver by real portal beams
+PASS: Room 24 R clears power and portals
+PASS: Room 24 R restores actual spawn
+PASS: Room 24 R restores closed gate collision
+PASS: Room 24 R restores closed gate collision
+PASS: Room 24 real gun shot (300.0, 240.0) color0 at (140.0, 465.0)
+PASS: First gate obstructs the far ceiling shot before power
+PASS: Room 24 real gun shot (480.0, 100.0) color1 at (410.3402, 464.9252)
+PASS: Near light opens only its own gate
+PASS: Room 24 real gun shot (760.0, 100.0) color1 at (670.1804, 464.9252)
+LASER_ROOM=24 state=won deaths=0 end=(891.5557, 464.9251) transfers=0
+PASS: Room 24 real-input standard route reaches its exit
+PASS: Room 25 is delegated through Maps
+PASS: Room 25 unaltered laser and ordinary walking cannot bypass its closed gate
+PASS: Room 25 closed gate physically stops the player
+PASS: Room 25 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 25 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: First circuit unlocks access but cannot open the final gate
+PASS: Room 25 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 25 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+PASS: Room 25 powers every receiver by real portal beams
+PASS: Room 25 R clears power and portals
+PASS: Room 25 R restores actual spawn
+PASS: Room 25 R restores closed gate collision
+PASS: Room 25 R restores closed gate collision
+PASS: Room 25 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 25 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: First circuit unlocks access but cannot open the final gate
+PASS: Room 25 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 25 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+LASER_ROOM=25 state=won deaths=0 end=(890.1326, 464.9251) transfers=0
+PASS: Room 25 real-input standard route reaches its exit
+LASER_ROUTE_FAILURES=0

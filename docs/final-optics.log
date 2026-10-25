@@ -1,0 +1,43 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gun exposes the shared reflected shot path
+PASS: Laser exposes a portal aperture path
+PASS: A visible green first hit reflects into a second segment
+PASS: Gun uses geometric equal-angle reflection
+PASS: Reflected final ray places on the pale floor
+PASS: Actual reflected shot accepts preview
+PASS: Actual shot draws every reflected segment with compatible trace records
+PASS: Reflected preview and actual placement match
+PASS: Reflected edge impact clamps the full aperture inward
+PASS: A floating green line does not invent collision or reflect
+PASS: An opaque first hit hides the green mirror behind it
+PASS: External dynamic occluder is a first ray blocker
+PASS: Gun cannot place through a dynamic occluder
+PASS: Default empty optics preserve direct placement
+PASS: Facing green mirrors reject after eight reflections
+PASS: Laser fixture red wall door is real
+PASS: Inactive single portal remains solid to a laser
+PASS: Laser fixture blue floor door is real
+PASS: Active portal pair routes a continuous laser
+PASS: Beam leaves output along its outward normal
+PASS: Portal routing works in the reverse color direction
+PASS: Aperture edge or outside grazing ray stays blocked: 164.0
+PASS: Aperture edge or outside grazing ray stays blocked: 165.0
+PASS: Aperture edge or outside grazing ray stays blocked: 235.0
+PASS: Aperture edge or outside grazing ray stays blocked: 236.0
+PASS: Safe off-center ray retains its tangential aperture offset
+PASS: Laser originating inside collision is rejected
+PASS: A dynamic blocker also stops a beam after its portal exit
+PASS: Inside an external occluder is invalid too
+PASS: Beam portal cycles stop within the hop and distance bounds
+PASS: Green gun mirrors never reflect lasers
+PASS: Dynamic exit fixture starts with a genuinely clear portal pair
+PASS: An exit occupied after placement refuses transport
+PASS: Refused transport never places any part of the player inside the dynamic blocker
+PASS: Blocked exit keeps the player on the entry side and removes only inward normal velocity
+PASS: An obstacle touching only the player's exit edge still blocks transport
+PASS: Moving the blocker away restores unchanged ordinary transport
+PASS: A flush dynamic blocker wins an equal-distance solid hit
+PASS: A blocker flush with the aperture stops the laser before routing
+PASS: A flush dynamic blocker also prevents gun placement
+OPTICS_FAILURES=0

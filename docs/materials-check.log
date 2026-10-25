@@ -1,0 +1,28 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Player supports optional material patches
+FLOOR_REBOUND=(123.5, -580.0) INCOMING=(123.5, 565.0)
+PASS: Blue floor automatically rebounds from a real landing
+PASS: Blue floor preserves incoming horizontal velocity
+PASS: Automatic bounce cannot be shortened by jump release
+PASS: Separating floor contact and released jump do not alter automatic rebound
+PASS: Death immediately resets material route evidence
+WALL_REBOUND=(-800.0, 105.0) INCOMING=(800.0, 105.0)
+PASS: Blue wall reflects pre-slide normal speed rather than zeroed slide velocity
+PASS: Blue wall preserves vertical velocity
+PASS: Separating wall contact does not rebound twice
+PASS: Blue rebound caps excessive incoming normal speed
+PASS: Slow wall impact receives a useful automatic rebound
+PASS: A remote blue patch does not coat the rest of a wall
+RED_SPEED=650.0 RED_DISTANCE=237.416534423828
+PASS: Held red runway accelerates beyond ordinary running with a bounded speed
+PASS: Red runway records actual traveled distance
+PASS: Released red runway movement deliberately brakes
+RED_AIR_SPEED=626.666625976563
+PASS: Leaving red runway retains high speed under existing held air control
+PASS: Empty material list preserves ordinary ground speed
+ORDINARY_SLIDE=8.71528625488281
+PASS: Empty material list preserves ordinary release braking distance
+PASS: A remote red patch cannot leak acceleration onto normal floor
+PASS: Leaving red coating onto ordinary floor restores ordinary ground running
+MATERIAL_TEST_FAILURES=0

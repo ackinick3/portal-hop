@@ -1,16 +1,18 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms: 8; room 7 natural-fall energy and underside clearance fixed; room 8 preplanned high-exit landing puzzle
-Bytes: 109310280
-SHA256: 5E0BE5B68A826F47E0B6EE31CFFA5CFBDD372B0B922E2B22FC191A38E3B43FE3
-Physics: unchanged this iteration; scalar speed follows exit normal; horizontal air-release drag 90
-Source tests: all 23 suites passed with full stdout/stderr checked, no runtime errors or exit leaks
-Routes: room 7 four landing routes plus less-centered exit; room 8 three preplaced pairs with D only, low-exit failure and retry
-Progression: old 7 stays 7 until completing room 7; 7-to-8 briefing and final page verified
-GPU: eight room previews, three briefing previews, two-column selection; room 7/8, room 8 briefing and selection visually inspected
-Display: three window sizes, fullscreen, real cursor aim and restoration passed; docs/display.log
-Review: no substantive code findings; reviewer NUL log initialization error excluded from clean-output evidence
-Graphical standalone exit: 0; docs/standalone-gui.log
+Rooms: 50; original eight geometries retained; new chapters9-50 complete
+Bytes: 109351192
+SHA256: 42E023A67E1C56142FA79A3E2F943846ADBF27503D90459DE1DCEE5F4D923EB1
+Mechanics: blue bounce; red acceleration; active-portal laser routing and latched receiver gates/platforms; green gun reflection; physical moving platforms with rotating gears and inset tracks
+Source tests: ALL 33 HEADLESS TEST SUITES PASSED after final briefing-wrap fix, ordinary real-time stepping; full stdout/stderr checked, no runtime errors or exit leaks; docs/final-all-tests.log
+Routes: actual movement/jump/gun-origin shots for all50 rooms; new42 never force player speed/position, receiver state or completion; UI navigation tests labelled separately
+Progression: five pages fit; old8 progress preserved;8-to-9 and onward; final only50; all42 new briefings fit width and height
+Review: three early important defects reproduced and fixed; fresh whole-campaign review no important findings; minor room41 retry depenetration documented
+GPU:50 rooms,42new briefings,5selection pages,locked/help/menu; final representative screenshots inspected; docs/campaign-preview and campaign-overview.png
+Display: three window sizes, fullscreen, live cursor aim and restoration passed; docs/display.log
+Native standalone GUI exit:0; docs/standalone-gui.log
+Embedded pack: matching Godot engine mounted this EXE and started all50 packed rooms, EMBEDDED_PROJECT=true; final mirrors1/movers1/receivers2; docs/standalone-pack.log and standalone-room50.png
+Extra native external-script helper: timed out before log startup; not used as success evidence. Normal release launch and pack-mount checks above succeeded.
 Single EXE: builds/PortalHop.exe; desktop Portal Hop.lnk target verified
-Human acceptance: pending user playtest of revised room 7 and new room 8
+Human acceptance: pending new chapter playtesting; no hour-scale performance/memory claim

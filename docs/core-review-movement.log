@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Gravity lands player on solid floor
+PASS: Right input moves player
+PASS: Jump rises above floor
+PASS: Jump returns to floor
+PASS: Player cannot cross solid wall
+PASS: Air control preserves launch speed above run cap
+PASS: Death restores spawn
+MOVEMENT_TEST_FAILURES=0

@@ -134,9 +134,14 @@ func enter_level(number: int) -> void:
 		var heading := label_at("%02d  /  %s" % [number+1,room.name],Vector2(50,66),30)
 		heading.size.x = 860
 		heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		var body := label_at("\n".join(room.get("briefing",[room.hint])),Vector2(130,155),20)
-		body.size = Vector2(700,235)
+		var body := Label.new()
 		body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		body.position = Vector2(130,155)
+		body.size = Vector2(700,235)
+		body.add_theme_font_size_override("font_size",18)
+		body.add_theme_color_override("font_color",Color("edf3f8"))
+		body.text = "\n".join(room.get("briefing",[room.hint]))
+		panel.add_child(body)
 	button("START ROOM",Vector2(340,410),func(): start_level(number))
 	button("BACK",Vector2(340,462),level_select)
 
@@ -152,7 +157,7 @@ func machines_instructions() -> void:
 	clear_panel()
 	backdrop()
 	label_at("MATERIALS & MACHINES",Vector2(245,60),32)
-	label_at("BLUE coating rebounds you automatically. Steer with A / D.\nRED coating builds running speed while you hold A / D.\nKeep that speed when you leave the runway.\n\nAMBER beams travel through active portal pairs.\nA lit receiver stays powered until R or RESTART.\nFollow its cable to the door or platform it controls.\n\nGREEN surfaces reflect your portal shots at equal angles.\nPale surfaces still accept portals; colored coatings do not.\nMoving platforms carry you. Gears and grooves show their route.",Vector2(130,125),20)
+	label_at("BLUE coating rebounds you automatically. Steer with A / D.\nRED coating builds running speed while you hold A / D.\nKeep that speed when you leave the runway.\n\nAMBER beams travel through active portal pairs.\nA lit receiver stays powered until R or RESTART.\nFollow its cable to the door or platform it controls.\n\nGREEN surfaces reflect your portal shots at equal angles.\nPale surfaces still accept portals; colored coatings do not.\nMoving platforms carry you. Gears and grooves show their route.",Vector2(130,125),18)
 	button("CONTROLS",Vector2(100,458),instructions)
 	button("BACK",Vector2(580,458),menu)
 

@@ -9,88 +9,382 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 [  83% ] first_scan_filesystem | 正在启动文件扫描……
 [ DONE ] first_scan_filesystem
 
-[   0% ] update_scripts_classes | Started 正在注册全局类…… (8 steps)
+[   0% ] update_scripts_classes | Started 正在注册全局类…… (24 steps)
 [   0% ] update_scripts_classes |
-[  11% ] update_scripts_classes |
-[  22% ] update_scripts_classes |
-[  33% ] update_scripts_classes |
+[   4% ] update_scripts_classes |
+[   8% ] update_scripts_classes |
+[  12% ] update_scripts_classes |
+[  16% ] update_scripts_classes |
+[  20% ] update_scripts_classes |
+[  24% ] update_scripts_classes |
+[  28% ] update_scripts_classes |
+[  32% ] update_scripts_classes |
+[  36% ] update_scripts_classes |
+[  40% ] update_scripts_classes |
 [  44% ] update_scripts_classes |
-[  55% ] update_scripts_classes |
-[  66% ] update_scripts_classes |
-[  77% ] update_scripts_classes |
+[  48% ] update_scripts_classes |
+[  52% ] update_scripts_classes |
+[  56% ] update_scripts_classes |
+[  60% ] update_scripts_classes |
+[  64% ] update_scripts_classes |
+[  68% ] update_scripts_classes |
+[  72% ] update_scripts_classes |
+[  76% ] update_scripts_classes |
+[  80% ] update_scripts_classes |
+[  84% ] update_scripts_classes |
+[  88% ] update_scripts_classes |
+[  92% ] update_scripts_classes |
 [ DONE ] update_scripts_classes
 
-[   0% ] _update_scan_actions | Started 正在扫描动作…… (13 steps)
-[   0% ] _update_scan_actions | level-select.png
-[   7% ] _update_scan_actions | menu.png
-[  14% ] _update_scan_actions | room1.png
-[  21% ] _update_scan_actions | room2.png
-[  28% ] _update_scan_actions | room3.png
-[  35% ] _update_scan_actions | room4.png
-[  42% ] _update_scan_actions | room5.png
-[  50% ] _update_scan_actions | room6-briefing.png
-[  57% ] _update_scan_actions | room6.png
-[  64% ] _update_scan_actions | room7-briefing.png
-[  71% ] _update_scan_actions | room7.png
-[  78% ] _update_scan_actions | room8-briefing.png
-[  85% ] _update_scan_actions | room8.png
+[   0% ] _update_scan_actions | Started 正在扫描动作…… (101 steps)
+[   0% ] _update_scan_actions | briefing09.png
+[   0% ] _update_scan_actions | briefing10.png
+[   1% ] _update_scan_actions | briefing11.png
+[   2% ] _update_scan_actions | briefing12.png
+[   3% ] _update_scan_actions | briefing13.png
+[   4% ] _update_scan_actions | briefing14.png
+[   5% ] _update_scan_actions | briefing15.png
+[   6% ] _update_scan_actions | briefing16.png
+[   7% ] _update_scan_actions | briefing17.png
+[   8% ] _update_scan_actions | briefing18.png
+[   9% ] _update_scan_actions | briefing19.png
+[  10% ] _update_scan_actions | briefing20.png
+[  11% ] _update_scan_actions | briefing21.png
+[  12% ] _update_scan_actions | briefing22.png
+[  13% ] _update_scan_actions | briefing23.png
+[  14% ] _update_scan_actions | briefing24.png
+[  15% ] _update_scan_actions | briefing25.png
+[  16% ] _update_scan_actions | briefing26.png
+[  17% ] _update_scan_actions | briefing27.png
+[  18% ] _update_scan_actions | briefing28.png
+[  19% ] _update_scan_actions | briefing29.png
+[  20% ] _update_scan_actions | briefing30.png
+[  21% ] _update_scan_actions | briefing31.png
+[  22% ] _update_scan_actions | briefing32.png
+[  23% ] _update_scan_actions | briefing33.png
+[  24% ] _update_scan_actions | briefing34.png
+[  25% ] _update_scan_actions | briefing35.png
+[  26% ] _update_scan_actions | briefing36.png
+[  27% ] _update_scan_actions | briefing37.png
+[  28% ] _update_scan_actions | briefing38.png
+[  29% ] _update_scan_actions | briefing39.png
+[  30% ] _update_scan_actions | briefing40.png
+[  31% ] _update_scan_actions | briefing41.png
+[  32% ] _update_scan_actions | briefing42.png
+[  33% ] _update_scan_actions | briefing43.png
+[  34% ] _update_scan_actions | briefing44.png
+[  35% ] _update_scan_actions | briefing45.png
+[  36% ] _update_scan_actions | briefing46.png
+[  37% ] _update_scan_actions | briefing47.png
+[  38% ] _update_scan_actions | briefing48.png
+[  39% ] _update_scan_actions | briefing49.png
+[  40% ] _update_scan_actions | briefing50.png
+[  41% ] _update_scan_actions | materials-help.png
+[  42% ] _update_scan_actions | menu.png
+[  43% ] _update_scan_actions | room01.png
+[  44% ] _update_scan_actions | room02.png
+[  45% ] _update_scan_actions | room03.png
+[  46% ] _update_scan_actions | room04.png
+[  47% ] _update_scan_actions | room05.png
+[  48% ] _update_scan_actions | room06.png
+[  49% ] _update_scan_actions | room07.png
+[  50% ] _update_scan_actions | room08.png
+[  50% ] _update_scan_actions | room09.png
+[  51% ] _update_scan_actions | room10.png
+[  52% ] _update_scan_actions | room11.png
+[  53% ] _update_scan_actions | room12.png
+[  54% ] _update_scan_actions | room13.png
+[  55% ] _update_scan_actions | room14.png
+[  56% ] _update_scan_actions | room15.png
+[  57% ] _update_scan_actions | room16.png
+[  58% ] _update_scan_actions | room17.png
+[  59% ] _update_scan_actions | room18.png
+[  60% ] _update_scan_actions | room19.png
+[  61% ] _update_scan_actions | room20.png
+[  62% ] _update_scan_actions | room21.png
+[  63% ] _update_scan_actions | room22.png
+[  64% ] _update_scan_actions | room23.png
+[  65% ] _update_scan_actions | room24.png
+[  66% ] _update_scan_actions | room25.png
+[  67% ] _update_scan_actions | room26.png
+[  68% ] _update_scan_actions | room27.png
+[  69% ] _update_scan_actions | room28.png
+[  70% ] _update_scan_actions | room29.png
+[  71% ] _update_scan_actions | room30.png
+[  72% ] _update_scan_actions | room31.png
+[  73% ] _update_scan_actions | room32.png
+[  74% ] _update_scan_actions | room33.png
+[  75% ] _update_scan_actions | room34.png
+[  76% ] _update_scan_actions | room35.png
+[  77% ] _update_scan_actions | room36.png
+[  78% ] _update_scan_actions | room37.png
+[  79% ] _update_scan_actions | room38.png
+[  80% ] _update_scan_actions | room39.png
+[  81% ] _update_scan_actions | room40.png
+[  82% ] _update_scan_actions | room41.png
+[  83% ] _update_scan_actions | room42.png
+[  84% ] _update_scan_actions | room43.png
+[  85% ] _update_scan_actions | room44.png
+[  86% ] _update_scan_actions | room45.png
+[  87% ] _update_scan_actions | room46.png
+[  88% ] _update_scan_actions | room47.png
+[  89% ] _update_scan_actions | room48.png
+[  90% ] _update_scan_actions | room49.png
+[  91% ] _update_scan_actions | room50.png
+[  92% ] _update_scan_actions | select1.png
+[  93% ] _update_scan_actions | select2.png
+[  94% ] _update_scan_actions | select3.png
+[  95% ] _update_scan_actions | select4.png
+[  96% ] _update_scan_actions | select5.png
+[  97% ] _update_scan_actions | select-locked.png
+[  98% ] _update_scan_actions | campaign-overview.png
 [ DONE ] _update_scan_actions
 
-[   0% ] reimport | Started 正在导入或重新导入资产 (13 steps)
+[   0% ] reimport | Started 正在导入或重新导入资产 (101 steps)
 [   0% ] reimport | 正在准备重新导入文件……
+[   0% ] reimport | 正在准备重新导入文件……
+[   1% ] reimport | 正在准备重新导入文件……
+[   2% ] reimport | 正在准备重新导入文件……
+[   3% ] reimport | 正在准备重新导入文件……
+[   4% ] reimport | 正在准备重新导入文件……
+[   5% ] reimport | 正在准备重新导入文件……
+[   6% ] reimport | 正在准备重新导入文件……
 [   7% ] reimport | 正在准备重新导入文件……
+[   8% ] reimport | 正在准备重新导入文件……
+[   9% ] reimport | 正在准备重新导入文件……
+[  10% ] reimport | 正在准备重新导入文件……
+[  11% ] reimport | 正在准备重新导入文件……
+[  12% ] reimport | 正在准备重新导入文件……
+[  13% ] reimport | 正在准备重新导入文件……
 [  14% ] reimport | 正在准备重新导入文件……
+[  15% ] reimport | 正在准备重新导入文件……
+[  16% ] reimport | 正在准备重新导入文件……
+[  17% ] reimport | 正在准备重新导入文件……
+[  18% ] reimport | 正在准备重新导入文件……
+[  19% ] reimport | 正在准备重新导入文件……
+[  20% ] reimport | 正在准备重新导入文件……
 [  21% ] reimport | 正在准备重新导入文件……
+[  22% ] reimport | 正在准备重新导入文件……
+[  23% ] reimport | 正在准备重新导入文件……
+[  24% ] reimport | 正在准备重新导入文件……
+[  25% ] reimport | 正在准备重新导入文件……
+[  26% ] reimport | 正在准备重新导入文件……
+[  27% ] reimport | 正在准备重新导入文件……
 [  28% ] reimport | 正在准备重新导入文件……
+[  29% ] reimport | 正在准备重新导入文件……
+[  30% ] reimport | 正在准备重新导入文件……
+[  31% ] reimport | 正在准备重新导入文件……
+[  32% ] reimport | 正在准备重新导入文件……
+[  33% ] reimport | 正在准备重新导入文件……
+[  34% ] reimport | 正在准备重新导入文件……
 [  35% ] reimport | 正在准备重新导入文件……
+[  36% ] reimport | 正在准备重新导入文件……
+[  37% ] reimport | 正在准备重新导入文件……
+[  38% ] reimport | 正在准备重新导入文件……
+[  39% ] reimport | 正在准备重新导入文件……
+[  40% ] reimport | 正在准备重新导入文件……
+[  41% ] reimport | 正在准备重新导入文件……
 [  42% ] reimport | 正在准备重新导入文件……
+[  43% ] reimport | 正在准备重新导入文件……
+[  44% ] reimport | 正在准备重新导入文件……
+[  45% ] reimport | 正在准备重新导入文件……
+[  46% ] reimport | 正在准备重新导入文件……
+[  47% ] reimport | 正在准备重新导入文件……
+[  48% ] reimport | 正在准备重新导入文件……
+[  49% ] reimport | 正在准备重新导入文件……
 [  50% ] reimport | 正在准备重新导入文件……
+[  50% ] reimport | 正在准备重新导入文件……
+[  51% ] reimport | 正在准备重新导入文件……
+[  52% ] reimport | 正在准备重新导入文件……
+[  53% ] reimport | 正在准备重新导入文件……
+[  54% ] reimport | 正在准备重新导入文件……
+[  55% ] reimport | 正在准备重新导入文件……
+[  56% ] reimport | 正在准备重新导入文件……
 [  57% ] reimport | 正在准备重新导入文件……
+[  58% ] reimport | 正在准备重新导入文件……
+[  59% ] reimport | 正在准备重新导入文件……
+[  60% ] reimport | 正在准备重新导入文件……
+[  61% ] reimport | 正在准备重新导入文件……
+[  62% ] reimport | 正在准备重新导入文件……
+[  63% ] reimport | 正在准备重新导入文件……
 [  64% ] reimport | 正在准备重新导入文件……
+[  65% ] reimport | 正在准备重新导入文件……
+[  66% ] reimport | 正在准备重新导入文件……
+[  67% ] reimport | 正在准备重新导入文件……
+[  68% ] reimport | 正在准备重新导入文件……
+[  69% ] reimport | 正在准备重新导入文件……
+[  70% ] reimport | 正在准备重新导入文件……
 [  71% ] reimport | 正在准备重新导入文件……
+[  72% ] reimport | 正在准备重新导入文件……
+[  73% ] reimport | 正在准备重新导入文件……
+[  74% ] reimport | 正在准备重新导入文件……
+[  75% ] reimport | 正在准备重新导入文件……
+[  76% ] reimport | 正在准备重新导入文件……
+[  77% ] reimport | 正在准备重新导入文件……
 [  78% ] reimport | 正在准备重新导入文件……
+[  79% ] reimport | 正在准备重新导入文件……
+[  80% ] reimport | 正在准备重新导入文件……
+[  81% ] reimport | 正在准备重新导入文件……
+[  82% ] reimport | 正在准备重新导入文件……
+[  83% ] reimport | 正在准备重新导入文件……
+[  84% ] reimport | 正在准备重新导入文件……
 [  85% ] reimport | 正在准备重新导入文件……
+[  86% ] reimport | 正在准备重新导入文件……
+[  87% ] reimport | 正在准备重新导入文件……
+[  88% ] reimport | 正在准备重新导入文件……
+[  89% ] reimport | 正在准备重新导入文件……
+[  90% ] reimport | 正在准备重新导入文件……
+[  91% ] reimport | 正在准备重新导入文件……
+[  92% ] reimport | 正在准备重新导入文件……
+[  93% ] reimport | 正在准备重新导入文件……
+[  94% ] reimport | 正在准备重新导入文件……
+[  95% ] reimport | 正在准备重新导入文件……
+[  96% ] reimport | 正在准备重新导入文件……
+[  97% ] reimport | 正在准备重新导入文件……
+[  98% ] reimport | 正在准备重新导入文件……
 [   0% ] reimport | 正在执行重新导入的前置操作……
-[   0% ] reimport | level-select.png
-[   7% ] reimport | menu.png
-[  14% ] reimport | room1.png
-[  21% ] reimport | room2.png
-[  28% ] reimport | room3.png
-[  35% ] reimport | room4.png
-[  42% ] reimport | room5.png
-[  50% ] reimport | room6-briefing.png
-[  57% ] reimport | room6.png
-[  64% ] reimport | room7-briefing.png
-[  71% ] reimport | room7.png
-[  78% ] reimport | room8-briefing.png
-[  85% ] reimport | room8.png
-[  92% ] reimport | 正在结束资产导入……
+[   0% ] reimport | room32.png
+[   0% ] reimport | room31.png
+[   1% ] reimport | room30.png
+[   2% ] reimport | room29.png
+[   3% ] reimport | room28.png
+[   4% ] reimport | room27.png
+[   5% ] reimport | room26.png
+[   6% ] reimport | room25.png
+[   7% ] reimport | room24.png
+[   8% ] reimport | room23.png
+[   9% ] reimport | room22.png
+[  10% ] reimport | room21.png
+[  11% ] reimport | room20.png
+[  12% ] reimport | room19.png
+[  13% ] reimport | room18.png
+[  14% ] reimport | room17.png
+[  15% ] reimport | room16.png
+[  16% ] reimport | room15.png
+[  17% ] reimport | room14.png
+[  18% ] reimport | room13.png
+[  19% ] reimport | room12.png
+[  20% ] reimport | room11.png
+[  21% ] reimport | room10.png
+[  22% ] reimport | room09.png
+[  23% ] reimport | room08.png
+[  24% ] reimport | campaign-overview.png
+[  25% ] reimport | select-locked.png
+[  26% ] reimport | select5.png
+[  27% ] reimport | select4.png
+[  28% ] reimport | select3.png
+[  29% ] reimport | select2.png
+[  30% ] reimport | select1.png
+[  31% ] reimport | room50.png
+[  32% ] reimport | room49.png
+[  33% ] reimport | room48.png
+[  34% ] reimport | room47.png
+[  35% ] reimport | room46.png
+[  36% ] reimport | room45.png
+[  37% ] reimport | room44.png
+[  38% ] reimport | room43.png
+[  39% ] reimport | room42.png
+[  40% ] reimport | room41.png
+[  41% ] reimport | room40.png
+[  42% ] reimport | room39.png
+[  43% ] reimport | room38.png
+[  44% ] reimport | room37.png
+[  45% ] reimport | room36.png
+[  46% ] reimport | room35.png
+[  47% ] reimport | room34.png
+[  48% ] reimport | room33.png
+[  49% ] reimport | briefing33.png
+[  50% ] reimport | briefing32.png
+[  50% ] reimport | briefing31.png
+[  51% ] reimport | briefing30.png
+[  52% ] reimport | briefing29.png
+[  53% ] reimport | briefing28.png
+[  54% ] reimport | briefing27.png
+[  55% ] reimport | briefing26.png
+[  56% ] reimport | briefing25.png
+[  57% ] reimport | briefing24.png
+[  58% ] reimport | briefing23.png
+[  59% ] reimport | briefing22.png
+[  60% ] reimport | briefing21.png
+[  61% ] reimport | briefing20.png
+[  62% ] reimport | briefing19.png
+[  63% ] reimport | briefing18.png
+[  64% ] reimport | briefing17.png
+[  65% ] reimport | briefing16.png
+[  66% ] reimport | briefing15.png
+[  67% ] reimport | briefing14.png
+[  68% ] reimport | briefing13.png
+[  69% ] reimport | briefing12.png
+[  70% ] reimport | briefing11.png
+[  71% ] reimport | briefing10.png
+[  72% ] reimport | briefing09.png
+[  73% ] reimport | room07.png
+[  74% ] reimport | room06.png
+[  75% ] reimport | room05.png
+[  76% ] reimport | room04.png
+[  77% ] reimport | room03.png
+[  78% ] reimport | room02.png
+[  79% ] reimport | room01.png
+[  80% ] reimport | menu.png
+[  81% ] reimport | materials-help.png
+[  82% ] reimport | briefing50.png
+[  83% ] reimport | briefing49.png
+[  84% ] reimport | briefing48.png
+[  85% ] reimport | briefing47.png
+[  86% ] reimport | briefing46.png
+[  87% ] reimport | briefing45.png
+[  88% ] reimport | briefing44.png
+[  89% ] reimport | briefing43.png
+[  90% ] reimport | briefing42.png
+[  91% ] reimport | briefing41.png
+[  92% ] reimport | briefing40.png
+[  93% ] reimport | briefing39.png
+[  94% ] reimport | briefing38.png
+[  95% ] reimport | briefing37.png
+[  96% ] reimport | briefing36.png
+[  97% ] reimport | briefing35.png
+[  98% ] reimport | briefing34.png
+[  99% ] reimport | 正在结束资产导入……
 [ DONE ] reimport
 
-[   0% ] reimport | Started 正在导入或重新导入资产 (13 steps)
+[   0% ] reimport | Started 正在导入或重新导入资产 (101 steps)
 [   0% ] reimport | 正在执行重新导入的后置操作……
 [ DONE ] reimport
 
 [   0% ] savepack | Started 打包中 (102 steps)
 [   1% ] savepack | 正在保存文件：res://actors/player.gdc
-[  12% ] savepack | 正在保存文件：res://actors/sentry.gdc
-[  23% ] savepack | 正在保存文件：res://assets/sounds.gdc
-[  33% ] savepack | 正在保存文件：res://levels/maps.gdc
-[  44% ] savepack | 正在保存文件：res://portals/system.gdc
-[  55% ] savepack | 正在保存文件：res://scenes/main.gdc
-[  66% ] savepack | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
-[  76% ] savepack | 正在保存文件：res://ui/tutorial.gdc
-[  87% ] savepack | 正在保存文件：res://ui/landmarks.gdc
-[  87% ] savepack | 正在保存文件：res://actors/player.gd.remap
-[  87% ] savepack | 正在保存文件：res://actors/sentry.gd.remap
-[  87% ] savepack | 正在保存文件：res://assets/sounds.gd.remap
-[  87% ] savepack | 正在保存文件：res://levels/maps.gd.remap
-[  87% ] savepack | 正在保存文件：res://portals/system.gd.remap
-[  87% ] savepack | 正在保存文件：res://scenes/main.gd.remap
-[  87% ] savepack | 正在保存文件：res://scenes/main.tscn.remap
-[  87% ] savepack | 正在保存文件：res://ui/tutorial.gd.remap
-[  87% ] savepack | 正在保存文件：res://ui/landmarks.gd.remap
-[  87% ] savepack | 正在保存文件：res://.godot/global_script_class_cache.cfg
-[  87% ] savepack | 正在保存文件：res://.godot/uid_cache.bin
-[  87% ] savepack | 正在保存文件：res://project.binary
+[   7% ] savepack | 正在保存文件：res://actors/sentry.gdc
+[  13% ] savepack | 正在保存文件：res://assets/sounds.gdc
+[  19% ] savepack | 正在保存文件：res://ui/tutorial.gdc
+[  26% ] savepack | 正在保存文件：res://world/materials.gdc
+[  32% ] savepack | 正在保存文件：res://world/mechanisms.gdc
+[  37% ] savepack | 正在保存文件：res://world/moving_platform.gdc
+[  43% ] savepack | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+[  50% ] savepack | 正在保存文件：res://scenes/main.gdc
+[  56% ] savepack | 正在保存文件：res://portals/system.gdc
+[  62% ] savepack | 正在保存文件：res://levels/maps.gdc
+[  67% ] savepack | 正在保存文件：res://levels/laser_rooms.gdc
+[  74% ] savepack | 正在保存文件：res://levels/coating_rooms.gdc
+[  80% ] savepack | 正在保存文件：res://levels/campaign.gdc
+[  86% ] savepack | 正在保存文件：res://levels/advanced_rooms.gdc
+[  92% ] savepack | 正在保存文件：res://ui/landmarks.gdc
+[  92% ] savepack | 正在保存文件：res://actors/player.gd.remap
+[  92% ] savepack | 正在保存文件：res://actors/sentry.gd.remap
+[  92% ] savepack | 正在保存文件：res://assets/sounds.gd.remap
+[  92% ] savepack | 正在保存文件：res://ui/tutorial.gd.remap
+[  92% ] savepack | 正在保存文件：res://world/materials.gd.remap
+[  92% ] savepack | 正在保存文件：res://world/mechanisms.gd.remap
+[  92% ] savepack | 正在保存文件：res://world/moving_platform.gd.remap
+[  92% ] savepack | 正在保存文件：res://scenes/main.tscn.remap
+[  92% ] savepack | 正在保存文件：res://scenes/main.gd.remap
+[  92% ] savepack | 正在保存文件：res://portals/system.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/maps.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/laser_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/coating_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/campaign.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/advanced_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://ui/landmarks.gd.remap
+[  92% ] savepack | 正在保存文件：res://.godot/global_script_class_cache.cfg
+[  92% ] savepack | 正在保存文件：res://.godot/uid_cache.bin
+[  92% ] savepack | 正在保存文件：res://project.binary
 [ DONE ] savepack

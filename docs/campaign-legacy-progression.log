@@ -1,0 +1,41 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Legacy progress is restored through the actual load path
+PASS: Old three-room progress and volume survive without clearing
+PASS: Fourth room appears locked before beating room 3
+PASS: Beating room 3 unlocks room 4
+PASS: Room 3 results now offer next room
+PASS: Next-room button starts actual fourth map
+PASS: Invalid room request leaves current room intact
+PASS: Beating room 4 unlocks room 5
+PASS: Room 4 results offer room 5
+PASS: Next-room button starts actual fifth map
+PASS: Beating room 5 unlocks room 6
+PASS: Room 5 results offer room 6
+PASS: Room 6 entry teaches airborne replacement before starting
+PASS: Briefing opens the actual sixth map
+PASS: Beating room 6 unlocks room 7
+PASS: Room 6 results offer room 7
+PASS: Room 7 entry explains the two airborne shots
+PASS: Briefing opens the actual seventh map
+PASS: Beating room 7 unlocks room 8
+PASS: Room 7 results offer room 8
+PASS: Room 8 entry explains planning portal height
+PASS: Briefing opens the actual eighth map
+PASS: Room 8 now continues into the new campaign
+PASS: Unlocked room 4 can be selected
+PASS: Old four-room progress is preserved without assuming completion
+PASS: Old save unlocks room 5 only after beating room 4
+PASS: Five-room progress and volume restore correctly
+PASS: Unlocked fifth room can be selected
+PASS: Old five-room save does not assume room 5 was completed
+PASS: Six-room progress, volume and selection restore correctly
+PASS: Selecting room 6 also shows its briefing
+PASS: Old six-room progress keeps room 7 locked until room 6 is completed
+PASS: Seven-room progress and volume restore correctly
+PASS: Seventh selection opens its own briefing, not room 6's
+PASS: Old seven-room save does not assume room 7 was completed
+PASS: Eight-room progress and volume restore correctly
+PASS: Eighth selection opens its own planning briefing
+PROGRESSION_TEST_FAILURES=0

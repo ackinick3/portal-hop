@@ -1,0 +1,23 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+BEFORE R room=37 player=(428.5, 385.0) mover=[P: (374.25, 400.0), S: (110.0, 20.0)]
+AFTER R room=37 tick=34 dead=0.00833333333333 player=(428.5, 385.0) floor=true mover=[P: (266.25, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=35 dead=-0.0 player=(295.0, 385.0) floor=true mover=[P: (267.0, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=36 dead=-0.0 player=(295.75, 385.0) floor=true mover=[P: (267.75, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=37 dead=-0.0 player=(296.5, 385.0) floor=true mover=[P: (268.5, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=38 dead=-0.0 player=(297.25, 385.0) floor=true mover=[P: (269.25, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=39 dead=-0.0 player=(298.0, 385.0) floor=true mover=[P: (270.0, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=45 dead=-0.0 player=(302.5, 385.0) floor=true mover=[P: (274.5, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=60 dead=-0.0 player=(313.75, 385.0) floor=true mover=[P: (285.75, 400.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=37 tick=99 dead=-0.0 player=(343.0, 385.0) floor=true mover=[P: (315.0, 400.0), S: (110.0, 20.0)] deaths=1
+BEFORE R room=41 player=(155.0, 331.2292) mover=[P: (100.0, 345.5833), S: (110.0, 20.0)]
+AFTER R room=41 tick=34 dead=0.00833333333333 player=(155.0, 331.2292) floor=true mover=[P: (100.0, 429.5833), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=35 dead=-0.0 player=(155.0, 435.0) floor=true mover=[P: (100.0, 429.0), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=36 dead=-0.0 player=(155.0, 414.2682) floor=true mover=[P: (100.0, 428.4167), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=37 dead=-0.0 player=(155.0, 413.4089) floor=true mover=[P: (100.0, 427.8333), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=38 dead=-0.0 player=(155.0, 412.8256) floor=true mover=[P: (100.0, 427.25), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=39 dead=-0.0 player=(155.0, 412.2423) floor=true mover=[P: (100.0, 426.6667), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=45 dead=-0.0 player=(155.0, 408.7423) floor=true mover=[P: (100.0, 423.1667), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=60 dead=-0.0 player=(155.0, 399.9923) floor=true mover=[P: (100.0, 414.4167), S: (110.0, 20.0)] deaths=1
+AFTER R room=41 tick=99 dead=-0.0 player=(155.0, 377.2423) floor=true mover=[P: (100.0, 391.6667), S: (110.0, 20.0)] deaths=1

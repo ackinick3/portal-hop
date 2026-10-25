@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: First relay exit is visible at the starting lip
+PASS: Initial low entry can be prepared
+PASS: Next floor is hidden below the high-point window
+RELAY_TRANSFER 1 p=(378.8777, 414.0) v=(0.0, -727.5)
+RELAY_TRANSFER 2 p=(588.8777, 414.0) v=(0.0, -742.5)
+RELAY_TRANSFER 3 p=(788.8777, 414.0) v=(0.0, -757.5)
+RELAY_END p=(948.9249, 236.5624) transfers=3 speed=727.5 death=0
+PASS: High-point shots advance both relay exits
+PASS: Initial gravity energy carries the complete spike relay
+RELAY_FAILURES=0

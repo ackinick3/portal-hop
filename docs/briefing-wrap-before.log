@@ -1,0 +1,912 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: All fifty rooms exist at their actual map boundaries
+PASS: Campaign rejects both invalid boundaries
+PASS: Room 01 has its own title
+PASS: Room 01 goal is inside the visible playfield
+PASS: Room 02 has its own title
+PASS: Room 02 goal is inside the visible playfield
+PASS: Room 03 has its own title
+PASS: Room 03 goal is inside the visible playfield
+PASS: Room 04 has its own title
+PASS: Room 04 goal is inside the visible playfield
+PASS: Room 05 has its own title
+PASS: Room 05 goal is inside the visible playfield
+PASS: Room 06 has its own title
+PASS: Room 06 goal is inside the visible playfield
+PASS: Room 07 has its own title
+PASS: Room 07 goal is inside the visible playfield
+PASS: Room 08 has its own title
+PASS: Room 08 goal is inside the visible playfield
+PASS: Room 09 has its own title
+PASS: Room 09 goal is inside the visible playfield
+PASS: Room 10 has its own title
+PASS: Room 10 goal is inside the visible playfield
+PASS: Room 11 has its own title
+PASS: Room 11 goal is inside the visible playfield
+PASS: Room 12 has its own title
+PASS: Room 12 goal is inside the visible playfield
+PASS: Room 13 has its own title
+PASS: Room 13 goal is inside the visible playfield
+PASS: Room 14 has its own title
+PASS: Room 14 goal is inside the visible playfield
+PASS: Room 15 has its own title
+PASS: Room 15 goal is inside the visible playfield
+PASS: Room 16 has its own title
+PASS: Room 16 goal is inside the visible playfield
+PASS: Room 17 has its own title
+PASS: Room 17 goal is inside the visible playfield
+PASS: Room 18 has its own title
+PASS: Room 18 goal is inside the visible playfield
+PASS: Room 19 has its own title
+PASS: Room 19 goal is inside the visible playfield
+PASS: Room 20 has its own title
+PASS: Room 20 goal is inside the visible playfield
+PASS: Room 21 has its own title
+PASS: Room 21 goal is inside the visible playfield
+PASS: Room 22 has its own title
+PASS: Room 22 goal is inside the visible playfield
+PASS: Room 23 has its own title
+PASS: Room 23 goal is inside the visible playfield
+PASS: Room 24 has its own title
+PASS: Room 24 goal is inside the visible playfield
+PASS: Room 25 has its own title
+PASS: Room 25 goal is inside the visible playfield
+PASS: Room 26 has its own title
+PASS: Room 26 goal is inside the visible playfield
+PASS: Room 27 has its own title
+PASS: Room 27 goal is inside the visible playfield
+PASS: Room 28 has its own title
+PASS: Room 28 goal is inside the visible playfield
+PASS: Room 29 has its own title
+PASS: Room 29 goal is inside the visible playfield
+PASS: Room 30 has its own title
+PASS: Room 30 goal is inside the visible playfield
+PASS: Room 31 has its own title
+PASS: Room 31 goal is inside the visible playfield
+PASS: Room 32 has its own title
+PASS: Room 32 goal is inside the visible playfield
+PASS: Room 33 has its own title
+PASS: Room 33 goal is inside the visible playfield
+PASS: Room 34 has its own title
+PASS: Room 34 goal is inside the visible playfield
+PASS: Room 35 has its own title
+PASS: Room 35 goal is inside the visible playfield
+PASS: Room 36 has its own title
+PASS: Room 36 goal is inside the visible playfield
+PASS: Room 37 has its own title
+PASS: Room 37 goal is inside the visible playfield
+PASS: Room 38 has its own title
+PASS: Room 38 goal is inside the visible playfield
+PASS: Room 39 has its own title
+PASS: Room 39 goal is inside the visible playfield
+PASS: Room 40 has its own title
+PASS: Room 40 goal is inside the visible playfield
+PASS: Room 41 has its own title
+PASS: Room 41 goal is inside the visible playfield
+PASS: Room 42 has its own title
+PASS: Room 42 goal is inside the visible playfield
+PASS: Room 43 has its own title
+PASS: Room 43 goal is inside the visible playfield
+PASS: Room 44 has its own title
+PASS: Room 44 goal is inside the visible playfield
+PASS: Room 45 has its own title
+PASS: Room 45 goal is inside the visible playfield
+PASS: Room 46 has its own title
+PASS: Room 46 goal is inside the visible playfield
+PASS: Room 47 has its own title
+PASS: Room 47 goal is inside the visible playfield
+PASS: Room 48 has its own title
+PASS: Room 48 goal is inside the visible playfield
+PASS: Room 49 has its own title
+PASS: Room 49 goal is inside the visible playfield
+PASS: Room 50 has its own title
+PASS: Room 50 goal is inside the visible playfield
+PORTAL_HOP_READY
+PASS: Old eight-room progress and settings survive without inventing completion
+PASS: Page 1 button is fully visible: 01  THE FIRST CROSSING
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 02  GRAVITY SLINGSHOT
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 03  MECHANICAL GUARDIAN
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 04  THE VECTOR SWITCH
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 05  THE FINAL RELAY
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 06  AIRBORNE RELAY
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 07  MIDAIR SWITCHBACK
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 08  THE HIGH ROAD
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 09  APEX RELAY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: 10  A SOFT LANDING  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 correctly preserves locks
+PASS: Page 1 button is fully visible: PREVIOUS PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 button is fully visible: NEXT PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 button is fully visible: BACK
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 1 contains ten selectable room slots
+PASS: Page 2 button is fully visible: 11  THE REDLINE SLING  [LOCKED]
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 12  BOUNCE STAIRCASE  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 13  THE RETURN WALL  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 14  SPRING TO SLING  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 15  RUNNING BROAD JUMP  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 16  LOW ROOF RUNUP  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 17  RED TO SKY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 18  FAST SPRING CROSSING  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 19  CLIMB THEN SPRINT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: 20  FIRST LIGHT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 correctly preserves locks
+PASS: Page 2 button is fully visible: PREVIOUS PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 button is fully visible: NEXT PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 button is fully visible: BACK
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 2 contains ten selectable room slots
+PASS: Page 3 button is fully visible: 21  LIGHT WELL  [LOCKED]
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 22  AROUND THE CORNER  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 23  TWO LIGHT MEMORY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 24  CEILING SWITCHBOARD  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 25  CIRCUIT EXCHANGE  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 26  RUN SPRING POWER  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 27  TWIN CONTACTS  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 28  UNDER THE CIRCUIT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 29  DOWNWARD CURRENT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: 30  RETURN CURRENT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 correctly preserves locks
+PASS: Page 3 button is fully visible: PREVIOUS PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 button is fully visible: NEXT PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 button is fully visible: BACK
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 3 contains ten selectable room slots
+PASS: Page 4 button is fully visible: 31  SOURCE SELECTOR  [LOCKED]
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 32  AIRBORNE IGNITION  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 33  FLIGHT SWITCHES  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 34  TWO STAGE RUN  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 35  BACKFLOW RELAY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 36  THE GREEN DETOUR  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 37  THE GEAR FERRY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 38  LIGHT THE TRACK  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 39  BEHIND THE LIFT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: 40  RUNWAY TO THE LIFT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 correctly preserves locks
+PASS: Page 4 button is fully visible: PREVIOUS PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 button is fully visible: NEXT PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 button is fully visible: BACK
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 4 contains ten selectable room slots
+PASS: Page 5 button is fully visible: 41  THE UPPER BRIDGE  [LOCKED]
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 42  MINT SKYLINE  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 43  THE LIGHT ELEVATOR  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 44  THE RETURN RAIL  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 45  BOUNCE TO THE FERRY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 46  THE REFLECTED RUNWAY  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 47  SWITCH THE SIGNAL  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 48  TWO GREEN HORIZONS  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 49  THE DOUBLE BANK  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: 50  THE COMPLETE CIRCUIT  [LOCKED]
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 correctly preserves locks
+PASS: Page 5 button is fully visible: PREVIOUS PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 button is fully visible: NEXT PAGE
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 button is fully visible: BACK
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Selection controls do not overlap
+PASS: Page 5 contains ten selectable room slots
+PASS: Beating room8 unlocks the ninth relay
+PASS: Room 09 has a pre-play explanation
+PASS: Room 09 explanation does not cover START
+FAIL: Room 09 explanation wraps inside the viewport
+PASS: Room 09 briefing starts the actual level
+PASS: Room 09 loads its own playable scene
+PASS: Room 09 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 10 has a pre-play explanation
+PASS: Room 10 explanation does not cover START
+PASS: Room 10 explanation wraps inside the viewport
+PASS: Room 10 briefing starts the actual level
+PASS: Room 10 loads its own playable scene
+PASS: Room 10 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 11 has a pre-play explanation
+PASS: Room 11 explanation does not cover START
+PASS: Room 11 explanation wraps inside the viewport
+PASS: Room 11 briefing starts the actual level
+PASS: Room 11 loads its own playable scene
+PASS: Room 11 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 12 has a pre-play explanation
+PASS: Room 12 explanation does not cover START
+PASS: Room 12 explanation wraps inside the viewport
+PASS: Room 12 briefing starts the actual level
+PASS: Room 12 loads its own playable scene
+PASS: Room 12 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 13 has a pre-play explanation
+PASS: Room 13 explanation does not cover START
+PASS: Room 13 explanation wraps inside the viewport
+PASS: Room 13 briefing starts the actual level
+PASS: Room 13 loads its own playable scene
+PASS: Room 13 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 14 has a pre-play explanation
+PASS: Room 14 explanation does not cover START
+PASS: Room 14 explanation wraps inside the viewport
+PASS: Room 14 briefing starts the actual level
+PASS: Room 14 loads its own playable scene
+PASS: Room 14 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 15 has a pre-play explanation
+PASS: Room 15 explanation does not cover START
+PASS: Room 15 explanation wraps inside the viewport
+PASS: Room 15 briefing starts the actual level
+PASS: Room 15 loads its own playable scene
+PASS: Room 15 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 16 has a pre-play explanation
+PASS: Room 16 explanation does not cover START
+PASS: Room 16 explanation wraps inside the viewport
+PASS: Room 16 briefing starts the actual level
+PASS: Room 16 loads its own playable scene
+PASS: Room 16 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 17 has a pre-play explanation
+PASS: Room 17 explanation does not cover START
+PASS: Room 17 explanation wraps inside the viewport
+PASS: Room 17 briefing starts the actual level
+PASS: Room 17 loads its own playable scene
+PASS: Room 17 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 18 has a pre-play explanation
+PASS: Room 18 explanation does not cover START
+PASS: Room 18 explanation wraps inside the viewport
+PASS: Room 18 briefing starts the actual level
+PASS: Room 18 loads its own playable scene
+PASS: Room 18 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 19 has a pre-play explanation
+PASS: Room 19 explanation does not cover START
+PASS: Room 19 explanation wraps inside the viewport
+PASS: Room 19 briefing starts the actual level
+PASS: Room 19 loads its own playable scene
+PASS: Room 19 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 20 has a pre-play explanation
+PASS: Room 20 explanation does not cover START
+FAIL: Room 20 explanation wraps inside the viewport
+PASS: Room 20 briefing starts the actual level
+PASS: Room 20 loads its own playable scene
+PASS: Room 20 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 21 has a pre-play explanation
+PASS: Room 21 explanation does not cover START
+FAIL: Room 21 explanation wraps inside the viewport
+PASS: Room 21 briefing starts the actual level
+PASS: Room 21 loads its own playable scene
+PASS: Room 21 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 22 has a pre-play explanation
+PASS: Room 22 explanation does not cover START
+FAIL: Room 22 explanation wraps inside the viewport
+PASS: Room 22 briefing starts the actual level
+PASS: Room 22 loads its own playable scene
+PASS: Room 22 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 23 has a pre-play explanation
+PASS: Room 23 explanation does not cover START
+FAIL: Room 23 explanation wraps inside the viewport
+PASS: Room 23 briefing starts the actual level
+PASS: Room 23 loads its own playable scene
+PASS: Room 23 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 24 has a pre-play explanation
+PASS: Room 24 explanation does not cover START
+FAIL: Room 24 explanation wraps inside the viewport
+PASS: Room 24 briefing starts the actual level
+PASS: Room 24 loads its own playable scene
+PASS: Room 24 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 25 has a pre-play explanation
+PASS: Room 25 explanation does not cover START
+FAIL: Room 25 explanation wraps inside the viewport
+PASS: Room 25 briefing starts the actual level
+PASS: Room 25 loads its own playable scene
+PASS: Room 25 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 26 has a pre-play explanation
+PASS: Room 26 explanation does not cover START
+FAIL: Room 26 explanation wraps inside the viewport
+PASS: Room 26 briefing starts the actual level
+PASS: Room 26 loads its own playable scene
+PASS: Room 26 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 27 has a pre-play explanation
+PASS: Room 27 explanation does not cover START
+FAIL: Room 27 explanation wraps inside the viewport
+PASS: Room 27 briefing starts the actual level
+PASS: Room 27 loads its own playable scene
+PASS: Room 27 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 28 has a pre-play explanation
+PASS: Room 28 explanation does not cover START
+FAIL: Room 28 explanation wraps inside the viewport
+PASS: Room 28 briefing starts the actual level
+PASS: Room 28 loads its own playable scene
+PASS: Room 28 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 29 has a pre-play explanation
+PASS: Room 29 explanation does not cover START
+FAIL: Room 29 explanation wraps inside the viewport
+PASS: Room 29 briefing starts the actual level
+PASS: Room 29 loads its own playable scene
+PASS: Room 29 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 30 has a pre-play explanation
+PASS: Room 30 explanation does not cover START
+PASS: Room 30 explanation wraps inside the viewport
+PASS: Room 30 briefing starts the actual level
+PASS: Room 30 loads its own playable scene
+PASS: Room 30 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 31 has a pre-play explanation
+PASS: Room 31 explanation does not cover START
+FAIL: Room 31 explanation wraps inside the viewport
+PASS: Room 31 briefing starts the actual level
+PASS: Room 31 loads its own playable scene
+PASS: Room 31 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 32 has a pre-play explanation
+PASS: Room 32 explanation does not cover START
+FAIL: Room 32 explanation wraps inside the viewport
+PASS: Room 32 briefing starts the actual level
+PASS: Room 32 loads its own playable scene
+PASS: Room 32 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 33 has a pre-play explanation
+PASS: Room 33 explanation does not cover START
+FAIL: Room 33 explanation wraps inside the viewport
+PASS: Room 33 briefing starts the actual level
+PASS: Room 33 loads its own playable scene
+PASS: Room 33 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 34 has a pre-play explanation
+PASS: Room 34 explanation does not cover START
+FAIL: Room 34 explanation wraps inside the viewport
+PASS: Room 34 briefing starts the actual level
+PASS: Room 34 loads its own playable scene
+PASS: Room 34 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 35 has a pre-play explanation
+PASS: Room 35 explanation does not cover START
+FAIL: Room 35 explanation wraps inside the viewport
+PASS: Room 35 briefing starts the actual level
+PASS: Room 35 loads its own playable scene
+PASS: Room 35 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 36 has a pre-play explanation
+PASS: Room 36 explanation does not cover START
+FAIL: Room 36 explanation wraps inside the viewport
+PASS: Room 36 briefing starts the actual level
+PASS: Room 36 loads its own playable scene
+PASS: Room 36 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 37 has a pre-play explanation
+PASS: Room 37 explanation does not cover START
+FAIL: Room 37 explanation wraps inside the viewport
+PASS: Room 37 briefing starts the actual level
+PASS: Room 37 loads its own playable scene
+PASS: Room 37 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 38 has a pre-play explanation
+PASS: Room 38 explanation does not cover START
+FAIL: Room 38 explanation wraps inside the viewport
+PASS: Room 38 briefing starts the actual level
+PASS: Room 38 loads its own playable scene
+PASS: Room 38 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 39 has a pre-play explanation
+PASS: Room 39 explanation does not cover START
+FAIL: Room 39 explanation wraps inside the viewport
+PASS: Room 39 briefing starts the actual level
+PASS: Room 39 loads its own playable scene
+PASS: Room 39 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 40 has a pre-play explanation
+PASS: Room 40 explanation does not cover START
+FAIL: Room 40 explanation wraps inside the viewport
+PASS: Room 40 briefing starts the actual level
+PASS: Room 40 loads its own playable scene
+PASS: Room 40 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 41 has a pre-play explanation
+PASS: Room 41 explanation does not cover START
+FAIL: Room 41 explanation wraps inside the viewport
+PASS: Room 41 briefing starts the actual level
+PASS: Room 41 loads its own playable scene
+PASS: Room 41 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 42 has a pre-play explanation
+PASS: Room 42 explanation does not cover START
+FAIL: Room 42 explanation wraps inside the viewport
+PASS: Room 42 briefing starts the actual level
+PASS: Room 42 loads its own playable scene
+PASS: Room 42 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 43 has a pre-play explanation
+PASS: Room 43 explanation does not cover START
+FAIL: Room 43 explanation wraps inside the viewport
+PASS: Room 43 briefing starts the actual level
+PASS: Room 43 loads its own playable scene
+PASS: Room 43 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 44 has a pre-play explanation
+PASS: Room 44 explanation does not cover START
+FAIL: Room 44 explanation wraps inside the viewport
+PASS: Room 44 briefing starts the actual level
+PASS: Room 44 loads its own playable scene
+PASS: Room 44 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 45 has a pre-play explanation
+PASS: Room 45 explanation does not cover START
+FAIL: Room 45 explanation wraps inside the viewport
+PASS: Room 45 briefing starts the actual level
+PASS: Room 45 loads its own playable scene
+PASS: Room 45 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 46 has a pre-play explanation
+PASS: Room 46 explanation does not cover START
+FAIL: Room 46 explanation wraps inside the viewport
+PASS: Room 46 briefing starts the actual level
+PASS: Room 46 loads its own playable scene
+PASS: Room 46 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 47 has a pre-play explanation
+PASS: Room 47 explanation does not cover START
+FAIL: Room 47 explanation wraps inside the viewport
+PASS: Room 47 briefing starts the actual level
+PASS: Room 47 loads its own playable scene
+PASS: Room 47 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 48 has a pre-play explanation
+PASS: Room 48 explanation does not cover START
+FAIL: Room 48 explanation wraps inside the viewport
+PASS: Room 48 briefing starts the actual level
+PASS: Room 48 loads its own playable scene
+PASS: Room 48 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 49 has a pre-play explanation
+PASS: Room 49 explanation does not cover START
+FAIL: Room 49 explanation wraps inside the viewport
+PASS: Room 49 briefing starts the actual level
+PASS: Room 49 loads its own playable scene
+PASS: Room 49 unlocks only its successor
+PASS: Final page appears only after room50
+PASS: Room 50 has a pre-play explanation
+PASS: Room 50 explanation does not cover START
+FAIL: Room 50 explanation wraps inside the viewport
+PASS: Room 50 briefing starts the actual level
+PASS: Room 50 loads its own playable scene
+PASS: Room 50 unlocks only its successor
+PASS: Final page appears only after room50
+CAMPAIGN_FAILURES=31

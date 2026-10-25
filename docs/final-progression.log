@@ -23,7 +23,7 @@ PASS: Beating room 7 unlocks room 8
 PASS: Room 7 results offer room 8
 PASS: Room 8 entry explains planning portal height
 PASS: Briefing opens the actual eighth map
-PASS: Room 8 is the final room
+PASS: Room 8 now continues into the new campaign
 PASS: Unlocked room 4 can be selected
 PASS: Old four-room progress is preserved without assuming completion
 PASS: Old save unlocks room 5 only after beating room 4

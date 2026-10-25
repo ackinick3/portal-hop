@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PAIR_PLACED=truetrue
+OCCUPIED_EXIT_TRANSPORTED=true POSITION=(488.0, 200.0) CENTER_INSIDE_BLOCKER=true FULL_PLAYER_INTERSECTS=true
+FLUSH_ENTRY_BLOCKER_PATH=[{ "a": (300.0, 200.0), "b": (500.0, 200.0) }, { "a": (250.0, 450.0), "b": (250.0, 0.0) }]
+BEHIND_WALL_RECEIVER_ACTIVE=true GATE_OPEN=true BEAM=[{ "a": (100.0, 200.0), "b": (300.0, 200.0) }]

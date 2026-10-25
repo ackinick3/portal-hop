@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Adjacent 50px faces merge into valid 100px portal surface
+PASS: Second continuous surface accepts portal
+PASS: Moving outwards cannot enter portal
+PASS: Low normal speed permits traversal
+PASS: Low speed traversal preserves total speed
+PASS: Stationary overlap cannot repeatedly trigger
+PASS: Reverse blue-to-red entry works after full exit separation
+PASS: No portals means no traversal
+PASS: Obstructed aperture edge rejects placement
+PASS: 30000px/s movement cannot tunnel through 2px solid wall
+EDGE_CASE_FAILURES=0
