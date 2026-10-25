@@ -20,9 +20,6 @@ ROOM5_ROUTE delay=40 launch=780.001770019531 guard_alive=false end=(899.001, 293
 PASS: Fifth route uses actual gravity launch
 PASS: Fifth route reaches the goal without death
 PASS: Forward launch stomps the guard without the old early braking
-PASS: Fifth guidance starts with its own wall marker
-PASS: Fifth guidance advances to its own floor marker
-PASS: Launch clears placement markers
 PASS: Retry fixture places wall portal
 PASS: Retry fixture places floor portal after leaving ledge
 PASS: Death restores fifth-room guard to its own patrol

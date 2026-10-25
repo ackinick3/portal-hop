@@ -96,26 +96,6 @@ func jump_exit(direction: int) -> void:
 	await wait_until(func(): return game.state == "won",450)
 	Input.action_release("jump")
 
-func board(index: int, low_y: float, horizontal := false) -> void:
-	var mover = game.stage.movers[index].platform
-	await wait_until(func(): return game.player.is_on_floor(),300)
-	if horizontal:
-		await wait_until(func(): return mover.bounds().position.x < 545,1600)
-	else:
-		await wait_until(func(): return mover.bounds().position.y > low_y-14,1800)
-	Input.action_press("jump")
-	for i in 240:
-		steer(mover.bounds().get_center().x)
-		await frames(1)
-		if game.deaths > 0 or game.state == "won": break
-		var r: Rect2 = mover.bounds()
-		if i > 10 and game.player.is_on_floor() and absf(game.player.position.y+15-r.position.y)<2:
-			break
-	Input.action_release("jump")
-	axis(0)
-	await frames(20)
-	check(absf(game.player.position.y+15-mover.bounds().position.y)<2,"Room %d boards the elevator/ferry with a real jump" % room_number)
-
 func route(number: int) -> void:
 	match number:
 		36:
@@ -127,60 +107,6 @@ func route(number: int) -> void:
 		38:
 			await power()
 			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.x>738)
-			await jump_exit(1)
-		39:
-			await ceiling_pair()
-			await reach(745)
-			await board(0,400)
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.y<215)
-			await jump_exit(1)
-		40:
-			axis(1)
-			await wait_until(func(): return game.player.position.x>500,400)
-			await reach(710)
-			await board(0,500)
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.y<285)
-			await jump_exit(1)
-		41:
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.y<232)
-			axis(-1)
-			Input.action_press("jump")
-			await reach(50)
-			Input.action_release("jump")
-			await frames(90)
-			shoot(Vector2(850,220),1)
-			shoot(Vector2(50,220),0)
-			axis(1)
-			await wait_until(func(): return game.state == "won",500)
-		42:
-			await ceiling_pair()
-			await wait_until(func(): return game.state == "won",600)
-		43:
-			await power(false,true)
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.y<212)
-			await jump_exit(-1)
-
-		44:
-			await power(true)
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.x<115)
-			await jump_exit(-1)
-		45:
-			axis(1)
-			await wait_until(func(): return game.player.position.x>350 and game.player.is_on_floor() and game.player.position.y<330,500)
-			await reach(475)
-			await board(0,320,true)
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.x>767)
-			await jump_exit(1)
-		46:
-			await ceiling_pair(Vector2(575,400))
-			await wait_until(func(): return game.player.position.x>680,400)
-			await jump_exit(1)
-		47:
-			await power()
-			shoot(Vector2(845,400),1)
-			await frames(6)
-			check(game.stage.receivers[1].active and game.stage.gates[0].open,"Second real beam latches the independent exit gate")
-			await wait_until(func(): return game.stage.movers[0].platform.bounds().position.x>670)
 			await jump_exit(1)
 		48:
 			await power(false,true,280)
@@ -194,9 +120,6 @@ func route(number: int) -> void:
 			shoot(Vector2(50,200),0)
 			axis(1)
 			await wait_until(func(): return game.state == "won",500)
-		49:
-			await ceiling_pair(Vector2(650,400),true)
-			await wait_until(func(): return game.state == "won",700)
 		50:
 			await power()
 			shoot(Vector2(900,260),1)
@@ -216,7 +139,7 @@ func controls() -> void:
 	release()
 	paused = false
 	room_number = 36
-	game.start_level(35)
+	game.start_level(18)
 	await frames(5)
 	game.portals.mirrors.clear()
 	var origin: Vector2 = game.gun_origin()
@@ -229,7 +152,7 @@ func controls() -> void:
 	release()
 	check(game.state != "won","Room36 ordinary jumping cannot cross its central barrier without portals")
 	paused = false
-	game.start_level(36)
+	game.start_level(19)
 	await frames(5)
 	var ferry = game.stage.movers[0].platform
 	ferry.set_physics_process(false)
@@ -240,7 +163,7 @@ func controls() -> void:
 	release()
 	check(game.state != "won" and ferry.bounds().position.is_equal_approx(Vector2(240,400)),"Room37 ordinary jump cannot cross the ferry gap with the mover parked")
 	paused = false
-	game.start_level(49)
+	game.start_level(22)
 	room_number = 50
 	await frames(5)
 	await power()
@@ -273,18 +196,15 @@ func run() -> void:
 	game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
-	var first := 36
-	var last := 50
+	var selected := [36,37,38,48,50]
 	for arg in OS.get_cmdline_user_args():
-		if arg.begins_with("--room="): first = int(arg.get_slice("=",1)); last = first
-		if arg.begins_with("--from="): first = int(arg.get_slice("=",1))
-		if arg.begins_with("--to="): last = int(arg.get_slice("=",1))
-	for room in range(first, last+1):
+		if arg.begins_with("--room="): selected = [int(arg.get_slice("=",1))]
+	for room in selected:
 		room_number = room
 		check(not chapter.get_level(room - 1).is_empty(), "Advanced room %d has a concrete map" % room)
 		release()
 		paused = false
-		game.start_level(room-1)
+		game.start_level(load("res://levels/maps.gd").index_for_id(room))
 		carried = 0
 		reflected = 0
 		await frames(5)
@@ -297,7 +217,7 @@ func run() -> void:
 		if not game.data.get("materials",[]).is_empty():
 			for patch in game.data.materials:
 				check(game.player.bounces>0 if patch.kind=="bounce" else game.player.boost_distance>20,"Room %d standard route uses %s coating" % [room,patch.kind])
-	if first == 36 and last == 50: await controls()
+	if selected.size() == 5: await controls()
 	paused = false
 	await game.drain_audio()
 	# The audio mixer uses wall time; fixed-fps physics timers can finish much faster.

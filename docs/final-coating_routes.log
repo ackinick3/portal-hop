@@ -1,6 +1,6 @@
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Coating chapter rooms10-19 exists
+PASS: Curated coating chapter exists
 PASS: Coating chapter is connected to the live game
 PORTAL_HOP_READY
 COATING_ROUTE room=10 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 0, "speed": 210.0, "shot": true, "end": (601.3754, 244.9251) }
@@ -10,34 +10,17 @@ COATING_ROUTE room=11 plain=false { "won": true, "deaths": 0, "bounces": 0, "dis
 PASS: Room11 completes through real movement and visible portal shots
 PASS: Room11 route physically uses red coating
 PASS: Room11 route physically crosses prepared portals
-COATING_ROUTE room=12 plain=false { "won": true, "deaths": 0, "bounces": 2, "distance": 0.0, "transfers": 0, "speed": 210.0, "shot": true, "end": (661.6257, 164.9251) }
-PASS: Room12 completes through real movement and visible portal shots
-PASS: Room12 route physically uses blue coating
-COATING_EVENT room=13 p=(818.9251, 95.30006) v=(-420.0, 210.0) incoming=(210.0, 210.0)
-COATING_ROUTE room=13 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 0, "speed": 420.0, "shot": true, "end": (490.7995, 404.9251) }
-PASS: Room13 completes through real movement and visible portal shots
-PASS: Room13 route physically uses blue coating
 COATING_EVENT room=14 p=(208.625, 434.9251) v=(210.0, -580.0) incoming=(210.0, 7.5)
 COATING_EVENT room=14 p=(112.0, 53.06982) v=(675.9484, 0.0) incoming=(675.9484, 0.0)
 COATING_ROUTE room=14 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 1, "speed": 675.948425292969, "shot": true, "end": (840.7413, 344.9251) }
 PASS: Room14 completes through real movement and visible portal shots
 PASS: Room14 route physically uses blue coating
 PASS: Room14 route physically crosses prepared portals
-COATING_ROUTE room=15 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 264.500244140625, "transfers": 0, "speed": 650.0, "shot": true, "end": (862.2512, 384.9251) }
-PASS: Room15 completes through real movement and visible portal shots
-PASS: Room15 route physically uses red coating
-COATING_ROUTE room=16 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 372.833435058594, "transfers": 0, "speed": 650.0, "shot": true, "end": (867.8762, 394.9251) }
-PASS: Room16 completes through real movement and visible portal shots
-PASS: Room16 route physically uses red coating
 COATING_EVENT room=17 p=(631.7929, 434.0) v=(0.0, -688.4301) incoming=(0.0, -688.4301)
 COATING_ROUTE room=17 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 150.750030517578, "transfers": 1, "speed": 650.0, "shot": true, "end": (875.3339, 264.9251) }
 PASS: Room17 completes through real movement and visible portal shots
 PASS: Room17 route physically uses red coating
 PASS: Room17 route physically crosses prepared portals
-COATING_ROUTE room=18 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 112.875, "transfers": 0, "speed": 630.0, "shot": true, "end": (923.6255, 387.2569) }
-PASS: Room18 completes through real movement and visible portal shots
-PASS: Room18 route physically uses blue coating
-PASS: Room18 route physically uses red coating
 COATING_ROUTE room=19 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 208.041870117188, "transfers": 0, "speed": 650.0, "shot": true, "end": (878.5851, 266.1749) }
 PASS: Room19 completes through real movement and visible portal shots
 PASS: Room19 route physically uses blue coating

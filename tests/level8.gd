@@ -8,8 +8,6 @@ func frames(count: int) -> void:
 	for i in count: await physics_frame
 func release() -> void:
 	for action in ["move_left","move_right","jump"]: Input.action_release(action)
-func marker_at(data: Dictionary, point: Vector2) -> bool:
-	return not data.markers.is_empty() and data.markers[0].p.is_equal_approx(point)
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
 	check(maps.get_level(7).get("name","") == "THE HIGH ROAD","Eighth room exists as a distinct placement puzzle")
@@ -21,13 +19,6 @@ func run() -> void:
 	root.add_child(game)
 	game.start_level(7)
 	await frames(4)
-	var tutorial = load("res://ui/tutorial.gd")
-	check(marker_at(tutorial.guidance(7,game.portals.doors,0,game.player.position),Vector2(100,90)),"Eighth guidance suggests a high exit before moving")
-	game.portals.shoot(game.gun_origin(),Vector2(100,90),1)
-	check(marker_at(tutorial.guidance(7,game.portals.doors,0,game.player.position),Vector2(430,480)),"Eighth guidance then suggests the prepared floor entry")
-	game.portals.shoot(game.gun_origin(),Vector2(100,160),1)
-	check(marker_at(tutorial.guidance(7,game.portals.doors,0,game.player.position),Vector2(100,90)),"Low exit keeps the high-placement suggestion visible")
-	check(tutorial.guidance(7,game.portals.doors,1,game.player.position).markers.is_empty(),"Eighth launch clears placement suggestions")
 	for setting in [Vector2(90,430),Vector2(80,420),Vector2(95,440),Vector2(160,430)]:
 		game.start_level(7)
 		await frames(4)

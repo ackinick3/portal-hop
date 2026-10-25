@@ -13,7 +13,7 @@ func release() -> void:
 
 func route(game, index: int, plain := false) -> Dictionary:
 	release()
-	game.start_level(index)
+	game.start_level(load("res://levels/maps.gd").index_for_id(index+1))
 	await frames(4)
 	if plain: game.player.materials.clear()
 	var shot := true
@@ -33,21 +33,17 @@ func route(game, index: int, plain := false) -> Dictionary:
 	for frame in 1100:
 		await physics_frame
 		var p: Vector2 = game.player.position
-		if index in [12,13,16] and (game.player.bounces > bounces or game.transfers > transfers):
+		if index in [13,16] and (game.player.bounces > bounces or game.transfers > transfers):
 			print("COATING_EVENT room=",index+1," p=",p," v=",game.player.velocity," incoming=",game.player.previous_velocity)
 		bounces = maxi(bounces,game.player.bounces)
 		distance = maxf(distance,game.player.boost_distance)
 		transfers = maxi(transfers,game.transfers)
 		speed = maxf(speed,absf(game.player.velocity.x))
-		if index == 12 and bounces > 0 and not action_done:
-			Input.action_release("move_right")
-			Input.action_press("move_left")
-			action_done = true
-		elif index == 13 and p.x > 350 and not action_done:
+		if index == 13 and p.x > 350 and not action_done:
 			shot = game.portals.shoot(game.gun_origin(),Vector2(500,480),0) and shot
 			action_done = true
-		elif index in [14,15,18] and not action_done:
-			var threshold := 350.0 if index == 14 else (440.0 if index == 15 else 520.0)
+		elif index == 18 and not action_done:
+			var threshold := 520.0
 			if p.x >= threshold and game.player.is_on_floor():
 				Input.action_press("jump")
 				jump_frame = frame
@@ -64,7 +60,7 @@ func route(game, index: int, plain := false) -> Dictionary:
 
 func run() -> void:
 	var exists := ResourceLoader.exists("res://levels/coating_rooms.gd")
-	check(exists,"Coating chapter rooms10-19 exists")
+	check(exists,"Curated coating chapter exists")
 	if not exists:
 		print("COATING_ROUTE_FAILURES=",failures)
 		quit(1)
@@ -77,12 +73,12 @@ func run() -> void:
 	var game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
-	for index in range(9,19):
+	for index in [9,10,13,16,18]:
 		var result := await route(game,index)
 		check(result.won and result.deaths == 0 and result.shot,"Room%d completes through real movement and visible portal shots" % (index+1))
-		if index in [9,11,12,13,17,18]:
+		if index in [9,13,18]:
 			check(result.bounces > 0,"Room%d route physically uses blue coating" % (index+1))
-		if index in [10,14,15,16,17,18]:
+		if index in [10,16,18]:
 			check(result.distance > 40 and result.speed > 300,"Room%d route physically uses red coating" % (index+1))
 		if index in [10,13,16]:
 			check(result.transfers > 0,"Room%d route physically crosses prepared portals" % (index+1))
@@ -90,7 +86,7 @@ func run() -> void:
 		var control := await route(game,index,true)
 		check(not control.won,"Room%d same-input control fails without coatings" % (index+1))
 	for index in [9,10]:
-		game.start_level(index)
+		game.start_level(load("res://levels/maps.gd").index_for_id(index+1))
 		await frames(4)
 		if index == 10:
 			game.portals.shoot(game.gun_origin(),Vector2(40,60),1)

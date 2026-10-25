@@ -1,57 +1,11 @@
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Mixed coating and laser rooms exist
 PORTAL_HOP_READY
-PASS: Room 26 places the laser entry from spawn
-MIXED_ROOM 26 win=won p=(904.0849, 286.9239) bounce=1 run=242.833312988281 peak=650.0 power=true
-PASS: Room 26 uses actual portal-directed laser power
-PASS: Room 26 actually uses both coatings
-PASS: Room 26 completes with real inputs
-PASS: Room 27 places the laser entry from spawn
-MIXED_ROOM 27 win=won p=(942.0017, 298.3822) bounce=1 run=253.666625976563 peak=650.0 power=true
-PASS: Room 27 uses actual portal-directed laser power
-PASS: Room 27 actually uses both coatings
-PASS: Room 27 completes with real inputs
-PASS: Room 28 places the laser entry from spawn
-MIXED_ROOM 28 win=won p=(898.6682, 289.0906) bounce=1 run=232.0 peak=650.0 power=true
-PASS: Room 28 uses actual portal-directed laser power
-PASS: Room 28 actually uses both coatings
-PASS: Room 28 completes with real inputs
-PASS: Room 29 places the laser entry from spawn
-MIXED_ROOM 29 win=won p=(948.9512, 306.0072) bounce=1 run=269.916595458984 peak=650.0 power=true
-PASS: Room 29 uses actual portal-directed laser power
-PASS: Room 29 actually uses both coatings
-PASS: Room 29 completes with real inputs
-PASS: Room 30 places the laser entry from spawn
-MIXED_ROOM 30 win=won p=(50.70824, 286.9239) bounce=1 run=259.082275390625 peak=650.0 power=true
-PASS: Room 30 uses actual portal-directed laser power
-PASS: Room 30 actually uses both coatings
-PASS: Room 30 completes with real inputs
-PASS: Room 31 places the laser entry from spawn
-PASS: Second source is selected with actual RED shot
-MIXED_ROOM 31 win=won p=(909.5016, 298.3822) bounce=1 run=221.166687011719 peak=650.0 power=true
-PASS: Room 31 uses actual portal-directed laser power
-PASS: Room 31 actually uses both coatings
-PASS: Room 31 completes with real inputs
-PASS: Room 32 places the laser entry from spawn
-MIXED_ROOM 32 win=won p=(904.0849, 286.9239) bounce=1 run=242.833312988281 peak=650.0 power=true
-PASS: Room 32 uses actual portal-directed laser power
-PASS: Room 32 actually uses both coatings
-PASS: Room 32 completes with real inputs
-PASS: Room 33 places the laser entry from spawn
-MIXED_ROOM 33 win=won p=(948.925, 303.403) bounce=1 run=253.666625976563 peak=650.0 power=true
-PASS: Room 33 uses actual portal-directed laser power
-PASS: Room 33 actually uses both coatings
-PASS: Room 33 completes with real inputs
-PASS: Room 34 places the laser entry from spawn
-MIXED_ROOM 34 win=won p=(931.1683, 291.3197) bounce=1 run=259.083282470703 peak=650.0 power=true
-PASS: Room 34 uses actual portal-directed laser power
-PASS: Room 34 actually uses both coatings
-PASS: Room 34 completes with real inputs
-PASS: Room 35 places the laser entry from spawn
-MIXED_ROOM 35 win=won p=(40.84699, 298.3822) bounce=1 run=242.832397460938 peak=650.0 power=true
-PASS: Room 35 uses actual portal-directed laser power
-PASS: Room 35 actually uses both coatings
-PASS: Room 35 completes with real inputs
-PASS: Unpowered gate blocks even a boosted blue launch
+PASS: New18 places the real laser entrance
+PASS: New18 powers the first circuit with a real shot
+PASS: First light leaves the final circuit unpowered
+PASS: New18 opens both circuits through actual beam paths
+PASS: New18 uses both coatings
+PASS: New18 actual-input route completes
+PASS: Without power the first real gate blocks the route
 MIXED_FAILURES=0

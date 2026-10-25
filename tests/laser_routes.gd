@@ -44,23 +44,6 @@ func prepare(game: Node2D,index: int) -> void:
 		20:
 			await shoot(game,Vector2(300,480),0)
 			await shoot(game,Vector2(620,480),1)
-		21:
-			await shoot(game,Vector2(150,480),0)
-			await shoot(game,Vector2(500,280),1)
-		22:
-			await shoot(game,Vector2(300,260),0)
-			await shoot(game,Vector2(520,480),1)
-			check(game.stage.receivers[0].active and not game.stage.receivers[1].active,"First receiver alone leaves the two-input gate shut")
-			check(not game.stage.gates[0].open,"Two-input gate requires its second actual beam")
-			await shoot(game,Vector2(660,480),1)
-		23:
-			await shoot(game,Vector2(300,240),0)
-			await walk_to(game,400)
-			check(not game.portals.shoot(game.gun_origin(),Vector2(760,100),1),"First gate obstructs the far ceiling shot before power")
-			await shoot(game,Vector2(480,100),1)
-			check(game.stage.gates[0].open and not game.stage.gates[1].open,"Near light opens only its own gate")
-			await walk_to(game,660)
-			await shoot(game,Vector2(760,100),1)
 		24:
 			await shoot(game,Vector2(300,220),0)
 			await walk_to(game,390)
@@ -77,15 +60,12 @@ func finish(game: Node2D,index: int) -> void:
 			await jump_to(game,390)
 			await walk_to(game,560)
 			await jump_to(game,710)
-		22:
-			await walk_to(game,600)
-			await jump_to(game,750)
 		24:
 			await walk_to(game,640)
 			await jump_to(game,785)
 	await walk_to(game,925)
 func run() -> void:
-	check(ResourceLoader.exists("res://levels/laser_rooms.gd"),"Six-room laser chapter exists")
+	check(ResourceLoader.exists("res://levels/laser_rooms.gd"),"Curated laser chapter exists")
 	if not ResourceLoader.exists("res://levels/laser_rooms.gd"):
 		quit(1)
 		return
@@ -93,15 +73,15 @@ func run() -> void:
 	var game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
-	for index in range(19,25):
-		check(not maps.get_level(index).is_empty(),"Room %d is delegated through Maps" % [index+1])
-		if maps.get_level(index).is_empty(): continue
-		game.start_level(index)
+	for index in [19,20,24]:
+		check(not maps.get_level(maps.index_for_id(index+1)).is_empty(),"Room %d is delegated through Maps" % [index+1])
+		if maps.get_level(maps.index_for_id(index+1)).is_empty(): continue
+		game.start_level(maps.index_for_id(index+1))
 		await frames(5)
 		await walk_to(game,925,520)
 		check(game.state != "won" and all_dark(game),"Room %d unaltered laser and ordinary walking cannot bypass its closed gate" % [index+1])
 		check(game.player.position.x <= game.stage.gates[0].rect.position.x - 10.9,"Room %d closed gate physically stops the player" % [index+1])
-		game.start_level(index)
+		game.start_level(maps.index_for_id(index+1))
 		await frames(5)
 		await prepare(game,index)
 		check(all_powered(game),"Room %d powers every receiver by real portal beams" % [index+1])
@@ -114,7 +94,7 @@ func run() -> void:
 		check(game.player.position.distance_to(game.player.spawn) < 1,"Room %d R restores actual spawn" % [index+1])
 		for gate in game.stage.gates:
 			check(not gate.open and gate.body.collision_layer == 1,"Room %d R restores closed gate collision" % [index+1])
-		game.start_level(index)
+		game.start_level(maps.index_for_id(index+1))
 		await frames(5)
 		await prepare(game,index)
 		await finish(game,index)

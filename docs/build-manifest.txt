@@ -1,18 +1,20 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms: 50; original eight geometries retained; new chapters9-50 complete
-Bytes: 109351192
-SHA256: 42E023A67E1C56142FA79A3E2F943846ADBF27503D90459DE1DCEE5F4D923EB1
-Mechanics: blue bounce; red acceleration; active-portal laser routing and latched receiver gates/platforms; green gun reflection; physical moving platforms with rotating gears and inset tracks
-Source tests: ALL 33 HEADLESS TEST SUITES PASSED after final briefing-wrap fix, ordinary real-time stepping; full stdout/stderr checked, no runtime errors or exit leaks; docs/final-all-tests.log
-Routes: actual movement/jump/gun-origin shots for all50 rooms; new42 never force player speed/position, receiver state or completion; UI navigation tests labelled separately
-Progression: five pages fit; old8 progress preserved;8-to-9 and onward; final only50; all42 new briefings fit width and height
-Review: three early important defects reproduced and fixed; fresh whole-campaign review no important findings; minor room41 retry depenetration documented
-GPU:50 rooms,42new briefings,5selection pages,locked/help/menu; final representative screenshots inspected; docs/campaign-preview and campaign-overview.png
-Display: three window sizes, fullscreen, live cursor aim and restoration passed; docs/display.log
-Native standalone GUI exit:0; docs/standalone-gui.log
-Embedded pack: matching Godot engine mounted this EXE and started all50 packed rooms, EMBEDDED_PROJECT=true; final mirrors1/movers1/receivers2; docs/standalone-pack.log and standalone-room50.png
-Extra native external-script helper: showed only normal main readiness, without test-script verification markers; owned helper timed out and was stopped; not used as success evidence. Normal release launch and pack-mount checks above succeeded.
-Single EXE: builds/PortalHop.exe; desktop Portal Hop.lnk target verified
-Human acceptance: pending new chapter playtesting; no hour-scale performance/memory claim
+Rooms:23;27 user-selected original rooms deleted; remaining rooms sequentially numbered1-23
+Stable original IDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50
+Bytes:109327456
+SHA256:89486E7D9B72655BF58889F77AE4CA5B20F6AB244996099A0A35D49D073CB35F
+Hints: no entry briefings, suggestion circles, tutorial/help menu entries or map hint/guide/briefing fields; aiming cursor, placement preview and shot/mechanism feedback retained
+Survivors: all23 geometry/mechanism fields match pre-edit50-room source baseline; docs/curation-geometry.log; player/portal/material/platform physics unchanged
+Progress: legacy50 numbering migrates to next surviving original ID; new order_version2 stores current23 numbering and does not remigrate; real player cfg not written by tests
+Source tests: ALL32 HEADLESS TEST SUITES PASSED, ordinary real-time runner, full stdout/stderr checked with no errors or exit leaks; docs/final-all-tests.log
+Retry stress:78 cases passed on retained23 rooms and powered mover phases; previous168-case result belongs old50-room build
+Routes: all23 surviving rooms complete through actual movement/jump/gun-origin shooting; navigation fixture completion is separately labelled
+Review: fresh read-only curation review no important findings; docs/curation-review.log
+GPU:23room previews,3selection pages and no-tutorial menu checked; docs/curated-preview
+Display:3window sizes, fullscreen, live cursor aiming/restoration passed; docs/display.log
+Native GUI exit:0; docs/standalone-gui.log
+Embedded pack: matchingGodot mounted thisEXE and directly started23rooms with no tutorial panel/data, EMBEDDED_PROJECT=true; docs/standalone-pack.log and standalone-room23.png
+Single entry: builds/PortalHop.exe; desktop Portal Hop.lnk target verified; buildsEXEcount1
+Human acceptance: pending further user playtesting of curated order

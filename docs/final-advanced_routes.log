@@ -26,93 +26,6 @@ ADVANCED_ROOM 38 state=won pos=(890.1119, 384.9252) velocity=(28.5, 0.0) transfe
 PASS: Room 38 authentic standard route reaches the exit without deaths
 PASS: Room 38 standard route actually uses green reflection
 PASS: Room 38 standard route rides the real platform
-PASS: Advanced room 39 has a concrete map
-PASS: Room 39 direct shot to the hidden face is blocked
-PASS: Room 39 gun follows 1 actual green reflections
-PASS: Room 39 actual gun shot color 1 toward (370.4783, 60.0)
-PASS: Room 39 reflected shot reaches the intended hidden face
-PASS: Room 39 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 39 traverses a real portal pair
-PASS: Room 39 boards the elevator/ferry with a real jump
-ADVANCED_ROOM 39 state=won pos=(917.0229, 137.029) velocity=(210.1667, 212.5012) transfers=1 bounces=0 boost=0.0 carried=156.541656494141 deaths=0
-PASS: Room 39 authentic standard route reaches the exit without deaths
-PASS: Room 39 standard route actually uses green reflection
-PASS: Room 39 standard route rides the real platform
-PASS: Advanced room 40 has a concrete map
-PASS: Room 40 boards the elevator/ferry with a real jump
-ADVANCED_ROOM 40 state=won pos=(899.993, 216.8598) velocity=(210.1667, 249.9976) transfers=0 bounces=0 boost=273.041534423828 carried=186.333343505859 deaths=0
-PASS: Room 40 authentic standard route reaches the exit without deaths
-PASS: Room 40 standard route rides the real platform
-PASS: Room 40 standard route uses boost coating
-PASS: Advanced room 41 has a concrete map
-PASS: Room 41 actual gun shot color 1 toward (850.0, 220.0)
-PASS: Room 41 actual gun shot color 0 toward (50.0, 220.0)
-ADVANCED_ROOM 41 state=won pos=(865.0471, 186.2754) velocity=(79.16666, 4.921173) transfers=1 bounces=0 boost=0.0 carried=217.58332824707 deaths=0
-PASS: Room 41 authentic standard route reaches the exit without deaths
-PASS: Room 41 standard route rides the real platform
-PASS: Advanced room 42 has a concrete map
-PASS: Room 42 direct shot to the hidden face is blocked
-PASS: Room 42 gun follows 1 actual green reflections
-PASS: Room 42 actual gun shot color 1 toward (370.4783, 60.0)
-PASS: Room 42 reflected shot reaches the intended hidden face
-PASS: Room 42 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 42 traverses a real portal pair
-ADVANCED_ROOM 42 state=won pos=(876.6402, 202.0491) velocity=(212.1668, 50.0) transfers=1 bounces=1 boost=0.0 carried=0.0 deaths=0
-PASS: Room 42 authentic standard route reaches the exit without deaths
-PASS: Room 42 standard route actually uses green reflection
-PASS: Room 42 standard route uses bounce coating
-PASS: Advanced room 43 has a concrete map
-PASS: Room 43 actual gun shot color 0 toward (400.0, 220.0)
-PASS: Room 43 gun follows 1 actual green reflections
-PASS: Room 43 actual gun shot color 1 toward (370.5036, 500.0)
-PASS: Room 43 reflected shot reaches the intended hidden face
-PASS: Room 43 actual routed laser latches the platform receiver
-PASS: Room 43 receiver enables the real mover
-ADVANCED_ROOM 43 state=won pos=(70.9594, 181.9056) velocity=(-210.1667, 377.5012) transfers=0 bounces=0 boost=0.0 carried=207.999980163575 deaths=0
-PASS: Room 43 authentic standard route reaches the exit without deaths
-PASS: Room 43 standard route actually uses green reflection
-PASS: Room 43 standard route rides the real platform
-PASS: Advanced room 44 has a concrete map
-PASS: Room 44 actual gun shot color 0 toward (560.0, 220.0)
-PASS: Room 44 gun follows 1 actual green reflections
-PASS: Room 44 actual gun shot color 1 toward (580.8425, 480.0)
-PASS: Room 44 reflected shot reaches the intended hidden face
-PASS: Room 44 actual routed laser latches the platform receiver
-PASS: Room 44 receiver enables the real mover
-ADVANCED_ROOM 44 state=won pos=(71.0751, 336.1754) velocity=(0.0, 150.0) transfers=0 bounces=0 boost=0.0 carried=634.916636021926 deaths=0
-PASS: Room 44 authentic standard route reaches the exit without deaths
-PASS: Room 44 standard route actually uses green reflection
-PASS: Room 44 standard route rides the real platform
-PASS: Advanced room 45 has a concrete map
-PASS: Room 45 boards the elevator/ferry with a real jump
-ADVANCED_ROOM 45 state=won pos=(894.6813, 256.174) velocity=(210.4977, 150.0) transfers=0 bounces=1 boost=0.0 carried=218.75 deaths=0
-PASS: Room 45 authentic standard route reaches the exit without deaths
-PASS: Room 45 standard route rides the real platform
-PASS: Room 45 standard route uses bounce coating
-PASS: Advanced room 46 has a concrete map
-PASS: Room 46 direct shot to the hidden face is blocked
-PASS: Room 46 gun follows 1 actual green reflections
-PASS: Room 46 actual gun shot color 1 toward (333.5949, 60.0)
-PASS: Room 46 reflected shot reaches the intended hidden face
-PASS: Room 46 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 46 traverses a real portal pair
-ADVANCED_ROOM 46 state=won pos=(908.0314, 337.4872) velocity=(407.1667, 157.5) transfers=1 bounces=0 boost=34.35986328125 carried=0.0 deaths=0
-PASS: Room 46 authentic standard route reaches the exit without deaths
-PASS: Room 46 standard route actually uses green reflection
-PASS: Room 46 standard route uses boost coating
-PASS: Advanced room 47 has a concrete map
-PASS: Room 47 actual gun shot color 0 toward (400.0, 220.0)
-PASS: Room 47 gun follows 1 actual green reflections
-PASS: Room 47 actual gun shot color 1 toward (379.1575, 480.0)
-PASS: Room 47 reflected shot reaches the intended hidden face
-PASS: Room 47 actual routed laser latches the platform receiver
-PASS: Room 47 receiver enables the real mover
-PASS: Room 47 actual gun shot color 1 toward (845.0, 400.0)
-PASS: Second real beam latches the independent exit gate
-ADVANCED_ROOM 47 state=won pos=(915.8409, 384.9251) velocity=(210.0, 0.0) transfers=0 bounces=0 boost=0.0 carried=569.999945640562 deaths=0
-PASS: Room 47 authentic standard route reaches the exit without deaths
-PASS: Room 47 standard route actually uses green reflection
-PASS: Room 47 standard route rides the real platform
 PASS: Advanced room 48 has a concrete map
 PASS: Room 48 actual gun shot color 0 toward (400.0, 220.0)
 PASS: Room 48 gun follows 1 actual green reflections
@@ -128,17 +41,6 @@ ADVANCED_ROOM 48 state=won pos=(860.7414, 184.0) velocity=(0.0, -182.5788) trans
 PASS: Room 48 authentic standard route reaches the exit without deaths
 PASS: Room 48 standard route actually uses green reflection
 PASS: Room 48 standard route rides the real platform
-PASS: Advanced room 49 has a concrete map
-PASS: Room 49 direct shot to the hidden face is blocked
-PASS: Room 49 gun follows 2 actual green reflections
-PASS: Room 49 actual gun shot color 1 toward (616.3677, 60.0)
-PASS: Room 49 reflected shot reaches the intended hidden face
-PASS: Room 49 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 49 traverses a real portal pair
-ADVANCED_ROOM 49 state=won pos=(814.4924, 202.8827) velocity=(63.33334, -70.0) transfers=1 bounces=1 boost=0.0 carried=0.0 deaths=0
-PASS: Room 49 authentic standard route reaches the exit without deaths
-PASS: Room 49 standard route actually uses green reflection
-PASS: Room 49 standard route uses bounce coating
 PASS: Advanced room 50 has a concrete map
 PASS: Room 50 actual gun shot color 0 toward (400.0, 220.0)
 PASS: Room 50 gun follows 1 actual green reflections

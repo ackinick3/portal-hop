@@ -2,10 +2,6 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
 PASS: Eighth room exists as a distinct placement puzzle
 PORTAL_HOP_READY
-PASS: Eighth guidance suggests a high exit before moving
-PASS: Eighth guidance then suggests the prepared floor entry
-PASS: Low exit keeps the high-placement suggestion visible
-PASS: Eighth launch clears placement suggestions
 PASS: Wall exit is visible before movement: (90.0, 430.0)
 PASS: Floor entry is visible before movement: (90.0, 430.0)
 ROOM8_ROUTE (90.0, 430.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(858.2689, 384.9251) deaths=0

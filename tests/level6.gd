@@ -8,8 +8,6 @@ func frames(count: int) -> void:
 	for i in count: await physics_frame
 func release() -> void:
 	for action in ["move_left","move_right","jump"]: Input.action_release(action)
-func first_marker_at(data: Dictionary, point: Vector2) -> bool:
-	return not data.markers.is_empty() and data.markers[0].p.is_equal_approx(point)
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
 	check(maps.get_level(5).get("name","") == "AIRBORNE RELAY","Sixth room exists as a new map")
@@ -65,14 +63,8 @@ func run() -> void:
 			check(floor_placed and changed_in_air,"Route shoots replacement blue while airborne")
 			check(game.transfers == 2 and second_speed > first_speed + 200,"Second fall adds real speed before the second launch")
 			check(game.state == "won" and game.deaths == 0,"Two-stage relay reaches exit without death")
-	var tutorial = load("res://ui/tutorial.gd")
 	game.start_level(5)
 	await frames(4)
-	check(first_marker_at(tutorial.guidance(5,game.portals.doors,0,game.player.position),Vector2(465,60)),"Sixth guidance begins with the ceiling target")
-	game.portals.shoot(game.gun_origin(),Vector2(465,60),1)
-	check(first_marker_at(tutorial.guidance(5,game.portals.doors,0,game.player.position),Vector2(465,480)),"Sixth guidance advances to the floor target")
-	check(first_marker_at(tutorial.guidance(5,game.portals.doors,1,game.player.position),Vector2(120,100)),"First transfer highlights airborne wall replacement")
-	check(tutorial.guidance(5,game.portals.doors,2,game.player.position).markers.is_empty(),"Second transfer clears setup markers")
 	game.portals.shoot(game.gun_origin(),Vector2(120,100),1)
 	Input.action_press("move_left")
 	for i in 120:
@@ -80,7 +72,6 @@ func run() -> void:
 		if game.player.position.x < 586: break
 	release()
 	check(game.portals.shoot(game.gun_origin(),Vector2(465,480),0),"Retry fixture places floor portal from a legal airborne position")
-	check(first_marker_at(tutorial.guidance(5,game.portals.doors,1,game.player.position),game.portals.doors[0].p),"After airborne replacement the retained red portal is highlighted")
 	var retry := InputEventKey.new()
 	retry.pressed = true
 	retry.physical_keycode = KEY_R
@@ -88,19 +79,12 @@ func run() -> void:
 	await frames(50)
 	check(game.transfers == 0 and game.portals.doors[0].is_empty() and game.portals.doors[1].is_empty(),"Sixth retry clears both portals and transfer stage")
 	check(game.player.position.distance_to(game.player.spawn) < 1 and game.state == "playing","R returns to starting ledge directly without a new briefing")
-	check(game.has_method("enter_level"),"Sixth room has an entry briefing before gameplay")
-	if game.has_method("enter_level"):
-		game.enter_level(5)
-		var start: Button
-		for child in game.panel.get_children():
-			if child is Button and child.text == "START ROOM": start = child
-		check(game.state == "briefing" and paused and start != null,"Briefing pauses gameplay and offers a clear start button")
-		if start != null: start.pressed.emit()
-		check(game.index == 5 and game.state == "playing" and not paused,"Briefing start opens the real sixth map")
-		game.pause_menu()
-		for child in game.panel.get_children():
-			if child is Button and child.text == "RESTART ROOM": child.pressed.emit()
-		check(game.index == 5 and game.state == "playing" and not paused,"Paused sixth room restarts directly without a briefing")
+	game.enter_level(5)
+	check(game.index == 5 and game.state == "playing" and not paused,"Sixth room enters directly without a tutorial")
+	game.pause_menu()
+	for child in game.panel.get_children():
+		if child is Button and child.text == "RESTART ROOM": child.pressed.emit()
+	check(game.index == 5 and game.state == "playing" and not paused,"Paused sixth room restarts directly")
 	await game.drain_audio()
 	paused = false
 	game.queue_free()

@@ -1,0 +1,442 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room 1 phase 1 pause freezes rider and machinery
+PASS: Room 1 phase 1 R respawns once without a death loop
+PASS: Room 1 phase 1 clears circuits, gates and portals
+PASS: Room 1 phase 1 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 1 phase 47 pause freezes rider and machinery
+PASS: Room 1 phase 47 R respawns once without a death loop
+PASS: Room 1 phase 47 clears circuits, gates and portals
+PASS: Room 1 phase 47 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 1 phase 173 pause freezes rider and machinery
+PASS: Room 1 phase 173 R respawns once without a death loop
+PASS: Room 1 phase 173 clears circuits, gates and portals
+PASS: Room 1 phase 173 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 2 phase 1 pause freezes rider and machinery
+PASS: Room 2 phase 1 R respawns once without a death loop
+PASS: Room 2 phase 1 clears circuits, gates and portals
+PASS: Room 2 phase 1 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 2 phase 47 pause freezes rider and machinery
+PASS: Room 2 phase 47 R respawns once without a death loop
+PASS: Room 2 phase 47 clears circuits, gates and portals
+PASS: Room 2 phase 47 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 2 phase 173 pause freezes rider and machinery
+PASS: Room 2 phase 173 R respawns once without a death loop
+PASS: Room 2 phase 173 clears circuits, gates and portals
+PASS: Room 2 phase 173 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 3 phase 1 pause freezes rider and machinery
+PASS: Room 3 phase 1 R respawns once without a death loop
+PASS: Room 3 phase 1 clears circuits, gates and portals
+PASS: Room 3 phase 1 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 3 phase 47 pause freezes rider and machinery
+PASS: Room 3 phase 47 R respawns once without a death loop
+PASS: Room 3 phase 47 clears circuits, gates and portals
+PASS: Room 3 phase 47 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 3 phase 173 pause freezes rider and machinery
+PASS: Room 3 phase 173 R respawns once without a death loop
+PASS: Room 3 phase 173 clears circuits, gates and portals
+PASS: Room 3 phase 173 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 4 phase 1 pause freezes rider and machinery
+PASS: Room 4 phase 1 R respawns once without a death loop
+PASS: Room 4 phase 1 clears circuits, gates and portals
+PASS: Room 4 phase 1 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 4 phase 47 pause freezes rider and machinery
+PASS: Room 4 phase 47 R respawns once without a death loop
+PASS: Room 4 phase 47 clears circuits, gates and portals
+PASS: Room 4 phase 47 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 4 phase 173 pause freezes rider and machinery
+PASS: Room 4 phase 173 R respawns once without a death loop
+PASS: Room 4 phase 173 clears circuits, gates and portals
+PASS: Room 4 phase 173 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 5 phase 1 pause freezes rider and machinery
+PASS: Room 5 phase 1 R respawns once without a death loop
+PASS: Room 5 phase 1 clears circuits, gates and portals
+PASS: Room 5 phase 1 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 5 phase 47 pause freezes rider and machinery
+PASS: Room 5 phase 47 R respawns once without a death loop
+PASS: Room 5 phase 47 clears circuits, gates and portals
+PASS: Room 5 phase 47 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 5 phase 173 pause freezes rider and machinery
+PASS: Room 5 phase 173 R respawns once without a death loop
+PASS: Room 5 phase 173 clears circuits, gates and portals
+PASS: Room 5 phase 173 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 6 phase 1 pause freezes rider and machinery
+PASS: Room 6 phase 1 R respawns once without a death loop
+PASS: Room 6 phase 1 clears circuits, gates and portals
+PASS: Room 6 phase 1 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 6 phase 47 pause freezes rider and machinery
+PASS: Room 6 phase 47 R respawns once without a death loop
+PASS: Room 6 phase 47 clears circuits, gates and portals
+PASS: Room 6 phase 47 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 6 phase 173 pause freezes rider and machinery
+PASS: Room 6 phase 173 R respawns once without a death loop
+PASS: Room 6 phase 173 clears circuits, gates and portals
+PASS: Room 6 phase 173 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 7 phase 1 pause freezes rider and machinery
+PASS: Room 7 phase 1 R respawns once without a death loop
+PASS: Room 7 phase 1 clears circuits, gates and portals
+PASS: Room 7 phase 1 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 7 phase 47 pause freezes rider and machinery
+PASS: Room 7 phase 47 R respawns once without a death loop
+PASS: Room 7 phase 47 clears circuits, gates and portals
+PASS: Room 7 phase 47 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 7 phase 173 pause freezes rider and machinery
+PASS: Room 7 phase 173 R respawns once without a death loop
+PASS: Room 7 phase 173 clears circuits, gates and portals
+PASS: Room 7 phase 173 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 8 phase 1 pause freezes rider and machinery
+PASS: Room 8 phase 1 R respawns once without a death loop
+PASS: Room 8 phase 1 clears circuits, gates and portals
+PASS: Room 8 phase 1 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 8 phase 47 pause freezes rider and machinery
+PASS: Room 8 phase 47 R respawns once without a death loop
+PASS: Room 8 phase 47 clears circuits, gates and portals
+PASS: Room 8 phase 47 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 8 phase 173 pause freezes rider and machinery
+PASS: Room 8 phase 173 R respawns once without a death loop
+PASS: Room 8 phase 173 clears circuits, gates and portals
+PASS: Room 8 phase 173 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 9 phase 1 pause freezes rider and machinery
+PASS: Room 9 phase 1 R respawns once without a death loop
+PASS: Room 9 phase 1 clears circuits, gates and portals
+PASS: Room 9 phase 1 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 9 phase 47 pause freezes rider and machinery
+PASS: Room 9 phase 47 R respawns once without a death loop
+PASS: Room 9 phase 47 clears circuits, gates and portals
+PASS: Room 9 phase 47 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 9 phase 173 pause freezes rider and machinery
+PASS: Room 9 phase 173 R respawns once without a death loop
+PASS: Room 9 phase 173 clears circuits, gates and portals
+PASS: Room 9 phase 173 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 10 phase 1 pause freezes rider and machinery
+PASS: Room 10 phase 1 R respawns once without a death loop
+PASS: Room 10 phase 1 clears circuits, gates and portals
+PASS: Room 10 phase 1 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 10 phase 47 pause freezes rider and machinery
+PASS: Room 10 phase 47 R respawns once without a death loop
+PASS: Room 10 phase 47 clears circuits, gates and portals
+PASS: Room 10 phase 47 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 10 phase 173 pause freezes rider and machinery
+PASS: Room 10 phase 173 R respawns once without a death loop
+PASS: Room 10 phase 173 clears circuits, gates and portals
+PASS: Room 10 phase 173 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 11 phase 1 pause freezes rider and machinery
+PASS: Room 11 phase 1 R respawns once without a death loop
+PASS: Room 11 phase 1 clears circuits, gates and portals
+PASS: Room 11 phase 1 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 11 phase 47 pause freezes rider and machinery
+PASS: Room 11 phase 47 R respawns once without a death loop
+PASS: Room 11 phase 47 clears circuits, gates and portals
+PASS: Room 11 phase 47 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 11 phase 173 pause freezes rider and machinery
+PASS: Room 11 phase 173 R respawns once without a death loop
+PASS: Room 11 phase 173 clears circuits, gates and portals
+PASS: Room 11 phase 173 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 14 phase 1 pause freezes rider and machinery
+PASS: Room 14 phase 1 R respawns once without a death loop
+PASS: Room 14 phase 1 clears circuits, gates and portals
+PASS: Room 14 phase 1 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 14 phase 47 pause freezes rider and machinery
+PASS: Room 14 phase 47 R respawns once without a death loop
+PASS: Room 14 phase 47 clears circuits, gates and portals
+PASS: Room 14 phase 47 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 14 phase 173 pause freezes rider and machinery
+PASS: Room 14 phase 173 R respawns once without a death loop
+PASS: Room 14 phase 173 clears circuits, gates and portals
+PASS: Room 14 phase 173 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 17 phase 1 pause freezes rider and machinery
+PASS: Room 17 phase 1 R respawns once without a death loop
+PASS: Room 17 phase 1 clears circuits, gates and portals
+PASS: Room 17 phase 1 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 17 phase 47 pause freezes rider and machinery
+PASS: Room 17 phase 47 R respawns once without a death loop
+PASS: Room 17 phase 47 clears circuits, gates and portals
+PASS: Room 17 phase 47 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 17 phase 173 pause freezes rider and machinery
+PASS: Room 17 phase 173 R respawns once without a death loop
+PASS: Room 17 phase 173 clears circuits, gates and portals
+PASS: Room 17 phase 173 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 19 phase 1 pause freezes rider and machinery
+PASS: Room 19 phase 1 R respawns once without a death loop
+PASS: Room 19 phase 1 clears circuits, gates and portals
+PASS: Room 19 phase 1 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 19 phase 47 pause freezes rider and machinery
+PASS: Room 19 phase 47 R respawns once without a death loop
+PASS: Room 19 phase 47 clears circuits, gates and portals
+PASS: Room 19 phase 47 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 19 phase 173 pause freezes rider and machinery
+PASS: Room 19 phase 173 R respawns once without a death loop
+PASS: Room 19 phase 173 clears circuits, gates and portals
+PASS: Room 19 phase 173 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 20 phase 1 pause freezes rider and machinery
+PASS: Room 20 phase 1 R respawns once without a death loop
+PASS: Room 20 phase 1 clears circuits, gates and portals
+PASS: Room 20 phase 1 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 20 phase 47 pause freezes rider and machinery
+PASS: Room 20 phase 47 R respawns once without a death loop
+PASS: Room 20 phase 47 clears circuits, gates and portals
+PASS: Room 20 phase 47 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 20 phase 173 pause freezes rider and machinery
+PASS: Room 20 phase 173 R respawns once without a death loop
+PASS: Room 20 phase 173 clears circuits, gates and portals
+PASS: Room 20 phase 173 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 21 phase 1 pause freezes rider and machinery
+PASS: Room 21 phase 1 R respawns once without a death loop
+PASS: Room 21 phase 1 clears circuits, gates and portals
+PASS: Room 21 phase 1 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 21 phase 47 pause freezes rider and machinery
+PASS: Room 21 phase 47 R respawns once without a death loop
+PASS: Room 21 phase 47 clears circuits, gates and portals
+PASS: Room 21 phase 47 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 21 phase 173 pause freezes rider and machinery
+PASS: Room 21 phase 173 R respawns once without a death loop
+PASS: Room 21 phase 173 clears circuits, gates and portals
+PASS: Room 21 phase 173 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 25 phase 1 pause freezes rider and machinery
+PASS: Room 25 phase 1 R respawns once without a death loop
+PASS: Room 25 phase 1 clears circuits, gates and portals
+PASS: Room 25 phase 1 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 25 phase 47 pause freezes rider and machinery
+PASS: Room 25 phase 47 R respawns once without a death loop
+PASS: Room 25 phase 47 clears circuits, gates and portals
+PASS: Room 25 phase 47 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 25 phase 173 pause freezes rider and machinery
+PASS: Room 25 phase 173 R respawns once without a death loop
+PASS: Room 25 phase 173 clears circuits, gates and portals
+PASS: Room 25 phase 173 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 34 phase 1 pause freezes rider and machinery
+PASS: Room 34 phase 1 R respawns once without a death loop
+PASS: Room 34 phase 1 clears circuits, gates and portals
+PASS: Room 34 phase 1 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 34 phase 47 pause freezes rider and machinery
+PASS: Room 34 phase 47 R respawns once without a death loop
+PASS: Room 34 phase 47 clears circuits, gates and portals
+PASS: Room 34 phase 47 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 34 phase 173 pause freezes rider and machinery
+PASS: Room 34 phase 173 R respawns once without a death loop
+PASS: Room 34 phase 173 clears circuits, gates and portals
+PASS: Room 34 phase 173 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 36 phase 1 pause freezes rider and machinery
+PASS: Room 36 phase 1 R respawns once without a death loop
+PASS: Room 36 phase 1 clears circuits, gates and portals
+PASS: Room 36 phase 1 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 36 phase 47 pause freezes rider and machinery
+PASS: Room 36 phase 47 R respawns once without a death loop
+PASS: Room 36 phase 47 clears circuits, gates and portals
+PASS: Room 36 phase 47 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 36 phase 173 pause freezes rider and machinery
+PASS: Room 36 phase 173 R respawns once without a death loop
+PASS: Room 36 phase 173 clears circuits, gates and portals
+PASS: Room 36 phase 173 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 37 phase 1 pause freezes rider and machinery
+PASS: Room 37 phase 1 R respawns once without a death loop
+PASS: Room 37 phase 1 clears circuits, gates and portals
+PASS: Room 37 phase 1 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 37 phase 47 pause freezes rider and machinery
+PASS: Room 37 phase 47 R respawns once without a death loop
+PASS: Room 37 phase 47 clears circuits, gates and portals
+PASS: Room 37 phase 47 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 37 phase 173 pause freezes rider and machinery
+PASS: Room 37 phase 173 R respawns once without a death loop
+PASS: Room 37 phase 173 clears circuits, gates and portals
+PASS: Room 37 phase 173 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 38 phase 1 pause freezes rider and machinery
+PASS: Room 38 phase 1 R respawns once without a death loop
+PASS: Room 38 phase 1 clears circuits, gates and portals
+PASS: Room 38 phase 1 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 38 phase 47 pause freezes rider and machinery
+PASS: Room 38 phase 47 R respawns once without a death loop
+PASS: Room 38 phase 47 clears circuits, gates and portals
+PASS: Room 38 phase 47 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 38 phase 173 pause freezes rider and machinery
+PASS: Room 38 phase 173 R respawns once without a death loop
+PASS: Room 38 phase 173 clears circuits, gates and portals
+PASS: Room 38 phase 173 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 48 phase 1 pause freezes rider and machinery
+PASS: Room 48 phase 1 R respawns once without a death loop
+PASS: Room 48 phase 1 clears circuits, gates and portals
+PASS: Room 48 phase 1 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 48 phase 47 pause freezes rider and machinery
+PASS: Room 48 phase 47 R respawns once without a death loop
+PASS: Room 48 phase 47 clears circuits, gates and portals
+PASS: Room 48 phase 47 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 48 phase 173 pause freezes rider and machinery
+PASS: Room 48 phase 173 R respawns once without a death loop
+PASS: Room 48 phase 173 clears circuits, gates and portals
+PASS: Room 48 phase 173 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 50 phase 1 pause freezes rider and machinery
+PASS: Room 50 phase 1 R respawns once without a death loop
+PASS: Room 50 phase 1 clears circuits, gates and portals
+PASS: Room 50 phase 1 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 50 phase 47 pause freezes rider and machinery
+PASS: Room 50 phase 47 R respawns once without a death loop
+PASS: Room 50 phase 47 clears circuits, gates and portals
+PASS: Room 50 phase 47 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 50 phase 173 pause freezes rider and machinery
+PASS: Room 50 phase 173 R respawns once without a death loop
+PASS: Room 50 phase 173 clears circuits, gates and portals
+PASS: Room 50 phase 173 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 1 pause freezes rider and machinery
+PASS: Room 38 phase 1 R respawns once without a death loop
+PASS: Room 38 phase 1 clears circuits, gates and portals
+PASS: Room 38 phase 1 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 47 pause freezes rider and machinery
+PASS: Room 38 phase 47 R respawns once without a death loop
+PASS: Room 38 phase 47 clears circuits, gates and portals
+PASS: Room 38 phase 47 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 173 pause freezes rider and machinery
+PASS: Room 38 phase 173 R respawns once without a death loop
+PASS: Room 38 phase 173 clears circuits, gates and portals
+PASS: Room 38 phase 173 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 1 pause freezes rider and machinery
+PASS: Room 48 phase 1 R respawns once without a death loop
+PASS: Room 48 phase 1 clears circuits, gates and portals
+PASS: Room 48 phase 1 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 47 pause freezes rider and machinery
+PASS: Room 48 phase 47 R respawns once without a death loop
+PASS: Room 48 phase 47 clears circuits, gates and portals
+PASS: Room 48 phase 47 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 173 pause freezes rider and machinery
+PASS: Room 48 phase 173 R respawns once without a death loop
+PASS: Room 48 phase 173 clears circuits, gates and portals
+PASS: Room 48 phase 173 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 1 pause freezes rider and machinery
+PASS: Room 50 phase 1 R respawns once without a death loop
+PASS: Room 50 phase 1 clears circuits, gates and portals
+PASS: Room 50 phase 1 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 47 pause freezes rider and machinery
+PASS: Room 50 phase 47 R respawns once without a death loop
+PASS: Room 50 phase 47 clears circuits, gates and portals
+PASS: Room 50 phase 47 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 173 pause freezes rider and machinery
+PASS: Room 50 phase 173 R respawns once without a death loop
+PASS: Room 50 phase 173 clears circuits, gates and portals
+PASS: Room 50 phase 173 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+RETRY_STRESS_CASES=78 FAILURES=0

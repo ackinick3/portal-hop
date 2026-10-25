@@ -49,12 +49,6 @@ ROOM7_ROUTE setting=(-1.0, 280.0, 0.0) first=892.5 up=0.0 landed=false end=(808.
 PASS: Initial pair alone cannot complete the standard route
 PASS: R clears both doors and relay stage after a failed first launch
 PASS: R directly restores seventh-room spawn
-PASS: Seventh guidance starts with its own initial wall
-PASS: Seventh guidance then suggests the initial floor
-PASS: First launch highlights replacement RED wall
-PASS: Replacing RED advances to lower BLUE floor
-PASS: Completed airborne pair highlights entry wall
-PASS: Upward launch clears setup markers
 PASS: Ordinary jump chain cannot bypass the relay: move_left
 PASS: Ordinary jump chain cannot bypass the relay: move_right
 LEVEL7_TEST_FAILURES=0

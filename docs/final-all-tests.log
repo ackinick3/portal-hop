@@ -225,21 +225,6 @@ PASS: Death/reset clears shot feedback
 FEEDBACK_TEST_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: First room teaches red shot first
-PASS: Second room starts with upper wall portal
-PASS: Second room explains floor shot is blocked until leaving ledge
-PASS: Second room explains braking above floor portal
-PASS: After launch tutorial guides player to exit
-PASS: Third room teaches ceiling shot while on high platform
-PASS: Third room retains ordinary action route
-PASS: Third room describes safe repositioning for floor shot
-PASS: Third room explains downward stomp after ceiling exit
-PASS: Fourth room begins with visible right floor exit
-PASS: Fourth room warns to step clear before wall shot
-PASS: Fourth room has its own post-transfer guidance
-TUTORIAL_TEST_FAILURES=0
-Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
-
 PASS: Player has visual-only action feedback
 PASS: Real landing triggers compression
 PASS: Landing compression settles back to normal
@@ -346,9 +331,6 @@ ROOM5_ROUTE delay=40 launch=780.001770019531 guard_alive=false end=(899.001, 293
 PASS: Fifth route uses actual gravity launch
 PASS: Fifth route reaches the goal without death
 PASS: Forward launch stomps the guard without the old early braking
-PASS: Fifth guidance starts with its own wall marker
-PASS: Fifth guidance advances to its own floor marker
-PASS: Launch clears placement markers
 PASS: Retry fixture places wall portal
 PASS: Retry fixture places floor portal after leaving ledge
 PASS: Death restores fifth-room guard to its own patrol
@@ -387,18 +369,11 @@ PASS: Initial blue portal is visible from spawn
 ROOM6_ROUTE delay=-1 first=810.060668945313 second=0.0 transfers=0 end=(868.9249, 521.2209) deaths=1
 PASS: Comparison route performs a real single launch from a high wall exit
 PASS: Standard single launch falls short of the final platform
-PASS: Sixth guidance begins with the ceiling target
-PASS: Sixth guidance advances to the floor target
-PASS: First transfer highlights airborne wall replacement
-PASS: Second transfer clears setup markers
 PASS: Retry fixture places floor portal from a legal airborne position
-PASS: After airborne replacement the retained red portal is highlighted
 PASS: Sixth retry clears both portals and transfer stage
 PASS: R returns to starting ledge directly without a new briefing
-PASS: Sixth room has an entry briefing before gameplay
-PASS: Briefing pauses gameplay and offers a clear start button
-PASS: Briefing start opens the real sixth map
-PASS: Paused sixth room restarts directly without a briefing
+PASS: Sixth room enters directly without a tutorial
+PASS: Paused sixth room restarts directly
 LEVEL6_TEST_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
@@ -451,12 +426,6 @@ ROOM7_ROUTE setting=(-1.0, 280.0, 0.0) first=892.5 up=0.0 landed=false end=(808.
 PASS: Initial pair alone cannot complete the standard route
 PASS: R clears both doors and relay stage after a failed first launch
 PASS: R directly restores seventh-room spawn
-PASS: Seventh guidance starts with its own initial wall
-PASS: Seventh guidance then suggests the initial floor
-PASS: First launch highlights replacement RED wall
-PASS: Replacing RED advances to lower BLUE floor
-PASS: Completed airborne pair highlights entry wall
-PASS: Upward launch clears setup markers
 PASS: Ordinary jump chain cannot bypass the relay: move_left
 PASS: Ordinary jump chain cannot bypass the relay: move_right
 LEVEL7_TEST_FAILURES=0
@@ -474,10 +443,6 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
 PASS: Eighth room exists as a distinct placement puzzle
 PORTAL_HOP_READY
-PASS: Eighth guidance suggests a high exit before moving
-PASS: Eighth guidance then suggests the prepared floor entry
-PASS: Low exit keeps the high-placement suggestion visible
-PASS: Eighth launch clears placement suggestions
 PASS: Wall exit is visible before movement: (90.0, 430.0)
 PASS: Floor entry is visible before movement: (90.0, 430.0)
 ROOM8_ROUTE (90.0, 430.0) crossed=true cleared=true landed=true speed=757.760009765625 end=(858.2689, 384.9251) deaths=0
@@ -502,47 +467,6 @@ PASS: Eighth retry restores the starting ledge
 PASS: Eighth retry clears both prepared portals
 PASS: Ordinary jumping cannot bypass the placement puzzle
 LEVEL8_TEST_FAILURES=0
-Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
-
-PORTAL_HOP_READY
-PASS: Legacy progress is restored through the actual load path
-PASS: Old three-room progress and volume survive without clearing
-PASS: Fourth room appears locked before beating room 3
-PASS: Beating room 3 unlocks room 4
-PASS: Room 3 results now offer next room
-PASS: Next-room button starts actual fourth map
-PASS: Invalid room request leaves current room intact
-PASS: Beating room 4 unlocks room 5
-PASS: Room 4 results offer room 5
-PASS: Next-room button starts actual fifth map
-PASS: Beating room 5 unlocks room 6
-PASS: Room 5 results offer room 6
-PASS: Room 6 entry teaches airborne replacement before starting
-PASS: Briefing opens the actual sixth map
-PASS: Beating room 6 unlocks room 7
-PASS: Room 6 results offer room 7
-PASS: Room 7 entry explains the two airborne shots
-PASS: Briefing opens the actual seventh map
-PASS: Beating room 7 unlocks room 8
-PASS: Room 7 results offer room 8
-PASS: Room 8 entry explains planning portal height
-PASS: Briefing opens the actual eighth map
-PASS: Room 8 now continues into the new campaign
-PASS: Unlocked room 4 can be selected
-PASS: Old four-room progress is preserved without assuming completion
-PASS: Old save unlocks room 5 only after beating room 4
-PASS: Five-room progress and volume restore correctly
-PASS: Unlocked fifth room can be selected
-PASS: Old five-room save does not assume room 5 was completed
-PASS: Six-room progress, volume and selection restore correctly
-PASS: Selecting room 6 also shows its briefing
-PASS: Old six-room progress keeps room 7 locked until room 6 is completed
-PASS: Seven-room progress and volume restore correctly
-PASS: Seventh selection opens its own briefing, not room 6's
-PASS: Old seven-room save does not assume room 7 was completed
-PASS: Eight-room progress and volume restore correctly
-PASS: Eighth selection opens its own planning briefing
-PROGRESSION_TEST_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
 PORTAL_HOP_READY
@@ -688,7 +612,7 @@ PASS: Initial gravity energy carries the complete spike relay
 RELAY_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Coating chapter rooms10-19 exists
+PASS: Curated coating chapter exists
 PASS: Coating chapter is connected to the live game
 PORTAL_HOP_READY
 COATING_ROUTE room=10 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 0, "speed": 210.0, "shot": true, "end": (601.3754, 244.9251) }
@@ -698,34 +622,17 @@ COATING_ROUTE room=11 plain=false { "won": true, "deaths": 0, "bounces": 0, "dis
 PASS: Room11 completes through real movement and visible portal shots
 PASS: Room11 route physically uses red coating
 PASS: Room11 route physically crosses prepared portals
-COATING_ROUTE room=12 plain=false { "won": true, "deaths": 0, "bounces": 2, "distance": 0.0, "transfers": 0, "speed": 210.0, "shot": true, "end": (661.6257, 164.9251) }
-PASS: Room12 completes through real movement and visible portal shots
-PASS: Room12 route physically uses blue coating
-COATING_EVENT room=13 p=(818.9251, 95.30006) v=(-420.0, 210.0) incoming=(210.0, 210.0)
-COATING_ROUTE room=13 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 0, "speed": 420.0, "shot": true, "end": (490.7995, 404.9251) }
-PASS: Room13 completes through real movement and visible portal shots
-PASS: Room13 route physically uses blue coating
 COATING_EVENT room=14 p=(208.625, 434.9251) v=(210.0, -580.0) incoming=(210.0, 7.5)
 COATING_EVENT room=14 p=(112.0, 53.06982) v=(675.9484, 0.0) incoming=(675.9484, 0.0)
 COATING_ROUTE room=14 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 0.0, "transfers": 1, "speed": 675.948425292969, "shot": true, "end": (840.7413, 344.9251) }
 PASS: Room14 completes through real movement and visible portal shots
 PASS: Room14 route physically uses blue coating
 PASS: Room14 route physically crosses prepared portals
-COATING_ROUTE room=15 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 264.500244140625, "transfers": 0, "speed": 650.0, "shot": true, "end": (862.2512, 384.9251) }
-PASS: Room15 completes through real movement and visible portal shots
-PASS: Room15 route physically uses red coating
-COATING_ROUTE room=16 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 372.833435058594, "transfers": 0, "speed": 650.0, "shot": true, "end": (867.8762, 394.9251) }
-PASS: Room16 completes through real movement and visible portal shots
-PASS: Room16 route physically uses red coating
 COATING_EVENT room=17 p=(631.7929, 434.0) v=(0.0, -688.4301) incoming=(0.0, -688.4301)
 COATING_ROUTE room=17 plain=false { "won": true, "deaths": 0, "bounces": 0, "distance": 150.750030517578, "transfers": 1, "speed": 650.0, "shot": true, "end": (875.3339, 264.9251) }
 PASS: Room17 completes through real movement and visible portal shots
 PASS: Room17 route physically uses red coating
 PASS: Room17 route physically crosses prepared portals
-COATING_ROUTE room=18 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 112.875, "transfers": 0, "speed": 630.0, "shot": true, "end": (923.6255, 387.2569) }
-PASS: Room18 completes through real movement and visible portal shots
-PASS: Room18 route physically uses blue coating
-PASS: Room18 route physically uses red coating
 COATING_ROUTE room=19 plain=false { "won": true, "deaths": 0, "bounces": 1, "distance": 208.041870117188, "transfers": 0, "speed": 650.0, "shot": true, "end": (878.5851, 266.1749) }
 PASS: Room19 completes through real movement and visible portal shots
 PASS: Room19 route physically uses blue coating
@@ -743,163 +650,65 @@ PASS: Room11 R clears portals and retains the map coating
 COATING_ROUTE_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Six-room laser chapter exists
+PASS: Curated laser chapter exists
 PORTAL_HOP_READY
 PASS: Room 20 is delegated through Maps
 PASS: Room 20 unaltered laser and ordinary walking cannot bypass its closed gate
 PASS: Room 20 closed gate physically stops the player
-PASS: Room 20 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
-PASS: Room 20 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 15 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 15 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
 PASS: Room 20 powers every receiver by real portal beams
 PASS: Room 20 R clears power and portals
 PASS: Room 20 R restores actual spawn
 PASS: Room 20 R restores closed gate collision
-PASS: Room 20 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
-PASS: Room 20 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 15 real gun shot (340.0, 300.0) color0 at (140.0, 465.0)
+PASS: Room 15 real gun shot (100.0, 480.0) color1 at (140.0, 465.0)
 LASER_ROOM=20 state=won deaths=0 end=(891.625, 464.9251) transfers=0
 PASS: Room 20 real-input standard route reaches its exit
 PASS: Room 21 is delegated through Maps
 PASS: Room 21 unaltered laser and ordinary walking cannot bypass its closed gate
 PASS: Room 21 closed gate physically stops the player
-PASS: Room 21 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
-PASS: Room 21 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 16 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 16 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
 PASS: Room 21 powers every receiver by real portal beams
 PASS: Room 21 R clears power and portals
 PASS: Room 21 R restores actual spawn
 PASS: Room 21 R restores closed gate collision
-PASS: Room 21 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
-PASS: Room 21 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
+PASS: Room 16 real gun shot (300.0, 480.0) color0 at (140.0, 465.0)
+PASS: Room 16 real gun shot (620.0, 480.0) color1 at (140.0, 465.0)
 LASER_ROOM=21 state=won deaths=0 end=(891.2648, 464.9251) transfers=0
 PASS: Room 21 real-input standard route reaches its exit
-PASS: Room 22 is delegated through Maps
-PASS: Room 22 unaltered laser and ordinary walking cannot bypass its closed gate
-PASS: Room 22 closed gate physically stops the player
-PASS: Room 22 real gun shot (150.0, 480.0) color0 at (220.0, 465.0)
-PASS: Room 22 real gun shot (500.0, 280.0) color1 at (220.0, 465.0)
-PASS: Room 22 powers every receiver by real portal beams
-PASS: Room 22 R clears power and portals
-PASS: Room 22 R restores actual spawn
-PASS: Room 22 R restores closed gate collision
-PASS: Room 22 real gun shot (150.0, 480.0) color0 at (220.0, 465.0)
-PASS: Room 22 real gun shot (500.0, 280.0) color1 at (220.0, 465.0)
-LASER_ROOM=22 state=won deaths=0 end=(891.125, 464.9251) transfers=0
-PASS: Room 22 real-input standard route reaches its exit
-PASS: Room 23 is delegated through Maps
-PASS: Room 23 unaltered laser and ordinary walking cannot bypass its closed gate
-PASS: Room 23 closed gate physically stops the player
-PASS: Room 23 real gun shot (300.0, 260.0) color0 at (140.0, 465.0)
-PASS: Room 23 real gun shot (520.0, 480.0) color1 at (140.0, 465.0)
-PASS: First receiver alone leaves the two-input gate shut
-PASS: Two-input gate requires its second actual beam
-PASS: Room 23 real gun shot (660.0, 480.0) color1 at (140.0, 465.0)
-PASS: Room 23 powers every receiver by real portal beams
-PASS: Room 23 R clears power and portals
-PASS: Room 23 R restores actual spawn
-PASS: Room 23 R restores closed gate collision
-PASS: Room 23 real gun shot (300.0, 260.0) color0 at (140.0, 465.0)
-PASS: Room 23 real gun shot (520.0, 480.0) color1 at (140.0, 465.0)
-PASS: First receiver alone leaves the two-input gate shut
-PASS: Two-input gate requires its second actual beam
-PASS: Room 23 real gun shot (660.0, 480.0) color1 at (140.0, 465.0)
-LASER_ROOM=23 state=won deaths=0 end=(891.4449, 464.9251) transfers=0
-PASS: Room 23 real-input standard route reaches its exit
-PASS: Room 24 is delegated through Maps
-PASS: Room 24 unaltered laser and ordinary walking cannot bypass its closed gate
-PASS: Room 24 closed gate physically stops the player
-PASS: Room 24 real gun shot (300.0, 240.0) color0 at (140.0, 465.0)
-PASS: First gate obstructs the far ceiling shot before power
-PASS: Room 24 real gun shot (480.0, 100.0) color1 at (410.3402, 464.9252)
-PASS: Near light opens only its own gate
-PASS: Room 24 real gun shot (760.0, 100.0) color1 at (670.1804, 464.9252)
-PASS: Room 24 powers every receiver by real portal beams
-PASS: Room 24 R clears power and portals
-PASS: Room 24 R restores actual spawn
-PASS: Room 24 R restores closed gate collision
-PASS: Room 24 R restores closed gate collision
-PASS: Room 24 real gun shot (300.0, 240.0) color0 at (140.0, 465.0)
-PASS: First gate obstructs the far ceiling shot before power
-PASS: Room 24 real gun shot (480.0, 100.0) color1 at (410.3402, 464.9252)
-PASS: Near light opens only its own gate
-PASS: Room 24 real gun shot (760.0, 100.0) color1 at (670.1804, 464.9252)
-LASER_ROOM=24 state=won deaths=0 end=(891.5557, 464.9251) transfers=0
-PASS: Room 24 real-input standard route reaches its exit
 PASS: Room 25 is delegated through Maps
 PASS: Room 25 unaltered laser and ordinary walking cannot bypass its closed gate
 PASS: Room 25 closed gate physically stops the player
-PASS: Room 25 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
-PASS: Room 25 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: Room 17 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 17 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
 PASS: First circuit unlocks access but cannot open the final gate
-PASS: Room 25 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
-PASS: Room 25 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+PASS: Room 17 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 17 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
 PASS: Room 25 powers every receiver by real portal beams
 PASS: Room 25 R clears power and portals
 PASS: Room 25 R restores actual spawn
 PASS: Room 25 R restores closed gate collision
 PASS: Room 25 R restores closed gate collision
-PASS: Room 25 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
-PASS: Room 25 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
+PASS: Room 17 real gun shot (300.0, 220.0) color0 at (140.0, 465.0)
+PASS: Room 17 real gun shot (440.0, 100.0) color1 at (399.8402, 464.9252)
 PASS: First circuit unlocks access but cannot open the final gate
-PASS: Room 25 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
-PASS: Room 25 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
+PASS: Room 17 real gun shot (700.0, 480.0) color0 at (629.9304, 464.9252)
+PASS: Room 17 real gun shot (820.0, 280.0) color1 at (629.9304, 464.9252)
 LASER_ROOM=25 state=won deaths=0 end=(890.1326, 464.9251) transfers=0
 PASS: Room 25 real-input standard route reaches its exit
 LASER_ROUTE_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Mixed coating and laser rooms exist
 PORTAL_HOP_READY
-PASS: Room 26 places the laser entry from spawn
-MIXED_ROOM 26 win=won p=(904.0849, 286.9239) bounce=1 run=242.833312988281 peak=650.0 power=true
-PASS: Room 26 uses actual portal-directed laser power
-PASS: Room 26 actually uses both coatings
-PASS: Room 26 completes with real inputs
-PASS: Room 27 places the laser entry from spawn
-MIXED_ROOM 27 win=won p=(942.0017, 298.3822) bounce=1 run=253.666625976563 peak=650.0 power=true
-PASS: Room 27 uses actual portal-directed laser power
-PASS: Room 27 actually uses both coatings
-PASS: Room 27 completes with real inputs
-PASS: Room 28 places the laser entry from spawn
-MIXED_ROOM 28 win=won p=(898.6682, 289.0906) bounce=1 run=232.0 peak=650.0 power=true
-PASS: Room 28 uses actual portal-directed laser power
-PASS: Room 28 actually uses both coatings
-PASS: Room 28 completes with real inputs
-PASS: Room 29 places the laser entry from spawn
-MIXED_ROOM 29 win=won p=(948.9512, 306.0072) bounce=1 run=269.916595458984 peak=650.0 power=true
-PASS: Room 29 uses actual portal-directed laser power
-PASS: Room 29 actually uses both coatings
-PASS: Room 29 completes with real inputs
-PASS: Room 30 places the laser entry from spawn
-MIXED_ROOM 30 win=won p=(50.70824, 286.9239) bounce=1 run=259.082275390625 peak=650.0 power=true
-PASS: Room 30 uses actual portal-directed laser power
-PASS: Room 30 actually uses both coatings
-PASS: Room 30 completes with real inputs
-PASS: Room 31 places the laser entry from spawn
-PASS: Second source is selected with actual RED shot
-MIXED_ROOM 31 win=won p=(909.5016, 298.3822) bounce=1 run=221.166687011719 peak=650.0 power=true
-PASS: Room 31 uses actual portal-directed laser power
-PASS: Room 31 actually uses both coatings
-PASS: Room 31 completes with real inputs
-PASS: Room 32 places the laser entry from spawn
-MIXED_ROOM 32 win=won p=(904.0849, 286.9239) bounce=1 run=242.833312988281 peak=650.0 power=true
-PASS: Room 32 uses actual portal-directed laser power
-PASS: Room 32 actually uses both coatings
-PASS: Room 32 completes with real inputs
-PASS: Room 33 places the laser entry from spawn
-MIXED_ROOM 33 win=won p=(948.925, 303.403) bounce=1 run=253.666625976563 peak=650.0 power=true
-PASS: Room 33 uses actual portal-directed laser power
-PASS: Room 33 actually uses both coatings
-PASS: Room 33 completes with real inputs
-PASS: Room 34 places the laser entry from spawn
-MIXED_ROOM 34 win=won p=(931.1683, 291.3197) bounce=1 run=259.083282470703 peak=650.0 power=true
-PASS: Room 34 uses actual portal-directed laser power
-PASS: Room 34 actually uses both coatings
-PASS: Room 34 completes with real inputs
-PASS: Room 35 places the laser entry from spawn
-MIXED_ROOM 35 win=won p=(40.84699, 298.3822) bounce=1 run=242.832397460938 peak=650.0 power=true
-PASS: Room 35 uses actual portal-directed laser power
-PASS: Room 35 actually uses both coatings
-PASS: Room 35 completes with real inputs
-PASS: Unpowered gate blocks even a boosted blue launch
+PASS: New18 places the real laser entrance
+PASS: New18 powers the first circuit with a real shot
+PASS: First light leaves the final circuit unpowered
+PASS: New18 opens both circuits through actual beam paths
+PASS: New18 uses both coatings
+PASS: New18 actual-input route completes
+PASS: Without power the first real gate blocks the route
 MIXED_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
@@ -929,93 +738,6 @@ ADVANCED_ROOM 38 state=won pos=(890.1119, 384.9252) velocity=(28.5, 0.0) transfe
 PASS: Room 38 authentic standard route reaches the exit without deaths
 PASS: Room 38 standard route actually uses green reflection
 PASS: Room 38 standard route rides the real platform
-PASS: Advanced room 39 has a concrete map
-PASS: Room 39 direct shot to the hidden face is blocked
-PASS: Room 39 gun follows 1 actual green reflections
-PASS: Room 39 actual gun shot color 1 toward (370.4783, 60.0)
-PASS: Room 39 reflected shot reaches the intended hidden face
-PASS: Room 39 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 39 traverses a real portal pair
-PASS: Room 39 boards the elevator/ferry with a real jump
-ADVANCED_ROOM 39 state=won pos=(917.0229, 137.029) velocity=(210.1667, 212.5012) transfers=1 bounces=0 boost=0.0 carried=156.541656494141 deaths=0
-PASS: Room 39 authentic standard route reaches the exit without deaths
-PASS: Room 39 standard route actually uses green reflection
-PASS: Room 39 standard route rides the real platform
-PASS: Advanced room 40 has a concrete map
-PASS: Room 40 boards the elevator/ferry with a real jump
-ADVANCED_ROOM 40 state=won pos=(899.993, 216.8598) velocity=(210.1667, 249.9976) transfers=0 bounces=0 boost=273.041534423828 carried=186.333343505859 deaths=0
-PASS: Room 40 authentic standard route reaches the exit without deaths
-PASS: Room 40 standard route rides the real platform
-PASS: Room 40 standard route uses boost coating
-PASS: Advanced room 41 has a concrete map
-PASS: Room 41 actual gun shot color 1 toward (850.0, 220.0)
-PASS: Room 41 actual gun shot color 0 toward (50.0, 220.0)
-ADVANCED_ROOM 41 state=won pos=(865.0471, 186.2754) velocity=(79.16666, 4.921173) transfers=1 bounces=0 boost=0.0 carried=217.58332824707 deaths=0
-PASS: Room 41 authentic standard route reaches the exit without deaths
-PASS: Room 41 standard route rides the real platform
-PASS: Advanced room 42 has a concrete map
-PASS: Room 42 direct shot to the hidden face is blocked
-PASS: Room 42 gun follows 1 actual green reflections
-PASS: Room 42 actual gun shot color 1 toward (370.4783, 60.0)
-PASS: Room 42 reflected shot reaches the intended hidden face
-PASS: Room 42 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 42 traverses a real portal pair
-ADVANCED_ROOM 42 state=won pos=(876.6402, 202.0491) velocity=(212.1668, 50.0) transfers=1 bounces=1 boost=0.0 carried=0.0 deaths=0
-PASS: Room 42 authentic standard route reaches the exit without deaths
-PASS: Room 42 standard route actually uses green reflection
-PASS: Room 42 standard route uses bounce coating
-PASS: Advanced room 43 has a concrete map
-PASS: Room 43 actual gun shot color 0 toward (400.0, 220.0)
-PASS: Room 43 gun follows 1 actual green reflections
-PASS: Room 43 actual gun shot color 1 toward (370.5036, 500.0)
-PASS: Room 43 reflected shot reaches the intended hidden face
-PASS: Room 43 actual routed laser latches the platform receiver
-PASS: Room 43 receiver enables the real mover
-ADVANCED_ROOM 43 state=won pos=(70.9594, 181.9056) velocity=(-210.1667, 377.5012) transfers=0 bounces=0 boost=0.0 carried=207.999980163575 deaths=0
-PASS: Room 43 authentic standard route reaches the exit without deaths
-PASS: Room 43 standard route actually uses green reflection
-PASS: Room 43 standard route rides the real platform
-PASS: Advanced room 44 has a concrete map
-PASS: Room 44 actual gun shot color 0 toward (560.0, 220.0)
-PASS: Room 44 gun follows 1 actual green reflections
-PASS: Room 44 actual gun shot color 1 toward (580.8425, 480.0)
-PASS: Room 44 reflected shot reaches the intended hidden face
-PASS: Room 44 actual routed laser latches the platform receiver
-PASS: Room 44 receiver enables the real mover
-ADVANCED_ROOM 44 state=won pos=(71.0751, 336.1754) velocity=(0.0, 150.0) transfers=0 bounces=0 boost=0.0 carried=634.916636021926 deaths=0
-PASS: Room 44 authentic standard route reaches the exit without deaths
-PASS: Room 44 standard route actually uses green reflection
-PASS: Room 44 standard route rides the real platform
-PASS: Advanced room 45 has a concrete map
-PASS: Room 45 boards the elevator/ferry with a real jump
-ADVANCED_ROOM 45 state=won pos=(894.6813, 256.174) velocity=(210.4977, 150.0) transfers=0 bounces=1 boost=0.0 carried=218.75 deaths=0
-PASS: Room 45 authentic standard route reaches the exit without deaths
-PASS: Room 45 standard route rides the real platform
-PASS: Room 45 standard route uses bounce coating
-PASS: Advanced room 46 has a concrete map
-PASS: Room 46 direct shot to the hidden face is blocked
-PASS: Room 46 gun follows 1 actual green reflections
-PASS: Room 46 actual gun shot color 1 toward (333.5949, 60.0)
-PASS: Room 46 reflected shot reaches the intended hidden face
-PASS: Room 46 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 46 traverses a real portal pair
-ADVANCED_ROOM 46 state=won pos=(908.0314, 337.4872) velocity=(407.1667, 157.5) transfers=1 bounces=0 boost=34.35986328125 carried=0.0 deaths=0
-PASS: Room 46 authentic standard route reaches the exit without deaths
-PASS: Room 46 standard route actually uses green reflection
-PASS: Room 46 standard route uses boost coating
-PASS: Advanced room 47 has a concrete map
-PASS: Room 47 actual gun shot color 0 toward (400.0, 220.0)
-PASS: Room 47 gun follows 1 actual green reflections
-PASS: Room 47 actual gun shot color 1 toward (379.1575, 480.0)
-PASS: Room 47 reflected shot reaches the intended hidden face
-PASS: Room 47 actual routed laser latches the platform receiver
-PASS: Room 47 receiver enables the real mover
-PASS: Room 47 actual gun shot color 1 toward (845.0, 400.0)
-PASS: Second real beam latches the independent exit gate
-ADVANCED_ROOM 47 state=won pos=(915.8409, 384.9251) velocity=(210.0, 0.0) transfers=0 bounces=0 boost=0.0 carried=569.999945640562 deaths=0
-PASS: Room 47 authentic standard route reaches the exit without deaths
-PASS: Room 47 standard route actually uses green reflection
-PASS: Room 47 standard route rides the real platform
 PASS: Advanced room 48 has a concrete map
 PASS: Room 48 actual gun shot color 0 toward (400.0, 220.0)
 PASS: Room 48 gun follows 1 actual green reflections
@@ -1031,17 +753,6 @@ ADVANCED_ROOM 48 state=won pos=(860.7414, 184.0) velocity=(0.0, -182.5788) trans
 PASS: Room 48 authentic standard route reaches the exit without deaths
 PASS: Room 48 standard route actually uses green reflection
 PASS: Room 48 standard route rides the real platform
-PASS: Advanced room 49 has a concrete map
-PASS: Room 49 direct shot to the hidden face is blocked
-PASS: Room 49 gun follows 2 actual green reflections
-PASS: Room 49 actual gun shot color 1 toward (616.3677, 60.0)
-PASS: Room 49 reflected shot reaches the intended hidden face
-PASS: Room 49 actual gun shot color 0 toward (180.0, 400.0)
-PASS: Room 49 traverses a real portal pair
-ADVANCED_ROOM 49 state=won pos=(814.4924, 202.8827) velocity=(63.33334, -70.0) transfers=1 bounces=1 boost=0.0 carried=0.0 deaths=0
-PASS: Room 49 authentic standard route reaches the exit without deaths
-PASS: Room 49 standard route actually uses green reflection
-PASS: Room 49 standard route uses bounce coating
 PASS: Advanced room 50 has a concrete map
 PASS: Room 50 actual gun shot color 0 toward (400.0, 220.0)
 PASS: Room 50 gun follows 1 actual green reflections
@@ -1075,915 +786,616 @@ PASS: R clears both reflected/routed portals
 ADVANCED_ROUTE_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: All fifty rooms exist at their actual map boundaries
-PASS: Campaign rejects both invalid boundaries
-PASS: Room 01 has its own title
-PASS: Room 01 goal is inside the visible playfield
-PASS: Room 02 has its own title
-PASS: Room 02 goal is inside the visible playfield
-PASS: Room 03 has its own title
-PASS: Room 03 goal is inside the visible playfield
-PASS: Room 04 has its own title
-PASS: Room 04 goal is inside the visible playfield
-PASS: Room 05 has its own title
-PASS: Room 05 goal is inside the visible playfield
-PASS: Room 06 has its own title
-PASS: Room 06 goal is inside the visible playfield
-PASS: Room 07 has its own title
-PASS: Room 07 goal is inside the visible playfield
-PASS: Room 08 has its own title
-PASS: Room 08 goal is inside the visible playfield
-PASS: Room 09 has its own title
-PASS: Room 09 goal is inside the visible playfield
-PASS: Room 10 has its own title
-PASS: Room 10 goal is inside the visible playfield
-PASS: Room 11 has its own title
-PASS: Room 11 goal is inside the visible playfield
-PASS: Room 12 has its own title
-PASS: Room 12 goal is inside the visible playfield
-PASS: Room 13 has its own title
-PASS: Room 13 goal is inside the visible playfield
-PASS: Room 14 has its own title
-PASS: Room 14 goal is inside the visible playfield
-PASS: Room 15 has its own title
-PASS: Room 15 goal is inside the visible playfield
-PASS: Room 16 has its own title
-PASS: Room 16 goal is inside the visible playfield
-PASS: Room 17 has its own title
-PASS: Room 17 goal is inside the visible playfield
-PASS: Room 18 has its own title
-PASS: Room 18 goal is inside the visible playfield
-PASS: Room 19 has its own title
-PASS: Room 19 goal is inside the visible playfield
-PASS: Room 20 has its own title
-PASS: Room 20 goal is inside the visible playfield
-PASS: Room 21 has its own title
-PASS: Room 21 goal is inside the visible playfield
-PASS: Room 22 has its own title
-PASS: Room 22 goal is inside the visible playfield
-PASS: Room 23 has its own title
-PASS: Room 23 goal is inside the visible playfield
-PASS: Room 24 has its own title
-PASS: Room 24 goal is inside the visible playfield
-PASS: Room 25 has its own title
-PASS: Room 25 goal is inside the visible playfield
-PASS: Room 26 has its own title
-PASS: Room 26 goal is inside the visible playfield
-PASS: Room 27 has its own title
-PASS: Room 27 goal is inside the visible playfield
-PASS: Room 28 has its own title
-PASS: Room 28 goal is inside the visible playfield
-PASS: Room 29 has its own title
-PASS: Room 29 goal is inside the visible playfield
-PASS: Room 30 has its own title
-PASS: Room 30 goal is inside the visible playfield
-PASS: Room 31 has its own title
-PASS: Room 31 goal is inside the visible playfield
-PASS: Room 32 has its own title
-PASS: Room 32 goal is inside the visible playfield
-PASS: Room 33 has its own title
-PASS: Room 33 goal is inside the visible playfield
-PASS: Room 34 has its own title
-PASS: Room 34 goal is inside the visible playfield
-PASS: Room 35 has its own title
-PASS: Room 35 goal is inside the visible playfield
-PASS: Room 36 has its own title
-PASS: Room 36 goal is inside the visible playfield
-PASS: Room 37 has its own title
-PASS: Room 37 goal is inside the visible playfield
-PASS: Room 38 has its own title
-PASS: Room 38 goal is inside the visible playfield
-PASS: Room 39 has its own title
-PASS: Room 39 goal is inside the visible playfield
-PASS: Room 40 has its own title
-PASS: Room 40 goal is inside the visible playfield
-PASS: Room 41 has its own title
-PASS: Room 41 goal is inside the visible playfield
-PASS: Room 42 has its own title
-PASS: Room 42 goal is inside the visible playfield
-PASS: Room 43 has its own title
-PASS: Room 43 goal is inside the visible playfield
-PASS: Room 44 has its own title
-PASS: Room 44 goal is inside the visible playfield
-PASS: Room 45 has its own title
-PASS: Room 45 goal is inside the visible playfield
-PASS: Room 46 has its own title
-PASS: Room 46 goal is inside the visible playfield
-PASS: Room 47 has its own title
-PASS: Room 47 goal is inside the visible playfield
-PASS: Room 48 has its own title
-PASS: Room 48 goal is inside the visible playfield
-PASS: Room 49 has its own title
-PASS: Room 49 goal is inside the visible playfield
-PASS: Room 50 has its own title
-PASS: Room 50 goal is inside the visible playfield
+PASS: Exactly23 curated rooms remain
+PASS: Displayed order matches all27 user deletions
+PASS: Deleted tail indices cannot be loaded
 PORTAL_HOP_READY
-PASS: Old eight-room progress and settings survive without inventing completion
-PASS: Page 1 button is fully visible: 01  THE FIRST CROSSING
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 02  GRAVITY SLINGSHOT
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 03  MECHANICAL GUARDIAN
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 04  THE VECTOR SWITCH
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 05  THE FINAL RELAY
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 06  AIRBORNE RELAY
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 07  MIDAIR SWITCHBACK
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 08  THE HIGH ROAD
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 09  APEX RELAY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: 10  A SOFT LANDING  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 correctly preserves locks
-PASS: Page 1 button is fully visible: PREVIOUS PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 button is fully visible: NEXT PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 button is fully visible: BACK
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 1 contains ten selectable room slots
-PASS: Page 2 button is fully visible: 11  THE REDLINE SLING  [LOCKED]
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 12  BOUNCE STAIRCASE  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 13  THE RETURN WALL  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 14  SPRING TO SLING  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 15  RUNNING BROAD JUMP  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 16  LOW ROOF RUNUP  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 17  RED TO SKY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 18  FAST SPRING CROSSING  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 19  CLIMB THEN SPRINT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: 20  FIRST LIGHT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 correctly preserves locks
-PASS: Page 2 button is fully visible: PREVIOUS PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 button is fully visible: NEXT PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 button is fully visible: BACK
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 2 contains ten selectable room slots
-PASS: Page 3 button is fully visible: 21  LIGHT WELL  [LOCKED]
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 22  AROUND THE CORNER  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 23  TWO LIGHT MEMORY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 24  CEILING SWITCHBOARD  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 25  CIRCUIT EXCHANGE  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 26  RUN SPRING POWER  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 27  TWIN CONTACTS  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 28  UNDER THE CIRCUIT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 29  DOWNWARD CURRENT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: 30  RETURN CURRENT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 correctly preserves locks
-PASS: Page 3 button is fully visible: PREVIOUS PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 button is fully visible: NEXT PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 button is fully visible: BACK
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 3 contains ten selectable room slots
-PASS: Page 4 button is fully visible: 31  SOURCE SELECTOR  [LOCKED]
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 32  AIRBORNE IGNITION  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 33  FLIGHT SWITCHES  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 34  TWO STAGE RUN  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 35  BACKFLOW RELAY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 36  THE GREEN DETOUR  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 37  THE GEAR FERRY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 38  LIGHT THE TRACK  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 39  BEHIND THE LIFT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: 40  RUNWAY TO THE LIFT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 correctly preserves locks
-PASS: Page 4 button is fully visible: PREVIOUS PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 button is fully visible: NEXT PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 button is fully visible: BACK
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 4 contains ten selectable room slots
-PASS: Page 5 button is fully visible: 41  THE UPPER BRIDGE  [LOCKED]
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 42  MINT SKYLINE  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 43  THE LIGHT ELEVATOR  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 44  THE RETURN RAIL  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 45  BOUNCE TO THE FERRY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 46  THE REFLECTED RUNWAY  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 47  SWITCH THE SIGNAL  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 48  TWO GREEN HORIZONS  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 49  THE DOUBLE BANK  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: 50  THE COMPLETE CIRCUIT  [LOCKED]
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 correctly preserves locks
-PASS: Page 5 button is fully visible: PREVIOUS PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 button is fully visible: NEXT PAGE
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 button is fully visible: BACK
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Selection controls do not overlap
-PASS: Page 5 contains ten selectable room slots
-PASS: Beating room8 unlocks the ninth relay
-PASS: Room 09 has a pre-play explanation
-PASS: Room 09 explanation does not cover START
-PASS: Room 09 explanation wraps inside the viewport
-PASS: Room 09 briefing starts the actual level
-PASS: Room 09 loads its own playable scene
-PASS: Room 09 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 10 has a pre-play explanation
-PASS: Room 10 explanation does not cover START
-PASS: Room 10 explanation wraps inside the viewport
-PASS: Room 10 briefing starts the actual level
-PASS: Room 10 loads its own playable scene
-PASS: Room 10 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 11 has a pre-play explanation
-PASS: Room 11 explanation does not cover START
-PASS: Room 11 explanation wraps inside the viewport
-PASS: Room 11 briefing starts the actual level
-PASS: Room 11 loads its own playable scene
-PASS: Room 11 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 12 has a pre-play explanation
-PASS: Room 12 explanation does not cover START
-PASS: Room 12 explanation wraps inside the viewport
-PASS: Room 12 briefing starts the actual level
-PASS: Room 12 loads its own playable scene
-PASS: Room 12 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 13 has a pre-play explanation
-PASS: Room 13 explanation does not cover START
-PASS: Room 13 explanation wraps inside the viewport
-PASS: Room 13 briefing starts the actual level
-PASS: Room 13 loads its own playable scene
-PASS: Room 13 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 14 has a pre-play explanation
-PASS: Room 14 explanation does not cover START
-PASS: Room 14 explanation wraps inside the viewport
-PASS: Room 14 briefing starts the actual level
-PASS: Room 14 loads its own playable scene
-PASS: Room 14 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 15 has a pre-play explanation
-PASS: Room 15 explanation does not cover START
-PASS: Room 15 explanation wraps inside the viewport
-PASS: Room 15 briefing starts the actual level
-PASS: Room 15 loads its own playable scene
-PASS: Room 15 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 16 has a pre-play explanation
-PASS: Room 16 explanation does not cover START
-PASS: Room 16 explanation wraps inside the viewport
-PASS: Room 16 briefing starts the actual level
-PASS: Room 16 loads its own playable scene
-PASS: Room 16 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 17 has a pre-play explanation
-PASS: Room 17 explanation does not cover START
-PASS: Room 17 explanation wraps inside the viewport
-PASS: Room 17 briefing starts the actual level
-PASS: Room 17 loads its own playable scene
-PASS: Room 17 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 18 has a pre-play explanation
-PASS: Room 18 explanation does not cover START
-PASS: Room 18 explanation wraps inside the viewport
-PASS: Room 18 briefing starts the actual level
-PASS: Room 18 loads its own playable scene
-PASS: Room 18 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 19 has a pre-play explanation
-PASS: Room 19 explanation does not cover START
-PASS: Room 19 explanation wraps inside the viewport
-PASS: Room 19 briefing starts the actual level
-PASS: Room 19 loads its own playable scene
-PASS: Room 19 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 20 has a pre-play explanation
-PASS: Room 20 explanation does not cover START
-PASS: Room 20 explanation wraps inside the viewport
-PASS: Room 20 briefing starts the actual level
-PASS: Room 20 loads its own playable scene
-PASS: Room 20 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 21 has a pre-play explanation
-PASS: Room 21 explanation does not cover START
-PASS: Room 21 explanation wraps inside the viewport
-PASS: Room 21 briefing starts the actual level
-PASS: Room 21 loads its own playable scene
-PASS: Room 21 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 22 has a pre-play explanation
-PASS: Room 22 explanation does not cover START
-PASS: Room 22 explanation wraps inside the viewport
-PASS: Room 22 briefing starts the actual level
-PASS: Room 22 loads its own playable scene
-PASS: Room 22 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 23 has a pre-play explanation
-PASS: Room 23 explanation does not cover START
-PASS: Room 23 explanation wraps inside the viewport
-PASS: Room 23 briefing starts the actual level
-PASS: Room 23 loads its own playable scene
-PASS: Room 23 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 24 has a pre-play explanation
-PASS: Room 24 explanation does not cover START
-PASS: Room 24 explanation wraps inside the viewport
-PASS: Room 24 briefing starts the actual level
-PASS: Room 24 loads its own playable scene
-PASS: Room 24 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 25 has a pre-play explanation
-PASS: Room 25 explanation does not cover START
-PASS: Room 25 explanation wraps inside the viewport
-PASS: Room 25 briefing starts the actual level
-PASS: Room 25 loads its own playable scene
-PASS: Room 25 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 26 has a pre-play explanation
-PASS: Room 26 explanation does not cover START
-PASS: Room 26 explanation wraps inside the viewport
-PASS: Room 26 briefing starts the actual level
-PASS: Room 26 loads its own playable scene
-PASS: Room 26 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 27 has a pre-play explanation
-PASS: Room 27 explanation does not cover START
-PASS: Room 27 explanation wraps inside the viewport
-PASS: Room 27 briefing starts the actual level
-PASS: Room 27 loads its own playable scene
-PASS: Room 27 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 28 has a pre-play explanation
-PASS: Room 28 explanation does not cover START
-PASS: Room 28 explanation wraps inside the viewport
-PASS: Room 28 briefing starts the actual level
-PASS: Room 28 loads its own playable scene
-PASS: Room 28 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 29 has a pre-play explanation
-PASS: Room 29 explanation does not cover START
-PASS: Room 29 explanation wraps inside the viewport
-PASS: Room 29 briefing starts the actual level
-PASS: Room 29 loads its own playable scene
-PASS: Room 29 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 30 has a pre-play explanation
-PASS: Room 30 explanation does not cover START
-PASS: Room 30 explanation wraps inside the viewport
-PASS: Room 30 briefing starts the actual level
-PASS: Room 30 loads its own playable scene
-PASS: Room 30 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 31 has a pre-play explanation
-PASS: Room 31 explanation does not cover START
-PASS: Room 31 explanation wraps inside the viewport
-PASS: Room 31 briefing starts the actual level
-PASS: Room 31 loads its own playable scene
-PASS: Room 31 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 32 has a pre-play explanation
-PASS: Room 32 explanation does not cover START
-PASS: Room 32 explanation wraps inside the viewport
-PASS: Room 32 briefing starts the actual level
-PASS: Room 32 loads its own playable scene
-PASS: Room 32 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 33 has a pre-play explanation
-PASS: Room 33 explanation does not cover START
-PASS: Room 33 explanation wraps inside the viewport
-PASS: Room 33 briefing starts the actual level
-PASS: Room 33 loads its own playable scene
-PASS: Room 33 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 34 has a pre-play explanation
-PASS: Room 34 explanation does not cover START
-PASS: Room 34 explanation wraps inside the viewport
-PASS: Room 34 briefing starts the actual level
-PASS: Room 34 loads its own playable scene
-PASS: Room 34 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 35 has a pre-play explanation
-PASS: Room 35 explanation does not cover START
-PASS: Room 35 explanation wraps inside the viewport
-PASS: Room 35 briefing starts the actual level
-PASS: Room 35 loads its own playable scene
-PASS: Room 35 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 36 has a pre-play explanation
-PASS: Room 36 explanation does not cover START
-PASS: Room 36 explanation wraps inside the viewport
-PASS: Room 36 briefing starts the actual level
-PASS: Room 36 loads its own playable scene
-PASS: Room 36 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 37 has a pre-play explanation
-PASS: Room 37 explanation does not cover START
-PASS: Room 37 explanation wraps inside the viewport
-PASS: Room 37 briefing starts the actual level
-PASS: Room 37 loads its own playable scene
-PASS: Room 37 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 38 has a pre-play explanation
-PASS: Room 38 explanation does not cover START
-PASS: Room 38 explanation wraps inside the viewport
-PASS: Room 38 briefing starts the actual level
-PASS: Room 38 loads its own playable scene
-PASS: Room 38 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 39 has a pre-play explanation
-PASS: Room 39 explanation does not cover START
-PASS: Room 39 explanation wraps inside the viewport
-PASS: Room 39 briefing starts the actual level
-PASS: Room 39 loads its own playable scene
-PASS: Room 39 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 40 has a pre-play explanation
-PASS: Room 40 explanation does not cover START
-PASS: Room 40 explanation wraps inside the viewport
-PASS: Room 40 briefing starts the actual level
-PASS: Room 40 loads its own playable scene
-PASS: Room 40 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 41 has a pre-play explanation
-PASS: Room 41 explanation does not cover START
-PASS: Room 41 explanation wraps inside the viewport
-PASS: Room 41 briefing starts the actual level
-PASS: Room 41 loads its own playable scene
-PASS: Room 41 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 42 has a pre-play explanation
-PASS: Room 42 explanation does not cover START
-PASS: Room 42 explanation wraps inside the viewport
-PASS: Room 42 briefing starts the actual level
-PASS: Room 42 loads its own playable scene
-PASS: Room 42 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 43 has a pre-play explanation
-PASS: Room 43 explanation does not cover START
-PASS: Room 43 explanation wraps inside the viewport
-PASS: Room 43 briefing starts the actual level
-PASS: Room 43 loads its own playable scene
-PASS: Room 43 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 44 has a pre-play explanation
-PASS: Room 44 explanation does not cover START
-PASS: Room 44 explanation wraps inside the viewport
-PASS: Room 44 briefing starts the actual level
-PASS: Room 44 loads its own playable scene
-PASS: Room 44 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 45 has a pre-play explanation
-PASS: Room 45 explanation does not cover START
-PASS: Room 45 explanation wraps inside the viewport
-PASS: Room 45 briefing starts the actual level
-PASS: Room 45 loads its own playable scene
-PASS: Room 45 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 46 has a pre-play explanation
-PASS: Room 46 explanation does not cover START
-PASS: Room 46 explanation wraps inside the viewport
-PASS: Room 46 briefing starts the actual level
-PASS: Room 46 loads its own playable scene
-PASS: Room 46 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 47 has a pre-play explanation
-PASS: Room 47 explanation does not cover START
-PASS: Room 47 explanation wraps inside the viewport
-PASS: Room 47 briefing starts the actual level
-PASS: Room 47 loads its own playable scene
-PASS: Room 47 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 48 has a pre-play explanation
-PASS: Room 48 explanation does not cover START
-PASS: Room 48 explanation wraps inside the viewport
-PASS: Room 48 briefing starts the actual level
-PASS: Room 48 loads its own playable scene
-PASS: Room 48 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 49 has a pre-play explanation
-PASS: Room 49 explanation does not cover START
-PASS: Room 49 explanation wraps inside the viewport
-PASS: Room 49 briefing starts the actual level
-PASS: Room 49 loads its own playable scene
-PASS: Room 49 unlocks only its successor
-PASS: Final page appears only after room50
-PASS: Room 50 has a pre-play explanation
-PASS: Room 50 explanation does not cover START
-PASS: Room 50 explanation wraps inside the viewport
-PASS: Room 50 briefing starts the actual level
-PASS: Room 50 loads its own playable scene
-PASS: Room 50 unlocks only its successor
-PASS: Final page appears only after room50
-CAMPAIGN_FAILURES=0
-ALL 33 HEADLESS TEST SUITES PASSED
+PASS: Tutorial entries are removed
+PASS: New room01 has no hint metadata
+PASS: New room01 enters gameplay directly
+PASS: New room01 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room02 has no hint metadata
+PASS: New room02 enters gameplay directly
+PASS: New room02 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room03 has no hint metadata
+PASS: New room03 enters gameplay directly
+PASS: New room03 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room04 has no hint metadata
+PASS: New room04 enters gameplay directly
+PASS: New room04 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room05 has no hint metadata
+PASS: New room05 enters gameplay directly
+PASS: New room05 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room06 has no hint metadata
+PASS: New room06 enters gameplay directly
+PASS: New room06 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room07 has no hint metadata
+PASS: New room07 enters gameplay directly
+PASS: New room07 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room08 has no hint metadata
+PASS: New room08 enters gameplay directly
+PASS: New room08 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room09 has no hint metadata
+PASS: New room09 enters gameplay directly
+PASS: New room09 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room10 has no hint metadata
+PASS: New room10 enters gameplay directly
+PASS: New room10 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room11 has no hint metadata
+PASS: New room11 enters gameplay directly
+PASS: New room11 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room12 has no hint metadata
+PASS: New room12 enters gameplay directly
+PASS: New room12 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room13 has no hint metadata
+PASS: New room13 enters gameplay directly
+PASS: New room13 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room14 has no hint metadata
+PASS: New room14 enters gameplay directly
+PASS: New room14 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room15 has no hint metadata
+PASS: New room15 enters gameplay directly
+PASS: New room15 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room16 has no hint metadata
+PASS: New room16 enters gameplay directly
+PASS: New room16 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room17 has no hint metadata
+PASS: New room17 enters gameplay directly
+PASS: New room17 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room18 has no hint metadata
+PASS: New room18 enters gameplay directly
+PASS: New room18 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room19 has no hint metadata
+PASS: New room19 enters gameplay directly
+PASS: New room19 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room20 has no hint metadata
+PASS: New room20 enters gameplay directly
+PASS: New room20 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room21 has no hint metadata
+PASS: New room21 enters gameplay directly
+PASS: New room21 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room22 has no hint metadata
+PASS: New room22 enters gameplay directly
+PASS: New room22 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: New room23 has no hint metadata
+PASS: New room23 enters gameplay directly
+PASS: New room23 has no tutorial panel
+PASS: Only new room23 ends the campaign
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Selection controls fit on page1
+PASS: Selection controls fit on page1
+PASS: Page1 has the correct room count
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Selection controls fit on page2
+PASS: Selection controls fit on page2
+PASS: Page2 has the correct room count
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Selection controls fit on page3
+PASS: Selection controls fit on page3
+PASS: Page3 has the correct room count
+PASS: Legacy unlock1 migrates to new1 without replaying completed survivors
+PASS: Legacy unlock8 migrates to new8 without replaying completed survivors
+PASS: Legacy unlock12 migrates to new12 without replaying completed survivors
+PASS: Legacy unlock14 migrates to new12 without replaying completed survivors
+PASS: Legacy unlock22 migrates to new17 without replaying completed survivors
+PASS: Legacy unlock34 migrates to new18 without replaying completed survivors
+PASS: Legacy unlock44 migrates to new22 without replaying completed survivors
+PASS: Legacy unlock49 migrates to new23 without replaying completed survivors
+PASS: Legacy unlock50 migrates to new23 without replaying completed survivors
+PASS: Version2 unlock1 is not migrated twice
+PASS: Version2 unlock12 is not migrated twice
+PASS: Version2 unlock20 is not migrated twice
+PASS: Version2 unlock23 is not migrated twice
+CURATION_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room 1 phase 1 pause freezes rider and machinery
+PASS: Room 1 phase 1 R respawns once without a death loop
+PASS: Room 1 phase 1 clears circuits, gates and portals
+PASS: Room 1 phase 1 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 1 phase 47 pause freezes rider and machinery
+PASS: Room 1 phase 47 R respawns once without a death loop
+PASS: Room 1 phase 47 clears circuits, gates and portals
+PASS: Room 1 phase 47 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 1 phase 173 pause freezes rider and machinery
+PASS: Room 1 phase 173 R respawns once without a death loop
+PASS: Room 1 phase 173 clears circuits, gates and portals
+PASS: Room 1 phase 173 returns near its actual spawn
+PASS: Room 1 retry leaves finite movement
+PASS: Room 2 phase 1 pause freezes rider and machinery
+PASS: Room 2 phase 1 R respawns once without a death loop
+PASS: Room 2 phase 1 clears circuits, gates and portals
+PASS: Room 2 phase 1 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 2 phase 47 pause freezes rider and machinery
+PASS: Room 2 phase 47 R respawns once without a death loop
+PASS: Room 2 phase 47 clears circuits, gates and portals
+PASS: Room 2 phase 47 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 2 phase 173 pause freezes rider and machinery
+PASS: Room 2 phase 173 R respawns once without a death loop
+PASS: Room 2 phase 173 clears circuits, gates and portals
+PASS: Room 2 phase 173 returns near its actual spawn
+PASS: Room 2 retry leaves finite movement
+PASS: Room 3 phase 1 pause freezes rider and machinery
+PASS: Room 3 phase 1 R respawns once without a death loop
+PASS: Room 3 phase 1 clears circuits, gates and portals
+PASS: Room 3 phase 1 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 3 phase 47 pause freezes rider and machinery
+PASS: Room 3 phase 47 R respawns once without a death loop
+PASS: Room 3 phase 47 clears circuits, gates and portals
+PASS: Room 3 phase 47 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 3 phase 173 pause freezes rider and machinery
+PASS: Room 3 phase 173 R respawns once without a death loop
+PASS: Room 3 phase 173 clears circuits, gates and portals
+PASS: Room 3 phase 173 returns near its actual spawn
+PASS: Room 3 retry leaves finite movement
+PASS: Room 4 phase 1 pause freezes rider and machinery
+PASS: Room 4 phase 1 R respawns once without a death loop
+PASS: Room 4 phase 1 clears circuits, gates and portals
+PASS: Room 4 phase 1 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 4 phase 47 pause freezes rider and machinery
+PASS: Room 4 phase 47 R respawns once without a death loop
+PASS: Room 4 phase 47 clears circuits, gates and portals
+PASS: Room 4 phase 47 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 4 phase 173 pause freezes rider and machinery
+PASS: Room 4 phase 173 R respawns once without a death loop
+PASS: Room 4 phase 173 clears circuits, gates and portals
+PASS: Room 4 phase 173 returns near its actual spawn
+PASS: Room 4 retry leaves finite movement
+PASS: Room 5 phase 1 pause freezes rider and machinery
+PASS: Room 5 phase 1 R respawns once without a death loop
+PASS: Room 5 phase 1 clears circuits, gates and portals
+PASS: Room 5 phase 1 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 5 phase 47 pause freezes rider and machinery
+PASS: Room 5 phase 47 R respawns once without a death loop
+PASS: Room 5 phase 47 clears circuits, gates and portals
+PASS: Room 5 phase 47 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 5 phase 173 pause freezes rider and machinery
+PASS: Room 5 phase 173 R respawns once without a death loop
+PASS: Room 5 phase 173 clears circuits, gates and portals
+PASS: Room 5 phase 173 returns near its actual spawn
+PASS: Room 5 retry leaves finite movement
+PASS: Room 6 phase 1 pause freezes rider and machinery
+PASS: Room 6 phase 1 R respawns once without a death loop
+PASS: Room 6 phase 1 clears circuits, gates and portals
+PASS: Room 6 phase 1 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 6 phase 47 pause freezes rider and machinery
+PASS: Room 6 phase 47 R respawns once without a death loop
+PASS: Room 6 phase 47 clears circuits, gates and portals
+PASS: Room 6 phase 47 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 6 phase 173 pause freezes rider and machinery
+PASS: Room 6 phase 173 R respawns once without a death loop
+PASS: Room 6 phase 173 clears circuits, gates and portals
+PASS: Room 6 phase 173 returns near its actual spawn
+PASS: Room 6 retry leaves finite movement
+PASS: Room 7 phase 1 pause freezes rider and machinery
+PASS: Room 7 phase 1 R respawns once without a death loop
+PASS: Room 7 phase 1 clears circuits, gates and portals
+PASS: Room 7 phase 1 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 7 phase 47 pause freezes rider and machinery
+PASS: Room 7 phase 47 R respawns once without a death loop
+PASS: Room 7 phase 47 clears circuits, gates and portals
+PASS: Room 7 phase 47 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 7 phase 173 pause freezes rider and machinery
+PASS: Room 7 phase 173 R respawns once without a death loop
+PASS: Room 7 phase 173 clears circuits, gates and portals
+PASS: Room 7 phase 173 returns near its actual spawn
+PASS: Room 7 retry leaves finite movement
+PASS: Room 8 phase 1 pause freezes rider and machinery
+PASS: Room 8 phase 1 R respawns once without a death loop
+PASS: Room 8 phase 1 clears circuits, gates and portals
+PASS: Room 8 phase 1 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 8 phase 47 pause freezes rider and machinery
+PASS: Room 8 phase 47 R respawns once without a death loop
+PASS: Room 8 phase 47 clears circuits, gates and portals
+PASS: Room 8 phase 47 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 8 phase 173 pause freezes rider and machinery
+PASS: Room 8 phase 173 R respawns once without a death loop
+PASS: Room 8 phase 173 clears circuits, gates and portals
+PASS: Room 8 phase 173 returns near its actual spawn
+PASS: Room 8 retry leaves finite movement
+PASS: Room 9 phase 1 pause freezes rider and machinery
+PASS: Room 9 phase 1 R respawns once without a death loop
+PASS: Room 9 phase 1 clears circuits, gates and portals
+PASS: Room 9 phase 1 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 9 phase 47 pause freezes rider and machinery
+PASS: Room 9 phase 47 R respawns once without a death loop
+PASS: Room 9 phase 47 clears circuits, gates and portals
+PASS: Room 9 phase 47 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 9 phase 173 pause freezes rider and machinery
+PASS: Room 9 phase 173 R respawns once without a death loop
+PASS: Room 9 phase 173 clears circuits, gates and portals
+PASS: Room 9 phase 173 returns near its actual spawn
+PASS: Room 9 retry leaves finite movement
+PASS: Room 10 phase 1 pause freezes rider and machinery
+PASS: Room 10 phase 1 R respawns once without a death loop
+PASS: Room 10 phase 1 clears circuits, gates and portals
+PASS: Room 10 phase 1 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 10 phase 47 pause freezes rider and machinery
+PASS: Room 10 phase 47 R respawns once without a death loop
+PASS: Room 10 phase 47 clears circuits, gates and portals
+PASS: Room 10 phase 47 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 10 phase 173 pause freezes rider and machinery
+PASS: Room 10 phase 173 R respawns once without a death loop
+PASS: Room 10 phase 173 clears circuits, gates and portals
+PASS: Room 10 phase 173 returns near its actual spawn
+PASS: Room 10 retry leaves finite movement
+PASS: Room 11 phase 1 pause freezes rider and machinery
+PASS: Room 11 phase 1 R respawns once without a death loop
+PASS: Room 11 phase 1 clears circuits, gates and portals
+PASS: Room 11 phase 1 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 11 phase 47 pause freezes rider and machinery
+PASS: Room 11 phase 47 R respawns once without a death loop
+PASS: Room 11 phase 47 clears circuits, gates and portals
+PASS: Room 11 phase 47 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 11 phase 173 pause freezes rider and machinery
+PASS: Room 11 phase 173 R respawns once without a death loop
+PASS: Room 11 phase 173 clears circuits, gates and portals
+PASS: Room 11 phase 173 returns near its actual spawn
+PASS: Room 11 retry leaves finite movement
+PASS: Room 14 phase 1 pause freezes rider and machinery
+PASS: Room 14 phase 1 R respawns once without a death loop
+PASS: Room 14 phase 1 clears circuits, gates and portals
+PASS: Room 14 phase 1 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 14 phase 47 pause freezes rider and machinery
+PASS: Room 14 phase 47 R respawns once without a death loop
+PASS: Room 14 phase 47 clears circuits, gates and portals
+PASS: Room 14 phase 47 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 14 phase 173 pause freezes rider and machinery
+PASS: Room 14 phase 173 R respawns once without a death loop
+PASS: Room 14 phase 173 clears circuits, gates and portals
+PASS: Room 14 phase 173 returns near its actual spawn
+PASS: Room 14 retry leaves finite movement
+PASS: Room 17 phase 1 pause freezes rider and machinery
+PASS: Room 17 phase 1 R respawns once without a death loop
+PASS: Room 17 phase 1 clears circuits, gates and portals
+PASS: Room 17 phase 1 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 17 phase 47 pause freezes rider and machinery
+PASS: Room 17 phase 47 R respawns once without a death loop
+PASS: Room 17 phase 47 clears circuits, gates and portals
+PASS: Room 17 phase 47 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 17 phase 173 pause freezes rider and machinery
+PASS: Room 17 phase 173 R respawns once without a death loop
+PASS: Room 17 phase 173 clears circuits, gates and portals
+PASS: Room 17 phase 173 returns near its actual spawn
+PASS: Room 17 retry leaves finite movement
+PASS: Room 19 phase 1 pause freezes rider and machinery
+PASS: Room 19 phase 1 R respawns once without a death loop
+PASS: Room 19 phase 1 clears circuits, gates and portals
+PASS: Room 19 phase 1 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 19 phase 47 pause freezes rider and machinery
+PASS: Room 19 phase 47 R respawns once without a death loop
+PASS: Room 19 phase 47 clears circuits, gates and portals
+PASS: Room 19 phase 47 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 19 phase 173 pause freezes rider and machinery
+PASS: Room 19 phase 173 R respawns once without a death loop
+PASS: Room 19 phase 173 clears circuits, gates and portals
+PASS: Room 19 phase 173 returns near its actual spawn
+PASS: Room 19 retry leaves finite movement
+PASS: Room 20 phase 1 pause freezes rider and machinery
+PASS: Room 20 phase 1 R respawns once without a death loop
+PASS: Room 20 phase 1 clears circuits, gates and portals
+PASS: Room 20 phase 1 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 20 phase 47 pause freezes rider and machinery
+PASS: Room 20 phase 47 R respawns once without a death loop
+PASS: Room 20 phase 47 clears circuits, gates and portals
+PASS: Room 20 phase 47 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 20 phase 173 pause freezes rider and machinery
+PASS: Room 20 phase 173 R respawns once without a death loop
+PASS: Room 20 phase 173 clears circuits, gates and portals
+PASS: Room 20 phase 173 returns near its actual spawn
+PASS: Room 20 retry leaves finite movement
+PASS: Room 21 phase 1 pause freezes rider and machinery
+PASS: Room 21 phase 1 R respawns once without a death loop
+PASS: Room 21 phase 1 clears circuits, gates and portals
+PASS: Room 21 phase 1 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 21 phase 47 pause freezes rider and machinery
+PASS: Room 21 phase 47 R respawns once without a death loop
+PASS: Room 21 phase 47 clears circuits, gates and portals
+PASS: Room 21 phase 47 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 21 phase 173 pause freezes rider and machinery
+PASS: Room 21 phase 173 R respawns once without a death loop
+PASS: Room 21 phase 173 clears circuits, gates and portals
+PASS: Room 21 phase 173 returns near its actual spawn
+PASS: Room 21 retry leaves finite movement
+PASS: Room 25 phase 1 pause freezes rider and machinery
+PASS: Room 25 phase 1 R respawns once without a death loop
+PASS: Room 25 phase 1 clears circuits, gates and portals
+PASS: Room 25 phase 1 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 25 phase 47 pause freezes rider and machinery
+PASS: Room 25 phase 47 R respawns once without a death loop
+PASS: Room 25 phase 47 clears circuits, gates and portals
+PASS: Room 25 phase 47 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 25 phase 173 pause freezes rider and machinery
+PASS: Room 25 phase 173 R respawns once without a death loop
+PASS: Room 25 phase 173 clears circuits, gates and portals
+PASS: Room 25 phase 173 returns near its actual spawn
+PASS: Room 25 retry leaves finite movement
+PASS: Room 34 phase 1 pause freezes rider and machinery
+PASS: Room 34 phase 1 R respawns once without a death loop
+PASS: Room 34 phase 1 clears circuits, gates and portals
+PASS: Room 34 phase 1 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 34 phase 47 pause freezes rider and machinery
+PASS: Room 34 phase 47 R respawns once without a death loop
+PASS: Room 34 phase 47 clears circuits, gates and portals
+PASS: Room 34 phase 47 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 34 phase 173 pause freezes rider and machinery
+PASS: Room 34 phase 173 R respawns once without a death loop
+PASS: Room 34 phase 173 clears circuits, gates and portals
+PASS: Room 34 phase 173 returns near its actual spawn
+PASS: Room 34 retry leaves finite movement
+PASS: Room 36 phase 1 pause freezes rider and machinery
+PASS: Room 36 phase 1 R respawns once without a death loop
+PASS: Room 36 phase 1 clears circuits, gates and portals
+PASS: Room 36 phase 1 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 36 phase 47 pause freezes rider and machinery
+PASS: Room 36 phase 47 R respawns once without a death loop
+PASS: Room 36 phase 47 clears circuits, gates and portals
+PASS: Room 36 phase 47 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 36 phase 173 pause freezes rider and machinery
+PASS: Room 36 phase 173 R respawns once without a death loop
+PASS: Room 36 phase 173 clears circuits, gates and portals
+PASS: Room 36 phase 173 returns near its actual spawn
+PASS: Room 36 retry leaves finite movement
+PASS: Room 37 phase 1 pause freezes rider and machinery
+PASS: Room 37 phase 1 R respawns once without a death loop
+PASS: Room 37 phase 1 clears circuits, gates and portals
+PASS: Room 37 phase 1 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 37 phase 47 pause freezes rider and machinery
+PASS: Room 37 phase 47 R respawns once without a death loop
+PASS: Room 37 phase 47 clears circuits, gates and portals
+PASS: Room 37 phase 47 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 37 phase 173 pause freezes rider and machinery
+PASS: Room 37 phase 173 R respawns once without a death loop
+PASS: Room 37 phase 173 clears circuits, gates and portals
+PASS: Room 37 phase 173 returns near its actual spawn
+PASS: Room 37 retry leaves finite movement
+PASS: Room 38 phase 1 pause freezes rider and machinery
+PASS: Room 38 phase 1 R respawns once without a death loop
+PASS: Room 38 phase 1 clears circuits, gates and portals
+PASS: Room 38 phase 1 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 38 phase 47 pause freezes rider and machinery
+PASS: Room 38 phase 47 R respawns once without a death loop
+PASS: Room 38 phase 47 clears circuits, gates and portals
+PASS: Room 38 phase 47 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 38 phase 173 pause freezes rider and machinery
+PASS: Room 38 phase 173 R respawns once without a death loop
+PASS: Room 38 phase 173 clears circuits, gates and portals
+PASS: Room 38 phase 173 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Room 48 phase 1 pause freezes rider and machinery
+PASS: Room 48 phase 1 R respawns once without a death loop
+PASS: Room 48 phase 1 clears circuits, gates and portals
+PASS: Room 48 phase 1 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 48 phase 47 pause freezes rider and machinery
+PASS: Room 48 phase 47 R respawns once without a death loop
+PASS: Room 48 phase 47 clears circuits, gates and portals
+PASS: Room 48 phase 47 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 48 phase 173 pause freezes rider and machinery
+PASS: Room 48 phase 173 R respawns once without a death loop
+PASS: Room 48 phase 173 clears circuits, gates and portals
+PASS: Room 48 phase 173 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Room 50 phase 1 pause freezes rider and machinery
+PASS: Room 50 phase 1 R respawns once without a death loop
+PASS: Room 50 phase 1 clears circuits, gates and portals
+PASS: Room 50 phase 1 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 50 phase 47 pause freezes rider and machinery
+PASS: Room 50 phase 47 R respawns once without a death loop
+PASS: Room 50 phase 47 clears circuits, gates and portals
+PASS: Room 50 phase 47 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Room 50 phase 173 pause freezes rider and machinery
+PASS: Room 50 phase 173 R respawns once without a death loop
+PASS: Room 50 phase 173 clears circuits, gates and portals
+PASS: Room 50 phase 173 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 1 pause freezes rider and machinery
+PASS: Room 38 phase 1 R respawns once without a death loop
+PASS: Room 38 phase 1 clears circuits, gates and portals
+PASS: Room 38 phase 1 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 47 pause freezes rider and machinery
+PASS: Room 38 phase 47 R respawns once without a death loop
+PASS: Room 38 phase 47 clears circuits, gates and portals
+PASS: Room 38 phase 47 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 38 prepares the real beam entrance
+PASS: Powered retry 38 reflects the real exit shot
+PASS: Powered retry 38 starts with its receivers lit
+PASS: Room 38 phase 173 pause freezes rider and machinery
+PASS: Room 38 phase 173 R respawns once without a death loop
+PASS: Room 38 phase 173 clears circuits, gates and portals
+PASS: Room 38 phase 173 returns near its actual spawn
+PASS: Room 38 retry leaves finite movement
+PASS: Powered mover 38 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 1 pause freezes rider and machinery
+PASS: Room 48 phase 1 R respawns once without a death loop
+PASS: Room 48 phase 1 clears circuits, gates and portals
+PASS: Room 48 phase 1 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 47 pause freezes rider and machinery
+PASS: Room 48 phase 47 R respawns once without a death loop
+PASS: Room 48 phase 47 clears circuits, gates and portals
+PASS: Room 48 phase 47 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 48 prepares the real beam entrance
+PASS: Powered retry 48 reflects the real exit shot
+PASS: Powered retry 48 starts with its receivers lit
+PASS: Room 48 phase 173 pause freezes rider and machinery
+PASS: Room 48 phase 173 R respawns once without a death loop
+PASS: Room 48 phase 173 clears circuits, gates and portals
+PASS: Room 48 phase 173 returns near its actual spawn
+PASS: Room 48 retry leaves finite movement
+PASS: Powered mover 48 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 1 pause freezes rider and machinery
+PASS: Room 50 phase 1 R respawns once without a death loop
+PASS: Room 50 phase 1 clears circuits, gates and portals
+PASS: Room 50 phase 1 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 47 pause freezes rider and machinery
+PASS: Room 50 phase 47 R respawns once without a death loop
+PASS: Room 50 phase 47 clears circuits, gates and portals
+PASS: Room 50 phase 47 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+PASS: Powered retry 50 prepares the real beam entrance
+PASS: Powered retry 50 reflects the real exit shot
+PASS: Powered retry lights the second actual circuit
+PASS: Powered retry 50 starts with its receivers lit
+PASS: Room 50 phase 173 pause freezes rider and machinery
+PASS: Room 50 phase 173 R respawns once without a death loop
+PASS: Room 50 phase 173 clears circuits, gates and portals
+PASS: Room 50 phase 173 returns near its actual spawn
+PASS: Room 50 retry leaves finite movement
+PASS: Powered mover 50 returns to its parked origin
+RETRY_STRESS_CASES=78 FAILURES=0
+ALL 32 HEADLESS TEST SUITES PASSED
 For GPU/window tests: run Godot --path . --script tests/display.gd

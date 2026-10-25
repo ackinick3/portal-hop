@@ -1,7 +1,6 @@
 extends Node2D
 
 const Maps = preload("res://levels/maps.gd")
-const Tutorial = preload("res://ui/tutorial.gd")
 const Landmarks = preload("res://ui/landmarks.gd")
 var world: Node2D
 var portals: Node2D
@@ -21,7 +20,6 @@ var volume := 0.6
 var preview := {}
 var teleported_this_frame := false
 var transfers := 0
-var guidance := {"text":"", "markers":[]}
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -36,13 +34,22 @@ func _ready() -> void:
 	print("PORTAL_HOP_READY")
 
 func restore_progress(save: ConfigFile) -> void:
-	unlocked = clampi(save.get_value("progress", "unlocked", 1), 1, Maps.LEVEL_COUNT)
+	var stored: int = save.get_value("progress", "unlocked", 1)
+	if save.get_value("progress", "order_version", 1) < 2:
+		unlocked = Maps.LEVEL_COUNT
+		for i in Maps.LEVEL_COUNT:
+			if Maps.ROOM_IDS[i] >= maxi(stored,1):
+				unlocked = i+1
+				break
+	else:
+		unlocked = clampi(stored,1,Maps.LEVEL_COUNT)
 	volume = clampf(save.get_value("settings", "volume", 0.6), 0, 1)
 
 func save_progress() -> void:
 	if not persistence_enabled: return
 	var save := ConfigFile.new()
 	save.set_value("progress", "unlocked", unlocked)
+	save.set_value("progress", "order_version", 2)
 	save.set_value("settings", "volume", volume)
 	save.save("user://progress.cfg")
 
@@ -84,12 +91,10 @@ func menu() -> void:
 	clear_panel()
 	backdrop()
 	label_at("PORTAL HOP",Vector2(310,58),46)
-	label_at("THINK IN PORTALS. MOVE WITH MOMENTUM.",Vector2(252,120),18)
 	button("START GAME",Vector2(340,170),func(): start_level(0))
 	button("LEVEL SELECT",Vector2(340,222),level_select)
-	button("HOW TO PLAY",Vector2(340,274),instructions)
-	button("SETTINGS",Vector2(340,326),settings)
-	button("QUIT",Vector2(340,378),quit_game)
+	button("SETTINGS",Vector2(340,274),settings)
+	button("QUIT",Vector2(340,326),quit_game)
 	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  %d ROOMS" % Maps.LEVEL_COUNT,Vector2(260,474),15)
 	queue_redraw()
 
@@ -109,57 +114,7 @@ func level_select(page: int = 0) -> void:
 	button("BACK",Vector2(340,480),menu)
 
 func enter_level(number: int) -> void:
-	if number not in [5,6,7] and number < 8:
-		start_level(number)
-		return
-	state = "briefing"
-	get_tree().paused = true
-	clear_panel()
-	backdrop()
-	if number == 5:
-		label_at("AIRBORNE RELAY",Vector2(310,74),34)
-		label_at("YOU CAN SHOOT IN MIDAIR",Vector2(290,130),24)
-		label_at("1. BLUE on the ceiling; walk LEFT and shoot RED on the floor.\n2. Tap D to brake above RED, release movement, and fall in.\n3. In midair, move BLUE to the left wall. Fall through RED again.\n\nHold D toward the exit after the second launch.\nPortals redirect speed; gravity adds speed during the next fall.\nR retries immediately once you start.",Vector2(150,184),20)
-	elif number == 6:
-		label_at("MIDAIR SWITCHBACK",Vector2(280,74),34)
-		label_at("TWO SHOTS, ONE FLIGHT",Vector2(300,130),24)
-		label_at("1. BLUE on the left wall; walk RIGHT and shoot RED below.\n2. Tap A to brake over RED, release movement, and take the long fall.\n3. While flying: RED on the far wall, then BLUE on the lower RIGHT floor.\n\nThe next exit points straight UP beside the goal ledge.\nHold D immediately to land on it, then walk to the exit.\nR retries immediately. The lower floor is safe.",Vector2(150,184),20)
-	elif number == 7:
-		label_at("THE HIGH ROAD",Vector2(340,74),34)
-		label_at("PLAN FIRST. THEN WALK.",Vector2(310,130),24)
-		label_at("1. Before moving, place BLUE high on the left wall.\n2. Place RED on the pale floor below, also from the starting ledge.\n3. Hold D to walk off, fall through RED and fly to the exit.\n\nA high exit clears the wall. A low exit will fall short.\nNo jumping or midair shots are needed.\nMissed the landing? R resets both portals for another try.",Vector2(150,184),20)
-	else:
-		var room := Maps.get_level(number)
-		if room.is_empty(): return
-		var heading := label_at("%02d  /  %s" % [number+1,room.name],Vector2(50,66),30)
-		heading.size.x = 860
-		heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		var body := Label.new()
-		body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		body.position = Vector2(130,155)
-		body.size = Vector2(700,235)
-		body.add_theme_font_size_override("font_size",18)
-		body.add_theme_color_override("font_color",Color("edf3f8"))
-		body.text = "\n".join(room.get("briefing",[room.hint]))
-		panel.add_child(body)
-	button("START ROOM",Vector2(340,410),func(): start_level(number))
-	button("BACK",Vector2(340,462),level_select)
-
-func instructions() -> void:
-	clear_panel()
-	backdrop()
-	label_at("HOW TO PLAY",Vector2(330,70),34)
-	label_at("A / D    Run and steer in the air (release to gently slow)\nSPACE    Jump (hold for a higher jump)\nLMB / RMB    Shoot red / blue portals, even in midair\nR    Retry from checkpoint\nESC    Pause     |     F11    Fullscreen\n\nPale surfaces accept portals. Walls block shots.\nPortals keep speed; the exit sets its direction.\nFalling farther gives a faster launch.\nLand on a guard from above; side contact is fatal.",Vector2(170,135),21)
-	button("BACK",Vector2(100,458),menu)
-	button("MATERIALS & MACHINES",Vector2(580,458),machines_instructions)
-
-func machines_instructions() -> void:
-	clear_panel()
-	backdrop()
-	label_at("MATERIALS & MACHINES",Vector2(245,60),32)
-	label_at("BLUE coating rebounds you automatically. Steer with A / D.\nRED coating builds running speed while you hold A / D.\nKeep that speed when you leave the runway.\n\nAMBER beams travel through active portal pairs.\nA lit receiver stays powered until R or RESTART.\nFollow its cable to the door or platform it controls.\n\nGREEN surfaces reflect your portal shots at equal angles.\nPale surfaces still accept portals; colored coatings do not.\nMoving platforms carry you. Gears and grooves show their route.",Vector2(130,125),18)
-	button("CONTROLS",Vector2(100,458),instructions)
-	button("BACK",Vector2(580,458),menu)
+	start_level(number)
 
 func settings() -> void:
 	clear_panel()
@@ -307,12 +262,6 @@ func gun_origin() -> Vector2:
 func _process(delta: float) -> void:
 	if state == "playing":
 		elapsed += delta
-		guidance = Tutorial.guidance(index, portals.doors, transfers, player.position)
-		if index >= 8:
-			guidance = {"text":"","markers":[]}
-			for mark in data.get("guide",[]):
-				if transfers >= mark.get("after",0) and transfers <= mark.get("before",99):
-					guidance.markers.append(mark)
 		preview = portals.candidate(gun_origin(),get_global_mouse_position(),0)
 		queue_redraw()
 
@@ -350,9 +299,6 @@ func _draw() -> void:
 			if not on_ground:
 				draw_colored_polygon(PackedVector2Array([Vector2(x,540),Vector2(x+9,525),Vector2(x+18,540)]),Color("ff526b"))
 	if state == "playing":
-		for mark in guidance.markers:
-			var radius := 15 + sin(elapsed * 4) * 2
-			draw_arc(mark.p, radius, 0, TAU, 30, mark.color, 2)
 		var mouse := get_global_mouse_position()
 		var color := Color("55e0ae") if not preview.is_empty() else Color("ff526b")
 		draw_arc(mouse,7,0,TAU,20,color,1.5)

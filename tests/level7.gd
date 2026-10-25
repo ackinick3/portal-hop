@@ -8,8 +8,6 @@ func frames(count: int) -> void:
 	for i in count: await physics_frame
 func release() -> void:
 	for action in ["move_left","move_right","jump"]: Input.action_release(action)
-func marker_at(data: Dictionary, point: Vector2) -> bool:
-	return not data.markers.is_empty() and data.markers[0].p.is_equal_approx(point)
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
 	check(maps.get_level(6).get("name","") == "MIDAIR SWITCHBACK","Seventh room exists as a distinct map")
@@ -79,17 +77,6 @@ func run() -> void:
 	await frames(50)
 	check(game.transfers == 0 and game.portals.doors[0].is_empty() and game.portals.doors[1].is_empty(),"R clears both doors and relay stage after a failed first launch")
 	check(game.state == "playing" and game.player.position.distance_to(game.player.spawn) < 1,"R directly restores seventh-room spawn")
-	var tutorial = load("res://ui/tutorial.gd")
-	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(180,170)),"Seventh guidance starts with its own initial wall")
-	game.portals.shoot(game.gun_origin(),Vector2(180,170),1)
-	check(marker_at(tutorial.guidance(6,game.portals.doors,0,game.player.position),Vector2(590,510)),"Seventh guidance then suggests the initial floor")
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(820,420)),"First launch highlights replacement RED wall")
-	# Inspect later marker states using the actual successful placement data already tested above.
-	game.portals.doors[0] = {"p":Vector2(820,420),"n":Vector2.LEFT}
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(670,420)),"Replacing RED advances to lower BLUE floor")
-	game.portals.doors[1] = {"p":Vector2(670,420),"n":Vector2.UP}
-	check(marker_at(tutorial.guidance(6,game.portals.doors,1,game.player.position),Vector2(820,420)),"Completed airborne pair highlights entry wall")
-	check(tutorial.guidance(6,game.portals.doors,2,game.player.position).markers.is_empty(),"Upward launch clears setup markers")
 	for direction in ["move_left","move_right"]:
 		game.start_level(6)
 		await frames(4)

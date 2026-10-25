@@ -1,3 +1,5 @@
+> 历史50关版本档案：本轮已按用户要求删减至23关并移除游戏提示。下方旧编号/路线不是当前关卡清单；以PROJECT_STATE.md与docs/编号对照.md为准。
+
 # Laser chapter: rooms 20–25
 
 All coordinates use the 960×540 view. Lasers are continuous and harmless puzzle tools. Receivers latch real beam contact until R/restart; there is no forced power, goal trigger, velocity or position assignment in route tests. Each full-height gate is a real collider and shot blocker. The full floor is safe for retries. The portal aperture is still freely placed on each pale face.

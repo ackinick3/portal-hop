@@ -30,16 +30,9 @@ PASS: Initial blue portal is visible from spawn
 ROOM6_ROUTE delay=-1 first=810.060668945313 second=0.0 transfers=0 end=(868.9249, 521.2209) deaths=1
 PASS: Comparison route performs a real single launch from a high wall exit
 PASS: Standard single launch falls short of the final platform
-PASS: Sixth guidance begins with the ceiling target
-PASS: Sixth guidance advances to the floor target
-PASS: First transfer highlights airborne wall replacement
-PASS: Second transfer clears setup markers
 PASS: Retry fixture places floor portal from a legal airborne position
-PASS: After airborne replacement the retained red portal is highlighted
 PASS: Sixth retry clears both portals and transfer stage
 PASS: R returns to starting ledge directly without a new briefing
-PASS: Sixth room has an entry briefing before gameplay
-PASS: Briefing pauses gameplay and offers a clear start button
-PASS: Briefing start opens the real sixth map
-PASS: Paused sixth room restarts directly without a briefing
+PASS: Sixth room enters directly without a tutorial
+PASS: Paused sixth room restarts directly
 LEVEL6_TEST_FAILURES=0
