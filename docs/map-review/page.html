@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portal Hop · 地图批注</title>
+<style>/*STYLE*/</style></head>
+<body>
+<header><div class="brand"><span class="brand-mark">↗</span><div>PORTAL HOP<small>地图评审工作台</small></div></div><div class="phase">计划图 <span>· 尚未实装</span></div><span id="save-state" role="status">正在载入…</span><button id="export-json" class="primary">导出全部批注</button><button id="import-json">导入批注</button><input type="file" id="import-file" accept=".json,application/json" hidden></header>
+<main><section class="workspace">
+<div class="page-heading"><div><span class="eyebrow">LEVEL REVIEW <span id="page-count"></span></span><h1 id="map-title"></h1></div><nav aria-label="关卡翻页"><button id="previous" aria-label="上一关">← 上一关</button><button id="next" aria-label="下一关">下一关 →</button></nav></div>
+<div class="toolbar" aria-label="批注工具"><div class="tools"><button data-tool="pen" aria-pressed="true">✎ 画笔</button><button data-tool="arrow" aria-pressed="false">↗ 箭头</button><button data-tool="text" aria-pressed="false">T 文字</button></div><label class="color-label">颜色 <input id="color" type="color" value="#f5d142"></label><label>粗细 <input id="width" type="range" min="1" max="10" value="4"></label><span class="toolbar-spacer"></span><button id="undo">撤销</button><button id="clear">清空本关</button><select id="zoom" aria-label="地图缩放"><option value="fit">适应窗口</option><option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option></select><button id="export-png">导出本关图片</button></div>
+<div id="scroll-area"><div id="canvas-wrap"><canvas id="map" width="1920" height="1080" aria-label="关卡地图批注画布"></canvas></div></div>
+<div class="map-caption"><span><i class="key white"></i>可放门面 <i class="key blue"></i>反弹面 <i class="key boost"></i>加速墙 <i class="key pink"></i>原计划路线</span><span>①②③④ = 放门 / 换门顺序</span></div>
+<div class="review-flow"><b>01 你批注</b><span>→</span><b>02 更新计划图</b><span>→</span><b>03 你确认</b><span>→</span><b>04 游戏实装</b></div>
+<p class="footnote">这五张图是当前设计稿。曲线仅示意路线，比例尚待游戏实测；图上可要求连接地形或保留独立平台。</p>
+</section>
+<aside><div class="aside-heading"><h2>本关修改意见</h2><span id="annotation-count"></span></div><p class="muted">画笔圈选、箭头指向，或选「文字」后点击地图。点击下方文字批注可继续编辑。</p><label class="note-label" for="general-note">整体意见</label><textarea id="general-note" maxlength="5000" placeholder="例如：把下层几块地面连起来，只保留蓝色区域为独立平台。"></textarea><div id="annotation-list"></div><div class="backup-tip"><b>批注保存在你的浏览器</b><p>评完后点「导出全部批注」，把 JSON 发回对话，我才能读取并修改计划图。换浏览器时也可导入继续。</p><small id="revision"></small></div></aside></main>
+<div id="toast" role="status" hidden></div><button id="recover" hidden>导出未能载入的旧数据</button>
+<dialog id="text-dialog"><form id="text-form"><h2 id="text-dialog-title">添加文字批注</h2><p class="muted">批注会放在刚才点击的位置。</p><textarea id="text-value" maxlength="2000" placeholder="这处你想怎么改？" required></textarea><div class="dialog-actions"><button type="button" id="cancel-text">取消</button><button type="submit" class="primary">保存文字</button></div></form></dialog>
+<dialog id="confirm-dialog"><form method="dialog"><h2 id="confirm-title"></h2><p id="confirm-detail" class="muted"></p><div class="dialog-actions"><button value="cancel">取消</button><button value="ok" class="primary">确定</button></div></form></dialog>
+<script>/*DATA*/</script><script>/*CORE*/</script><script>/*APP*/</script>
+</body></html>

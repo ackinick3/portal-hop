@@ -13,6 +13,8 @@ Godot4.7.2 / GDScript，Windows x64，23关单机版。开发接续先读[PROJEC
 
 ## 开发与检查
 
+关卡设计评审入口：[本地地图批注网页](docs/地图批注.html)，用普通浏览器打开，可逐关翻页、画笔/箭头/文字批注、自动保存及导入/导出。评完导出全部批注JSON发回对话，再更新计划图，用户确认后实装游戏。当前只包含手绘五图A–E，不是新增可玩关卡；[使用与维护说明](docs/map-review/README.md)。
+
 ```powershell
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64.exe --editor --path .
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path .
