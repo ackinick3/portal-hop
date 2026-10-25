@@ -27,6 +27,12 @@ func run() -> void:
 			return
 	print("EXPORTED_ROOMS_STARTED=24")
 	print("EXPORTED_FINAL=",game.data.name," polygons=",game.portals.polygons.size()," movers=",game.stage.movers.size()," receivers=",game.stage.receivers.size())
+	if game.enemy==null or not game.enemy.vertical or game.enemy.spawn!=Vector2(542,208.5):
+		push_error("Exported final room is missing the vertical guard")
+		await game.drain_audio()
+		quit(1)
+		return
+	print("EXPORTED_VERTICAL_GUARD=",game.enemy.spawn," range=",game.enemy.low,"..",game.enemy.high)
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--capture="):
 			root.get_texture().get_image().save_png(arg.trim_prefix("--capture="))

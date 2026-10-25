@@ -4,19 +4,23 @@
 
 ## 最新接续方向
 
+用户最新要求“小修24关，增加一个上下移动的怪，让路线二三可能碰到”。已按新JSON增加本关guard：x542、y54–363上下往返，出生y208.5向下，速度沿用70px/s。地形、普通物理、编号/存档不变；旧怪默认水平巡逻。原稿/修订稿及对照图在docs/level-editor/designs/2026-10-25-fall-bounce-guard。新原稿怪物ID15与旧修订补灰地冲突，修订稿使用ID17，旧地形ID保留。
+
+本轮35组实时回归全部通过，81个重试案例通过，无运行错误/退出泄漏。安全出发采样下9组门位偏差及两个邻近出发时机均零死亡通关；另两个真实输入时机分别在路线②/③碰撞死亡。暂停/R/死亡与旧第三关水平/踩踏回归通过，独立审阅无重要问题。GPU画面、普通EXE启动（退出0）、内嵌包24关/新怪身份与同组真实路线全部验证。唯一EXE已更新：109332384字节，SHA256 A28B44DD243D5A0E48B3BB3527F331E2D50CF81E2C8EC60CFB1A4EE7E9501337，见docs/build-manifest.txt。原无怪版相同出发时机的容差保证已被动态障碍取代；待用户试玩评价观察/等待难度。
+
 已按用户要求封装并安装`portalhop-level-builder`技能；版本控制源在skills/portalhop-level-builder，安装于C:/Users/XH/.codex/skills/portalhop-level-builder。调用时提交设计器JSON，授权保持原思路自主分析/调整比例、实装、真实通关/容差/重试/回归、更新唯一EXE并汇报，不默认停在比例确认。仅评图的请求仍只评图；关键玩法语义不明时集中询问，继续其余分析。原稿保留、普通物理与真实存档保护不变，不给未定义激光颜色发明玩法。
 
-本轮只增加技能、只读JSON检查工具及文档；工具3项测试、技能格式与独立只读试用通过。未修改游戏源码、存档或EXE，未重跑Godot回归；下方34组及导出结果属于第24关实装轮。技能细节见[技能入口](skills/portalhop-level-builder/SKILL.md)。
+此前技能封装轮只改技能/文档，3项工具测试、格式与只读试用通过；游戏状态以本次怪物版35组结果为准。技能细节见[技能入口](skills/portalhop-level-builder/SKILL.md)。
 
 用户已确认首份编辑器草图的比例修订，并要求“符合，开始”。已按批准方案追加**第24关 THE FALLING RETURN（落差折返），稳定ID51**：蓝面约57.4°、右白面约74.5°、底部白带120px，两侧灰地相接。原23关布局和稳定ID顺序保留；角色跑速、跳跃、重力、空中控制、蓝反弹公式及传送速度规则未改。没有加入方块、按钮、新激光或其余四份草图。
 
 原稿与批准方案见[设计目录](docs/level-editor/designs/2026-10-25-fall-bounce/README.md)，input.json原样保留，adjusted.json与原/修订对照网页继续可用。[实施计划](docs/superpowers/plans/2026-10-25-slopes-and-room24.md)记录范围与检查。网页绿色路径仍是模型，真实结果以Godot测试为准。
 
-标准路线：先从出生走到起点右沿放底门和右侧斜面门，再退回助跑；按D下落直到进底门，出门松横向键，碰左蓝面反弹，实际落上右平台后走到终点。R清门回出生，游戏内不添加解法提示。
+标准路线：先从出生走到起点右沿放底门和右侧斜面门，再退回助跑；按D下落直到进底门，出门松横向键，碰左蓝面反弹，实际落上右平台后走到终点。新增上下怪后可先观察巡逻时机再助跑；R清门回出生并复位怪物，游戏内不添加解法提示。
 
 新增凸多边形斜面实体、首表面射线、自由放门、完整72px真实碰撞开口及关闭复原；斜向出口按22×30直立角色的法线/切线投影留出空间。激光通过斜面门沿用首表面遮挡及出口法线。本轮只需要白斜面与蓝反弹；红斜坡加速仍未实现，不能把斜面碰撞能力当成所有斜坡材质已完成。
 
-**本轮34组实时回归全部通过，81个暂停/R压力案例通过；GPU新关、24张全图、3页选关、窗口/全屏/鼠标映射均已检查，独立审阅无重要问题。唯一EXE已重新导出并通过普通启动（退出0）及内嵌包24关身份检查。** 该内嵌包的9组真实输入新关路线也全部通过（standalone-fall-bounce.log）。构建109332080字节，SHA256为F21D40F7F314E5ED3FC2014C8F040EFE5AF5E8ED168E70DC364F2CECA01B2C02，见docs/build-manifest.txt；待用户实际试玩评价容差。
+首次无怪版曾通过34组/81例及GPU/显示/导出；该轮构建109332080字节，SHA256为F21D40F7F314E5ED3FC2014C8F040EFE5AF5E8ED168E70DC364F2CECA01B2C02，属于历史身份。本次怪物版的检查和构建身份在顶部及build-manifest单独更新，不沿用无怪版结论。
 
 ## 当前版本与约束
 
@@ -43,13 +47,13 @@ A/D移动、Space跳跃、左右鼠标红/蓝门、R重试、Esc暂停、F11全�
 | 门锁/平台 | 所需信号全亮动作；真实碰撞、往返/齿轮双轨、承载及扫掠避碰；平台不放门 |
 | 重试/暂停 | R计死亡并清门/阶段/材质计数/接收器，门关闭、平台复位；暂停冻结，RESTART另清计时/死亡 |
 
-原敌人规则保留，第三关普通跳跃踩踏仍合法。B圆润旗帜/终点门、动作反馈及固定音效池不变。可拿取的惯性方块、压力按钮、挡光及红色致死激光仍未实现。
+怪物沿用70px/s及原侧碰死亡/向下踩踏规则；guard.vertical默认为false，只有24关开启上下巡逻，第三关普通跳跃踩踏仍合法。B圆润旗帜/终点门、动作反馈及固定音效池不变。可拿取的惯性方块、压力按钮、挡光及红色致死激光仍未实现。
 
 ## 工程与存档接续
 
 - levels/maps.gd唯一数量LEVEL_COUNT=24，get_level接受0..23；ROOM_IDS是稳定ID列表，不是另一套游玩编号，index_for_id用于迁移/测试。
 - 原地图仍在maps/campaign/coating_rooms/laser_rooms/advanced_rooms；levels/designed_rooms.gd保存新ID51。章节路由使用稳定ID减一，旧23关地形/机关源码未改。
-- scenes/main.gd管菜单/分页/进度/结算及交互，将可选polygons交给门系统。actors/player.gd与world/materials.gd本轮未改；portals/system.gd保留旧Rect2并新增凸多边形路径。
+- scenes/main.gd管菜单/分页/进度/结算及交互，将可选polygons交给门系统。actors/player.gd与world/materials.gd本轮未改；actors/sentry.gd支持可选vertical；portals/system.gd保留旧Rect2及凸多边形路径。
 - 地图必需name/spawn/goal/blocks/faces/enemy，可选polygons:Array[PackedVector2Array]、guard/materials/mirrors/emitters/receivers/gates/movers/hazards。polygons仅凸多边形，面与外法线须贴合实体；不添加hint/guide/briefing。
 - progress.order_version仍为2，存当前编号unlocked/音量；版本2按1..24限幅，不重复迁移。已有23解锁保持23，完成23后解锁24，不自动修改玩家进度。
 - 缺版本的旧50关存档迁移到首个保留原ID≥旧最高解锁ID。旧12→新12（原14）、旧22→新17（原25）、旧49/50→新23，新增ID51不改变这些映射。
@@ -57,8 +61,9 @@ A/D移动、Space跳跃、左右鼠标红/蓝门、R重试、Esc暂停、F11全�
 
 ## 验证与运行
 
-本轮重新运行原32组基线通过，见docs/baseline-before-slopes.log。新增测试在旧代码先失败：docs/slopes-before.log、fall-bounce-before.log；实现后8法线方向真实开口/门框/复原、射线遮挡/激光、真实角色双向通门通过。第24关9组门位扰动均一传送、蓝反弹、实际落台并零死亡通关；去蓝反弹同输入不通关，120px带拒绝双门，R/暂停通过。最终34组实时回归全部通过，无运行错误或退出泄漏：docs/final-all-tests.log；暂停/R压力81例通过。GPU新关/实际落台及选关第三页已核对，显示测试0失败并恢复原鼠标位置。普通EXE启动退出0，同版本Godot挂载该EXE的内嵌包直接进入全部24关且最后关有2块斜面，见standalone-pack.log。独立只读审阅无重要问题，见slopes-review.log；8方向真实角色测试覆盖中心穿越，未穷尽各角度极限切向偏移。
+本次35组实时全回归通过（docs/final-all-tests.log），81个R/暂停压力案例通过。新vertical_guard检查上下折返/范围、暂停、死亡复位及第三关仍水平；fall_bounce从出生真实输入验证9门位在安全相位下零死亡通关，290/350帧邻近安全采样也通关，80/200帧分别在路线②/③碰撞死亡。上述等待值为准备门和退回助跑位置后的开发夹具，非关内提示或保证所有连续相位安全。
 
+GPU新怪、反弹、实际落台已查看；普通EXE启动退出0，内嵌包24关/最后2斜面及新怪身份检查通过，内嵌包同组真实路线也通过。独立审阅无重要问题，详见vertical-guard-review.log。未重测显示/其他23张图；旧显示测试属于首次实装轮。真实存档未写入。首次斜面基线和无怪版结果留于进度/计划，不替代本次结果；当前8方向斜面回归仍通过，极限切向偏移及全部巧解未穷尽。
 ```powershell
 ./tests/run.ps1
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/fall_bounce.gd -- --capture

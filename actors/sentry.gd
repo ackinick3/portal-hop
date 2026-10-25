@@ -4,18 +4,22 @@ var direction := 1.0
 var low := 440.0
 var high := 580.0
 var spawn := Vector2(510,413)
+var vertical := false
 
 func _ready() -> void:
 	position = spawn
 func _physics_process(delta: float) -> void:
 	if not alive: return
-	position.x += direction * 70 * delta
-	if position.x >= high:
-		position.x = high
+	var at := position.y if vertical else position.x
+	at += direction * 70 * delta
+	if at >= high:
+		at = high
 		direction = -1
-	if position.x <= low:
-		position.x = low
+	if at <= low:
+		at = low
 		direction = 1
+	if vertical: position.y = at
+	else: position.x = at
 	queue_redraw()
 func reset() -> void:
 	alive = true

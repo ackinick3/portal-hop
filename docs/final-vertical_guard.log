@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Room24 contains the requested moving guard
+PASS: Guard follows the straightened user patrol, with existing speed
+PASS: Guard really reverses vertically and remains within the patrol
+PASS: Pause freezes the vertical guard
+PASS: Death resets the vertical guard immediately
+PASS: Guard does not cause a spawn death loop
+PASS: Original third-room guard still patrols horizontally
+VERTICAL_GUARD_FAILURES=0

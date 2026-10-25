@@ -198,6 +198,7 @@ func start_level(number: int) -> void:
 			enemy.spawn = data.guard.spawn
 			enemy.low = data.guard.low
 			enemy.high = data.guard.high
+			enemy.vertical = data.guard.get("vertical",false)
 		world.add_child(enemy)
 	clear_panel()
 	audio.play("checkpoint")

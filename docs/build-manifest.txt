@@ -1,25 +1,26 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms:24; original curated23 unchanged, approved custom falling-return room appended as24/stableID51
+Rooms:24; room24/stableID51 updated with vertical guard; original23 and all room geometry unchanged
 Stable IDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51
-Bytes:109332080
-SHA256:F21D40F7F314E5ED3FC2014C8F040EFE5AF5E8ED168E70DC364F2CECA01B2C02
-Geometry: approved adjusted.json; blue slope57.4deg, pale slope74.5deg, floor pale band120px; convex polygon collision and full72px real slope apertures
-Physics: actors/player.gd and world/materials.gd unchanged; existing movement/gravity/blue reflection and total-speed exit rule retained
-Hints: no entry briefings, suggestion circles, tutorial/help entries or hint metadata; operational feedback retained
-Progress: order_version2 unchanged; existing23 stays23; completing23 unlocks24 and NEXT; final settlement only24; real player cfg not written by tests
-Baseline: original32 real-time suites passed before implementation; docs/baseline-before-slopes.log
-Source tests: ALL34 HEADLESS TEST SUITES PASSED, real time, stdout/stderr checked, no runtime errors or exit leaks; docs/final-all-tests.log
-Retry stress:81 cases passed for24 rooms and powered mover/receiver phases; docs/final-retry_stress.log
-Slope tests:8 surface normal directions, real bidirectional central character traversal, full-aperture clearance and physical frame collision, closed restoration, first-hit ray/laser; docs/final-slopes.log
-Room24 route:9 entrance/exit deviations +/-8px all zero-death wins, one transfer, blue reflection and actual goal-platform landing; nominal x681.24, range670.02-693.01; no-blue same-input control cannot win; R/pause and dual-floor-door rejection passed; docs/final-fall_bounce.log
-Review: independent read-only review no confirmed P0/P1/P2 findings; near-limit tangential character traversal not exhaustively covered; docs/slopes-review.log
-GPU:24 room previews,3 selection pages, menu, new-room real blue-bounce/landing captures checked; docs/curated-preview and docs/sloped-preview; docs/campaign-preview24.log and docs/fall-bounce-gpu.log
-Display:3 window sizes, fullscreen, cursor mapping/restoration passed; docs/display.log
+Bytes:109332384
+SHA256:A28B44DD243D5A0E48B3BB3527F331E2D50CF81E2C8EC60CFB1A4EE7E9501337
+Room24 guard: x542, spawn y208.5 facing down; patrol y54..363, speed70px/s; original enemy side-death/downward-stomp rules retained
+Geometry/physics: same57.4deg blue slope,74.5deg pale slope,120px band, polygons/real72px apertures; player/material/portal physics unchanged
+Compatibility: sentry.vertical defaults false; original guards retain horizontal70px/s behavior, including third-room ordinary stomp
+Progress: same24/order_version2; existing unlock/audio not reset; tests persistence_enabled=false, actual cfg unchanged from2026-10-24
+Source tests: ALL35 HEADLESS TEST SUITES PASSED; real-time full stdout/stderr, no runtime errors/exit leaks; docs/final-all-tests.log
+Retry stress:81 cases passed; docs/final-retry_stress.log
+Vertical guard: bounds/reversals, pause, death reset/no spawn loop, original third-room horizontal patrol passed; docs/final-vertical_guard.log
+Real room24: safe wait320 fixture passed9 +/-8px gate variants with one transfer, blue reflection, actual platform landing and zero-death win; nearby wait290/350 samples also won. Nominal geometry landing x681.24 retained.
+Real danger: wait80 fixture collides/dies on route2; wait200 fixture collides/dies on route3 after blue reflection. Waiting measured after legal standing/gun-origin placement and retreat; no actor position/velocity forcing in route.
+Controls: no-blue same-input control cannot win; floor dual-door rejection, pause player/guard freeze and R guard/spawn/doors reset passed; docs/final-fall_bounce.log
+GPU: current guard, actual blue bounce/landing and all above phases passed; docs/fall-bounce-gpu.log and docs/sloped-preview; curated-preview/room24.png refreshed. Display/other23screens not re-tested this round; prior results remain historical.
+Review: independent read-only review no important defects; docs/vertical-guard-review.log
 Native GUI exit:0; docs/standalone-gui.log and docs/standalone-gui-exit.log
-Embedded pack: matchingGodot mounted thisEXE, EMBEDDED_PROJECT=true, directly entered24 rooms; last THE FALLING RETURN polygons=2; docs/standalone-pack.log and standalone-room24.png
-Embedded playable route: same9 real-input gate variants, no-blue control, R/pause all passed from thisEXE pack; docs/standalone-fall-bounce.log
-Single entry: builds/PortalHop.exe only1EXE; desktop C:\Users\XH\Desktop\Portal Hop.lnk target verified against same absolute path
-Human acceptance: new room24 hand-play difficulty and tolerances pending user feedback; all shortcuts not exhaustively excluded
-Documentation: local Markdown links, original input SHA256, plan embedded JSON equality and inline JS syntax verified; no editor/map-review logic changed.
+Embedded identity: EMBEDDED_PROJECT=true,24 rooms started, final has2polygons and vertical guard spawn(542,208.5)/range54..363; docs/standalone-pack.log and standalone-room24.png
+Embedded playable route: same9safe gate variants,290/350safe samples,2/3danger contacts, no-blue control and R/pause all passed from thisEXE pack; docs/standalone-fall-bounce.log
+Single entry: builds/PortalHop.exe only1EXE; existing desktop Portal Hop.lnk target verified
+Design: raw input SHA256 5a1229aff18d8ec5dd6aa3393bbc2559a4d9c505f629cc7580cca64900adfe72; docs/level-editor/designs/2026-10-25-fall-bounce-guard. All prior adjusted items preserved; enemy remapped toID17 to avoid gray-fillIDs15/16.
+Documentation: original SHA, editor parse of adjusted JSON, retained geometry/ID mapping, HTML embedded JSON/JS syntax/SVG IDs/local links verified
+Human acceptance: waiting/dodging difficulty and all shortcuts not exhaustively tested; user playtest pending

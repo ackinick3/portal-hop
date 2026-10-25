@@ -17,7 +17,7 @@ Godot4.7.2 / GDScript，Windows x64，24关单机版。开发接续先读[PROJEC
 
 自动实装入口：[portalhop-level-builder技能](skills/portalhop-level-builder/SKILL.md)，已安装到用户Codex技能目录。发送`使用 $portalhop-level-builder，地图JSON：<文件路径>`，助手保持思路，自主计算比例、创建关卡、实际通关与回归、更新同一EXE并汇报；无需再次确认比例稿。仅要求评图时仍按评图范围，未定义的玩法语义会先询问。原稿/旧关/普通物理和真实存档保留。
 
-首张用户草图已确认并实装为第24关THE FALLING RETURN（落差折返）：蓝斜面反弹、右白斜面传送门与120px底部白带。[原图/批准方案对照](docs/level-editor/designs/2026-10-25-fall-bounce/plan.html)及可编辑JSON保留。先通关第23关即可解锁，不重置旧进度。
+首张用户草图已确认并实装为第24关THE FALLING RETURN（落差折返）：蓝斜面反弹、右白斜面传送门与120px底部白带。最新小修加入x542、y54–363上下巡逻怪，路线②/③要观察时机；[当前小修图/JSON](docs/level-editor/designs/2026-10-25-fall-bounce-guard/plan.html)。[原图/批准方案对照](docs/level-editor/designs/2026-10-25-fall-bounce/plan.html)及可编辑JSON保留。先通关第23关即可解锁，不重置旧进度。
 
 关卡设计评审入口：[本地地图批注网页](docs/地图批注.html)，用普通浏览器打开，可逐关翻页、画笔/箭头/文字批注、自动保存及导入/导出。评完导出全部批注JSON发回对话，再更新计划图，用户确认后实装游戏。当前只包含手绘五图A–E，不是新增可玩关卡；[使用与维护说明](docs/map-review/README.md)。
 
@@ -29,4 +29,4 @@ Godot4.7.2 / GDScript，Windows x64，24关单机版。开发接续先读[PROJEC
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-测试隔离真实进度。当前入口34组，覆盖原23关和新增第24关的真实输入路线、8方向斜面真实开口、核心物理/光路/平台、删关顺序、无提示、重编号、分页、存档迁移及重试。新关GPU截图在docs/sloped-preview，全图与选关在docs/curated-preview；实际验证及导出身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。
+测试隔离真实进度。当前入口35组，覆盖原23关和新增第24关的真实输入路线、8方向斜面真实开口、核心物理/光路/平台、删关顺序、无提示、重编号、分页、存档迁移及重试。新关GPU截图在docs/sloped-preview，全图与选关在docs/curated-preview；实际验证及导出身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。

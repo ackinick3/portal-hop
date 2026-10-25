@@ -1,0 +1,5 @@
+2026-10-25 room24 vertical-guard independent read-only review
+Base: f6c7051. Scope: actors/sentry.gd, scenes/main.gd, levels/designed_rooms.gd and current test changes.
+No important defect found. Horizontal branch is equivalent to original, vertical defaults false and instances are rebuilt per level. Player physics, geometry and enemy hit/stomp rules unchanged. Existing pause/death/R chains apply to new vertical motion.
+Real-input phase evidence verified from first probe: wait80 route2 dies (player x570/y289, guard y277); wait200 route3 dies after blue reflection (x514/y148, guard y140); wait320 actually lands and wins.
+Reviewer did not run tests or modify files. At review time final35-suite run was ongoing; nearby290/350 phases and9safe-phase variants require that run's final output, not old logs.
