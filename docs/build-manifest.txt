@@ -13,6 +13,6 @@ GPU:50 rooms,42new briefings,5selection pages,locked/help/menu; final representa
 Display: three window sizes, fullscreen, live cursor aim and restoration passed; docs/display.log
 Native standalone GUI exit:0; docs/standalone-gui.log
 Embedded pack: matching Godot engine mounted this EXE and started all50 packed rooms, EMBEDDED_PROJECT=true; final mirrors1/movers1/receivers2; docs/standalone-pack.log and standalone-room50.png
-Extra native external-script helper: timed out before log startup; not used as success evidence. Normal release launch and pack-mount checks above succeeded.
+Extra native external-script helper: showed only normal main readiness, without test-script verification markers; owned helper timed out and was stopped; not used as success evidence. Normal release launch and pack-mount checks above succeeded.
 Single EXE: builds/PortalHop.exe; desktop Portal Hop.lnk target verified
 Human acceptance: pending new chapter playtesting; no hour-scale performance/memory claim
