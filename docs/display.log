@@ -14,7 +14,7 @@ PASS: Mouse aiming maps correctly through window letterboxing
 PASS: Same mouse target stays shootable at each window size
 DISPLAY_PROBE requested=(800, 800) visible=[P: (0.0, 0.0), S: (960.0, 540.0)] scale=(960, 540) aspect=1 transform=[X: (0.833333, 0.0), Y: (0.0, 0.833333), O: (0.0, 175.0)]
 PASS: Resizing preserves 960x540 logical view
-MOUSE_PROBE expected=(180.0, 90.0) actual=(180.0, 90.0)
+MOUSE_PROBE expected=(180.0, 90.0) actual=(180.0001, 90.0)
 PASS: Mouse aiming maps correctly through window letterboxing
 PASS: Same mouse target stays shootable at each window size
 FULLSCREEN_MODE=3 visible=[P: (0.0, 0.0), S: (960.0, 540.0)]

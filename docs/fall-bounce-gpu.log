@@ -1,0 +1,51 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 573.24 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060 Laptop GPU
+
+PASS: Approved sketch is appended as room24 with stable ID51
+PORTAL_HOP_READY
+PASS: Spawn sightline cannot pass through the starting ledge
+FALL_EXIT dx=-8.0 ds=-8.0 p=(614.0419, 299.7494) v=(-750.4314, -208.4532)
+FALL_BLUE dx=-8.0 ds=-8.0 p=(260.5486, 307.4916) v=(508.2939, -543.2379)
+FALL_ROUTE dx=-8.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.23, 184.9253), "end": (784.6989, 184.9251) }
+PASS: Room24 real input route -8/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=-8.0 ds=0.0 p=(616.1831, 292.0413) v=(-750.4314, -208.4532)
+FALL_BLUE dx=-8.0 ds=0.0 p=(256.8877, 301.7741) v=(514.6451, -539.5544)
+FALL_ROUTE dx=-8.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (686.8934, 184.9253), "end": (784.2128, 184.9251) }
+PASS: Room24 real input route -8/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=-8.0 ds=8.0 p=(618.3242, 284.3331) v=(-750.4314, -208.4532)
+FALL_BLUE dx=-8.0 ds=8.0 p=(253.2721, 296.1236) v=(521.3357, -535.5458)
+FALL_ROUTE dx=-8.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (693.012, 184.9253), "end": (784.2719, 184.9251) }
+PASS: Room24 real input route -8/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=-8.0 p=(611.9008, 307.4575) v=(-750.4314, -208.4532)
+FALL_BLUE dx=0.0 ds=-8.0 p=(264.2367, 313.258) v=(501.6995, -547.1501)
+FALL_ROUTE dx=0.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (675.4786, 184.9252), "end": (783.3209, 184.9251) }
+PASS: Room24 real input route 0/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+FALL_BLUE dx=0.0 ds=0.0 p=(260.5486, 307.4917) v=(508.3071, -543.2258)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251) }
+PASS: Room24 real input route 0/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=8.0 p=(616.1831, 292.0413) v=(-750.4314, -208.4532)
+FALL_BLUE dx=0.0 ds=8.0 p=(256.8877, 301.7741) v=(514.6451, -539.5544)
+FALL_ROUTE dx=0.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (686.8934, 184.9253), "end": (784.2128, 184.9251) }
+PASS: Room24 real input route 0/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=-8.0 p=(609.7596, 315.1656) v=(-750.4314, -208.4532)
+FALL_BLUE dx=8.0 ds=-8.0 p=(267.9704, 319.0912) v=(495.2682, -550.912)
+FALL_ROUTE dx=8.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (670.0187, 184.9253), "end": (784.044, 184.9251) }
+PASS: Room24 real input route 8/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=0.0 p=(611.9008, 307.4575) v=(-750.4314, -208.4532)
+FALL_BLUE dx=8.0 ds=0.0 p=(264.2367, 313.258) v=(501.6995, -547.1501)
+FALL_ROUTE dx=8.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (675.4786, 184.9252), "end": (783.3209, 184.9251) }
+PASS: Room24 real input route 8/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=8.0 p=(614.0419, 299.7494) v=(-750.4314, -208.4532)
+FALL_BLUE dx=8.0 ds=8.0 p=(260.5486, 307.4916) v=(508.2939, -543.2379)
+FALL_ROUTE dx=8.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.23, 184.9253), "end": (784.6989, 184.9251) }
+PASS: Room24 real input route 8/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+FALL_ROUTE dx=0.0 ds=0.0 plain=true { "won": false, "deaths": 0, "shot": true, "transfers": 1, "bounced": false, "landed": false, "landing": (0.0, 0.0), "end": (321.2775, 484.9882) }
+PASS: The same real-input route cannot win without blue reflection
+PASS: Retry fixture prepares real portals from a legal standing place
+PASS: 120px floor band cannot hold both full72px portals
+PASS: Pause freezes the player and retains the active slope pair
+PASS: R restores spawn and counters without a death loop
+PASS: R closes every real slope opening
+FALL_BOUNCE_FAILURES=0

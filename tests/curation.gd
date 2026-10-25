@@ -1,6 +1,6 @@
 extends SceneTree
 var failures := 0
-const EXPECTED_IDS := [1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50]
+const EXPECTED_IDS := [1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51]
 func _initialize() -> void: call_deferred("run")
 func check(ok: bool,message: String) -> void:
 	print("PASS: " if ok else "FAIL: ",message)
@@ -11,25 +11,25 @@ func find_button(game: Node2D,prefix: String) -> Button:
 	return null
 func run() -> void:
 	var maps = load("res://levels/maps.gd")
-	check(maps.LEVEL_COUNT == 23,"Exactly23 curated rooms remain")
-	if maps.LEVEL_COUNT != 23:
+	check(maps.LEVEL_COUNT == 24,"23 curated rooms plus the approved room24")
+	if maps.LEVEL_COUNT != 24:
 		quit(1)
 		return
-	check(maps.ROOM_IDS == EXPECTED_IDS,"Displayed order matches all27 user deletions")
-	check(maps.get_level(-1).is_empty() and maps.get_level(23).is_empty(),"Deleted tail indices cannot be loaded")
+	check(maps.ROOM_IDS == EXPECTED_IDS,"Original curated order is preserved and stableID51 appended")
+	check(maps.get_level(-1).is_empty() and maps.get_level(24).is_empty(),"Invalid tail indices cannot be loaded")
 	var game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
 	game.menu()
 	check(find_button(game,"HOW TO PLAY") == null and find_button(game,"MATERIALS") == null,"Tutorial entries are removed")
-	for i in 23:
+	for i in 24:
 		var data: Dictionary = maps.get_level(i)
 		check(not data.is_empty() and not data.has("hint") and not data.has("guide") and not data.has("briefing"),"New room%02d has no hint metadata" % (i+1))
 		game.enter_level(i)
 		check(game.index == i and game.state == "playing" and not paused,"New room%02d enters gameplay directly" % (i+1))
 		check(game.panel.get_child_count() == 0,"New room%02d has no tutorial panel" % (i+1))
 		game.complete()
-		check((find_button(game,"NEXT ROOM") != null) == (i<22),"Only new room23 ends the campaign")
+		check((find_button(game,"NEXT ROOM") != null) == (i<23),"Only room24 ends the campaign")
 	game.unlocked = 13
 	for page in 3:
 		game.level_select(page)
@@ -42,7 +42,7 @@ func run() -> void:
 				if child.text.left(2).is_valid_int():
 					slots += 1
 					check(child.disabled == (int(child.text.left(2))>13),"Renumbered locks correspond to new progress")
-		check(slots == (3 if page==2 else 10),"Page%d has the correct room count" % (page+1))
+		check(slots == (4 if page==2 else 10),"Page%d has the correct room count" % (page+1))
 	var legacy := ConfigFile.new()
 	legacy.set_value("settings","volume",0.35)
 	for setting in [Vector2i(1,1),Vector2i(8,8),Vector2i(12,12),Vector2i(14,12),Vector2i(22,17),Vector2i(34,18),Vector2i(44,22),Vector2i(49,23),Vector2i(50,23)]:
@@ -50,10 +50,18 @@ func run() -> void:
 		game.restore_progress(legacy)
 		check(game.unlocked == setting.y and is_equal_approx(game.volume,0.35),"Legacy unlock%d migrates to new%d without replaying completed survivors" % [setting.x,setting.y])
 	legacy.set_value("progress","order_version",2)
-	for value in [1,12,20,23]:
+	for value in [1,12,20,23,24]:
 		legacy.set_value("progress","unlocked",value)
 		game.restore_progress(legacy)
 		check(game.unlocked == value,"Version2 unlock%d is not migrated twice" % value)
+	legacy.set_value("progress","unlocked",23)
+	game.restore_progress(legacy)
+	check(game.unlocked==23,"Existing version2 room23 progress does not auto-complete the new room")
+	game.start_level(22)
+	game.complete()
+	check(game.unlocked==24 and find_button(game,"NEXT ROOM")!=null,"Progression fixture: completing room23 unlocks room24 and NEXT")
+	find_button(game,"NEXT ROOM").pressed.emit()
+	check(game.index==23 and game.data.has("polygons") and game.state=="playing","NEXT actually enters the appended slope room without a tutorial")
 	await game.drain_audio()
 	OS.delay_msec(350)
 	paused = false

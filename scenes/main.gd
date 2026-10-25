@@ -177,7 +177,7 @@ func start_level(number: int) -> void:
 	blocks.append(Rect2(0,-20,960,20))
 	var surfaces: Array[Dictionary] = []
 	surfaces.assign(data.faces)
-	portals.configure(blocks,surfaces)
+	portals.configure(blocks,surfaces,data.get("polygons",[]))
 	portals.feedback.connect(on_portal_feedback)
 	stage = load("res://world/mechanisms.gd").new()
 	world.add_child(stage)

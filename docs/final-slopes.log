@@ -1,0 +1,164 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Convex slope geometry is available
+PASS: Slope15 returns its true first surface and normal
+PASS: Slope15 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 cannot be shot through an intervening solid
+PASS: Slope15 checks clearance across the full aperture, not only its center ray
+PASS: Slope15 pair activates using actual ray placement
+PASS: Slope15 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope15 active center is a real physical opening
+SLOPE_FRAME 15 collided=true normal=8.09491729736328 tangent=23.4526996612549
+PASS: Slope15 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope15 clearing doors restores the closed slope
+PASS: Slope15 real character traverses slope to floor
+PASS: Slope15 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope45 returns its true first surface and normal
+PASS: Slope45 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 cannot be shot through an intervening solid
+PASS: Slope45 checks clearance across the full aperture, not only its center ray
+PASS: Slope45 pair activates using actual ray placement
+PASS: Slope45 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope45 active center is a real physical opening
+SLOPE_FRAME 45 collided=true normal=-16.1747856140137 tangent=16.1754341125488
+PASS: Slope45 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope45 clearing doors restores the closed slope
+PASS: Slope45 real character traverses slope to floor
+PASS: Slope45 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope75 returns its true first surface and normal
+PASS: Slope75 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 cannot be shot through an intervening solid
+PASS: Slope75 checks clearance across the full aperture, not only its center ray
+PASS: Slope75 pair activates using actual ray placement
+PASS: Slope75 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope75 active center is a real physical opening
+SLOPE_FRAME 75 collided=true normal=17.4022445678711 tangent=35.0006065368652
+PASS: Slope75 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope75 clearing doors restores the closed slope
+PASS: Slope75 real character traverses slope to floor
+PASS: Slope75 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope135 returns its true first surface and normal
+PASS: Slope135 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 cannot be shot through an intervening solid
+PASS: Slope135 checks clearance across the full aperture, not only its center ray
+PASS: Slope135 pair activates using actual ray placement
+PASS: Slope135 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope135 active center is a real physical opening
+SLOPE_FRAME 135 collided=true normal=18.3863086700439 tangent=35.002326965332
+PASS: Slope135 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope135 clearing doors restores the closed slope
+PASS: Slope135 real character traverses slope to floor
+PASS: Slope135 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope195 returns its true first surface and normal
+PASS: Slope195 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 cannot be shot through an intervening solid
+PASS: Slope195 checks clearance across the full aperture, not only its center ray
+PASS: Slope195 pair activates using actual ray placement
+PASS: Slope195 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope195 active center is a real physical opening
+SLOPE_FRAME 195 collided=true normal=8.0949182510376 tangent=23.4526996612549
+PASS: Slope195 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope195 clearing doors restores the closed slope
+PASS: Slope195 real character traverses slope to floor
+PASS: Slope195 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope225 returns its true first surface and normal
+PASS: Slope225 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 cannot be shot through an intervening solid
+PASS: Slope225 checks clearance across the full aperture, not only its center ray
+PASS: Slope225 pair activates using actual ray placement
+PASS: Slope225 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope225 active center is a real physical opening
+SLOPE_FRAME 225 collided=true normal=-16.1750679016113 tangent=16.1750659942627
+PASS: Slope225 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope225 clearing doors restores the closed slope
+PASS: Slope225 real character traverses slope to floor
+PASS: Slope225 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope255 returns its true first surface and normal
+PASS: Slope255 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 cannot be shot through an intervening solid
+PASS: Slope255 checks clearance across the full aperture, not only its center ray
+PASS: Slope255 pair activates using actual ray placement
+PASS: Slope255 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope255 active center is a real physical opening
+SLOPE_FRAME 255 collided=true normal=17.4024524688721 tangent=34.993896484375
+PASS: Slope255 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope255 clearing doors restores the closed slope
+PASS: Slope255 real character traverses slope to floor
+PASS: Slope255 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope315 returns its true first surface and normal
+PASS: Slope315 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 cannot be shot through an intervening solid
+PASS: Slope315 checks clearance across the full aperture, not only its center ray
+PASS: Slope315 pair activates using actual ray placement
+PASS: Slope315 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope315 active center is a real physical opening
+SLOPE_FRAME 315 collided=true normal=18.3867568969727 tangent=34.9997177124023
+PASS: Slope315 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope315 clearing doors restores the closed slope
+PASS: Slope315 real character traverses slope to floor
+PASS: Slope315 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+SLOPE_FAILURES=0

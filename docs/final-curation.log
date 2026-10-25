@@ -1,102 +1,106 @@
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Exactly23 curated rooms remain
-PASS: Displayed order matches all27 user deletions
-PASS: Deleted tail indices cannot be loaded
+PASS: 23 curated rooms plus the approved room24
+PASS: Original curated order is preserved and stableID51 appended
+PASS: Invalid tail indices cannot be loaded
 PORTAL_HOP_READY
 PASS: Tutorial entries are removed
 PASS: New room01 has no hint metadata
 PASS: New room01 enters gameplay directly
 PASS: New room01 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room02 has no hint metadata
 PASS: New room02 enters gameplay directly
 PASS: New room02 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room03 has no hint metadata
 PASS: New room03 enters gameplay directly
 PASS: New room03 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room04 has no hint metadata
 PASS: New room04 enters gameplay directly
 PASS: New room04 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room05 has no hint metadata
 PASS: New room05 enters gameplay directly
 PASS: New room05 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room06 has no hint metadata
 PASS: New room06 enters gameplay directly
 PASS: New room06 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room07 has no hint metadata
 PASS: New room07 enters gameplay directly
 PASS: New room07 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room08 has no hint metadata
 PASS: New room08 enters gameplay directly
 PASS: New room08 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room09 has no hint metadata
 PASS: New room09 enters gameplay directly
 PASS: New room09 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room10 has no hint metadata
 PASS: New room10 enters gameplay directly
 PASS: New room10 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room11 has no hint metadata
 PASS: New room11 enters gameplay directly
 PASS: New room11 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room12 has no hint metadata
 PASS: New room12 enters gameplay directly
 PASS: New room12 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room13 has no hint metadata
 PASS: New room13 enters gameplay directly
 PASS: New room13 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room14 has no hint metadata
 PASS: New room14 enters gameplay directly
 PASS: New room14 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room15 has no hint metadata
 PASS: New room15 enters gameplay directly
 PASS: New room15 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room16 has no hint metadata
 PASS: New room16 enters gameplay directly
 PASS: New room16 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room17 has no hint metadata
 PASS: New room17 enters gameplay directly
 PASS: New room17 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room18 has no hint metadata
 PASS: New room18 enters gameplay directly
 PASS: New room18 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room19 has no hint metadata
 PASS: New room19 enters gameplay directly
 PASS: New room19 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room20 has no hint metadata
 PASS: New room20 enters gameplay directly
 PASS: New room20 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room21 has no hint metadata
 PASS: New room21 enters gameplay directly
 PASS: New room21 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room22 has no hint metadata
 PASS: New room22 enters gameplay directly
 PASS: New room22 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room23 has no hint metadata
 PASS: New room23 enters gameplay directly
 PASS: New room23 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
+PASS: New room24 has no hint metadata
+PASS: New room24 enters gameplay directly
+PASS: New room24 has no tutorial panel
+PASS: Only room24 ends the campaign
 PASS: Selection controls fit on page1
 PASS: Renumbered locks correspond to new progress
 PASS: Selection controls fit on page1
@@ -152,6 +156,8 @@ PASS: Renumbered locks correspond to new progress
 PASS: Selection controls fit on page3
 PASS: Renumbered locks correspond to new progress
 PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
 PASS: Selection controls fit on page3
 PASS: Selection controls fit on page3
 PASS: Page3 has the correct room count
@@ -168,4 +174,8 @@ PASS: Version2 unlock1 is not migrated twice
 PASS: Version2 unlock12 is not migrated twice
 PASS: Version2 unlock20 is not migrated twice
 PASS: Version2 unlock23 is not migrated twice
+PASS: Version2 unlock24 is not migrated twice
+PASS: Existing version2 room23 progress does not auto-complete the new room
+PASS: Progression fixture: completing room23 unlocks room24 and NEXT
+PASS: NEXT actually enters the appended slope room without a tutorial
 CURATION_FAILURES=0

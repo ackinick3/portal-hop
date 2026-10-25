@@ -2,6 +2,8 @@ extends Node2D
 
 signal feedback(kind: String)
 var solids: Array[Rect2] = []
+var polygons: Array[PackedVector2Array] = []
+var polygon_pieces: Array[PackedVector2Array] = []
 # Surface: endpoints a,b and outward normal n. Adjacent collinear faces merge.
 var faces: Array[Dictionary] = []
 # Green faces share real solid geometry; dynamic blockers never cut terrain.
@@ -21,8 +23,9 @@ static func tangent(n: Vector2) -> Vector2:
 static func transform_velocity(v: Vector2, _n_in: Vector2, n_out: Vector2) -> Vector2:
 	return n_out * v.length()
 
-func configure(blocks: Array[Rect2], surfaces: Array[Dictionary]) -> void:
+func configure(blocks: Array[Rect2], surfaces: Array[Dictionary], slopes: Array = []) -> void:
 	solids = blocks
+	polygons.assign(slopes)
 	faces = surfaces
 	# Merge connected valid faces; internal seams never constrain placement.
 	var merged := true
@@ -67,6 +70,50 @@ func subtract_rect(source: Rect2, cut: Rect2) -> Array[Rect2]:
 			out.append(rect)
 	return out
 
+static func _area(poly: PackedVector2Array) -> float:
+	var area := 0.0
+	for i in poly.size(): area += poly[i].cross(poly[(i+1)%poly.size()])
+	return area*0.5
+
+# Clip a convex slope against one side of the aperture's tangent boundary.
+static func _clip(poly: PackedVector2Array, axis: Vector2, boundary: float, low: bool) -> PackedVector2Array:
+	var result := PackedVector2Array()
+	for i in poly.size():
+		var a := poly[i]
+		var b := poly[(i+1)%poly.size()]
+		var da := a.dot(axis)-boundary
+		var db := b.dot(axis)-boundary
+		var inside_a := da<=0.0001 if low else da>=-0.0001
+		var inside_b := db<=0.0001 if low else db>=-0.0001
+		if inside_a: result.append(a)
+		if inside_a != inside_b: result.append(a+(b-a)*(da/(da-db)))
+	return result
+
+static func _box_polygon(box: Rect2) -> PackedVector2Array:
+	return PackedVector2Array([box.position,Vector2(box.end.x,box.position.y),box.end,Vector2(box.position.x,box.end.y)])
+
+static func _overlap(a: PackedVector2Array, b: PackedVector2Array) -> bool:
+	for piece in Geometry2D.intersect_polygons(a,b):
+		if piece.size()>=3 and absf(_area(piece))>0.001: return true
+	return false
+
+static func _half_extent(axis: Vector2) -> float:
+	return absf(axis.x)*11+absf(axis.y)*15
+
+func _slope_clear(p: Vector2, n: Vector2) -> bool:
+	var t := tangent(n)
+	var center := p+n*(_half_extent(n)+2)
+	var reach := 36-_half_extent(t)
+	var corners := PackedVector2Array()
+	for side in [-1,1]:
+		corners.append_array(_box_polygon(Rect2(center+t*reach*side-Vector2(11,15),Vector2(22,30))))
+	var clearance := Geometry2D.convex_hull(corners)
+	for box in solids+occluders:
+		if _overlap(clearance,_box_polygon(box)): return false
+	for poly in polygons:
+		if _overlap(clearance,poly): return false
+	return true
+
 func rebuild() -> void:
 	if collision_root != null:
 		remove_child(collision_root)
@@ -100,6 +147,26 @@ func rebuild() -> void:
 			body.position = piece.get_center()
 			body.add_child(shape)
 			collision_root.add_child(body)
+	polygon_pieces.clear()
+	for poly in polygons:
+		var pieces: Array[PackedVector2Array] = [poly]
+		if active():
+			for door in doors:
+				if not Geometry2D.is_point_in_polygon(door.p-door.n*0.05,poly): continue
+				var t := tangent(door.n)
+				var next: Array[PackedVector2Array] = []
+				for piece in pieces:
+					for side in [true,false]:
+						var part := _clip(piece,t,door.p.dot(t)+(-36 if side else 36),side)
+						if part.size()>=3 and absf(_area(part))>0.001: next.append(part)
+				pieces = next
+		for piece in pieces:
+			var body := StaticBody2D.new()
+			var shape := CollisionPolygon2D.new()
+			shape.polygon = piece
+			body.add_child(shape)
+			collision_root.add_child(body)
+			polygon_pieces.append(piece)
 	queue_redraw()
 
 # Slab intersection returns the first solid face along the finite aim ray.
@@ -134,6 +201,28 @@ func ray_hit(origin: Vector2, target: Vector2) -> Dictionary:
 			result = {"p": origin + direction * near, "n": normal}
 			if occluders.has(rect):
 				result["occluder"] = true
+	for poly in polygons:
+		var near := -INF
+		var far := INF
+		var normal := Vector2.ZERO
+		var valid := true
+		for i in poly.size():
+			var a := poly[i]
+			var edge := poly[(i+1)%poly.size()]-a
+			var n := Vector2(edge.y,-edge.x).normalized()
+			if _area(poly)<0: n = -n
+			var distance := (origin-a).dot(n)
+			var speed := direction.dot(n)
+			if absf(speed)<0.00001:
+				if distance>0.0001: valid = false
+			else:
+				var at := -distance/speed
+				if speed<0:
+					if at>near: near = at; normal = n
+				else: far = minf(far,at)
+		if valid and near>=0 and near<=far+0.0001 and near<best:
+			best = near
+			result = {"p":origin+direction*near,"n":normal}
 	return result
 
 # Use the original visible screen endpoint for every displayed gun segment.
@@ -188,6 +277,8 @@ func _inside_blocker(point: Vector2) -> bool:
 	for rect in solids + occluders:
 		if rect.grow(-0.001).has_point(point):
 			return true
+	for poly in polygons:
+		if Geometry2D.is_point_in_polygon(point,poly): return true
 	return false
 
 # Continuous lasers pass through active real apertures, never through green paint.
@@ -214,7 +305,7 @@ func beam_path(origin: Vector2, direction: Vector2) -> Array[Dictionary]:
 		var offset := 0.0
 		for i in 2:
 			var door: Dictionary = doors[i]
-			if hit.n != door.n or direction.dot(door.n) >= -0.0001 or absf((hit.p - door.p).dot(door.n)) > 0.1:
+			if not hit.n.is_equal_approx(door.n) or direction.dot(door.n) >= -0.0001 or absf((hit.p - door.p).dot(door.n)) > 0.1:
 				continue
 			offset = (hit.p - door.p).dot(tangent(door.n))
 			# Leave a two-pixel safety margin; grazing the frame stays blocked.
@@ -252,6 +343,9 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 		var other: Dictionary = doors[1 - color]
 		if not other.is_empty() and (other.p - placement.p).length() < 76:
 			return {}
+		if absf(face.n.x)>0.0001 and absf(face.n.y)>0.0001:
+			if not polygons.any(func(poly): return Geometry2D.is_point_in_polygon(placement.p-face.n*0.05,poly)): return {}
+			return placement if _slope_clear(placement.p,face.n) else {}
 		# Full upright player plus margin must fit immediately outside the door.
 		var normal_half := 15.0 if face.n.y != 0 else 11.0
 		var center: Vector2 = placement.p + face.n * (normal_half + 2)
@@ -260,6 +354,8 @@ func candidate(origin: Vector2, target: Vector2, color: int) -> Dictionary:
 		for solid in solids + occluders:
 			if solid.intersects(clearance):
 				return {}
+		for poly in polygons:
+			if _overlap(_box_polygon(clearance),poly): return {}
 		return placement
 	return {}
 
@@ -291,7 +387,7 @@ func transport(player: CharacterBody2D, before: Vector2) -> bool:
 	if exit_lock >= 0:
 		var locked: Dictionary = doors[exit_lock]
 		var n: Vector2 = locked.n
-		var extent := 15.0 if n.y != 0 else 11.0
+		var extent := _half_extent(n)
 		if (player.position - locked.p).dot(n) > extent + 0.5 or absf((player.position - locked.p).dot(tangent(n))) > 36 + extent:
 			exit_lock = -1
 	for i in 2:
@@ -305,13 +401,13 @@ func transport(player: CharacterBody2D, before: Vector2) -> bool:
 		if d0 >= 0 and d1 <= 0 and d1 < d0 and player.velocity.dot(n) < 0:
 			var crossing := before.lerp(player.position, d0 / (d0 - d1))
 			var offset: float = (crossing - entry.p).dot(t)
-			var half_t := 11.0 if n.y != 0 else 15.0
+			var half_t := _half_extent(t)
 			if absf(offset) + half_t > 36:
 				continue
 			var output: Dictionary = doors[1 - i]
 			var out_n: Vector2 = output.n
-			var out_half_t := 11.0 if out_n.y != 0 else 15.0
-			var out_half_n := 15.0 if out_n.y != 0 else 11.0
+			var out_half_t := _half_extent(tangent(out_n))
+			var out_half_n := _half_extent(out_n)
 			var safe_offset := clampf(offset, -36 + out_half_t, 36 - out_half_t)
 			var destination: Vector2 = output.p + tangent(out_n) * safe_offset + out_n * (out_half_n + 1)
 			var exit_box := Rect2(destination - Vector2(11,15),Vector2(22,30))
@@ -319,7 +415,7 @@ func transport(player: CharacterBody2D, before: Vector2) -> bool:
 				if blocker.intersects(exit_box):
 					# Dynamic geometry may have moved here since placement. Keep the
 					# player safely outside the entry rather than inside either solid.
-					var in_half_n := 15.0 if n.y != 0 else 11.0
+					var in_half_n := _half_extent(n)
 					player.position = entry.p + t * offset + n * (in_half_n + 1)
 					player.velocity -= n * player.velocity.dot(n)
 					return false
@@ -343,6 +439,8 @@ func _process(delta: float) -> void:
 func _draw() -> void:
 	for solid in solids:
 		draw_rect(solid, Color("566579"))
+	for poly in polygon_pieces:
+		draw_colored_polygon(poly,Color("566579"))
 	for face in faces:
 		draw_line(face.a, face.b, Color("c6d9e5"), 5)
 	for face in mirrors:

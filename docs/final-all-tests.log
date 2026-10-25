@@ -163,6 +163,170 @@ PASS: Blocked edge placement never opens a collision gap
 PLACEMENT_EDGE_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
+PASS: Convex slope geometry is available
+PASS: Slope15 returns its true first surface and normal
+PASS: Slope15 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope15 cannot be shot through an intervening solid
+PASS: Slope15 checks clearance across the full aperture, not only its center ray
+PASS: Slope15 pair activates using actual ray placement
+PASS: Slope15 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope15 active center is a real physical opening
+SLOPE_FRAME 15 collided=true normal=8.09491729736328 tangent=23.4526996612549
+PASS: Slope15 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope15 clearing doors restores the closed slope
+PASS: Slope15 real character traverses slope to floor
+PASS: Slope15 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope45 returns its true first surface and normal
+PASS: Slope45 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope45 cannot be shot through an intervening solid
+PASS: Slope45 checks clearance across the full aperture, not only its center ray
+PASS: Slope45 pair activates using actual ray placement
+PASS: Slope45 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope45 active center is a real physical opening
+SLOPE_FRAME 45 collided=true normal=-16.1747856140137 tangent=16.1754341125488
+PASS: Slope45 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope45 clearing doors restores the closed slope
+PASS: Slope45 real character traverses slope to floor
+PASS: Slope45 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope75 returns its true first surface and normal
+PASS: Slope75 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope75 cannot be shot through an intervening solid
+PASS: Slope75 checks clearance across the full aperture, not only its center ray
+PASS: Slope75 pair activates using actual ray placement
+PASS: Slope75 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope75 active center is a real physical opening
+SLOPE_FRAME 75 collided=true normal=17.4022445678711 tangent=35.0006065368652
+PASS: Slope75 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope75 clearing doors restores the closed slope
+PASS: Slope75 real character traverses slope to floor
+PASS: Slope75 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope135 returns its true first surface and normal
+PASS: Slope135 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope135 cannot be shot through an intervening solid
+PASS: Slope135 checks clearance across the full aperture, not only its center ray
+PASS: Slope135 pair activates using actual ray placement
+PASS: Slope135 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope135 active center is a real physical opening
+SLOPE_FRAME 135 collided=true normal=18.3863086700439 tangent=35.002326965332
+PASS: Slope135 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope135 clearing doors restores the closed slope
+PASS: Slope135 real character traverses slope to floor
+PASS: Slope135 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope195 returns its true first surface and normal
+PASS: Slope195 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope195 cannot be shot through an intervening solid
+PASS: Slope195 checks clearance across the full aperture, not only its center ray
+PASS: Slope195 pair activates using actual ray placement
+PASS: Slope195 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope195 active center is a real physical opening
+SLOPE_FRAME 195 collided=true normal=8.0949182510376 tangent=23.4526996612549
+PASS: Slope195 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope195 clearing doors restores the closed slope
+PASS: Slope195 real character traverses slope to floor
+PASS: Slope195 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope225 returns its true first surface and normal
+PASS: Slope225 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope225 cannot be shot through an intervening solid
+PASS: Slope225 checks clearance across the full aperture, not only its center ray
+PASS: Slope225 pair activates using actual ray placement
+PASS: Slope225 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope225 active center is a real physical opening
+SLOPE_FRAME 225 collided=true normal=-16.1750679016113 tangent=16.1750659942627
+PASS: Slope225 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope225 clearing doors restores the closed slope
+PASS: Slope225 real character traverses slope to floor
+PASS: Slope225 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope255 returns its true first surface and normal
+PASS: Slope255 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope255 cannot be shot through an intervening solid
+PASS: Slope255 checks clearance across the full aperture, not only its center ray
+PASS: Slope255 pair activates using actual ray placement
+PASS: Slope255 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope255 active center is a real physical opening
+SLOPE_FRAME 255 collided=true normal=17.4024524688721 tangent=34.993896484375
+PASS: Slope255 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope255 clearing doors restores the closed slope
+PASS: Slope255 real character traverses slope to floor
+PASS: Slope255 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+PASS: Slope315 returns its true first surface and normal
+PASS: Slope315 accepts legal edge/center shot -100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 accepts legal edge/center shot 0
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 accepts legal edge/center shot 100
+PASS: Whole72px slope aperture remains within pale edge
+PASS: Slope315 cannot be shot through an intervening solid
+PASS: Slope315 checks clearance across the full aperture, not only its center ray
+PASS: Slope315 pair activates using actual ray placement
+PASS: Slope315 laser traverses the real paired face
+PASS: A laser cannot originate inside slope material
+PASS: Slope315 active center is a real physical opening
+SLOPE_FRAME 315 collided=true normal=18.3867568969727 tangent=34.9997177124023
+PASS: Slope315 aperture frame physically collides before any corner sliding into the hole
+PASS: Slope315 clearing doors restores the closed slope
+PASS: Slope315 real character traverses slope to floor
+PASS: Slope315 real character traverses floor to slope
+PASS: Diagonal output projects the full upright character safely outside
+PASS: Diagonal output keeps total speed along the face normal
+SLOPE_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
 PORTAL_HOP_READY
 PASS: Menu starts room
 PASS: Room 1 red visible from spawn
@@ -786,103 +950,107 @@ PASS: R clears both reflected/routed portals
 ADVANCED_ROUTE_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
-PASS: Exactly23 curated rooms remain
-PASS: Displayed order matches all27 user deletions
-PASS: Deleted tail indices cannot be loaded
+PASS: 23 curated rooms plus the approved room24
+PASS: Original curated order is preserved and stableID51 appended
+PASS: Invalid tail indices cannot be loaded
 PORTAL_HOP_READY
 PASS: Tutorial entries are removed
 PASS: New room01 has no hint metadata
 PASS: New room01 enters gameplay directly
 PASS: New room01 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room02 has no hint metadata
 PASS: New room02 enters gameplay directly
 PASS: New room02 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room03 has no hint metadata
 PASS: New room03 enters gameplay directly
 PASS: New room03 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room04 has no hint metadata
 PASS: New room04 enters gameplay directly
 PASS: New room04 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room05 has no hint metadata
 PASS: New room05 enters gameplay directly
 PASS: New room05 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room06 has no hint metadata
 PASS: New room06 enters gameplay directly
 PASS: New room06 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room07 has no hint metadata
 PASS: New room07 enters gameplay directly
 PASS: New room07 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room08 has no hint metadata
 PASS: New room08 enters gameplay directly
 PASS: New room08 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room09 has no hint metadata
 PASS: New room09 enters gameplay directly
 PASS: New room09 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room10 has no hint metadata
 PASS: New room10 enters gameplay directly
 PASS: New room10 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room11 has no hint metadata
 PASS: New room11 enters gameplay directly
 PASS: New room11 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room12 has no hint metadata
 PASS: New room12 enters gameplay directly
 PASS: New room12 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room13 has no hint metadata
 PASS: New room13 enters gameplay directly
 PASS: New room13 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room14 has no hint metadata
 PASS: New room14 enters gameplay directly
 PASS: New room14 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room15 has no hint metadata
 PASS: New room15 enters gameplay directly
 PASS: New room15 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room16 has no hint metadata
 PASS: New room16 enters gameplay directly
 PASS: New room16 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room17 has no hint metadata
 PASS: New room17 enters gameplay directly
 PASS: New room17 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room18 has no hint metadata
 PASS: New room18 enters gameplay directly
 PASS: New room18 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room19 has no hint metadata
 PASS: New room19 enters gameplay directly
 PASS: New room19 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room20 has no hint metadata
 PASS: New room20 enters gameplay directly
 PASS: New room20 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room21 has no hint metadata
 PASS: New room21 enters gameplay directly
 PASS: New room21 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room22 has no hint metadata
 PASS: New room22 enters gameplay directly
 PASS: New room22 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
 PASS: New room23 has no hint metadata
 PASS: New room23 enters gameplay directly
 PASS: New room23 has no tutorial panel
-PASS: Only new room23 ends the campaign
+PASS: Only room24 ends the campaign
+PASS: New room24 has no hint metadata
+PASS: New room24 enters gameplay directly
+PASS: New room24 has no tutorial panel
+PASS: Only room24 ends the campaign
 PASS: Selection controls fit on page1
 PASS: Renumbered locks correspond to new progress
 PASS: Selection controls fit on page1
@@ -938,6 +1106,8 @@ PASS: Renumbered locks correspond to new progress
 PASS: Selection controls fit on page3
 PASS: Renumbered locks correspond to new progress
 PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
 PASS: Selection controls fit on page3
 PASS: Selection controls fit on page3
 PASS: Page3 has the correct room count
@@ -954,7 +1124,61 @@ PASS: Version2 unlock1 is not migrated twice
 PASS: Version2 unlock12 is not migrated twice
 PASS: Version2 unlock20 is not migrated twice
 PASS: Version2 unlock23 is not migrated twice
+PASS: Version2 unlock24 is not migrated twice
+PASS: Existing version2 room23 progress does not auto-complete the new room
+PASS: Progression fixture: completing room23 unlocks room24 and NEXT
+PASS: NEXT actually enters the appended slope room without a tutorial
 CURATION_FAILURES=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Approved sketch is appended as room24 with stable ID51
+PORTAL_HOP_READY
+PASS: Spawn sightline cannot pass through the starting ledge
+FALL_EXIT dx=-8.0 ds=-8.0 p=(614.0419, 299.7494) v=(-750.4314, -208.4532)
+FALL_BLUE dx=-8.0 ds=-8.0 p=(260.5486, 307.4916) v=(508.2939, -543.2379)
+FALL_ROUTE dx=-8.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.23, 184.9253), "end": (784.6989, 184.9251) }
+PASS: Room24 real input route -8/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=-8.0 ds=0.0 p=(616.1831, 292.0413) v=(-750.4314, -208.4532)
+FALL_BLUE dx=-8.0 ds=0.0 p=(256.8877, 301.7741) v=(514.6451, -539.5544)
+FALL_ROUTE dx=-8.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (686.8934, 184.9253), "end": (784.2128, 184.9251) }
+PASS: Room24 real input route -8/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=-8.0 ds=8.0 p=(618.3242, 284.3331) v=(-750.4314, -208.4532)
+FALL_BLUE dx=-8.0 ds=8.0 p=(253.2721, 296.1236) v=(521.3357, -535.5458)
+FALL_ROUTE dx=-8.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (693.012, 184.9253), "end": (784.2719, 184.9251) }
+PASS: Room24 real input route -8/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=-8.0 p=(611.9008, 307.4575) v=(-750.4314, -208.4532)
+FALL_BLUE dx=0.0 ds=-8.0 p=(264.2367, 313.258) v=(501.6995, -547.1501)
+FALL_ROUTE dx=0.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (675.4786, 184.9252), "end": (783.3209, 184.9251) }
+PASS: Room24 real input route 0/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+FALL_BLUE dx=0.0 ds=0.0 p=(260.5486, 307.4917) v=(508.3071, -543.2258)
+FALL_ROUTE dx=0.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.2418, 184.9253), "end": (784.7126, 184.9251) }
+PASS: Room24 real input route 0/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=8.0 p=(616.1831, 292.0413) v=(-750.4314, -208.4532)
+FALL_BLUE dx=0.0 ds=8.0 p=(256.8877, 301.7741) v=(514.6451, -539.5544)
+FALL_ROUTE dx=0.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (686.8934, 184.9253), "end": (784.2128, 184.9251) }
+PASS: Room24 real input route 0/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=-8.0 p=(609.7596, 315.1656) v=(-750.4314, -208.4532)
+FALL_BLUE dx=8.0 ds=-8.0 p=(267.9704, 319.0912) v=(495.2682, -550.912)
+FALL_ROUTE dx=8.0 ds=-8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (670.0187, 184.9253), "end": (784.044, 184.9251) }
+PASS: Room24 real input route 8/-8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=0.0 p=(611.9008, 307.4575) v=(-750.4314, -208.4532)
+FALL_BLUE dx=8.0 ds=0.0 p=(264.2367, 313.258) v=(501.6995, -547.1501)
+FALL_ROUTE dx=8.0 ds=0.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (675.4786, 184.9252), "end": (783.3209, 184.9251) }
+PASS: Room24 real input route 8/0 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=8.0 ds=8.0 p=(614.0419, 299.7494) v=(-750.4314, -208.4532)
+FALL_BLUE dx=8.0 ds=8.0 p=(260.5486, 307.4916) v=(508.2939, -543.2379)
+FALL_ROUTE dx=8.0 ds=8.0 plain=false { "won": true, "deaths": 0, "shot": true, "transfers": 1, "bounced": true, "landed": true, "landing": (681.23, 184.9253), "end": (784.6989, 184.9251) }
+PASS: Room24 real input route 8/8 crosses the slope and blue wall, then actually lands
+FALL_EXIT dx=0.0 ds=0.0 p=(614.042, 299.7494) v=(-750.4314, -208.4532)
+FALL_ROUTE dx=0.0 ds=0.0 plain=true { "won": false, "deaths": 0, "shot": true, "transfers": 1, "bounced": false, "landed": false, "landing": (0.0, 0.0), "end": (321.2775, 484.9882) }
+PASS: The same real-input route cannot win without blue reflection
+PASS: Retry fixture prepares real portals from a legal standing place
+PASS: 120px floor band cannot hold both full72px portals
+PASS: Pause freezes the player and retains the active slope pair
+PASS: R restores spawn and counters without a death loop
+PASS: R closes every real slope opening
+FALL_BOUNCE_FAILURES=0
 Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 
 PORTAL_HOP_READY
@@ -1312,6 +1536,21 @@ PASS: Room 50 phase 173 clears circuits, gates and portals
 PASS: Room 50 phase 173 returns near its actual spawn
 PASS: Room 50 retry leaves finite movement
 PASS: Powered mover 50 returns to its parked origin
+PASS: Room 51 phase 1 pause freezes rider and machinery
+PASS: Room 51 phase 1 R respawns once without a death loop
+PASS: Room 51 phase 1 clears circuits, gates and portals
+PASS: Room 51 phase 1 returns near its actual spawn
+PASS: Room 51 retry leaves finite movement
+PASS: Room 51 phase 47 pause freezes rider and machinery
+PASS: Room 51 phase 47 R respawns once without a death loop
+PASS: Room 51 phase 47 clears circuits, gates and portals
+PASS: Room 51 phase 47 returns near its actual spawn
+PASS: Room 51 retry leaves finite movement
+PASS: Room 51 phase 173 pause freezes rider and machinery
+PASS: Room 51 phase 173 R respawns once without a death loop
+PASS: Room 51 phase 173 clears circuits, gates and portals
+PASS: Room 51 phase 173 returns near its actual spawn
+PASS: Room 51 retry leaves finite movement
 PASS: Powered retry 38 prepares the real beam entrance
 PASS: Powered retry 38 reflects the real exit shot
 PASS: Powered retry 38 starts with its receivers lit
@@ -1396,6 +1635,6 @@ PASS: Room 50 phase 173 clears circuits, gates and portals
 PASS: Room 50 phase 173 returns near its actual spawn
 PASS: Room 50 retry leaves finite movement
 PASS: Powered mover 50 returns to its parked origin
-RETRY_STRESS_CASES=78 FAILURES=0
-ALL 32 HEADLESS TEST SUITES PASSED
+RETRY_STRESS_CASES=81 FAILURES=0
+ALL 34 HEADLESS TEST SUITES PASSED
 For GPU/window tests: run Godot --path . --script tests/display.gd

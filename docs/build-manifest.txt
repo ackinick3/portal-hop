@@ -1,20 +1,25 @@
 Build: builds/PortalHop.exe
 Godot: 4.7.2.stable.official.ed1daf0bf
 Architecture: Windows x86_64
-Rooms:23;27 user-selected original rooms deleted; remaining rooms sequentially numbered1-23
-Stable original IDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50
-Bytes:109327456
-SHA256:89486E7D9B72655BF58889F77AE4CA5B20F6AB244996099A0A35D49D073CB35F
-Hints: no entry briefings, suggestion circles, tutorial/help menu entries or map hint/guide/briefing fields; aiming cursor, placement preview and shot/mechanism feedback retained
-Survivors: all23 geometry/mechanism fields match pre-edit50-room source baseline; docs/curation-geometry.log; player/portal/material/platform physics unchanged
-Progress: legacy50 numbering migrates to next surviving original ID; new order_version2 stores current23 numbering and does not remigrate; real player cfg not written by tests
-Source tests: ALL32 HEADLESS TEST SUITES PASSED, ordinary real-time runner, full stdout/stderr checked with no errors or exit leaks; docs/final-all-tests.log
-Retry stress:78 cases passed on retained23 rooms and powered mover phases; previous168-case result belongs old50-room build
-Routes: all23 surviving rooms complete through actual movement/jump/gun-origin shooting; navigation fixture completion is separately labelled
-Review: fresh read-only curation review no important findings; docs/curation-review.log
-GPU:23room previews,3selection pages and no-tutorial menu checked; docs/curated-preview
-Display:3window sizes, fullscreen, live cursor aiming/restoration passed; docs/display.log
-Native GUI exit:0; docs/standalone-gui.log
-Embedded pack: matchingGodot mounted thisEXE and directly started23rooms with no tutorial panel/data, EMBEDDED_PROJECT=true; docs/standalone-pack.log and standalone-room23.png
-Single entry: builds/PortalHop.exe; desktop Portal Hop.lnk target verified; buildsEXEcount1
-Human acceptance: pending further user playtesting of curated order
+Rooms:24; original curated23 unchanged, approved custom falling-return room appended as24/stableID51
+Stable IDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51
+Bytes:109332080
+SHA256:F21D40F7F314E5ED3FC2014C8F040EFE5AF5E8ED168E70DC364F2CECA01B2C02
+Geometry: approved adjusted.json; blue slope57.4deg, pale slope74.5deg, floor pale band120px; convex polygon collision and full72px real slope apertures
+Physics: actors/player.gd and world/materials.gd unchanged; existing movement/gravity/blue reflection and total-speed exit rule retained
+Hints: no entry briefings, suggestion circles, tutorial/help entries or hint metadata; operational feedback retained
+Progress: order_version2 unchanged; existing23 stays23; completing23 unlocks24 and NEXT; final settlement only24; real player cfg not written by tests
+Baseline: original32 real-time suites passed before implementation; docs/baseline-before-slopes.log
+Source tests: ALL34 HEADLESS TEST SUITES PASSED, real time, stdout/stderr checked, no runtime errors or exit leaks; docs/final-all-tests.log
+Retry stress:81 cases passed for24 rooms and powered mover/receiver phases; docs/final-retry_stress.log
+Slope tests:8 surface normal directions, real bidirectional central character traversal, full-aperture clearance and physical frame collision, closed restoration, first-hit ray/laser; docs/final-slopes.log
+Room24 route:9 entrance/exit deviations +/-8px all zero-death wins, one transfer, blue reflection and actual goal-platform landing; nominal x681.24, range670.02-693.01; no-blue same-input control cannot win; R/pause and dual-floor-door rejection passed; docs/final-fall_bounce.log
+Review: independent read-only review no confirmed P0/P1/P2 findings; near-limit tangential character traversal not exhaustively covered; docs/slopes-review.log
+GPU:24 room previews,3 selection pages, menu, new-room real blue-bounce/landing captures checked; docs/curated-preview and docs/sloped-preview; docs/campaign-preview24.log and docs/fall-bounce-gpu.log
+Display:3 window sizes, fullscreen, cursor mapping/restoration passed; docs/display.log
+Native GUI exit:0; docs/standalone-gui.log and docs/standalone-gui-exit.log
+Embedded pack: matchingGodot mounted thisEXE, EMBEDDED_PROJECT=true, directly entered24 rooms; last THE FALLING RETURN polygons=2; docs/standalone-pack.log and standalone-room24.png
+Embedded playable route: same9 real-input gate variants, no-blue control, R/pause all passed from thisEXE pack; docs/standalone-fall-bounce.log
+Single entry: builds/PortalHop.exe only1EXE; desktop C:\Users\XH\Desktop\Portal Hop.lnk target verified against same absolute path
+Human acceptance: new room24 hand-play difficulty and tolerances pending user feedback; all shortcuts not exhaustively excluded
+Documentation: local Markdown links, original input SHA256, plan embedded JSON equality and inline JS syntax verified; no editor/map-review logic changed.
