@@ -31,9 +31,10 @@ func configure(data: Dictionary, portals: Node2D) -> void:
 		gates.append({"rect":spec.rect,"requires":spec.get("requires",[]),"body":body,"open":false})
 	for spec in data.get("movers",[]):
 		var platform = load("res://world/moving_platform.gd").new()
+		platform.z_index = -1 # Keep hazard markers above decorative tracks.
 		add_child(platform)
 		platform.process_physics_priority = -10
-		platform.configure(spec.rect,spec.to,spec.get("speed",85.0))
+		platform.configure(spec.rect,spec.to,spec.get("speed",85.0),spec.get("path",PackedVector2Array()))
 		platform.enabled = spec.get("requires",[]).is_empty()
 		movers.append({"platform":platform,"requires":spec.get("requires",[])})
 	publish_occluders()

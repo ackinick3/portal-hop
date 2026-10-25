@@ -1,0 +1,24 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Platforms support an ordered multi-segment track
+PASS: First track leg remains horizontal
+PASS: Second leg follows the actual right-angle waypoint, not its chord
+PASS: An ordinary rider survives the horizontal-to-vertical corner
+PASS: Whole track reverses at its far endpoint
+PASS: Reset restores full path origin, direction and gear phase
+PASS: A high-speed tick sweeps each leg and never cuts across the inside corner
+PASS: A thin wall on the real leg still blocks high-speed motion
+PASS: The kinetic sketch has its own room28 stableID55
+PORTAL_HOP_READY
+FAIL: The first frame never sweeps a phantom player from world origin through the six-guard field
+PASS: All six guards exist while the legacy first-enemy alias remains compatible
+PASS: Both distinct platform tracks retain all sketch waypoints
+PASS: Six guards actually follow their own diagonal/horizontal segments at existing70px/s
+PASS: Spikes use the second real platform position as their collision anchor
+PASS: Pause freezes target, spikes and the full guard roster
+PASS: Death resets every guard, including diagonal patrol direction
+KINETIC_RESPAWN deaths=2 p=(488.0, 495.0) spawn=(488.0, 495.0) dead=-0.0 hazard=[[P: (182.25, 345.0), S: (148.0, 22.0)]]
+FAIL: The dense stage does not create a spawn death loop
+KINETIC_SPIKE deaths=3 p=(256.25, 356.0) dead=0.275
+FAIL: The rendered moving spike area is actually lethal; fixture placement is separate from route evidence
+KINETIC_STAGE_FAILURES=3

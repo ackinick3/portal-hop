@@ -6,6 +6,7 @@ var world: Node2D
 var portals: Node2D
 var player: CharacterBody2D
 var enemy: Node2D
+var enemies: Array[Node2D] = []
 var stage: Node2D
 var audio: Node
 var panel: CanvasLayer
@@ -186,6 +187,7 @@ func start_level(number: int) -> void:
 	player = load("res://actors/player.gd").new()
 	player.spawn = data.spawn
 	player.position = data.spawn
+	player.previous_position = data.spawn
 	player.portal_system = portals
 	player.materials.assign(data.get("materials",[]))
 	player.died.connect(on_death)
@@ -193,14 +195,18 @@ func start_level(number: int) -> void:
 	player.landed.connect(func(): audio.play("land"))
 	world.add_child(player)
 	enemy = null
+	enemies.clear()
 	if data.enemy:
-		enemy = load("res://actors/sentry.gd").new()
-		if data.has("guard"):
-			enemy.spawn = data.guard.spawn
-			enemy.low = data.guard.low
-			enemy.high = data.guard.high
-			enemy.vertical = data.guard.get("vertical",false)
-		world.add_child(enemy)
+		for spec in data.get("guards",[data.get("guard",{})]):
+			var guard = load("res://actors/sentry.gd").new()
+			guard.spawn = spec.get("spawn",guard.spawn)
+			guard.low = spec.get("low",guard.low)
+			guard.high = spec.get("high",guard.high)
+			guard.vertical = spec.get("vertical",false)
+			guard.patrol_points = spec.get("patrol",PackedVector2Array())
+			world.add_child(guard)
+			enemies.append(guard)
+		if not enemies.is_empty(): enemy = enemies[0]
 	clear_panel()
 	audio.play("checkpoint")
 	queue_redraw()
@@ -211,7 +217,7 @@ func on_death() -> void:
 	portals.clear()
 	stage.reset()
 	update_moving_goal()
-	if enemy != null: enemy.reset()
+	for guard in enemies: guard.reset()
 	audio.play("death")
 
 func on_portal_feedback(kind: String) -> void:
@@ -267,6 +273,15 @@ func update_moving_goal() -> void:
 		var platform: Rect2 = stage.movers[data.goal_mover].platform.bounds()
 		data.goal = Rect2(platform.position+data.goal_offset,data.goal.size)
 
+func hazard_rects() -> Array[Rect2]:
+	var result: Array[Rect2] = []
+	result.assign(data.get("hazards",[]))
+	for spec in data.get("moving_hazards",[]):
+		var rect: Rect2 = spec.rect
+		rect.position += stage.movers[spec.mover].platform.bounds().position
+		result.append(rect)
+	return result
+
 func _process(delta: float) -> void:
 	if state == "playing":
 		elapsed += delta
@@ -277,11 +292,12 @@ func _physics_process(_delta: float) -> void:
 	if state != "playing": return
 	update_moving_goal()
 	if player.dead_time > 0: return
-	if enemy != null:
-		var kind: String = enemy.hit(player,player.previous_position,player.previous_velocity)
+	for guard in enemies:
+		var kind: String = guard.hit(player,player.previous_position,player.previous_velocity)
 		if kind == "stomp": audio.play("stomp")
+		if player.dead_time>0: break
 	if player.position.y + 15 >= 530: player.die()
-	for hazard in data.get("hazards",[]):
+	for hazard in hazard_rects():
 		if hazard.intersects(Rect2(player.position-Vector2(11,15),Vector2(22,30))): player.die()
 	var supported_goal := true
 	if data.has("goal_mover"):
@@ -303,7 +319,7 @@ func _draw() -> void:
 				break
 		Landmarks.draw_flag(self, flag_foot, elapsed)
 		Landmarks.draw_gate(self, data.goal, elapsed)
-		for hazard in data.get("hazards",[]):
+		for hazard in hazard_rects():
 			for x in range(int(hazard.position.x),int(hazard.end.x),16):
 				draw_colored_polygon(PackedVector2Array([Vector2(x,hazard.end.y),Vector2(x+8,hazard.position.y),Vector2(minf(x+16,hazard.end.x),hazard.end.y)]),Color("ff526b"))
 		for x in range(0,960,18):

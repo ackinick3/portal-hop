@@ -2,6 +2,9 @@ extends Node2D
 
 var enabled := true
 var gear_angle := 0.0
+var path_points := PackedVector2Array()
+var _distances := PackedFloat64Array()
+var _path_length := 0.0
 var _start := Vector2.ZERO
 var _end := Vector2.ZERO
 var _size := Vector2(110, 20)
@@ -10,11 +13,18 @@ var _travel := 0.0
 var _forward := true
 var _body: AnimatableBody2D
 
-func configure(rect: Rect2, to: Vector2, speed: float) -> void:
+func configure(rect: Rect2, to: Vector2, speed: float, path: PackedVector2Array = PackedVector2Array()) -> void:
 	_start = rect.position
 	_end = to
 	_size = rect.size
 	_speed = maxf(0.0, speed)
+	# Runtime track points are platform top-left positions, including the origin.
+	path_points = path.duplicate() if not path.is_empty() else PackedVector2Array([_start,_end])
+	_distances = PackedFloat64Array([0.0])
+	_path_length = 0.0
+	for i in range(1,path_points.size()):
+		_path_length += path_points[i-1].distance_to(path_points[i])
+		_distances.append(_path_length)
 	if is_inside_tree():
 		_body.get_child(0).shape.size = _size
 		_body.get_child(0).position = _size * 0.5
@@ -52,20 +62,42 @@ func _physics_process(delta: float) -> void:
 		if _travel != 0:
 			reset()
 		return
-	var length := _start.distance_to(_end)
-	if length < 0.001 or _speed <= 0:
+	if _path_length < 0.001 or _speed <= 0:
 		return
-	var phase := _travel if _forward else length * 2.0 - _travel
-	var next_phase := fposmod(phase + _speed * delta, length * 2.0)
-	var next := length - absf(next_phase - length)
-	var movement := _start.lerp(_end, next / length) - _body.position
-	var fraction := _safe_fraction(movement)
-	_travel = lerpf(_travel, next, fraction)
-	_body.position = _start.lerp(_end, _travel / length)
-	gear_angle = fposmod(gear_angle + movement.length() * fraction / 9.0, TAU)
-	if fraction >= 1.0:
-		_forward = next_phase < length
+	var remaining := _speed*delta
+	while remaining>0.000001:
+		var corner := _path_length if _forward else 0.0
+		if _forward:
+			for mark in _distances:
+				if mark>_travel+0.000001:
+					corner = mark
+					break
+		else:
+			for i in range(_distances.size()-1,-1,-1):
+				if _distances[i]<_travel-0.000001:
+					corner = _distances[i]
+					break
+		var advance := minf(remaining,absf(corner-_travel))
+		if advance<0.000001:
+			_forward = not _forward
+			continue
+		var next := _travel+advance*(1 if _forward else -1)
+		var movement := _point_at(next)-_body.position
+		var fraction := _safe_fraction(movement)
+		_travel = lerpf(_travel,next,fraction)
+		_body.position = _point_at(_travel)
+		gear_angle = fposmod(gear_angle+movement.length()*fraction/9.0,TAU)
+		remaining -= advance
+		if fraction<1: break
+		if _travel>=_path_length-0.000001: _forward = false
+		elif _travel<=0.000001: _forward = true
 	queue_redraw()
+
+func _point_at(distance: float) -> Vector2:
+	for i in range(1,path_points.size()):
+		var length := _distances[i]-_distances[i-1]
+		if length>0 and distance<=_distances[i]: return path_points[i-1].lerp(path_points[i],clampf((distance-_distances[i-1])/length,0,1))
+	return path_points[-1]
 
 func _safe_fraction(movement: Vector2) -> float:
 	if movement.length_squared() < 0.000001:
@@ -88,7 +120,10 @@ func _safe_fraction(movement: Vector2) -> float:
 	var fraction := 1.0
 	var collision := KinematicCollision2D.new()
 	if _body.test_move(_body.global_transform, movement, collision):
-		fraction = minf(fraction, collision.get_travel().dot(movement.normalized()) / movement.length())
+		# Recovery may include sideways travel; only the opposing normal limits
+		# progress along this track, otherwise a diagonal mover creeps into a floor.
+		var into := movement.dot(collision.get_normal())
+		fraction = minf(fraction,collision.get_travel().dot(collision.get_normal())/into if into < -0.000001 else 0.0)
 	for rider in riders:
 		# CharacterBody applies the platform's velocity on its following tick.
 		# Leave one tick of clearance so its pending carry cannot squeeze it.
@@ -103,12 +138,13 @@ func _safe_fraction(movement: Vector2) -> float:
 func _draw() -> void:
 	for wheel in [19.0, _size.x - 19.0]:
 		var under := Vector2(wheel, _size.y + 5)
-		var rail_start := _start + under
-		var rail_end := _end + under
-		draw_line(rail_start, rail_end, Color("070f1b"), 21, true)
-		draw_line(rail_start, rail_end, Color("273b50"), 13, true)
-		draw_line(rail_start, rail_end, Color("111f30"), 5, true)
-		for endpoint in [rail_start, rail_end]:
+		var rail := PackedVector2Array()
+		for p in path_points if not path_points.is_empty() else PackedVector2Array([_start,_end]): rail.append(p+under)
+		if rail.size()>1:
+			draw_polyline(rail,Color("070f1b"),21,true)
+			draw_polyline(rail,Color("273b50"),13,true)
+			draw_polyline(rail,Color("111f30"),5,true)
+		for endpoint in [rail[0],rail[-1]]:
 			draw_circle(endpoint, 11, Color("070f1b"))
 			draw_circle(endpoint, 6, Color("526779"))
 			draw_circle(endpoint, 2, Color("111f30"))

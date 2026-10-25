@@ -1,8 +1,8 @@
 # Portal Hop
 
-Godot4.7.2 / GDScript，Windows x64，27关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
+Godot4.7.2 / GDScript，Windows x64，28关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
 
-双击`builds/PortalHop.exe`或桌面Portal Hop快捷方式，持续使用同一个文件。原50关中用户指定的27张图已删，保留23关后追加24–27，连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
+双击`builds/PortalHop.exe`或桌面Portal Hop快捷方式，持续使用同一个文件。原50关中用户指定的27张图已删，保留23关后追加24–28，连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
 
 - A/D：移动；Space：跳跃。
 - 鼠标左/右键：红/蓝传送门。
@@ -13,7 +13,7 @@ Godot4.7.2 / GDScript，Windows x64，27关单机版。开发接续先读[PROJEC
 
 ## 开发与检查
 
-自主画关卡入口：[空白关卡编辑器](docs/关卡编辑器.html)，普通浏览器打开即可。点击放置部件、拖墙/地刺、设置发射器方向/怪物范围，使用曲线箭头画预期路线；移动平台可改宽高、灰/蓝/红材质及多点往返轨迹，绿色虚线阻枪光幕表示人过、枪线不过。导出JSON回传；第27关已接灰平台/移动终点/光幕，其他移动材质与多折点支撑按后续地图需要实现。[操作说明](docs/level-editor/README.md)。
+自主画关卡入口：[空白关卡编辑器](docs/关卡编辑器.html)，普通浏览器打开即可。点击放置部件、拖墙/地刺、设置发射器方向/怪物范围，使用曲线箭头画预期路线；移动平台可改宽高、灰/蓝/红材质及多点往返轨迹，绿色虚线阻枪光幕表示人过、枪线不过。导出JSON回传；27/28关已接灰平台/折线往返/移动终点/尖刺/光幕，蓝红移动材质按后续地图需要实现。[操作说明](docs/level-editor/README.md)。
 
 自动实装入口：[portalhop-level-builder技能](skills/portalhop-level-builder/SKILL.md)，已安装到用户Codex技能目录。发送`使用 $portalhop-level-builder，地图JSON：<文件路径>`，助手保持思路，自主计算比例、创建关卡、实际通关与回归、更新同一EXE并汇报；无需再次确认比例稿。仅要求评图时仍按评图范围，未定义的玩法语义会先询问。原稿/旧关/普通物理和真实存档保留。
 
@@ -25,6 +25,8 @@ Godot4.7.2 / GDScript，Windows x64，27关单机版。开发接续先读[PROJEC
 
 第27关THE WANDERING FINISH（流动终点）按最新四箭头：起跳入底门、左墙水平跨刺与上下怪、红跑道换右竖/斜门、真实落上随平台移动的终点。光幕只挡枪线，人可通过；灰平台50px/s往返。按相位躲怪，既有向下踩踏仍有效。[原/修订及实测图](docs/level-editor/designs/2026-10-25-wandering-goal/plan.html)。完成26解锁27，原1–26地图、普通人物物理和进度保留。
 
+第28关THE KINETIC CHAMBER（流动密室）保留四周白墙、六只独立巡逻怪、五节点终点平台和三节点移动刺台。用户已确认自由解法，不强制传送顺序/次数；参考底门/顶门落上移动目标，其他合法解法保留。[原/修订及实测图](docs/level-editor/designs/2026-10-25-kinetic-chamber/plan.html)。完成27解锁28，原地图/普通物理/进度保留；多段平台、移动尖刺和怪群均实际运行。
+
 关卡设计评审入口：[本地地图批注网页](docs/地图批注.html)，用普通浏览器打开，可逐关翻页、画笔/箭头/文字批注、自动保存及导入/导出。评完导出全部批注JSON发回对话，再更新计划图，用户确认后实装游戏。当前只包含手绘五图A–E，不是新增可玩关卡；[使用与维护说明](docs/map-review/README.md)。
 
 ```powershell
@@ -35,4 +37,4 @@ Godot4.7.2 / GDScript，Windows x64，27关单机版。开发接续先读[PROJEC
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-测试隔离真实进度。当前入口41组，覆盖当前27关真实输入路线、8方向斜面真实开口、核心物理/光路/平台、移动目标/阻枪光幕、删关顺序、无提示、重编号、分页、存档迁移及90例重试。第27关GPU及内嵌选关在docs/wandering-goal-preview，26在docs/boost-bounce-preview，25在docs/double-return-preview，24在docs/sloped-preview；实际验证及唯一EXE身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。
+测试隔离真实进度。当前入口43组，覆盖当前28关实际参考路线、8方向斜面真实开口、核心物理/光路/折线平台、移动目标/尖刺/阻枪光幕、怪群、删关顺序、分页、存档迁移及93例重试。第28关GPU与内嵌选关在docs/kinetic-chamber-preview，27在docs/wandering-goal-preview，26在docs/boost-bounce-preview，25在docs/double-return-preview，24在docs/sloped-preview；实际验证及唯一EXE身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。

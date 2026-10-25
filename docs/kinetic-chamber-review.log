@@ -1,0 +1,8 @@
+2026-10-25 independent read-only source review
+Reviewed polyline movers/legacy3arg API, six-guard lifecycle/legacy first-enemy alias, diagonal patrols, shared moving hazard bounds, room28 geometry and original intent.
+Reviewer independently ran moving_platform and vertical_guard: exit0, failures0, no ERROR/leak output.
+P2 finding: root-drawn spikes were covered by mover decorative tracks in actual GPU images, despite full lethal collision area.
+Fixed: stage movers use z_index=-1 so hazard markers remain above decorative tracks. Re-recorded and viewed initial/actual landing GPU pictures; spikes remain visible along their full platform width. Collision ranges unchanged.
+No other confirmed substantive code regression in review.
+Review does not independently establish full43 suites, packaged route or human difficulty. Executor records those separately.
+Not exhausted: every free solution, human timing, every extreme-speed diagonal-rider crush combination.

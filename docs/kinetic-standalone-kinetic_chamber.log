@@ -1,0 +1,30 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: User sketch is room28 stableID55
+PORTAL_HOP_READY
+KINETIC_ROUTE target=225.0 delay=0 floor=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (225.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (225.0, 176.2148), "end": (225.0, 176.2148), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Birth jump and real floor/ceiling doors land on the independently moving target
+KINETIC_ROUTE target=213.0 delay=0 floor=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (213.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (213.0, 176.2148), "end": (213.0, 176.2148), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Nearby ceiling/floor doors and short departure delays retain an actual target landing
+KINETIC_ROUTE target=237.0 delay=0 floor=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (237.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (237.0, 176.2148), "end": (237.0, 176.2148), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Nearby ceiling/floor doors and short departure delays retain an actual target landing
+KINETIC_ROUTE target=225.0 delay=0 floor=-8.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (217.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (217.0, 176.2148), "end": (217.0, 176.2148), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Nearby ceiling/floor doors and short departure delays retain an actual target landing
+KINETIC_ROUTE target=225.0 delay=0 floor=8.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (233.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (233.0, 176.2148), "end": (233.0, 176.2148), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Nearby ceiling/floor doors and short departure delays retain an actual target landing
+KINETIC_ROUTE target=225.0 delay=24 floor=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (225.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (225.0, 180.2957), "end": (225.0, 180.2957), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Nearby ceiling/floor doors and short departure delays retain an actual target landing
+KINETIC_ROUTE target=225.0 delay=48 floor=0.0 mode=normal { "won": true, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (225.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": true, "landing": (225.0, 184.3755), "end": (232.2808, 185.618), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Nearby ceiling/floor doors and short departure delays retain an actual target landing
+KINETIC_ROUTE target=225.0 delay=0 floor=0.0 mode=no_portals { "won": false, "deaths": 0, "transfers": 0, "max_transfers": 0, "floor_shot": false, "ceiling_shot": false, "exit": {  }, "landed": false, "landing": (0.0, 0.0), "end": (488.0, 494.9253), "minimum_y": 433.05029296875, "hazard_contact": false }
+PASS: An ordinary birth jump without portals does not reach the upper moving target
+KINETIC_ROUTE target=800.0 delay=0 floor=0.0 mode=normal { "won": false, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (800.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": false, "landing": (0.0, 0.0), "end": (800.0, 494.9895), "minimum_y": 56.0, "hazard_contact": false }
+PASS: A distant ceiling exit cannot count as landing on the moving goal
+KINETIC_ROUTE target=350.0 delay=0 floor=0.0 mode=normal { "won": false, "deaths": 1, "transfers": 0, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (350.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": false, "landing": (0.0, 0.0), "end": (350.0, 330.75), "minimum_y": 56.0, "hazard_contact": true }
+PASS: A different free ceiling aim actually falls into the moving spike platform
+KINETIC_ROUTE target=225.0 delay=0 floor=0.0 mode=normal { "won": false, "deaths": 0, "transfers": 1, "max_transfers": 1, "floor_shot": true, "ceiling_shot": true, "exit": { "p": (225.0, 56.0), "v": (0.0, 375.0), "frame": 95 }, "landed": false, "landing": (0.0, 0.0), "end": (225.0, 56.0), "minimum_y": 56.0, "hazard_contact": false }
+PASS: Retry fixture reaches the real ceiling exit
+PASS: Pause freezes the actual reference route and every moving hazard
+PASS: R immediately restores both paths, target and attached spikes
+PASS: R restores the real birth state and all six guards without a retry loop
+KINETIC_CHAMBER_FAILURES=0

@@ -1,0 +1,99 @@
+{
+  "input_sha256": "6e8628cb09a038a4034839edb4f3209cd9a6b48dc8c62a07a7f462ab35224af4",
+  "intent": "Explicitly confirmed free solutions; goal on mover11, spikes on mover12, six independent guards",
+  "physics": {
+    "gravity": 900,
+    "jump": -330,
+    "ordinary_speed": 210,
+    "air_control": 380,
+    "character": [
+      22,
+      30
+    ],
+    "portal_width": 72
+  },
+  "layout": {
+    "interior": [
+      [
+        40,
+        40
+      ],
+      [
+        920,
+        510
+      ]
+    ],
+    "goal_track": [
+      {
+        "x": 180,
+        "y": 180
+      },
+      {
+        "x": 730,
+        "y": 370
+      },
+      {
+        "x": 730,
+        "y": 175
+      },
+      {
+        "x": 170,
+        "y": 360
+      },
+      {
+        "x": 180,
+        "y": 180
+      }
+    ],
+    "goal_speed": 60,
+    "spike_track": [
+      {
+        "x": 225,
+        "y": 373
+      },
+      {
+        "x": 818,
+        "y": 373
+      },
+      {
+        "x": 116,
+        "y": 373
+      }
+    ],
+    "spike_speed": 75,
+    "guard_speed": 70
+  },
+  "analytical_floor_entry_speed": 368.64617182333524,
+  "model_limit": "Estimate includes15px from standing center to aperture plane, excludes discrete timing and contact clearance; measured velocity is stored separately",
+  "measured": {
+    "ceiling_shot": true,
+    "deaths": 0,
+    "end": [
+      225,
+      176.05859375
+    ],
+    "exit": {
+      "frame": 95,
+      "p": [
+        225,
+        56
+      ],
+      "v": [
+        0,
+        375
+      ]
+    },
+    "floor_shot": true,
+    "hazard_contact": false,
+    "landed": true,
+    "landing": [
+      225,
+      176.05859375
+    ],
+    "max_transfers": 1,
+    "minimum_y": 56,
+    "transfers": 1,
+    "won": true
+  },
+  "boundaries": "Finite targets/phases; no enforced optimal solution or exhaustive human difficulty/clever-route proof"
+}

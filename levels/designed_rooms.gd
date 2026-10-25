@@ -68,3 +68,24 @@ static func wandering_finish() -> Dictionary:
 		"gun_screens":[{"a":Vector2(575,0),"b":Vector2(575,330)}],
 		"movers":[{"rect":Rect2(290,90,180,20),"to":Vector2(760,90),"speed":50.0}]
 	}
+
+static func kinetic_chamber() -> Dictionary:
+	return {
+		"name":"THE KINETIC CHAMBER", "spawn":Vector2(488,495), "goal":Rect2(152,116,42,54), "enemy":true,
+		"goal_mover":0,"goal_offset":Vector2(32,-54),
+		"blocks":[Rect2(20,20,920,20),Rect2(20,20,20,510),Rect2(920,20,20,510),Rect2(20,510,920,20)],
+		"faces":[{"a":Vector2(40,40),"b":Vector2(920,40),"n":Vector2.DOWN},{"a":Vector2(40,40),"b":Vector2(40,510),"n":Vector2.RIGHT},{"a":Vector2(920,40),"b":Vector2(920,510),"n":Vector2.LEFT},{"a":Vector2(40,510),"b":Vector2(920,510),"n":Vector2.UP}],
+		"guards":[
+			{"spawn":Vector2(480,272.5),"patrol":PackedVector2Array([Vector2(72,72),Vector2(888,473)])},
+			{"spawn":Vector2(480,275),"patrol":PackedVector2Array([Vector2(72,478),Vector2(888,72)])},
+			{"spawn":Vector2(269,275),"patrol":PackedVector2Array([Vector2(164,72),Vector2(374,478)])},
+			{"spawn":Vector2(632.5,275),"patrol":PackedVector2Array([Vector2(495,72),Vector2(770,478)])},
+			{"spawn":Vector2(485,144.5),"patrol":PackedVector2Array([Vector2(115,140),Vector2(855,149)])},
+			{"spawn":Vector2(484,388.5),"patrol":PackedVector2Array([Vector2(80,383),Vector2(888,394)])}
+		],
+		"movers":[
+			{"rect":Rect2(120,170,120,20),"to":Vector2(120,170),"speed":60.0,"path":PackedVector2Array([Vector2(120,170),Vector2(670,360),Vector2(670,165),Vector2(110,350),Vector2(120,170)])},
+			{"rect":Rect2(151,367,148,12),"to":Vector2(42,367),"speed":75.0,"path":PackedVector2Array([Vector2(151,367),Vector2(744,367),Vector2(42,367)])}
+		],
+		"moving_hazards":[{"mover":1,"rect":Rect2(0,-22,148,22)}]
+	}

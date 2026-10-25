@@ -4,14 +4,14 @@ func run() -> void:
 	var embedded := FileAccess.file_exists("res://project.binary")
 	print("EMBEDDED_PROJECT=",embedded)
 	var maps = load("res://levels/maps.gd")
-	if not embedded or maps.LEVEL_COUNT != 27:
-		push_error("Expected the exported twenty-seven-room pack, not loose project sources")
+	if not embedded or maps.LEVEL_COUNT != 28:
+		push_error("Expected the exported twenty-eight-room pack, not loose project sources")
 		quit(1)
 		return
 	var game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
-	for i in 27:
+	for i in 28:
 		game.enter_level(i)
 		await process_frame
 		await process_frame
@@ -40,10 +40,15 @@ func run() -> void:
 			await game.drain_audio()
 			quit(1)
 			return
-	print("EXPORTED_ROOMS_STARTED=27")
+		if i==26 and (game.data.name!="THE WANDERING FINISH" or game.portals.gun_screens.size()!=1 or game.stage.movers.size()!=1 or game.data.get("goal_mover",-1)!=0):
+			push_error("Exported room27 was not retained")
+			await game.drain_audio()
+			quit(1)
+			return
+	print("EXPORTED_ROOMS_STARTED=28")
 	print("EXPORTED_FINAL=",game.data.name," polygons=",game.portals.polygons.size()," movers=",game.stage.movers.size()," receivers=",game.stage.receivers.size())
-	if game.data.name!="THE WANDERING FINISH" or game.portals.gun_screens.size()!=1 or game.stage.movers.size()!=1 or game.data.get("goal_mover",-1)!=0 or game.enemy==null or not game.enemy.vertical:
-		push_error("Exported final room is missing the gun screen, moving goal or vertical guard")
+	if game.data.name!="THE KINETIC CHAMBER" or game.stage.movers.size()!=2 or game.stage.movers[0].platform.path_points.size()!=5 or game.stage.movers[1].platform.path_points.size()!=3 or game.data.get("goal_mover",-1)!=0 or game.enemies.size()!=6 or game.hazard_rects().size()!=1:
+		push_error("Exported final room is missing the polyline target, moving spikes or six guards")
 		await game.drain_audio()
 		quit(1)
 		return

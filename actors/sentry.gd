@@ -5,11 +5,24 @@ var low := 440.0
 var high := 580.0
 var spawn := Vector2(510,413)
 var vertical := false
+var patrol_points := PackedVector2Array()
 
 func _ready() -> void:
 	position = spawn
 func _physics_process(delta: float) -> void:
 	if not alive: return
+	if patrol_points.size()==2:
+		var a := patrol_points[0]
+		var b := patrol_points[1]
+		var length := a.distance_to(b)
+		if length>0.001:
+			var distance := clampf((position-a).dot((b-a).normalized()),0,length)
+			var phase := distance if direction>0 else length*2-distance
+			var next := fposmod(phase+70*delta,length*2)
+			position = a.lerp(b,(length-absf(next-length))/length)
+			direction = 1 if next<length else -1
+		queue_redraw()
+		return
 	var at := position.y if vertical else position.x
 	at += direction * 70 * delta
 	if at >= high:
