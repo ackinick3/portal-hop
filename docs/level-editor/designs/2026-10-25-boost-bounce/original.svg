@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540"><defs><marker id="original-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5 0 10z" fill="#278b6f"/></marker></defs><rect width="960" height="540" fill="white"/><style>text{font:14px "Microsoft YaHei",sans-serif}</style>
+<line x1="38" y1="444" x2="138" y2="443" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="38" y1="444" x2="138" y2="443" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+<path d="M89 410v-40l28 10-28 10" stroke="#238b69" fill="none" stroke-width="2"/><text x="77" y="429" fill="#238b69">起点</text>
+<line x1="156" y1="440" x2="341" y2="437" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="156" y1="440" x2="341" y2="437" stroke="#e95c68" stroke-width="20" stroke-linecap="round"/>
+<line x1="419" y1="379" x2="347" y2="434" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="419" y1="379" x2="347" y2="434" stroke="#e95c68" stroke-width="20" stroke-linecap="round"/>
+<line x1="417" y1="379" x2="417" y2="438" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="417" y1="379" x2="417" y2="438" stroke="#7b8591" stroke-width="20" stroke-linecap="round"/>
+<polygon points="422.0,447.0 429.82087974253056,424.9356885434221 437.9994712404367,446.86992299804524" fill="#ff526b"/>
+<polygon points="437.9994712404367,446.86992299804524 445.82035098296734,424.80561154146733 453.9989424808735,446.7398459960905" fill="#ff526b"/>
+<polygon points="453.9989424808735,446.7398459960905 461.81982222340406,424.67553453951257 469.9984137213102,446.60976899413566" fill="#ff526b"/>
+<polygon points="469.9984137213102,446.60976899413566 477.8192934638408,424.54545753755775 485.997884961747,446.4796919921809" fill="#ff526b"/>
+<polygon points="485.997884961747,446.4796919921809 493.81876470427756,424.415380535603 501.9973562021837,446.34961499022614" fill="#ff526b"/>
+<polygon points="501.9973562021837,446.34961499022614 509.8182359447143,424.28530353364823 517.9968274426204,446.2195379882714" fill="#ff526b"/>
+<polygon points="517.9968274426204,446.2195379882714 525.817707185151,424.1552265316935 533.9962986830571,446.0894609863166" fill="#ff526b"/>
+<polygon points="533.9962986830571,446.0894609863166 541.8171784255877,424.0251495297387 549.995769923494,445.95938398436186" fill="#ff526b"/>
+<polygon points="549.995769923494,445.95938398436186 557.8166496660244,423.8950725277839 565.9952411639307,445.82930698240705" fill="#ff526b"/>
+<polygon points="565.9952411639307,445.82930698240705 573.8161209064612,423.76499552582914 581.9947124043674,445.6992299804523" fill="#ff526b"/>
+<polygon points="581.9947124043674,445.6992299804523 589.815592146898,423.6349185238744 597.9941836448041,445.5691529784975" fill="#ff526b"/>
+<polygon points="597.9941836448041,445.5691529784975 605.8150633873347,423.5048415219196 613.9936548852409,445.43907597654277" fill="#ff526b"/>
+<polygon points="613.9936548852409,445.43907597654277 621.8145346277714,423.37476451996486 629.9931261256777,445.308998974588" fill="#ff526b"/>
+<polygon points="629.9931261256777,445.308998974588 637.8140058682081,423.2446875180101 645.9925973661144,445.1789219726332" fill="#ff526b"/>
+<polygon points="645.9925973661144,445.1789219726332 653.8134771086449,423.1146105160553 661.9920686065511,445.04884497067843" fill="#ff526b"/>
+<polygon points="661.9920686065511,445.04884497067843 664.8171784255877,423.0251495297387 668.0,445.0" fill="#ff526b"/>
+<line x1="673" y1="444" x2="805" y2="379" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="673" y1="444" x2="805" y2="379" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+<line x1="794" y1="107" x2="798" y2="369" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="794" y1="107" x2="798" y2="369" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+<line x1="40" y1="201" x2="134" y2="262" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="40" y1="201" x2="134" y2="262" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+<line x1="342" y1="172" x2="472" y2="173" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="342" y1="172" x2="472" y2="173" stroke="#448cdb" stroke-width="20" stroke-linecap="round"/>
+<line x1="664" y1="111" x2="786" y2="107" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="664" y1="111" x2="786" y2="107" stroke="#7b8591" stroke-width="20" stroke-linecap="round"/>
+<rect x="714" y="17" width="36" height="44" fill="#d7e8fa" stroke="#345f8b" stroke-width="2"/><text x="720" y="10" fill="#345f8b">终点</text>
+<line x1="35" y1="205" x2="39" y2="445" stroke="#5e6a75" stroke-width="22" stroke-linecap="round"/>
+<line x1="35" y1="205" x2="39" y2="445" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+<path d="M137 413Q360 417 405 356" fill="none" stroke="#278b6f" stroke-width="3" marker-end="url(#original-arrow)"/>
+<path d="M412 347Q608 207 744 390" fill="none" stroke="#278b6f" stroke-width="3" marker-end="url(#original-arrow)"/>
+<path d="M93 230Q216 17 398 158" fill="none" stroke="#278b6f" stroke-width="3" marker-end="url(#original-arrow)"/>
+<path d="M405 160Q488 0 710 84" fill="none" stroke="#278b6f" stroke-width="3" marker-end="url(#original-arrow)"/>
+</svg>

@@ -32,3 +32,22 @@ static func second_ascent() -> Dictionary:
 		"polygons":[strip(a,b)],
 		"faces":[{"a":a+n*10,"b":b+n*10,"n":n},{"a":Vector2(288,258),"b":Vector2(288,400),"n":Vector2.RIGHT},{"a":Vector2(288,400),"b":Vector2(900,400),"n":Vector2.UP}]
 	}
+
+static func crimson_arc() -> Dictionary:
+	var red_a := Vector2(340,440)
+	var red_b := Vector2(440,410)
+	var red_n := Vector2(-30,-100).normalized()
+	var in_a := Vector2(680,440)
+	var in_b := Vector2(810,380)
+	var in_n := Vector2(-60,-130).normalized()
+	var out_a := Vector2(40,201)
+	var out_b := Vector2(134,262)
+	var out_n := Vector2(61,-94).normalized()
+	return {
+		"name":"THE CRIMSON ARC", "spawn":Vector2(89,415), "goal":Rect2(758,46,42,54), "enemy":false,
+		"blocks":[Rect2(38,430,102,20),Rect2(140,430,200,20),Rect2(430,410,20,40),Rect2(30,201,20,249),Rect2(400,250,150,20),Rect2(800,100,20,290),Rect2(650,100,170,20)],
+		"polygons":[strip(red_a,red_b),strip(in_a,in_b),strip(out_a,out_b)],
+		"faces":[{"a":Vector2(38,430),"b":Vector2(140,430),"n":Vector2.UP},{"a":Vector2(50,201),"b":Vector2(50,430),"n":Vector2.RIGHT},{"a":in_a+in_n*10,"b":in_b+in_n*10,"n":in_n},{"a":Vector2(800,110),"b":Vector2(800,380),"n":Vector2.LEFT},{"a":out_a+out_n*10,"b":out_b+out_n*10,"n":out_n}],
+		"materials":[{"a":Vector2(140,430),"b":Vector2(340,430),"n":Vector2.UP,"kind":"boost"},{"a":red_a+red_n*10,"b":red_b+red_n*10,"n":red_n,"kind":"boost"},{"a":Vector2(400,250),"b":Vector2(550,250),"n":Vector2.UP,"kind":"bounce"}],
+		"hazards":[Rect2(450,428,220,22)]
+	}

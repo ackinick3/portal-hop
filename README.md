@@ -1,6 +1,6 @@
 # Portal Hop
 
-Godot4.7.2 / GDScript，Windows x64，25关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
+Godot4.7.2 / GDScript，Windows x64，26关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
 
 双击`builds/PortalHop.exe`或桌面Portal Hop快捷方式，持续使用同一个文件。用户指定的27关已删，剩余关卡连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
 
@@ -21,6 +21,8 @@ Godot4.7.2 / GDScript，Windows x64，25关单机版。开发接续先读[PROJEC
 
 第25关THE SECOND ASCENT（二次蓄势）保留两次斜面出门，需空中移动底门、第一次出门按A收落点、第二次松键。[原稿/修订及实测图](docs/level-editor/designs/2026-10-25-double-return/plan.html)。通关24后解锁25，旧进度与音量保留。
 
+第26关THE CRIMSON ARC（赤坡接力）为红跑道/红坡越刺坑→双白斜面传送→蓝台反弹至终点；新增红坡接触支撑，普通和水平参数不改。[当前修订/实测图](docs/level-editor/designs/2026-10-25-boost-bounce/plan.html)。完成25后解锁26，原进度保留。
+
 关卡设计评审入口：[本地地图批注网页](docs/地图批注.html)，用普通浏览器打开，可逐关翻页、画笔/箭头/文字批注、自动保存及导入/导出。评完导出全部批注JSON发回对话，再更新计划图，用户确认后实装游戏。当前只包含手绘五图A–E，不是新增可玩关卡；[使用与维护说明](docs/map-review/README.md)。
 
 ```powershell
@@ -31,4 +33,4 @@ Godot4.7.2 / GDScript，Windows x64，25关单机版。开发接续先读[PROJEC
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-测试隔离真实进度。当前入口36组，覆盖当前25关真实输入路线、8方向斜面真实开口、核心物理/光路/平台、删关顺序、无提示、重编号、分页、存档迁移及重试。第25关GPU截图在docs/double-return-preview，第24关在docs/sloped-preview，当前新图与选关在docs/curated-preview；实际验证及导出身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。
+测试隔离真实进度。当前入口38组，覆盖当前26关真实输入路线、8方向斜面真实开口、核心物理/光路/平台、删关顺序、无提示、重编号、分页、存档迁移及重试。第26关GPU在docs/boost-bounce-preview，第25关在docs/double-return-preview，第24关在docs/sloped-preview，当前新图与选关在docs/curated-preview；实际验证及导出身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。

@@ -1,0 +1,61 @@
+{
+  "method": "Geometry calibration; analytical launch target separate from recorded Godot measurements",
+  "physics_snapshot": {
+    "hz": 120,
+    "gravity": 900,
+    "ordinary_speed": 210,
+    "boost_target": 650,
+    "boost_acceleration": 1800,
+    "released_ground_braking": 2300,
+    "released_air_drag": 90,
+    "character": [
+      22,
+      30
+    ]
+  },
+  "red_ramp_degrees": 16.69924423399362,
+  "nominal_tangent_target": [
+    622.5870853937485,
+    -186.77612561812452
+  ],
+  "actual_launch_after_edge": {
+    "p": [
+      456.111236572266,
+      377.680908203125
+    ],
+    "v": [
+      622.653686523438,
+      -141.553833007813
+    ]
+  },
+  "actual_exit": {
+    "p": [
+      104.685554504395,
+      207.725326538086
+    ],
+    "v": [
+      368.038482666016,
+      -567.141235351563
+    ]
+  },
+  "actual_bounce": {
+    "p": [
+      506.597961425781,
+      234.925231933594
+    ],
+    "v": [
+      251.038482666016,
+      -602.858764648438
+    ]
+  },
+  "actual_portal_exit_speed": 676.0928231827345,
+  "actual_landing": [
+    712.262451171875,
+    84.9252014160156
+  ],
+  "actual_minimum_top_y": 16.3869285583496,
+  "actual_boost_horizontal_distance": 289.542343139648,
+  "input_sha256": "b59347f2cef8bf34fda51685165d3ce19a59baa6937d3da7140c2bdeae25c5ab",
+  "measurement_source": "actual-route.json",
+  "limits": "Finite actual inputs; no exhaustive shortcut solver or human acceptance"
+}

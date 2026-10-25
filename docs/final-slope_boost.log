@@ -1,0 +1,8 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Released red-ramp input uses the existing deliberate braking
+SLOPE_BOOST_EXIT p=(456.5218, 377.9818) v=(598.4678, -127.0691) distance=286.72331237793
+PASS: Red ramp keeps existing boost speed and naturally launches upward
+PASS: Boost contact continues across the slope instead of stopping at the flat seam
+PASS: Real character traverses flat-to-ramp boost geometry
+SLOPE_BOOST_FAILURES=0

@@ -1,0 +1,4 @@
+2026-10-25 independent read-only room26 review against6b65445
+No confirmed important issues. New boost branch requires actual floor contact/normal and red patch match; horizontal and non-red paths retain their algorithm, original25 map data and portal speed formula unchanged.
+Route test uses candidate/shoot and real inputs without assigning player position/velocity. Existing5case evidence shows1transfer/1blue bounce/actual landing/0death win. No-red/no-blue controls demonstrate pit failure/staying on middle platform for those inputs.
+Reviewer did not independently rerun/GPU/export; reverse red slope, slope jump and mixed material boundaries not specially covered. Full38/GPU/embedded results were subsequently verified by implementer; finite cases are not an exhaustive shortcut proof.

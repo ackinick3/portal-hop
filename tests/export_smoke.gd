@@ -4,14 +4,14 @@ func run() -> void:
 	var embedded := FileAccess.file_exists("res://project.binary")
 	print("EMBEDDED_PROJECT=",embedded)
 	var maps = load("res://levels/maps.gd")
-	if not embedded or maps.LEVEL_COUNT != 25:
-		push_error("Expected the exported twenty-five-room pack, not loose project sources")
+	if not embedded or maps.LEVEL_COUNT != 26:
+		push_error("Expected the exported twenty-six-room pack, not loose project sources")
 		quit(1)
 		return
 	var game = load("res://scenes/main.tscn").instantiate()
 	game.persistence_enabled = false
 	root.add_child(game)
-	for i in 25:
+	for i in 26:
 		game.enter_level(i)
 		await process_frame
 		await process_frame
@@ -30,10 +30,15 @@ func run() -> void:
 			await game.drain_audio()
 			quit(1)
 			return
-	print("EXPORTED_ROOMS_STARTED=25")
+		if i==24 and game.data.name!="THE SECOND ASCENT":
+			push_error("Exported room25 was not retained")
+			await game.drain_audio()
+			quit(1)
+			return
+	print("EXPORTED_ROOMS_STARTED=26")
 	print("EXPORTED_FINAL=",game.data.name," polygons=",game.portals.polygons.size()," movers=",game.stage.movers.size()," receivers=",game.stage.receivers.size())
-	if game.data.name!="THE SECOND ASCENT" or game.portals.polygons.size()!=1:
-		push_error("Exported final room is missing the two-stage ascent geometry")
+	if game.data.name!="THE CRIMSON ARC" or game.portals.polygons.size()!=3 or not game.data.materials.any(func(p): return p.kind=="boost" and absf(p.n.x)>0.001):
+		push_error("Exported final room is missing the boost ramp/bounce relay geometry")
 		await game.drain_audio()
 		quit(1)
 		return

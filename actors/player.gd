@@ -48,6 +48,15 @@ func _physics_process(delta: float) -> void:
 	var grounded := is_on_floor() and not material_airborne
 	material_airborne = false
 	var boosting := grounded and Materials.has_patch(materials, position + Vector2(0, 15), Vector2.UP, "boost")
+	var boost_normal := Vector2.UP
+	if grounded:
+		for i in get_slide_collision_count():
+			var contact := get_slide_collision(i)
+			var normal := contact.get_normal()
+			if absf(normal.x)>0.001 and normal.dot(get_floor_normal())>0.99 and Materials.has_patch(materials,contact.get_position(),normal,"boost"):
+				boosting = true
+				boost_normal = normal
+				break
 	coyote = 0.1 if grounded else maxf(0.0, coyote - delta)
 	buffer = 0.1 if Input.is_action_just_pressed("jump") else maxf(0.0, buffer - delta)
 	var axis := Input.get_axis("move_left", "move_right")
@@ -60,7 +69,11 @@ func _physics_process(delta: float) -> void:
 			speed = 650.0
 			if axis != 0:
 				acceleration = 1800.0
-		velocity.x = move_toward(velocity.x, axis * speed, acceleration * delta)
+		if boost_normal!=Vector2.UP:
+			var tangent := Vector2(-boost_normal.y,boost_normal.x)
+			velocity = tangent*move_toward(velocity.dot(tangent),axis*speed,acceleration*delta)
+		else:
+			velocity.x = move_toward(velocity.x, axis * speed, acceleration * delta)
 	else:
 		# Gently settle released horizontal drift without clamping a fast launch.
 		if axis == 0:

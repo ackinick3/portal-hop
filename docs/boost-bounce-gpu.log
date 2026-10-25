@@ -1,0 +1,44 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 573.24 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060 Laptop GPU
+
+PASS: New sketch is room26 stableID53
+PORTAL_HOP_READY
+BOOST_ARC_LAUNCH { "p": (456.1112, 377.6809), "v": (622.6537, -141.5538) }
+BOOST_ARC_EXIT { "p": (104.6856, 207.7253), "v": (368.0385, -567.1412) }
+BOOST_ARC_BOUNCE p=(506.598, 234.9252) v=(251.0385, -602.8588)
+BOOST_ARC_ROUTE 0.0/0.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (712.2625, 84.9252), "minimum_y": 31.3869285583496, "launch": { "p": (456.1112, 377.6809), "v": (622.6537, -141.5538) }, "exit": { "p": (104.6856, 207.7253), "v": (368.0385, -567.1412) }, "boost_distance": 289.542343139648, "end": (748.3527, 84.92506) }
+PASS: Red ramp, spike crossing, sloped portal, blue bounce and actual goal landing all occur
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (109.7585, 211.0173), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(511.6318, 234.9251) v=(251.0083, -602.9052)
+BOOST_ARC_ROUTE -6.0/0.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (717.2655, 84.92521), "minimum_y": 34.7081985473633, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (109.7585, 211.0173), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.1047, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (99.69225, 204.485), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(503.651, 234.9253) v=(250.2583, -610.4052)
+BOOST_ARC_ROUTE 6.0/0.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (712.5037, 84.92521), "minimum_y": 28.1758060455322, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (99.69225, 204.485), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.4929, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (101.3484, 205.5597), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(505.3072, 234.9252) v=(250.2583, -610.4052)
+BOOST_ARC_ROUTE 0.0/-4.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (714.1599, 84.92521), "minimum_y": 29.250560760498, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (101.3484, 205.5597), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.399, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (108.0454, 209.9056), "v": (368.0083, -567.0948) }
+BOOST_ARC_BOUNCE p=(509.9187, 234.9253) v=(251.0083, -602.9052)
+BOOST_ARC_ROUTE 0.0/4.0 mode=normal { "won": true, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": true, "bounces": 1, "landed": true, "landing": (715.5524, 84.92521), "minimum_y": 33.5964965820313, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (108.0454, 209.9056), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (748.1417, 84.92506) }
+PASS: Nearby sloped door targets keep the full boost/portal/bounce route and headroom
+BOOST_ARC_LAUNCH { "p": (456.066, 386.2926), "v": (210.0, 37.5) }
+BOOST_ARC_ROUTE 0.0/0.0 mode=no_red { "won": false, "deaths": 1, "in_shot": true, "out_shot": true, "transferred": false, "transfers": 0, "bounced": false, "bounces": 0, "landed": false, "landing": (0.0, 0.0), "minimum_y": 385.295379638672, "launch": { "p": (456.066, 386.2926), "v": (210.0, 37.5) }, "exit": {  }, "boost_distance": 0.0, "end": (499.816, 414.4176) }
+PASS: Without red acceleration the same input cannot clear the spike pit
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }
+BOOST_ARC_ROUTE 0.0/0.0 mode=no_blue { "won": false, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": false, "bounces": 0, "landed": false, "landing": (0.0, 0.0), "minimum_y": 31.4420146942139, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (519.2566, 234.9261) }
+PASS: Without blue rebound the same input cannot reach the upper goal
+BOOST_ARC_LAUNCH { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }
+BOOST_ARC_EXIT { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }
+BOOST_ARC_ROUTE 0.0/0.0 mode=normal { "won": false, "deaths": 0, "in_shot": true, "out_shot": true, "transferred": true, "transfers": 1, "bounced": false, "bounces": 0, "landed": false, "landing": (0.0, 0.0), "minimum_y": 207.751174926758, "launch": { "p": (456.1081, 377.6774), "v": (622.6288, -141.6371) }, "exit": { "p": (104.7254, 207.7512), "v": (368.0083, -567.0948) }, "boost_distance": 289.540298461914, "end": (104.7254, 207.7512) }
+PASS: Retry fixture reaches the actual post-spike slope exit
+PASS: Pause freezes the full boost relay and retains doors
+PASS: R restores spawn, boost/bounce evidence and closed doors without a spike death loop
+BOOST_ARC_FAILURES=0

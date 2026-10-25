@@ -1,23 +1,24 @@
 Build: builds/PortalHop.exe
 Godot:4.7.2.stable.official.ed1daf0bf; Windows x86_64
-Rooms:25; new THE SECOND ASCENT/stableID52; original24 maps and ordinary physics unchanged
-StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52
-Bytes:109332848
-SHA256:E2129518599CA91CE228B5B7F34261F68F1D21021A263E762435E5D06CB471DE
-Room25: two slope exits with in-air floor-door relocation; pale slope46.357deg, floor y400, goal platform x680..930/y80; added starting low roof to limit jump bypass and extended ledge to clear aperture frame
-Physics: no player/material/portal/enemy physics modifications; actual full72px opening and free placement retained
-Progress: order_version2 unchanged; old24 remains24, completion24 NEXT unlocks25;3pages10/10/5; only25 final settlement; actual cfg not written
-Source tests: ALL36 HEADLESS TEST SUITES PASSED, ordinary real-time stdout/stderr, no runtime errors or exit leaks; docs/final-all-tests.log
-Retry stress:84cases passed; docs/final-retry_stress.log
-Room25 actual route: nominal+4nearby targets all0death/2transfers/actual final-platform contact/win; total exit speed735.61->782.41, nominal landing(705.51,64.93), minimum body top23.13px; docs/final-double_return.log
-Controls/bypasses: no floor relocation, single slope pass, starting jump+single slope pass, double floor+starting jump all fail in tested actual inputs; not an exhaustive shortcut proof
-R/pause: first actual exit fixture freezes with live pair; R clears/reset to tunnel without death loop; other24routes/mechanisms/guard phases pass in full runner
-Review: independent read-only review no confirmed important issues; docs/double-return-review.log
-GPU: initial/two-exit/actual landing captures and actual-route JSON checked; docs/double-return-preview and docs/double-return-gpu.log; current selection page3 from embeddedEXE checked in docs/curated-preview/select3.png
+Rooms:26; new THE CRIMSON ARC/stableID53; original25 map data/order unchanged
+StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53
+Bytes:109334176
+SHA256:4D4D7D28A3844E5FFAC4B39E339E1B5EA42DFC2C59375DCF55DCBED870FC023D
+Room26: red flat+ramp naturally launch over spikes, right slope entry/left slope exit, middle blue rebound, actual goal-platform landing; red ramp16.7deg, blue top250/x400..550, goal top100/x650..820
+Player addition: only real grounded floor-normal/contact-point red-slope matches use tangent drive; existing target650/input1800/release2300; horizontal/non-red/ordinary branches and blue/portal formulas retained
+Source tests: ALL38 HEADLESS TEST SUITES PASSED in real time, stdout/stderr clean, no runtime errors or exit leaks; docs/final-all-tests.log
+Retry stress:87cases passed; docs/final-retry_stress.log
+Slope boost TDD: old code vx277/vy+30/distance196 fails; new real up-ramp input, release braking/reacceleration natural exit vx598/vy-127/distance286 passes; docs/slope-boost-before.log and final-slope_boost.log
+Room26 real route: nominal+4nearby door targets all0death/1transfer/1blue bounce/actual landing/win; nominal landing(712.26,84.93), body top min about16.4px; docs/final-boost_bounce.log
+Controls: no-red same input dies in spikes without transfer; no-blue transfers but stays at middle platform; post-transfer pause/R restores spawn/counters/doors without death loop; no forced position/velocity/complete in real route
+Original25: ordinary movement, horizontal red, blue/portal/optics/platforms/enemies and prior relay routes re-run passed
+Progress: order_version2 unchanged; old25 stays25, completing25 NEXT unlocks26;3pages10/10/6, only26final; persistence_enabled=false, actual player cfg unchanged
+GPU: initial/ramp launch/slope exit/blue bounce/goal contact checked; docs/boost-bounce-preview, boost-bounce-gpu.log; actual route archived separately from analytic target/Bezier fits
+Review: independent read-only review no confirmed important issues; docs/boost-bounce-review.log
 Native GUI exit:0; docs/standalone-gui.log and standalone-gui-exit.log
-Embedded identity: EMBEDDED_PROJECT=true,25rooms enter directly without hints, room24vertical guard retained, final THE SECOND ASCENT has1polygon; docs/standalone-pack.log and standalone-room25.png
-Embedded playable route: same5relay variants/4controls/first-exit pause/R all passed from thisEXE pack; docs/standalone-double-return.log
-Single entry: buildsEXEcount1; desktop Portal Hop.lnk points to this exact absolute executable
-Design: docs/level-editor/designs/2026-10-25-double-return; originalSHA256 26534f984f16a76611c07f594e190749cfd7d87f65bdc525806a7836fcd8e0fc, IDs1..10 retained, new11/12, adjusted JSON and original/comparison page kept; actual Godot record separately labelled from analytic estimate/Bezier fit
-Boundaries: finite targets/inputs, not all clever routes or human difficulty; old display/other24previews not rerun this round; player feedback pending
-Documentation validation: originalSHA/ID preservation, editor-core parsing, embedded adjustedJSON equality, inlineJS syntax, SVG IDs and Markdown links passed.
+Embedded identity: EMBEDDED_PROJECT=true,26rooms enter directly without hints, room24vertical guard/room25retained, final THE CRIMSON ARC has3polygons and sloped red patch; docs/standalone-pack.log and standalone-room26.png
+Embedded route: same5route targets/no-red/no-blue/pause/R all passed from thisEXE; docs/standalone-boost-bounce.log
+Single entry: buildsEXEcount1; existing desktop Portal Hop.lnk points to this exact executable
+Design: docs/level-editor/designs/2026-10-25-boost-bounce; originalSHA b59347f2cef8bf34fda51685165d3ce19a59baa6937d3da7140c2bdeae25c5ab;17IDs preserved, original/adjusted JSON and comparison page archived
+Boundaries: reverse red slopes, slope jump/mixed-material boundaries not specially exhausted; finite tested targets do not exclude all clever routes; no new display/old25image verification; human slope-shooting difficulty pending
+Documentation validation: raw SHA/IDs, editor parse, HTML embedded JSON/JS syntax/SVG IDs/Markdown links, runner actual38 names and EXE hash passed.

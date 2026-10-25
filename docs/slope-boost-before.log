@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SLOPE_BOOST_EXIT p=(456.4427, 385.9801) v=(276.6667, 30.0) distance=196.389755249023
+FAIL: Red ramp keeps existing boost speed and naturally launches upward
+FAIL: Boost contact continues across the slope instead of stopping at the flat seam
+PASS: Real character traverses flat-to-ramp boost geometry
+SLOPE_BOOST_FAILURES=2
