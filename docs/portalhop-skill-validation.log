@@ -1,0 +1,12 @@
+2026-10-25 portalhop-level-builder skill validation
+Source: skills/portalhop-level-builder
+Installed: C:/Users/XH/.codex/skills/portalhop-level-builder
+Scope: skill package, read-only JSON inventory helper and workflow documentation; no game source/config/save/EXE changes.
+Tool TDD: valid-input and Unicode/BOM cases first failed due missing helper; after implementation all3 tests passed. Added nonmonotonic IDs and imported order=999; observed incorrect route order then fixed generated order precedence, all3 passed again.
+Cases: real input original SHA/geometry/anchors/order and byte preservation; annotation/out-of-bounds rejection; incomplete anchors, Unicode/space paths, BOM, inert notes and creation order override.
+Skill structure: bundled quick_validate.py passed for source and installed copy. Primary bundled Python lacked PyYAML; validation used existing local .canvas-venv Python, no dependency installation or global environment changes.
+Forward test: independent read-only agent used skill + actual inspector + sample; identified existing room24 stableID51 and avoided duplicate addition, retained ordinary physics/save, asked for undefined laser semantics, separated model/source/pack evidence. No confirmed skill defect; stale manual-approval wording in project docs identified and updated.
+Baseline: independent no-new-skill read-only scenario also chose appropriate decisions; no behavioral baseline failure claimed. Skill packages the requested repeatable workflow and project lookup, rather than claiming to correct an observed discipline failure.
+Installation: all5 source/installed package files SHA256 matched; installed helper3 tests passed.
+Game: no Godot suite run this turn; prior34-suite/81-case result belongs preceding room24 implementation. Existing EXE SHA256 remains F21D40F7F314E5ED3FC2014C8F040EFE5AF5E8ED168E70DC364F2CECA01B2C02.
+Not performed: no new level implementation or full autonomous game-build evaluation during skill creation; end-to-end game evidence is from preceding room24 implementation, not a new skill run.

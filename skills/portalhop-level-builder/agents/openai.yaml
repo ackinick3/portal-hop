@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portal Hop 关卡实装"
+  short_description: "将设计器JSON转为可玩关卡，自主校准比例、实装并验证通关"
+  default_prompt: "使用 $portalhop-level-builder 处理我提供的关卡设计JSON，保持原思路，自主调整比例、实装、测试并汇报结果。"

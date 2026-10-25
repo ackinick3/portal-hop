@@ -13,7 +13,9 @@ Godot4.7.2 / GDScript，Windows x64，24关单机版。开发接续先读[PROJEC
 
 ## 开发与检查
 
-自主画关卡入口：[空白关卡编辑器](docs/关卡编辑器.html)，普通浏览器打开即可。点击放置部件、拖墙/地刺、设置发射器方向/怪物范围，使用曲线箭头画预期路线；导出设计JSON回传后再计算地图比例，用户确认后实装。[操作说明](docs/level-editor/README.md)。
+自主画关卡入口：[空白关卡编辑器](docs/关卡编辑器.html)，普通浏览器打开即可。点击放置部件、拖墙/地刺、设置发射器方向/怪物范围，使用曲线箭头画预期路线；导出JSON回传。[操作说明](docs/level-editor/README.md)。
+
+自动实装入口：[portalhop-level-builder技能](skills/portalhop-level-builder/SKILL.md)，已安装到用户Codex技能目录。发送`使用 $portalhop-level-builder，地图JSON：<文件路径>`，助手保持思路，自主计算比例、创建关卡、实际通关与回归、更新同一EXE并汇报；无需再次确认比例稿。仅要求评图时仍按评图范围，未定义的玩法语义会先询问。原稿/旧关/普通物理和真实存档保留。
 
 首张用户草图已确认并实装为第24关THE FALLING RETURN（落差折返）：蓝斜面反弹、右白斜面传送门与120px底部白带。[原图/批准方案对照](docs/level-editor/designs/2026-10-25-fall-bounce/plan.html)及可编辑JSON保留。先通关第23关即可解锁，不重置旧进度。
 
