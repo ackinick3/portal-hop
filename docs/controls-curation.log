@@ -1,0 +1,231 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS: Original28 rooms plus the requested hard puzzle room29
+PASS: Original curated order is preserved through stableID56
+PASS: Invalid tail indices cannot be loaded
+PORTAL_HOP_READY
+PASS: Tutorial entries are removed
+PASS: New room01 has no hint metadata
+PASS: New room01 enters gameplay directly
+PASS: New room01 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room02 has no hint metadata
+PASS: New room02 enters gameplay directly
+PASS: New room02 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room03 has no hint metadata
+PASS: New room03 enters gameplay directly
+PASS: New room03 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room04 has no hint metadata
+PASS: New room04 enters gameplay directly
+PASS: New room04 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room05 has no hint metadata
+PASS: New room05 enters gameplay directly
+PASS: New room05 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room06 has no hint metadata
+PASS: New room06 enters gameplay directly
+PASS: New room06 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room07 has no hint metadata
+PASS: New room07 enters gameplay directly
+PASS: New room07 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room08 has no hint metadata
+PASS: New room08 enters gameplay directly
+PASS: New room08 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room09 has no hint metadata
+PASS: New room09 enters gameplay directly
+PASS: New room09 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room10 has no hint metadata
+PASS: New room10 enters gameplay directly
+PASS: New room10 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room11 has no hint metadata
+PASS: New room11 enters gameplay directly
+PASS: New room11 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room12 has no hint metadata
+PASS: New room12 enters gameplay directly
+PASS: New room12 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room13 has no hint metadata
+PASS: New room13 enters gameplay directly
+PASS: New room13 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room14 has no hint metadata
+PASS: New room14 enters gameplay directly
+PASS: New room14 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room15 has no hint metadata
+PASS: New room15 enters gameplay directly
+PASS: New room15 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room16 has no hint metadata
+PASS: New room16 enters gameplay directly
+PASS: New room16 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room17 has no hint metadata
+PASS: New room17 enters gameplay directly
+PASS: New room17 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room18 has no hint metadata
+PASS: New room18 enters gameplay directly
+PASS: New room18 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room19 has no hint metadata
+PASS: New room19 enters gameplay directly
+PASS: New room19 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room20 has no hint metadata
+PASS: New room20 enters gameplay directly
+PASS: New room20 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room21 has no hint metadata
+PASS: New room21 enters gameplay directly
+PASS: New room21 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room22 has no hint metadata
+PASS: New room22 enters gameplay directly
+PASS: New room22 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room23 has no hint metadata
+PASS: New room23 enters gameplay directly
+PASS: New room23 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room24 has no hint metadata
+PASS: New room24 enters gameplay directly
+PASS: New room24 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room25 has no hint metadata
+PASS: New room25 enters gameplay directly
+PASS: New room25 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room26 has no hint metadata
+PASS: New room26 enters gameplay directly
+PASS: New room26 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room27 has no hint metadata
+PASS: New room27 enters gameplay directly
+PASS: New room27 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room28 has no hint metadata
+PASS: New room28 enters gameplay directly
+PASS: New room28 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: New room29 has no hint metadata
+PASS: New room29 enters gameplay directly
+PASS: New room29 has no tutorial panel
+PASS: Only room29 ends the campaign
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page1
+PASS: Selection controls fit on page1
+PASS: Selection controls fit on page1
+PASS: Page1 has the correct room count
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page2
+PASS: Selection controls fit on page2
+PASS: Selection controls fit on page2
+PASS: Page2 has the correct room count
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Renumbered locks correspond to new progress
+PASS: Selection controls fit on page3
+PASS: Selection controls fit on page3
+PASS: Selection controls fit on page3
+PASS: Page3 has the correct room count
+PASS: Legacy unlock1 migrates to new1 without replaying completed survivors
+PASS: Legacy unlock8 migrates to new8 without replaying completed survivors
+PASS: Legacy unlock12 migrates to new12 without replaying completed survivors
+PASS: Legacy unlock14 migrates to new12 without replaying completed survivors
+PASS: Legacy unlock22 migrates to new17 without replaying completed survivors
+PASS: Legacy unlock34 migrates to new18 without replaying completed survivors
+PASS: Legacy unlock44 migrates to new22 without replaying completed survivors
+PASS: Legacy unlock49 migrates to new23 without replaying completed survivors
+PASS: Legacy unlock50 migrates to new23 without replaying completed survivors
+PASS: Version2 unlock1 is not migrated twice
+PASS: Version2 unlock12 is not migrated twice
+PASS: Version2 unlock20 is not migrated twice
+PASS: Version2 unlock23 is not migrated twice
+PASS: Version2 unlock24 is not migrated twice
+PASS: Version2 unlock25 is not migrated twice
+PASS: Version2 unlock26 is not migrated twice
+PASS: Version2 unlock27 is not migrated twice
+PASS: Version2 unlock28 is not migrated twice
+PASS: Version2 unlock29 is not migrated twice
+PASS: Existing version2 room23 progress does not auto-complete the new room
+PASS: Progression fixture: completing room23 unlocks room24 and NEXT
+PASS: NEXT actually enters the appended slope room without a tutorial
+PASS: Existing room24 unlock stays24 without completing the new room
+PASS: Progression fixture: room24 unlocks25 and NEXT
+PASS: NEXT enters room25 without tutorial
+PASS: Existing room25 progress stays25 until the new room is unlocked
+PASS: Progression fixture: completing25 unlocks26
+PASS: NEXT enters26 directly
+PASS: Existing room26 progress stays26 until the moving-goal room is unlocked
+PASS: Progression fixture: completing26 unlocks27
+PASS: NEXT enters27 directly
+PASS: Existing room27 progress stays27 before the new chamber
+PASS: Progression fixture: completing27 unlocks28
+PASS: NEXT enters28 with its complete guard roster
+PASS: Existing room28 progress stays28 before the new puzzle
+PASS: Progression fixture: completing28 unlocks29
+PASS: NEXT enters29 with all three puzzle circuits
+CURATION_FAILURES=0

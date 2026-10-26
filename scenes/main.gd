@@ -100,7 +100,8 @@ func menu() -> void:
 	button("START GAME",Vector2(340,170),func(): start_level(0))
 	button("LEVEL SELECT",Vector2(340,222),level_select)
 	button("SETTINGS",Vector2(340,274),settings)
-	button("QUIT",Vector2(340,326),quit_game)
+	button("CONTROLS",Vector2(340,326),controls)
+	button("QUIT",Vector2(340,378),quit_game)
 	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  %d ROOMS" % Maps.LEVEL_COUNT,Vector2(260,474),15)
 	queue_redraw()
 
@@ -138,6 +139,27 @@ func settings() -> void:
 	panel.add_child(slider)
 	button("TOGGLE WINDOW / FULLSCREEN",Vector2(340,280),toggle_fullscreen)
 	button("BACK",Vector2(340,400),menu)
+
+func controls() -> void:
+	state = "controls"
+	get_tree().paused = true
+	clear_panel()
+	backdrop()
+	label_at("CONTROLS",Vector2(365,62),34)
+	var rows := [
+		["A / D", "Move left / right"],
+		["SPACE", "Jump"],
+		["MOUSE", "Aim"],
+		["LEFT CLICK", "Place red portal"],
+		["RIGHT CLICK", "Place blue portal"],
+		["R", "Retry room (adds one death)"],
+		["ESC", "Pause / resume"],
+		["F11", "Window / fullscreen"],
+	]
+	for i in rows.size():
+		label_at(rows[i][0],Vector2(200,130+i*36),20)
+		label_at(rows[i][1],Vector2(430,130+i*36),20)
+	button("BACK",Vector2(340,450),menu)
 
 func toggle_fullscreen() -> void:
 	var full := DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN

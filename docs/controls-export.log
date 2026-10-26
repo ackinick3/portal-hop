@@ -1,0 +1,219 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] first_scan_filesystem | Started 项目初始化 (5 steps)
+[   0% ] first_scan_filesystem | 正在扫描文件结构……
+[  16% ] first_scan_filesystem | 正在加载全局类名……
+[  33% ] first_scan_filesystem | 正在校验 GDExtension……
+[  50% ] first_scan_filesystem | 正在创建自动加载脚本……
+[  66% ] first_scan_filesystem | 正在初始化插件……
+[  83% ] first_scan_filesystem | 正在启动文件扫描……
+[ DONE ] first_scan_filesystem
+
+[   0% ] update_scripts_classes | Started 正在注册全局类…… (2 steps)
+[   0% ] update_scripts_classes | 
+[  33% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] _update_scan_actions | Started 正在扫描动作…… (51 steps)
+[   0% ] _update_scan_actions | room26-bounce.png
+[   1% ] _update_scan_actions | room26-exit.png
+[   3% ] _update_scan_actions | room26-landing.png
+[   5% ] _update_scan_actions | room26-launch.png
+[   7% ] _update_scan_actions | room26.png
+[   9% ] _update_scan_actions | room29-pack.png
+[  11% ] _update_scan_actions | room29-powered.png
+[  13% ] _update_scan_actions | room29-return.png
+[  15% ] _update_scan_actions | room29.png
+[  17% ] _update_scan_actions | selection-pack.png
+[  19% ] _update_scan_actions | room24.png
+[  21% ] _update_scan_actions | room25.png
+[  23% ] _update_scan_actions | room26.png
+[  25% ] _update_scan_actions | room25-exit1.png
+[  26% ] _update_scan_actions | room25-exit2.png
+[  28% ] _update_scan_actions | room25-landing.png
+[  30% ] _update_scan_actions | room25.png
+[  32% ] _update_scan_actions | room28-ceiling-exit.png
+[  34% ] _update_scan_actions | room28-landing.png
+[  36% ] _update_scan_actions | room28.png
+[  38% ] _update_scan_actions | standalone-room28.png
+[  40% ] _update_scan_actions | standalone-selection.png
+[  42% ] _update_scan_actions | original.svg
+[  44% ] _update_scan_actions | plan.svg
+[  46% ] _update_scan_actions | original.svg
+[  48% ] _update_scan_actions | plan.svg
+[  50% ] _update_scan_actions | original.svg
+[  51% ] _update_scan_actions | plan.svg
+[  53% ] _update_scan_actions | original.svg
+[  55% ] _update_scan_actions | plan.svg
+[  57% ] _update_scan_actions | original.svg
+[  59% ] _update_scan_actions | plan.svg
+[  61% ] _update_scan_actions | original.svg
+[  63% ] _update_scan_actions | plan.svg
+[  65% ] _update_scan_actions | room24-bounce.png
+[  67% ] _update_scan_actions | room24-landing.png
+[  69% ] _update_scan_actions | room24-portals.png
+[  71% ] _update_scan_actions | room24.png
+[  73% ] _update_scan_actions | room27-first-exit.png
+[  75% ] _update_scan_actions | room27-landing.png
+[  76% ] _update_scan_actions | room27-second-exit.png
+[  78% ] _update_scan_actions | room27.png
+[  80% ] _update_scan_actions | standalone-room27.png
+[  82% ] _update_scan_actions | standalone-selection.png
+[  84% ] _update_scan_actions | controls-help.png
+[  86% ] _update_scan_actions | controls-menu.png
+[  88% ] _update_scan_actions | standalone-room23.png
+[  90% ] _update_scan_actions | standalone-room24.png
+[  92% ] _update_scan_actions | standalone-room25.png
+[  94% ] _update_scan_actions | standalone-room26.png
+[  96% ] _update_scan_actions | 五关布局示意.svg
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started 正在导入或重新导入资产 (51 steps)
+[   0% ] reimport | 正在准备重新导入文件……
+[   1% ] reimport | 正在准备重新导入文件……
+[   3% ] reimport | 正在准备重新导入文件……
+[   5% ] reimport | 正在准备重新导入文件……
+[   7% ] reimport | 正在准备重新导入文件……
+[   9% ] reimport | 正在准备重新导入文件……
+[  11% ] reimport | 正在准备重新导入文件……
+[  13% ] reimport | 正在准备重新导入文件……
+[  15% ] reimport | 正在准备重新导入文件……
+[  17% ] reimport | 正在准备重新导入文件……
+[  19% ] reimport | 正在准备重新导入文件……
+[  21% ] reimport | 正在准备重新导入文件……
+[  23% ] reimport | 正在准备重新导入文件……
+[  25% ] reimport | 正在准备重新导入文件……
+[  26% ] reimport | 正在准备重新导入文件……
+[  28% ] reimport | 正在准备重新导入文件……
+[  30% ] reimport | 正在准备重新导入文件……
+[  32% ] reimport | 正在准备重新导入文件……
+[  34% ] reimport | 正在准备重新导入文件……
+[  36% ] reimport | 正在准备重新导入文件……
+[  38% ] reimport | 正在准备重新导入文件……
+[  40% ] reimport | 正在准备重新导入文件……
+[  42% ] reimport | 正在准备重新导入文件……
+[  44% ] reimport | 正在准备重新导入文件……
+[  46% ] reimport | 正在准备重新导入文件……
+[  48% ] reimport | 正在准备重新导入文件……
+[  50% ] reimport | 正在准备重新导入文件……
+[  51% ] reimport | 正在准备重新导入文件……
+[  53% ] reimport | 正在准备重新导入文件……
+[  55% ] reimport | 正在准备重新导入文件……
+[  57% ] reimport | 正在准备重新导入文件……
+[  59% ] reimport | 正在准备重新导入文件……
+[  61% ] reimport | 正在准备重新导入文件……
+[  63% ] reimport | 正在准备重新导入文件……
+[  65% ] reimport | 正在准备重新导入文件……
+[  67% ] reimport | 正在准备重新导入文件……
+[  69% ] reimport | 正在准备重新导入文件……
+[  71% ] reimport | 正在准备重新导入文件……
+[  73% ] reimport | 正在准备重新导入文件……
+[  75% ] reimport | 正在准备重新导入文件……
+[  76% ] reimport | 正在准备重新导入文件……
+[  78% ] reimport | 正在准备重新导入文件……
+[  80% ] reimport | 正在准备重新导入文件……
+[  82% ] reimport | 正在准备重新导入文件……
+[  84% ] reimport | 正在准备重新导入文件……
+[  86% ] reimport | 正在准备重新导入文件……
+[  88% ] reimport | 正在准备重新导入文件……
+[  90% ] reimport | 正在准备重新导入文件……
+[  92% ] reimport | 正在准备重新导入文件……
+[  94% ] reimport | 正在准备重新导入文件……
+[  96% ] reimport | 正在准备重新导入文件……
+[   0% ] reimport | 正在执行重新导入的前置操作……
+[   0% ] reimport | original.svg
+[   1% ] reimport | plan.svg
+[   3% ] reimport | original.svg
+[   5% ] reimport | plan.svg
+[   7% ] reimport | original.svg
+[   9% ] reimport | plan.svg
+[  11% ] reimport | original.svg
+[  13% ] reimport | plan.svg
+[  15% ] reimport | room24-bounce.png
+[  17% ] reimport | room24-landing.png
+[  19% ] reimport | room24-portals.png
+[  21% ] reimport | room24.png
+[  23% ] reimport | room27-first-exit.png
+[  25% ] reimport | room27-landing.png
+[  26% ] reimport | room27-second-exit.png
+[  28% ] reimport | room27.png
+[  30% ] reimport | standalone-room27.png
+[  32% ] reimport | standalone-selection.png
+[  34% ] reimport | controls-help.png
+[  36% ] reimport | controls-menu.png
+[  38% ] reimport | standalone-room23.png
+[  40% ] reimport | standalone-room24.png
+[  42% ] reimport | standalone-room25.png
+[  44% ] reimport | standalone-room26.png
+[  46% ] reimport | 五关布局示意.svg
+[  48% ] reimport | room26-bounce.png
+[  50% ] reimport | room26-exit.png
+[  51% ] reimport | room26-landing.png
+[  53% ] reimport | room26-launch.png
+[  55% ] reimport | room26.png
+[  57% ] reimport | room29-pack.png
+[  59% ] reimport | room29-powered.png
+[  61% ] reimport | room29-return.png
+[  63% ] reimport | room29.png
+[  65% ] reimport | selection-pack.png
+[  67% ] reimport | room24.png
+[  69% ] reimport | room25.png
+[  71% ] reimport | room26.png
+[  73% ] reimport | room25-exit1.png
+[  75% ] reimport | room25-exit2.png
+[  76% ] reimport | room25-landing.png
+[  78% ] reimport | room25.png
+[  80% ] reimport | room28-ceiling-exit.png
+[  82% ] reimport | room28-landing.png
+[  84% ] reimport | room28.png
+[  86% ] reimport | standalone-room28.png
+[  88% ] reimport | standalone-selection.png
+[  90% ] reimport | original.svg
+[  92% ] reimport | plan.svg
+[  94% ] reimport | original.svg
+[  96% ] reimport | plan.svg
+[  98% ] reimport | 正在结束资产导入……
+[ DONE ] reimport
+
+[   0% ] reimport | Started 正在导入或重新导入资产 (51 steps)
+[   0% ] reimport | 正在执行重新导入的后置操作……
+[ DONE ] reimport
+
+[   0% ] savepack | Started 打包中 (102 steps)
+[   1% ] savepack | 正在保存文件：res://actors/player.gdc
+[   7% ] savepack | 正在保存文件：res://actors/sentry.gdc
+[  13% ] savepack | 正在保存文件：res://assets/sounds.gdc
+[  19% ] savepack | 正在保存文件：res://portals/system.gdc
+[  26% ] savepack | 正在保存文件：res://levels/maps.gdc
+[  32% ] savepack | 正在保存文件：res://levels/laser_rooms.gdc
+[  37% ] savepack | 正在保存文件：res://levels/designed_rooms.gdc
+[  43% ] savepack | 正在保存文件：res://levels/coating_rooms.gdc
+[  50% ] savepack | 正在保存文件：res://levels/campaign.gdc
+[  56% ] savepack | 正在保存文件：res://levels/advanced_rooms.gdc
+[  62% ] savepack | 正在保存文件：res://scenes/main.gdc
+[  67% ] savepack | 正在保存文件：res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+[  74% ] savepack | 正在保存文件：res://world/moving_platform.gdc
+[  80% ] savepack | 正在保存文件：res://world/mechanisms.gdc
+[  86% ] savepack | 正在保存文件：res://world/materials.gdc
+[  92% ] savepack | 正在保存文件：res://ui/landmarks.gdc
+[  92% ] savepack | 正在保存文件：res://actors/player.gd.remap
+[  92% ] savepack | 正在保存文件：res://actors/sentry.gd.remap
+[  92% ] savepack | 正在保存文件：res://assets/sounds.gd.remap
+[  92% ] savepack | 正在保存文件：res://portals/system.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/maps.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/laser_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/designed_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/coating_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/campaign.gd.remap
+[  92% ] savepack | 正在保存文件：res://levels/advanced_rooms.gd.remap
+[  92% ] savepack | 正在保存文件：res://scenes/main.gd.remap
+[  92% ] savepack | 正在保存文件：res://scenes/main.tscn.remap
+[  92% ] savepack | 正在保存文件：res://world/moving_platform.gd.remap
+[  92% ] savepack | 正在保存文件：res://world/mechanisms.gd.remap
+[  92% ] savepack | 正在保存文件：res://world/materials.gd.remap
+[  92% ] savepack | 正在保存文件：res://ui/landmarks.gd.remap
+[  92% ] savepack | 正在保存文件：res://.godot/global_script_class_cache.cfg
+[  92% ] savepack | 正在保存文件：res://.godot/uid_cache.bin
+[  92% ] savepack | 正在保存文件：res://project.binary
+[ DONE ] savepack
+

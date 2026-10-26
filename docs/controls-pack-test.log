@@ -1,0 +1,33 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Main menu exposes controls
+PASS: Controls opens while gameplay stays paused
+PASS: Help text fits viewport: CONTROLS
+PASS: Help text fits viewport: A / D
+PASS: Help text fits viewport: Move left / right
+PASS: Help text fits viewport: SPACE
+PASS: Help text fits viewport: Jump
+PASS: Help text fits viewport: MOUSE
+PASS: Help text fits viewport: Aim
+PASS: Help text fits viewport: LEFT CLICK
+PASS: Help text fits viewport: Place red portal
+PASS: Help text fits viewport: RIGHT CLICK
+PASS: Help text fits viewport: Place blue portal
+PASS: Help text fits viewport: R
+PASS: Help text fits viewport: Retry room (adds one death)
+PASS: Help text fits viewport: ESC
+PASS: Help text fits viewport: Pause / resume
+PASS: Help text fits viewport: F11
+PASS: Help text fits viewport: Window / fullscreen
+PASS: Documents A / D
+PASS: Documents SPACE
+PASS: Documents MOUSE
+PASS: Documents LEFT CLICK
+PASS: Documents RIGHT CLICK
+PASS: Documents R
+PASS: Documents ESC
+PASS: Documents F11
+PASS: Back restores main menu
+PASS: Help opened after gameplay blocks retry input
+CONTROLS_FAILURES=0
