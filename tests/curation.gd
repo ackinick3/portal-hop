@@ -7,7 +7,7 @@ func check(ok: bool,message: String) -> void:
 	if not ok: failures += 1
 func find_button(game: Node2D,prefix: String) -> Button:
 	for child in game.panel.get_children():
-		if child is Button and child.text.begins_with(prefix): return child
+		if child is Button and child.text.begins_with(game.text(prefix)): return child
 	return null
 func run() -> void:
 	var maps = load("res://levels/maps.gd")

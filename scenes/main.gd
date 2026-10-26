@@ -2,6 +2,7 @@ extends Node2D
 
 const Maps = preload("res://levels/maps.gd")
 const Landmarks = preload("res://ui/landmarks.gd")
+const Languages = preload("res://ui/languages.gd")
 var world: Node2D
 var portals: Node2D
 var player: CharacterBody2D
@@ -18,6 +19,7 @@ var deaths := 0
 var state := "menu"
 var data := {}
 var volume := 0.6
+var language := "zh_CN"
 var preview := {}
 var teleported_this_frame := false
 var transfers := 0
@@ -50,14 +52,20 @@ func restore_progress(save: ConfigFile) -> void:
 	else:
 		unlocked = clampi(stored,1,Maps.LEVEL_COUNT)
 	volume = clampf(save.get_value("settings", "volume", 0.6), 0, 1)
+	language = save.get_value("settings", "language", "zh_CN")
+	if language not in ["zh_CN","en"]: language = "zh_CN"
 
-func save_progress() -> void:
+func text(source: String) -> String:
+	return Languages.text(source,language)
+
+func save_progress(path: String = "user://progress.cfg") -> void:
 	if not persistence_enabled: return
 	var save := ConfigFile.new()
 	save.set_value("progress", "unlocked", unlocked)
 	save.set_value("progress", "order_version", 2)
 	save.set_value("settings", "volume", volume)
-	save.save("user://progress.cfg")
+	save.set_value("settings", "language", language)
+	save.save(path)
 
 func clear_panel() -> void:
 	if panel != null:
@@ -68,7 +76,7 @@ func clear_panel() -> void:
 
 func label_at(text: String, at: Vector2, size: int = 20) -> Label:
 	var label := Label.new()
-	label.text = text
+	label.text = self.text(text)
 	label.position = at
 	label.add_theme_font_size_override("font_size", size)
 	label.add_theme_color_override("font_color", Color("edf3f8"))
@@ -77,7 +85,7 @@ func label_at(text: String, at: Vector2, size: int = 20) -> Label:
 
 func button(text: String, at: Vector2, action: Callable, disabled: bool = false) -> Button:
 	var b := Button.new()
-	b.text = text
+	b.text = self.text(text)
 	b.position = at
 	b.size = Vector2(280,42)
 	b.disabled = disabled
@@ -101,19 +109,20 @@ func menu() -> void:
 	button("LEVEL SELECT",Vector2(340,222),level_select)
 	button("SETTINGS",Vector2(340,274),settings)
 	button("CONTROLS",Vector2(340,326),controls)
-	button("QUIT",Vector2(340,378),quit_game)
-	label_at("ORIGINAL GEOMETRIC PROTOTYPE  /  %d ROOMS" % Maps.LEVEL_COUNT,Vector2(260,474),15)
+	button("LANGUAGE / 语言",Vector2(340,378),language_select)
+	button("QUIT",Vector2(340,430),quit_game)
+	label_at(text("PORTAL HOP  /  v1.0  /  %d ROOMS") % Maps.LEVEL_COUNT,Vector2(300,490),15)
 	queue_redraw()
 
 func level_select(page: int = 0) -> void:
 	clear_panel()
 	backdrop()
 	page = clampi(page,0,(Maps.LEVEL_COUNT-1)/10)
-	label_at("SELECT A ROOM  /  %d" % (page+1),Vector2(290,62),32)
+	label_at(text("SELECT A ROOM  /  %d") % (page+1),Vector2(290,62),32)
 	for i in range(page*10,mini(page*10+10,Maps.LEVEL_COUNT)):
 		var level_index := i
 		var slot := i-page*10
-		var item := button("%02d  %s%s" % [i+1, Maps.get_level(i).name, "  [LOCKED]" if i >= unlocked else ""],Vector2(100 if slot < 5 else 520,125+(slot%5)*55),func(): enter_level(level_index), i >= unlocked)
+		var item := button("%02d  %s%s" % [i+1, text(Maps.get_level(i).name), text("  [LOCKED]") if i >= unlocked else ""],Vector2(100 if slot < 5 else 520,125+(slot%5)*55),func(): enter_level(level_index), i >= unlocked)
 		item.size.x = 340
 		item.add_theme_font_size_override("font_size",16)
 	button("PREVIOUS PAGE",Vector2(100,425),func(): level_select(page-1),page==0)
@@ -139,6 +148,20 @@ func settings() -> void:
 	panel.add_child(slider)
 	button("TOGGLE WINDOW / FULLSCREEN",Vector2(340,280),toggle_fullscreen)
 	button("BACK",Vector2(340,400),menu)
+
+func language_select() -> void:
+	clear_panel()
+	backdrop()
+	label_at("LANGUAGE",Vector2(340,90),34)
+	button("简体中文" + ("  ✓" if language == "zh_CN" else ""),Vector2(340,200),func(): set_language("zh_CN"))
+	button("English" + ("  ✓" if language == "en" else ""),Vector2(340,260),func(): set_language("en"))
+	button("BACK",Vector2(340,400),menu)
+
+func set_language(value: String) -> void:
+	language = value
+	save_progress()
+	language_select()
+	queue_redraw()
 
 func controls() -> void:
 	state = "controls"
@@ -274,8 +297,8 @@ func complete() -> void:
 	audio.play("win")
 	clear_panel()
 	backdrop()
-	label_at("ROOM COMPLETE" if index < Maps.LEVEL_COUNT - 1 else "PROTOTYPE COMPLETE!",Vector2(265,85),36)
-	label_at("%02d / %s\n\nTIME  %.2f s     DEATHS  %d" % [index+1,data.name,elapsed,deaths],Vector2(260,160),23)
+	label_at("ROOM COMPLETE" if index < Maps.LEVEL_COUNT - 1 else "GAME COMPLETE!",Vector2(265,85),36)
+	label_at(text("%02d / %s\n\nTIME  %.2f s     DEATHS  %d") % [index+1,text(data.name),elapsed,deaths],Vector2(260,160),23)
 	if index < Maps.LEVEL_COUNT - 1:
 		button("NEXT ROOM",Vector2(340,280),func(): enter_level(index+1))
 	button("REPLAY ROOM",Vector2(340,340),func(): start_level(index))

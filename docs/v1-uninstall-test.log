@@ -1,0 +1,35 @@
+﻿2026-10-26 16:12:24.535   Log opened. (Time zone: UTC+08:00)
+2026-10-26 16:12:24.535   Setup version: Inno Setup version 6.7.3
+2026-10-26 16:12:24.535   Original Uninstall EXE: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\unins000.exe
+2026-10-26 16:12:24.535   Uninstall DAT: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\unins000.dat
+2026-10-26 16:12:24.535   Current Uninstall EXE: C:\Users\XH\AppData\Local\Temp\is-WW3R7AYRZY-uninstall.tmp\_unins.tmp
+2026-10-26 16:12:24.535   Uninstall command line: /SECONDPHASE="D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\unins000.exe" /FIRSTPHASEWND=$18094C /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /LOG="D:\常用文件\codex_project\pop_Mario开发/docs/v1-uninstall-test.log"
+2026-10-26 16:12:24.535   Windows version: 10.0.26100
+2026-10-26 16:12:24.535   Windows architecture: x64 (64-bit)
+2026-10-26 16:12:24.535   Machine types supported by system: x86 x64
+2026-10-26 16:12:24.535   User privileges: None
+2026-10-26 16:12:24.535   Administrative install mode: No
+2026-10-26 16:12:24.536   Install mode root key: HKEY_CURRENT_USER
+2026-10-26 16:12:24.536   RedirectionGuard status for current process: Enabled in enforcing mode
+2026-10-26 16:12:24.536   Cleaning up any residual temporary files from previous Uninstall runs.
+2026-10-26 16:12:24.536   Deleted file: C:\Users\XH\AppData\Local\Temp\is-BUCO6QWS6Z-uninstall.tmp\_unins.tmp
+2026-10-26 16:12:24.537   Cleanup finished (2 directories found, 2 directories checked, 1 files deleted).
+2026-10-26 16:12:24.538   Created temporary directory: C:\Users\XH\AppData\Local\Temp\is-7J5GA1UJ9O.tmp
+2026-10-26 16:12:24.553   Starting the uninstallation process.
+2026-10-26 16:12:24.554   Deleting registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\{71BF9072-A6BA-46F4-A0CD-E61AC0CD1F10}_is1
+2026-10-26 16:12:24.619   Deleting file: C:\Users\XH\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Portal Hop\Portal Hop.lnk
+2026-10-26 16:12:24.621   Deleting directory: C:\Users\XH\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Portal Hop
+2026-10-26 16:12:24.621   Deleting file: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\说明.txt
+2026-10-26 16:12:24.621   Deleting file: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\licenses\GODOT-LICENSE.txt
+2026-10-26 16:12:24.621   Deleting file: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\licenses\NotoSansSC-OFL.txt
+2026-10-26 16:12:24.621   Deleting directory: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\licenses
+2026-10-26 16:12:24.622   Deleting file: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\PortalHop.exe
+2026-10-26 16:12:24.639   Deleting directory: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release
+2026-10-26 16:12:24.639   Failed to delete directory (145). Will retry later.
+2026-10-26 16:12:24.639   Deleting Uninstall data files.
+2026-10-26 16:12:24.640   Creating "_unins-done.tmp" file.
+2026-10-26 16:12:25.223   Deleting directory: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release
+2026-10-26 16:12:25.227   Uninstallation process succeeded.
+2026-10-26 16:12:25.227   Removed all? Yes
+2026-10-26 16:12:25.227   Need to restart Windows? No
+2026-10-26 16:12:25.228   Log closed.

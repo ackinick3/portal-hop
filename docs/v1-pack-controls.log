@@ -1,0 +1,33 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Main menu exposes controls
+PASS: Controls opens while gameplay stays paused
+PASS: Help text fits viewport: 键位说明
+PASS: Help text fits viewport: A / D
+PASS: Help text fits viewport: 向左 / 向右移动
+PASS: Help text fits viewport: SPACE
+PASS: Help text fits viewport: 跳跃
+PASS: Help text fits viewport: 鼠标
+PASS: Help text fits viewport: 瞄准
+PASS: Help text fits viewport: 鼠标左键
+PASS: Help text fits viewport: 放置红色传送门
+PASS: Help text fits viewport: 鼠标右键
+PASS: Help text fits viewport: 放置蓝色传送门
+PASS: Help text fits viewport: R
+PASS: Help text fits viewport: 重试本关（死亡次数加一）
+PASS: Help text fits viewport: ESC
+PASS: Help text fits viewport: 暂停 / 继续
+PASS: Help text fits viewport: F11
+PASS: Help text fits viewport: 窗口 / 全屏
+PASS: Documents A / D
+PASS: Documents SPACE
+PASS: Documents MOUSE
+PASS: Documents LEFT CLICK
+PASS: Documents RIGHT CLICK
+PASS: Documents R
+PASS: Documents ESC
+PASS: Documents F11
+PASS: Back restores main menu
+PASS: Help opened after gameplay blocks retry input
+CONTROLS_FAILURES=0

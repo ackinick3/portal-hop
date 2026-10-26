@@ -1,0 +1,58 @@
+﻿2026-10-26 16:12:18.918   Log opened. (Time zone: UTC+08:00)
+2026-10-26 16:12:18.918   Setup version: Inno Setup version 6.7.3
+2026-10-26 16:12:18.918   Original Setup EXE: D:\常用文件\codex_project\pop_Mario开发\builds\PortalHop-1.0-Windows-x64-Setup.exe
+2026-10-26 16:12:18.918   Setup command line: /SL5="$1D0ABA,34547221,893952,D:\常用文件\codex_project\pop_Mario开发\builds\PortalHop-1.0-Windows-x64-Setup.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /TASKS= /LANG=chinesesimp /DIR="D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release" /LOG="D:\常用文件\codex_project\pop_Mario开发/docs/v1-install-test.log"
+2026-10-26 16:12:18.918   Windows version: 10.0.26100
+2026-10-26 16:12:18.918   Windows architecture: x64 (64-bit)
+2026-10-26 16:12:18.918   Machine types supported by system: x86 x64
+2026-10-26 16:12:18.918   User privileges: None
+2026-10-26 16:12:18.919   Administrative install mode: No
+2026-10-26 16:12:18.919   Install mode root key: HKEY_CURRENT_USER
+2026-10-26 16:12:18.919   64-bit install mode: Yes
+2026-10-26 16:12:18.919   RedirectionGuard status for current process: Enabled in enforcing mode
+2026-10-26 16:12:18.920   Created temporary directory: C:\Users\XH\AppData\Local\Temp\is-OQ02UJGN5Q.tmp
+2026-10-26 16:12:19.012   Starting the installation process.
+2026-10-26 16:12:19.014   Creating directory: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release
+2026-10-26 16:12:19.014   Directory for uninstall files: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release
+2026-10-26 16:12:19.014   Creating new uninstall log: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\unins000.dat
+2026-10-26 16:12:19.016   -- File entry --
+2026-10-26 16:12:19.016   Dest filename: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\unins000.exe
+2026-10-26 16:12:19.016   Non-default bitness: 32-bit
+2026-10-26 16:12:19.017   Time stamp of our file: 2026-10-26 16:12:18.720
+2026-10-26 16:12:19.017   Installing the file.
+2026-10-26 16:12:19.021   Successfully installed the file.
+2026-10-26 16:12:19.022   -- File entry --
+2026-10-26 16:12:19.022   Dest filename: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\PortalHop.exe
+2026-10-26 16:12:19.022   Time stamp of our file: 2026-10-26 16:11:32.000
+2026-10-26 16:12:19.022   Installing the file.
+2026-10-26 16:12:20.645   Successfully installed the file.
+2026-10-26 16:12:20.645   -- File entry --
+2026-10-26 16:12:20.645   Dest filename: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\licenses\NotoSansSC-OFL.txt
+2026-10-26 16:12:20.645   Time stamp of our file: 2026-10-26 15:59:14.000
+2026-10-26 16:12:20.645   Installing the file.
+2026-10-26 16:12:20.645   Creating directory: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\licenses
+2026-10-26 16:12:20.646   Successfully installed the file.
+2026-10-26 16:12:20.646   -- File entry --
+2026-10-26 16:12:20.646   Dest filename: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\licenses\GODOT-LICENSE.txt
+2026-10-26 16:12:20.646   Time stamp of our file: 2026-10-26 16:03:28.000
+2026-10-26 16:12:20.646   Installing the file.
+2026-10-26 16:12:20.647   Successfully installed the file.
+2026-10-26 16:12:20.647   -- File entry --
+2026-10-26 16:12:20.647   Dest filename: D:\常用文件\codex_project\pop_Mario开发\tools\install-v1-release\说明.txt
+2026-10-26 16:12:20.647   Time stamp of our file: 2026-10-26 16:03:28.000
+2026-10-26 16:12:20.647   Installing the file.
+2026-10-26 16:12:20.648   Successfully installed the file.
+2026-10-26 16:12:20.648   -- Icon entry --
+2026-10-26 16:12:20.648   Dest filename: C:\Users\XH\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Portal Hop\Portal Hop.lnk
+2026-10-26 16:12:20.648   Creating directory: C:\Users\XH\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Portal Hop
+2026-10-26 16:12:20.655   Creating the icon.
+2026-10-26 16:12:21.289   Successfully created the icon.
+2026-10-26 16:12:21.293   Saving uninstall information.
+2026-10-26 16:12:21.293   Creating new uninstall key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall\{71BF9072-A6BA-46F4-A0CD-E61AC0CD1F10}_is1
+2026-10-26 16:12:21.293   Writing uninstall key values.
+2026-10-26 16:12:21.293   Detected previous administrative 64-bit install? No
+2026-10-26 16:12:21.293   Detected previous administrative 32-bit install? No
+2026-10-26 16:12:21.329   Installation process succeeded.
+2026-10-26 16:12:21.336   Need to restart Windows? No
+2026-10-26 16:12:21.339   Deinitializing Setup.
+2026-10-26 16:12:21.343   Log closed.

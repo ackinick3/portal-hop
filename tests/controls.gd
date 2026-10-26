@@ -6,7 +6,7 @@ func check(ok: bool, message: String) -> void:
 	if not ok: failures += 1
 func find_button(game, text: String) -> Button:
 	for child in game.panel.get_children():
-		if child is Button and child.text == text: return child
+		if child is Button and child.text == game.text(text): return child
 	return null
 func capture(file: String) -> void:
 	if OS.get_cmdline_user_args().has("--capture"):
@@ -29,7 +29,7 @@ func run() -> void:
 				labels.append(child.text)
 				check(child.position.x + child.size.x <= 960 and child.position.y + child.size.y <= 540,"Help text fits viewport: " + child.text)
 		for key in ["A / D","SPACE","MOUSE","LEFT CLICK","RIGHT CLICK","R","ESC","F11"]:
-			check(labels.has(key),"Documents " + key)
+			check(labels.has(game.text(key)),"Documents " + key)
 		await capture("res://docs/controls-help.png")
 		find_button(game,"BACK").pressed.emit()
 		check(game.state == "menu" and find_button(game,"CONTROLS") != null,"Back restores main menu")

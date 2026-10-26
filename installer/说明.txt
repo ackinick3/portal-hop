@@ -1,0 +1,18 @@
+Portal Hop 1.0 — Windows x64
+
+共29关，单人离线游戏。首次启动默认简体中文，主菜单“语言 / Language”可切换English并保存。
+
+A/D左右移动，Space跳跃，鼠标瞄准，左键红门、右键蓝门。
+R重试并计一次死亡，Esc暂停/继续，F11窗口/全屏。
+主菜单“键位说明”可随时查看完整操作。
+
+安装程序安装到当前用户目录，不需要管理员权限。可选创建桌面快捷方式。
+卸载：Windows设置→应用→Portal Hop→卸载。
+存档位于 %APPDATA%\Godot\app_userdata\Portal Hop\progress.cfg。
+更新及卸载均保留存档；已经选择的语言不会被再次安装强制覆盖。
+无需安装Godot或下载中文字体，游戏资源已嵌入程序。程序需要支持OpenGL 3.3的显卡驱动。
+
+字体：Noto Sans SC，SIL Open Font License 1.1，见licenses/NotoSansSC-OFL.txt。
+字体来源：https://github.com/notofonts/noto-cjk
+引擎：Godot Engine，MIT，见licenses/GODOT-LICENSE.txt。
+引擎及第三方许可：https://godotengine.org/license/

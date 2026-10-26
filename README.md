@@ -1,12 +1,13 @@
-# Portal Hop
+# Portal Hop 1.0
 
 Godot4.7.2 / GDScript，Windows x64，29关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
 
-双击`builds/PortalHop.exe`或桌面Portal Hop快捷方式，持续使用同一个文件。原50关中用户指定的27张图已删，保留23关后追加24–29，连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
+Windows 10及以上64位电脑可运行`builds/PortalHop-1.0-Windows-x64-Setup.exe`安装，默认安装到当前用户目录，带开始菜单入口和卸载功能，可选桌面快捷方式。开发目录仍双击`builds/PortalHop.exe`或原桌面Portal Hop快捷方式，持续使用同一个游戏文件。原50关中用户指定的27张图已删，保留23关后追加24–29，连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
 
 - A/D：移动；Space：跳跃。
 - 移动鼠标：瞄准；鼠标左/右键：红/蓝传送门。
-- R：重试（死亡计数加一）；Esc：暂停/继续；F11：全屏。主菜单新增CONTROLS键位说明，BACK返回。
+- R：重试（死亡计数加一）；Esc：暂停/继续；F11：全屏。主菜单“键位说明 / CONTROLS”查看操作并返回。
+- 主菜单“语言 / Language”选择简体中文或English；首次启动默认中文，保存后记住语言选择。菜单、键位说明、29关名称、暂停与结算均支持中文，字体随包嵌入。
 - 设置支持音量，选关3页；旧存档自动迁移，不清空进度。实际存档位于`%APPDATA%/Godot/app_userdata/Portal Hop/progress.cfg`。
 
 原有手感、保留关卡布局、B美术与操作反馈保持。准星、放门预览、枪线和机关状态仍可见。原50关详细路线文档与截图仅作开发历史，不能按旧编号作为当前关卡清单。
@@ -37,6 +38,8 @@ Godot4.7.2 / GDScript，Windows x64，29关单机版。开发接续先读[PROJEC
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --headless --path . --export-release 'Windows Desktop' builds/PortalHop.exe
 ```
 
-测试隔离真实进度。当前入口45组，覆盖当前29关实际参考路线、8方向斜面真实开口、核心物理/光路/折线平台、移动目标/尖刺/阻枪光幕、怪群、删关顺序、分页、存档迁移及96例重试。第29关GPU与内嵌选关在docs/borrowed-exit-preview，28在docs/kinetic-chamber-preview，27在docs/wandering-goal-preview，26在docs/boost-bounce-preview，25在docs/double-return-preview，24在docs/sloped-preview；实际验证及唯一EXE身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。
+测试隔离真实进度。当前入口47组，覆盖当前29关实际参考路线、8方向斜面真实开口、核心物理/光路/折线平台、移动目标/尖刺/阻枪光幕、怪群、删关顺序、分页、存档迁移及96例重试。第29关GPU与内嵌选关在docs/borrowed-exit-preview，28在docs/kinetic-chamber-preview，27在docs/wandering-goal-preview，26在docs/boost-bounce-preview，25在docs/double-return-preview，24在docs/sloped-preview；实际验证及唯一EXE身份见docs/build-manifest.txt。工具/模板与builds不进入Git，新克隆需自行准备；资源嵌入EXE，无需玩家安装Godot。
 
 第29关THE BORROWED EXIT（借来的出口）是用户要求助手原创的高难空间解谜，使用现有反射、激光机关与自由双门，不改普通物理或旧关。完成28后解锁29。可运行`builds/PortalHop.exe -- --challenge`直接试玩29；该进程不保存进度，正常双击仍沿用原存档。R重试、Esc暂停、F11全屏。[开发记录（含剧透）](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)。本轮实际通过结果见PROJECT_STATE及build-manifest。
+
+安装器构建与发布说明见[installer/README.md](installer/README.md)。Windows版本信息为1.0.0.0；安装/升级/卸载保留玩家存档。游戏及安装器未数字签名。

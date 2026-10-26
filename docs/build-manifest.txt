@@ -1,25 +1,23 @@
-Latest update:2026-10-26 CONTROLS main menu/help/BACK; source GPU and embedded-pack controls tests passed; curation passed; export and normal EXE startup exit0. No full45-suite/route/retry rerun this update; remaining room29 validation below is historical. Screenshots docs/controls-menu.png and controls-help.png visually inspected.
-Build: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop.exe
-Godot:4.7.2.stable.official.ed1daf0bf; Windows x86_64
-Rooms:29; new THE BORROWED EXIT/stableID56; original1-28 maps/order and ordinary player parameters/portal velocity unchanged
-StableIDs:1,2,3,4,5,6,7,8,9,10,11,14,17,19,20,21,25,34,36,37,38,48,50,51,52,53,54,55,56
-Bytes:109341920
-SHA256:6218391284D900A7FAA70DF5BEA8976AFD065026794E2FFEFB565B6EF1FACE7A
-Intent:user requested autonomous hard puzzle generation for immediate play; existing reflection, three latched receivers/gates, high portal outputs, wide well, reuse optical input as human return exit
-Geometry:interior40..920/60..500; upperfloor250, well560..780 width220; bottomfloor500, green ceiling150..260, initial screen210/85..160, firstgate210/160..250; terminal goalx780 calibrated from790 for landing before win
-TDD:borrowed_exit first failed on missing stableID56; challenge_entry first failed on missing production flag; both now pass
-Source targeted:borrowed_exit nine real-input nearby variants,0deaths/1transfer/actual lower visit/right upper landing/real terminal contact; no direct position/velocity changes or direct complete for route
-Controls:no-reflector/direct-face endpoints, ordinary jump over first gate and upper well, omitted terminal exit, lower shot blocked by upper floor,3powered phase R/pause,actual death reset
-Source full regression:tests/run.ps1 exit0, ALL45HEADLESS TEST SUITES PASSED, RETRY_STRESS_CASES=96 FAILURES=0; no SCRIPT ERROR/ERROR/leaked-at-exit in docs/borrowed-exit-all-tests.log
-GPU:initial,all receivers lit,actual upper landing inspected in docs/borrowed-exit-preview; exported room29 and3rd selection page9buttons inspected
-Independent review:docs/borrowed-exit-review.md, no confirmed remaining actionable defect; separate initial reachable-space/no-reflection sweep and challenge-entry/core route rerun
-Export:Godot Windows Desktop release export exit0, docs/borrowed-exit-export.log
-Embedded pack:project.binary=true,29rooms started; old24-28 key components retained, final3receivers/3gates/mirror/curtain confirmed; docs/borrowed-exit-pack-smoke.log
-Embedded actual route:birth/reflected gun/3circuits/lower movement/1transfer/upper landing/terminal won with0deaths; docs/borrowed-exit-pack-route.log
-Embedded challenge entry:real --challenge flag disables persistence before play; completion/menu/save fixtures preserve real cfg hash/mtime, docs/borrowed-exit-pack-entry.log
-Normal EXE:menu --quit-after120 exit0, docs/borrowed-exit-exe-start.log; challenge --quit-after120 exit0, docs/borrowed-exit-exe-challenge.log
-Launch:PortalHop.exe -- --challenge enters29 without changing persistent unlocks; normal double click retains saved campaign progression,28 unlocks29
-Unique entry:builds/PortalHop.exe only playable EXE in builds; C:/Users/XH/Desktop/Portal Hop.lnk target unchanged
-Real progress:45bytes,modified2026-10-24T19:08:28.0857433+08:00; SHA256 41EE993434F948612C6DBD5566D478FDDB59E775B6AA48B18D36B74D7EA6D790 unchanged across source/pack/normal/challenge smoke
-Limits:not human-rated hardest,not all solutions/portal positions,long runs,display mappings or all old-room GPU recaptured; editor/browser layouts untouched
-Prior28 release43suites/93cases is historical,not this build's current regression evidence
+Portal Hop 1.0 Windows release — 2026-10-26
+Game: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop.exe
+GameBytes:116802304
+GameSHA256:389FB5C0B4F75242B45E4ABC011706E23445CD20BCFE9B16EA83243591D5DA38
+Installer: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop-1.0-Windows-x64-Setup.exe
+InstallerBytes:35753719
+InstallerSHA256:ABB560B40BE1AF93D1F21047420F8B543C0BE5D1D81866BAEAC18067FEECFCDF
+Version:application1.0; Windows FileVersion/ProductVersion1.0.0.0; installer AppVersion1.0
+Engine:Godot4.7.2.stable.official.ed1daf0bf; Windows x86_64 Compatibility/OpenGL3.3; 29 rooms unchanged
+Language:zh_CN default without saved setting; English selectable and persisted as settings.language; existing order_version2/unlocks/volume retained
+Font:bundled NotoSansSC-Regular.otf; all translated glyphs verified; OFL license shipped
+Source full regression:ALL 47 HEADLESS TEST SUITES PASSED; RETRY_STRESS_CASES=96 FAILURES=0; exit0; no SCRIPT ERROR/ERROR/leaked-at-exit; docs/v1-all-tests.log
+Source GPU:LOCALIZATION_FAILURES=0; both languages menu/language/controls/settings/3selectionpages/pause/final result captured; viewport/button widths checked; docs/v1-language-test.log
+Pack checks:controls and real --challenge entry pass; docs/v1-pack-controls.log and v1-pack-challenge.log
+Installed package:LOCALIZATION_FAILURES=0 including default Chinese, old/save restore, all29names/font glyph coverage; docs/v1-installed-language.log
+Installer:Inno Setup6.7.3; compiler signed Pyrsys B.V. Authenticode Valid; generated setup/game unsigned
+Installation:current user, Windows10+x64, optional desktop shortcut, start-menu shortcut, Apps uninstall registration1.0
+Final installer verification:install0; EXE hash identical; start-menu target valid; old desktop unchanged; GPU launch0; uninstall0; files/shortcut/registry removed; real save hash+mtime unchanged; docs/v1-installer-validation.log
+Real save SHA256:41EE993434F948612C6DBD5566D478FDDB59E775B6AA48B18D36B74D7EA6D790
+Review:independent read-only review no actionable correctness issue; English final label GAME COMPLETE; docs/v1-code-review.md
+Unique playable build:builds/PortalHop.exe; Setup.exe is an installer, not an alternative game edition
+Build recipe:installer/build.ps1 and installer/PortalHop.iss; compiler/downloads not shipped
+Limits:no second physical PC/fresh Windows VM, all-old-room GPU recapture/hour-long soak/all-solutions/human difficulty acceptance

@@ -83,7 +83,7 @@ func run() -> void:
 	check(game.index == 5 and game.state == "playing" and not paused,"Sixth room enters directly without a tutorial")
 	game.pause_menu()
 	for child in game.panel.get_children():
-		if child is Button and child.text == "RESTART ROOM": child.pressed.emit()
+		if child is Button and child.text == game.text("RESTART ROOM"): child.pressed.emit()
 	check(game.index == 5 and game.state == "playing" and not paused,"Paused sixth room restarts directly")
 	await game.drain_audio()
 	paused = false

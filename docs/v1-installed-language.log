@@ -1,0 +1,368 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Fresh game defaults to Simplified Chinese
+PASS: Release version is 1.0
+PASS: Default menu renders Chinese
+PASS: Language entry exists on main menu
+PASS: Old save gains Chinese while preserving progress/volume
+PASS: Selecting English immediately translates page
+PASS: Language setting writes an isolated settings file
+PASS: Saved English survives reload with progress/volume
+PASS: Bundled font covers all translated glyphs: {  }
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 开始游戏
+PASS: Fits viewport: Button
+PASS: Button text fits: 选择关卡
+PASS: Fits viewport: Button
+PASS: Button text fits: 设置
+PASS: Fits viewport: Button
+PASS: Button text fits: 键位说明
+PASS: Fits viewport: Button
+PASS: Button text fits: 语言 / Language
+PASS: Fits viewport: Button
+PASS: Button text fits: 退出游戏
+PASS: Fits viewport: Label
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 简体中文  ✓
+PASS: Fits viewport: Button
+PASS: Button text fits: English
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: HSlider
+PASS: Fits viewport: Button
+PASS: Button text fits: 切换窗口 / 全屏
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 01  初次跨越
+PASS: Fits viewport: Button
+PASS: Button text fits: 02  重力弹弓
+PASS: Fits viewport: Button
+PASS: Button text fits: 03  机械守卫
+PASS: Fits viewport: Button
+PASS: Button text fits: 04  向量转换
+PASS: Fits viewport: Button
+PASS: Button text fits: 05  最终接力
+PASS: Fits viewport: Button
+PASS: Button text fits: 06  空中接力
+PASS: Fits viewport: Button
+PASS: Button text fits: 07  空中折返
+PASS: Fits viewport: Button
+PASS: Button text fits: 08  高空之路
+PASS: Fits viewport: Button
+PASS: Button text fits: 09  顶点接力
+PASS: Fits viewport: Button
+PASS: Button text fits: 10  轻盈落地
+PASS: Fits viewport: Button
+PASS: Button text fits: 上一页
+PASS: Fits viewport: Button
+PASS: Button text fits: 下一页
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 11  红线弹射
+PASS: Fits viewport: Button
+PASS: Button text fits: 12  弹跳接力
+PASS: Fits viewport: Button
+PASS: Button text fits: 13  红轨升空
+PASS: Fits viewport: Button
+PASS: Button text fits: 14  攀升冲刺
+PASS: Fits viewport: Button
+PASS: Button text fits: 15  第一束光
+PASS: Fits viewport: Button
+PASS: Button text fits: 16  光之井
+PASS: Fits viewport: Button
+PASS: Button text fits: 17  光路交换
+PASS: Fits viewport: Button
+PASS: Button text fits: 18  双阶段疾行  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 19  绿色迂回  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 20  齿轮渡台  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 上一页
+PASS: Fits viewport: Button
+PASS: Button text fits: 下一页
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 21  点亮轨道  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 22  双重绿境  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 23  完整回路  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 24  落差折返  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 25  二次蓄势  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 26  赤坡接力  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 27  流动终点  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 28  流动密室  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 29  借来的出口  [未解锁]
+PASS: Fits viewport: Button
+PASS: Button text fits: 上一页
+PASS: Fits viewport: Button
+PASS: Button text fits: 下一页
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回
+PASS: Chinese name exists: THE FIRST CROSSING
+PASS: Chinese name exists: GRAVITY SLINGSHOT
+PASS: Chinese name exists: MECHANICAL GUARDIAN
+PASS: Chinese name exists: THE VECTOR SWITCH
+PASS: Chinese name exists: THE FINAL RELAY
+PASS: Chinese name exists: AIRBORNE RELAY
+PASS: Chinese name exists: MIDAIR SWITCHBACK
+PASS: Chinese name exists: THE HIGH ROAD
+PASS: Chinese name exists: APEX RELAY
+PASS: Chinese name exists: A SOFT LANDING
+PASS: Chinese name exists: THE REDLINE SLING
+PASS: Chinese name exists: SPRING TO SLING
+PASS: Chinese name exists: RED TO SKY
+PASS: Chinese name exists: CLIMB THEN SPRINT
+PASS: Chinese name exists: FIRST LIGHT
+PASS: Chinese name exists: LIGHT WELL
+PASS: Chinese name exists: CIRCUIT EXCHANGE
+PASS: Chinese name exists: TWO STAGE RUN
+PASS: Chinese name exists: THE GREEN DETOUR
+PASS: Chinese name exists: THE GEAR FERRY
+PASS: Chinese name exists: LIGHT THE TRACK
+PASS: Chinese name exists: TWO GREEN HORIZONS
+PASS: Chinese name exists: THE COMPLETE CIRCUIT
+PASS: Chinese name exists: THE FALLING RETURN
+PASS: Chinese name exists: THE SECOND ASCENT
+PASS: Chinese name exists: THE CRIMSON ARC
+PASS: Chinese name exists: THE WANDERING FINISH
+PASS: Chinese name exists: THE KINETIC CHAMBER
+PASS: Chinese name exists: THE BORROWED EXIT
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 继续游戏
+PASS: Fits viewport: Button
+PASS: Button text fits: 重新开始本关
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回主菜单
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 重玩本关
+PASS: Fits viewport: Button
+PASS: Button text fits: 返回主菜单
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: START GAME
+PASS: Fits viewport: Button
+PASS: Button text fits: LEVEL SELECT
+PASS: Fits viewport: Button
+PASS: Button text fits: SETTINGS
+PASS: Fits viewport: Button
+PASS: Button text fits: CONTROLS
+PASS: Fits viewport: Button
+PASS: Button text fits: LANGUAGE / 语言
+PASS: Fits viewport: Button
+PASS: Button text fits: QUIT
+PASS: Fits viewport: Label
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 简体中文
+PASS: Fits viewport: Button
+PASS: Button text fits: English  ✓
+PASS: Fits viewport: Button
+PASS: Button text fits: BACK
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: BACK
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: HSlider
+PASS: Fits viewport: Button
+PASS: Button text fits: TOGGLE WINDOW / FULLSCREEN
+PASS: Fits viewport: Button
+PASS: Button text fits: BACK
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 01  THE FIRST CROSSING
+PASS: Fits viewport: Button
+PASS: Button text fits: 02  GRAVITY SLINGSHOT
+PASS: Fits viewport: Button
+PASS: Button text fits: 03  MECHANICAL GUARDIAN
+PASS: Fits viewport: Button
+PASS: Button text fits: 04  THE VECTOR SWITCH
+PASS: Fits viewport: Button
+PASS: Button text fits: 05  THE FINAL RELAY
+PASS: Fits viewport: Button
+PASS: Button text fits: 06  AIRBORNE RELAY
+PASS: Fits viewport: Button
+PASS: Button text fits: 07  MIDAIR SWITCHBACK
+PASS: Fits viewport: Button
+PASS: Button text fits: 08  THE HIGH ROAD
+PASS: Fits viewport: Button
+PASS: Button text fits: 09  APEX RELAY
+PASS: Fits viewport: Button
+PASS: Button text fits: 10  A SOFT LANDING
+PASS: Fits viewport: Button
+PASS: Button text fits: PREVIOUS PAGE
+PASS: Fits viewport: Button
+PASS: Button text fits: NEXT PAGE
+PASS: Fits viewport: Button
+PASS: Button text fits: BACK
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 11  THE REDLINE SLING
+PASS: Fits viewport: Button
+PASS: Button text fits: 12  SPRING TO SLING
+PASS: Fits viewport: Button
+PASS: Button text fits: 13  RED TO SKY
+PASS: Fits viewport: Button
+PASS: Button text fits: 14  CLIMB THEN SPRINT
+PASS: Fits viewport: Button
+PASS: Button text fits: 15  FIRST LIGHT
+PASS: Fits viewport: Button
+PASS: Button text fits: 16  LIGHT WELL
+PASS: Fits viewport: Button
+PASS: Button text fits: 17  CIRCUIT EXCHANGE
+PASS: Fits viewport: Button
+PASS: Button text fits: 18  TWO STAGE RUN  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 19  THE GREEN DETOUR  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 20  THE GEAR FERRY  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: PREVIOUS PAGE
+PASS: Fits viewport: Button
+PASS: Button text fits: NEXT PAGE
+PASS: Fits viewport: Button
+PASS: Button text fits: BACK
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: 21  LIGHT THE TRACK  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 22  TWO GREEN HORIZONS  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 23  THE COMPLETE CIRCUIT  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 24  THE FALLING RETURN  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 25  THE SECOND ASCENT  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 26  THE CRIMSON ARC  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 27  THE WANDERING FINISH  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 28  THE KINETIC CHAMBER  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: 29  THE BORROWED EXIT  [LOCKED]
+PASS: Fits viewport: Button
+PASS: Button text fits: PREVIOUS PAGE
+PASS: Fits viewport: Button
+PASS: Button text fits: NEXT PAGE
+PASS: Fits viewport: Button
+PASS: Button text fits: BACK
+PASS: Chinese name exists: THE FIRST CROSSING
+PASS: Chinese name exists: GRAVITY SLINGSHOT
+PASS: Chinese name exists: MECHANICAL GUARDIAN
+PASS: Chinese name exists: THE VECTOR SWITCH
+PASS: Chinese name exists: THE FINAL RELAY
+PASS: Chinese name exists: AIRBORNE RELAY
+PASS: Chinese name exists: MIDAIR SWITCHBACK
+PASS: Chinese name exists: THE HIGH ROAD
+PASS: Chinese name exists: APEX RELAY
+PASS: Chinese name exists: A SOFT LANDING
+PASS: Chinese name exists: THE REDLINE SLING
+PASS: Chinese name exists: SPRING TO SLING
+PASS: Chinese name exists: RED TO SKY
+PASS: Chinese name exists: CLIMB THEN SPRINT
+PASS: Chinese name exists: FIRST LIGHT
+PASS: Chinese name exists: LIGHT WELL
+PASS: Chinese name exists: CIRCUIT EXCHANGE
+PASS: Chinese name exists: TWO STAGE RUN
+PASS: Chinese name exists: THE GREEN DETOUR
+PASS: Chinese name exists: THE GEAR FERRY
+PASS: Chinese name exists: LIGHT THE TRACK
+PASS: Chinese name exists: TWO GREEN HORIZONS
+PASS: Chinese name exists: THE COMPLETE CIRCUIT
+PASS: Chinese name exists: THE FALLING RETURN
+PASS: Chinese name exists: THE SECOND ASCENT
+PASS: Chinese name exists: THE CRIMSON ARC
+PASS: Chinese name exists: THE WANDERING FINISH
+PASS: Chinese name exists: THE KINETIC CHAMBER
+PASS: Chinese name exists: THE BORROWED EXIT
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: CONTINUE
+PASS: Fits viewport: Button
+PASS: Button text fits: RESTART ROOM
+PASS: Fits viewport: Button
+PASS: Button text fits: MAIN MENU
+PASS: Fits viewport: ColorRect
+PASS: Fits viewport: Label
+PASS: Fits viewport: Label
+PASS: Fits viewport: Button
+PASS: Button text fits: REPLAY ROOM
+PASS: Fits viewport: Button
+PASS: Button text fits: MAIN MENU
+PASS: Real player save remains unchanged
+LOCALIZATION_FAILURES=0

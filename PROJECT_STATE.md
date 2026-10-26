@@ -4,29 +4,24 @@
 
 ## 最新接续方向
 
-2026-10-26：主菜单新增CONTROLS键位说明，列出A/D、Space、鼠标瞄准、左右键红/蓝门、R（计死亡重试）、Esc、F11，BACK返回主菜单。英文样式沿用原界面，不含解法/机关教程。源码GPU及导出包controls测试均CONTROLS_FAILURES=0，菜单/说明截图已查看；curation回归CURATION_FAILURES=0，导出与EXE启动退出0。本轮未重跑完整45组/路线/重试压力；以下第29关完整回归属于前版历史证据。最新EXE身份见build-manifest，普通物理和地图未改。
+当前版本定为Portal Hop 1.0（Windows文件/产品版本1.0.0.0），29关。主菜单新增“语言 / Language”，支持简体中文与English；首次运行及无语言字段的旧存档默认中文，保存过的语言选择下次恢复。菜单、设置、键位说明、选关/29个关卡名称、暂停与结算均有中文。Noto Sans SC字体随包嵌入，不依赖目标电脑系统中文字体；原地图、物理与传送公式未改。
 
-已按用户“助手选择最难解谜、直接生成试玩”的请求追加第29关THE BORROWED EXIT（借来的出口），稳定ID56。本轮由助手原创，不来自用户JSON。采用既有反射枪线、三接收器锁存、机关门与高低落差；不新增底层玩法，不改普通物理/传送公式或原1–28地图。用户希望先自行探索，游戏内不提供解法提示；详细解法仅在[开发设计记录](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)，不要在试玩汇报中剧透。
+交付仍使用唯一游戏入口builds/PortalHop.exe；新增builds/PortalHop-1.0-Windows-x64-Setup.exe为安装器，不是并列游戏版本。安装器支持Windows10+ x64、当前用户目录安装、开始菜单、可选桌面快捷方式及Windows应用卸载。卸载保留玩家存档。开发目录原桌面快捷方式仍指向builds/PortalHop.exe。安装构建源与说明见installer/README.md；最新文件大小和SHA256见docs/build-manifest.txt。
 
-真实路线：出生反射射门→复用激光入口依次点亮三接收器→改造回程出口→下井、真实传送回右侧上层、落台进入终点。9组实际输入/反射目标/第二出口/底门/返回高度均0死亡、1传送、实际落台通关。初始所有采样直射点被挡，无反射对照、普通翻门/跨井、错误返回、三阶段暂停/R及实际死亡复位已通过。初稿终点x790在较高返回门位落台前擦中，校准到x780后9组均先落台；没有改碰撞尺寸或速度。独立只读审阅无剩余已确认实质问题，并扫查初始可达范围在禁反射时无直射入口。
+本轮已通过源码GPU中英文/字体/布局/保存检查、内嵌包键位与隔离挑战入口、安装后的内嵌语言/字体检查与实际GPU启动；安装/卸载均退出0，已验证文件哈希、开始菜单目标、卸载项与实际存档哈希/修改时间不变。47组完整回归与96例重试压力全部通过，退出0且无SCRIPT ERROR/ERROR/退出泄漏。独立只读审阅无实质问题；英文最终结算已从PROTOTYPE COMPLETE调整为GAME COMPLETE。中英文截图docs/v1-*.png已查看主要页面；本轮未逐关重拍GPU或做人手难度验收。
 
-增加命令行`PortalHop.exe -- --challenge`，直接进入29，整个该进程禁用存档写入；正常双击行为不变，完成28解锁29。生产入口先缺失失败再实现，源码和包内夹具均确认通关/菜单/保存前后cfg哈希与修改时间不变。真实cfg仍45字节/2026-10-24 19:08:28，SHA256 41EE993434F948612C6DBD5566D478FDDB59E775B6AA48B18D36B74D7EA6D790。
-
-源码完整45组回归、96例重试压力已实际通过，退出0，无SCRIPT ERROR/ERROR或退出泄漏。目标路线完整通过日志docs/borrowed-exit-route.log；GPU初始/点亮/实际返回落台及包内29/第三页9关图已查看。EXE已更新为109341168字节，SHA256 37471FC6FB61BDF1FD23AA583F9CA66BA03D057B3E9F843FC993EA395A013D7E。普通EXE菜单启动退出0，内嵌29关身份、原24–28关键组件保留、新29核心真实路线及隔离试玩入口均通过；不把源码测试当作导出版测试。唯一EXE/桌面原快捷方式保持。
-
-第28关历史轮为43组/93例，不能替代本轮。其自由解法、多折点平台/独立六怪/移动刺及原稿证据见[28开发记录](docs/level-editor/designs/2026-10-25-kinetic-chamber/README.md)。本轮没改这些底层机制。第29关人手思考时长、是否满足用户“最难”的感受及全部巧解尚待试玩，未穷尽所有门位/长期运行/显示映射。
-
+第29关THE BORROWED EXIT（借来的出口，稳定ID56）保留此前已交付的高难解谜。用户希望先自行探索，不加解法提示；详细解法仅在[开发设计记录](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)，试玩汇报不要剧透。命令行PortalHop.exe -- --challenge直接进入29且禁用该进程所有存档写入；正常完成28解锁29。第28关自由解法与移动机关见[28开发记录](docs/level-editor/designs/2026-10-25-kinetic-chamber/README.md)。不把自动路线通过当成人手难度认可。
 ## 当前版本与约束
 
-- Godot4.7.2/GDScript，Windows x64，单人离线、960×540固定单屏、120Hz、Compatibility。
+- Portal Hop 1.0；Godot4.7.2/GDScript，Windows x64，单人离线、960×540固定单屏、120Hz、Compatibility。
 - 当前源码29关。原50关按用户指令删除27关、保留23关后追加24–29；[编号对照](docs/编号对照.md)保留原顺序，新增稳定ID56，不复用被删编号。
 - 选关3页（10/10/9），选关与NEXT直接入关。第28完成后NEXT到29，第29显示最终结算。无入关说明卡、建议圈、教程/机关说明菜单；准星、放门预览、枪线及机关反馈保留。
-- 唯一交付入口builds/PortalHop.exe；桌面C:\Users\XH\Desktop\Portal Hop.lnk指向它。禁止并列版本EXE，不终止用户试玩来替换文件。
+- 唯一交付入口builds/PortalHop.exe；桌面C:\Users\XH\Desktop\Portal Hop.lnk指向它。禁止并列可玩游戏版本EXE（1.0安装器除外），不终止用户试玩来替换文件。
 - 自动通关不代表人手难度认可或所有巧解已穷尽。后续按用户反馈改地图，不自动改手感或实装其他草图。
 
 ## 当前机制与操作
 
-A/D移动、Space跳跃、鼠标瞄准、左右鼠标红/蓝门、R计死亡重试、Esc暂停/继续、F11全屏。主菜单CONTROLS可查看键位并通过BACK返回，UI仍为英文。
+A/D移动、Space跳跃、鼠标瞄准、左右鼠标红/蓝门、R计死亡重试、Esc暂停/继续、F11全屏。主菜单“键位说明 / CONTROLS”可查看操作并返回；“语言 / Language”切换中英文，默认中文。
 
 | 项目 | 参数/规则 |
 |---|---|
@@ -51,16 +46,15 @@ A/D移动、Space跳跃、鼠标瞄准、左右鼠标红/蓝门、R计死亡重�
 - scenes/main.gd管菜单/分页/进度/结算及交互，将可选polygons交给门系统。actors/player.gd新增红坡接触/切向分支，world/materials.gd未改；actors/sentry.gd支持可选vertical；portals/system.gd保留旧Rect2及凸多边形路径。
 - 地图必需name/spawn/goal/blocks/faces/enemy，可选polygons:Array[PackedVector2Array]、guard/guards/materials/mirrors/emitters/receivers/gates/movers/hazards/moving_hazards/gun_screens。移动终点用goal_mover（movers索引）及goal_offset（相对平台左上角）绑定；polygons仅凸多边形，面与外法线须贴合实体；不添加hint/guide/briefing。
 - movers可选path为包含起点的左上角点数组，省略时沿用rect→to；guards为spawn/patrol两点向量名单，旧guard和enemy别名保留。moving_hazards条目为mover索引及相对左上角rect，伤害/绘制使用同一hazard_rects。出生先初始化previous_position，避免虚假首帧扫掠。
-- progress.order_version仍为2，存当前编号unlocked/音量；版本2按1..29限幅，不重复迁移。已有28解锁保持28，完成28后解锁29，不自动修改玩家进度。
+- progress.order_version仍为2，存当前编号unlocked/音量/语言settings.language（zh_CN或en）；版本2按1..29限幅，不重复迁移。已有28解锁保持28，完成28后解锁29，不自动修改玩家进度。
 - 缺版本的旧50关存档迁移到首个保留原ID≥旧最高解锁ID。旧12→新12（原14）、旧22→新17（原25）、旧49/50→新23，新增ID51/52/53/54/55/56不改变这些映射。
 - 测试persistence_enabled=false，不写实际%APPDATA%/Godot/app_userdata/Portal Hop/progress.cfg。
 
 ## 验证与运行
 
-本轮第29关：目标borrowed_exit完整9组真实输入与对照/恢复通过，challenge_entry源码/内嵌包通过，curation通过；完整45组回归、96例重试压力通过，runner退出0且无运行错误/退出泄漏。旧28关轮43组/93例是历史结果。
+1.0本轮：完整47组回归/96例重试压力通过，runner退出0，无运行错误或退出泄漏。源码GPU tests/localization.gd检查中英文页面/全部29个关卡译名、按钮宽度、内嵌字体字形、旧存档默认中文与隔离文件保存/恢复；LOCALIZATION_FAILURES=0。键位测试、内嵌challenge_entry及安装包内语言测试通过。安装后的GPU启动退出0；安装/卸载、开始菜单目标、Windows版本和存档保护检查见docs/v1-installer-validation.log。
 
-本轮日志docs/borrowed-exit-all-tests.log、borrowed-exit-route.log、borrowed-exit-gpu.log、borrowed-exit-pack-route.log、borrowed-exit-pack-entry.log、borrowed-exit-pack-smoke.log及borrowed-exit-exe-start.log。GPU初始/全部点亮/实落台/包内关卡与第三页9关均已解码查看，图片在docs/borrowed-exit-preview。未重测显示映射/全部旧关GPU，也未声称人手难度验收。
-
+源码日志docs/v1-all-tests.log、v1-language-test.log；导出docs/v1-export.log；包内docs/v1-pack-controls.log、v1-pack-challenge.log；实际安装docs/v1-install-test.log、v1-installed-language.log、v1-installed-start.log、v1-uninstall-test.log。中英文截图docs/v1-*.png。历史第29关45组/96例及第28关43组/93例不替代本轮结果；未做全部旧关GPU/长时间/所有显示器/全部巧解验收。
 ```powershell
 ./tests/run.ps1
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/kinetic_chamber.gd -- --capture
@@ -80,4 +74,3 @@ A/D移动、Space跳跃、鼠标瞄准、左右鼠标红/蓝门、R计死亡重�
 [本地地图批注页](docs/地图批注.html)保留五图A–E逐页批注；94条原始手写意见归档docs/map-review/feedback/2026-10-25-050407.json，R2底图版本50640cab687f。旧五图仍未接入游戏，当前草图01批准不等于它们全部已批准。D/E红实线是加速墙，红坡接触支撑现已补齐并在26验证，但这些草图的具体斜率/接缝/可达性仍未逐图验收。原14类部件的完整浏览器实测属于首版工具；本轮旧数据兼容和批注页Node回归通过，未改批注工具逻辑。
 
 历史交接见docs/新对话交接.md，过程见docs/进度.md。行为/运行/验证变化同步本文件、README、已知问题及构建清单，与代码一起提交。
-
