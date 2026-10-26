@@ -104,14 +104,15 @@ func menu() -> void:
 	get_tree().paused = true
 	clear_panel()
 	backdrop()
-	label_at("PORTAL HOP",Vector2(310,58),46)
+	var title := label_at("PORTAL HOP",Vector2(0,58),46)
+	title.size.x = 960
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	button("START GAME",Vector2(340,170),func(): start_level(0))
 	button("LEVEL SELECT",Vector2(340,222),level_select)
 	button("SETTINGS",Vector2(340,274),settings)
 	button("CONTROLS",Vector2(340,326),controls)
 	button("LANGUAGE / 语言",Vector2(340,378),language_select)
 	button("QUIT",Vector2(340,430),quit_game)
-	label_at(text("PORTAL HOP  /  v1.0  /  %d ROOMS") % Maps.LEVEL_COUNT,Vector2(300,490),15)
 	queue_redraw()
 
 func level_select(page: int = 0) -> void:

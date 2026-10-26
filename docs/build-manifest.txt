@@ -1,23 +1,18 @@
-Portal Hop 1.0 Windows release — 2026-10-26
+Portal Hop 1.0 — menu polish 2026-10-26
 Game: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop.exe
-GameBytes:116802304
-GameSHA256:389FB5C0B4F75242B45E4ABC011706E23445CD20BCFE9B16EA83243591D5DA38
+GameBytes:116802240
+GameSHA256:5870691AA6BE438F5378F78C2FC33B36A19DFCC64FEEDDA16F48F6B0F8586D24
 Installer: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop-1.0-Windows-x64-Setup.exe
-InstallerBytes:35753719
-InstallerSHA256:ABB560B40BE1AF93D1F21047420F8B543C0BE5D1D81866BAEAC18067FEECFCDF
-Version:application1.0; Windows FileVersion/ProductVersion1.0.0.0; installer AppVersion1.0
-Engine:Godot4.7.2.stable.official.ed1daf0bf; Windows x86_64 Compatibility/OpenGL3.3; 29 rooms unchanged
-Language:zh_CN default without saved setting; English selectable and persisted as settings.language; existing order_version2/unlocks/volume retained
-Font:bundled NotoSansSC-Regular.otf; all translated glyphs verified; OFL license shipped
-Source full regression:ALL 47 HEADLESS TEST SUITES PASSED; RETRY_STRESS_CASES=96 FAILURES=0; exit0; no SCRIPT ERROR/ERROR/leaked-at-exit; docs/v1-all-tests.log
-Source GPU:LOCALIZATION_FAILURES=0; both languages menu/language/controls/settings/3selectionpages/pause/final result captured; viewport/button widths checked; docs/v1-language-test.log
-Pack checks:controls and real --challenge entry pass; docs/v1-pack-controls.log and v1-pack-challenge.log
-Installed package:LOCALIZATION_FAILURES=0 including default Chinese, old/save restore, all29names/font glyph coverage; docs/v1-installed-language.log
-Installer:Inno Setup6.7.3; compiler signed Pyrsys B.V. Authenticode Valid; generated setup/game unsigned
-Installation:current user, Windows10+x64, optional desktop shortcut, start-menu shortcut, Apps uninstall registration1.0
-Final installer verification:install0; EXE hash identical; start-menu target valid; old desktop unchanged; GPU launch0; uninstall0; files/shortcut/registry removed; real save hash+mtime unchanged; docs/v1-installer-validation.log
-Real save SHA256:41EE993434F948612C6DBD5566D478FDDB59E775B6AA48B18D36B74D7EA6D790
-Review:independent read-only review no actionable correctness issue; English final label GAME COMPLETE; docs/v1-code-review.md
-Unique playable build:builds/PortalHop.exe; Setup.exe is an installer, not an alternative game edition
-Build recipe:installer/build.ps1 and installer/PortalHop.iss; compiler/downloads not shipped
-Limits:no second physical PC/fresh Windows VM, all-old-room GPU recapture/hour-long soak/all-solutions/human difficulty acceptance
+InstallerBytes:35752824
+InstallerSHA256:66AA27270A8B2E5607D582E6420CBF2EAFA1C3190BF6FDB02F807C28DDD45B87
+Version:application1.0; Windows file/product1.0.0.0; installer1.0
+Change:remove footer beneath QUIT in both languages; title spans960px with horizontal center alignment; map/physics/settings untouched
+Source GPU:tests/localization.gd exit0 LOCALIZATION_FAILURES=0; Chinese/English menu screenshots visually inspected, docs/v1-zh_CN-menu.png and v1-en-menu.png; docs/menu-polish-language.log
+Export/build:installer/build.ps1 exit0; docs/menu-polish-build.log and docs/v1-export.log
+Final installer:install0, installed EXE SHA256 matches current build, embedded localization0, GPU start0, uninstall0, real save hash/mtime unchanged; docs/menu-polish-installer-validation.log
+Embedded language/font:docs/menu-polish-installed-language.log LOCALIZATION_FAILURES=0
+Installer behavior:Windows10+x64 per-user; start-menu, optional desktop shortcut, Apps uninstall, preserves save; unsigned game/setup
+Prior1.0 verification:47 suites/96 retry cases passed before this menu-only adjustment; not rerun this update; docs/v1-all-tests.log
+Prior1.0 pack controls/challenge and full installer shortcut/registry tests:docs/v1-pack-controls.log, v1-pack-challenge.log, v1-installer-validation.log; historical evidence
+Unique playable file:builds/PortalHop.exe; separate Setup.exe is the distributor, original desktop shortcut target retained
+Limits:no new map/physics regression or second physical PC/fresh Windows VM testing this update

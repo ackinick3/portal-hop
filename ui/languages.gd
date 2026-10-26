@@ -4,7 +4,6 @@ const ZH := {
 	"START GAME":"开始游戏", "LEVEL SELECT":"选择关卡", "SETTINGS":"设置",
 	"CONTROLS":"键位说明", "QUIT":"退出游戏", "BACK":"返回",
 	"LANGUAGE / 语言":"语言 / Language", "LANGUAGE":"语言 / Language",
-	"PORTAL HOP  /  v1.0  /  %d ROOMS":"PORTAL HOP  /  版本 1.0  /  %d 关",
 	"SELECT A ROOM  /  %d":"选择关卡  /  第 %d 页", "  [LOCKED]":"  [未解锁]",
 	"PREVIOUS PAGE":"上一页", "NEXT PAGE":"下一页", "MASTER VOLUME":"主音量",
 	"TOGGLE WINDOW / FULLSCREEN":"切换窗口 / 全屏", "PAUSED":"已暂停",

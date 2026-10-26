@@ -4,11 +4,13 @@
 
 ## 最新接续方向
 
+2026-10-26主菜单小修：删除退出按钮下的版本/关卡小字，标题改为960px全宽居中。版本仍1.0，版本信息保留在工程与Windows属性中。源码GPU中英文页面检查及截图已核对；更新安装包后，隔离安装、内嵌语言检查、GPU启动、卸载与存档保护均通过。日志docs/menu-polish-*.log；本轮未重跑完整47组/96例，以下全套结果属于此前1.0基础发行。
+
 当前版本定为Portal Hop 1.0（Windows文件/产品版本1.0.0.0），29关。主菜单新增“语言 / Language”，支持简体中文与English；首次运行及无语言字段的旧存档默认中文，保存过的语言选择下次恢复。菜单、设置、键位说明、选关/29个关卡名称、暂停与结算均有中文。Noto Sans SC字体随包嵌入，不依赖目标电脑系统中文字体；原地图、物理与传送公式未改。
 
 交付仍使用唯一游戏入口builds/PortalHop.exe；新增builds/PortalHop-1.0-Windows-x64-Setup.exe为安装器，不是并列游戏版本。安装器支持Windows10+ x64、当前用户目录安装、开始菜单、可选桌面快捷方式及Windows应用卸载。卸载保留玩家存档。开发目录原桌面快捷方式仍指向builds/PortalHop.exe。安装构建源与说明见installer/README.md；最新文件大小和SHA256见docs/build-manifest.txt。
 
-本轮已通过源码GPU中英文/字体/布局/保存检查、内嵌包键位与隔离挑战入口、安装后的内嵌语言/字体检查与实际GPU启动；安装/卸载均退出0，已验证文件哈希、开始菜单目标、卸载项与实际存档哈希/修改时间不变。47组完整回归与96例重试压力全部通过，退出0且无SCRIPT ERROR/ERROR/退出泄漏。独立只读审阅无实质问题；英文最终结算已从PROTOTYPE COMPLETE调整为GAME COMPLETE。中英文截图docs/v1-*.png已查看主要页面；本轮未逐关重拍GPU或做人手难度验收。
+1.0基础发行轮已通过源码GPU中英文/字体/布局/保存检查、内嵌包键位与隔离挑战入口、安装后的内嵌语言/字体检查与实际GPU启动；安装/卸载均退出0，已验证文件哈希、开始菜单目标、卸载项与实际存档哈希/修改时间不变。47组完整回归与96例重试压力全部通过，退出0且无SCRIPT ERROR/ERROR/退出泄漏。独立只读审阅无实质问题；英文最终结算已从PROTOTYPE COMPLETE调整为GAME COMPLETE。中英文截图docs/v1-*.png已查看主要页面；本轮未逐关重拍GPU或做人手难度验收。
 
 第29关THE BORROWED EXIT（借来的出口，稳定ID56）保留此前已交付的高难解谜。用户希望先自行探索，不加解法提示；详细解法仅在[开发设计记录](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)，试玩汇报不要剧透。命令行PortalHop.exe -- --challenge直接进入29且禁用该进程所有存档写入；正常完成28解锁29。第28关自由解法与移动机关见[28开发记录](docs/level-editor/designs/2026-10-25-kinetic-chamber/README.md)。不把自动路线通过当成人手难度认可。
 ## 当前版本与约束
@@ -52,7 +54,7 @@ A/D移动、Space跳跃、鼠标瞄准、左右鼠标红/蓝门、R计死亡重�
 
 ## 验证与运行
 
-1.0本轮：完整47组回归/96例重试压力通过，runner退出0，无运行错误或退出泄漏。源码GPU tests/localization.gd检查中英文页面/全部29个关卡译名、按钮宽度、内嵌字体字形、旧存档默认中文与隔离文件保存/恢复；LOCALIZATION_FAILURES=0。键位测试、内嵌challenge_entry及安装包内语言测试通过。安装后的GPU启动退出0；安装/卸载、开始菜单目标、Windows版本和存档保护检查见docs/v1-installer-validation.log。
+1.0基础发行轮（菜单小修前）：完整47组回归/96例重试压力通过，runner退出0，无运行错误或退出泄漏。源码GPU tests/localization.gd检查中英文页面/全部29个关卡译名、按钮宽度、内嵌字体字形、旧存档默认中文与隔离文件保存/恢复；LOCALIZATION_FAILURES=0。键位测试、内嵌challenge_entry及安装包内语言测试通过。安装后的GPU启动退出0；安装/卸载、开始菜单目标、Windows版本和存档保护检查见docs/v1-installer-validation.log。
 
 源码日志docs/v1-all-tests.log、v1-language-test.log；导出docs/v1-export.log；包内docs/v1-pack-controls.log、v1-pack-challenge.log；实际安装docs/v1-install-test.log、v1-installed-language.log、v1-installed-start.log、v1-uninstall-test.log。中英文截图docs/v1-*.png。历史第29关45组/96例及第28关43组/93例不替代本轮结果；未做全部旧关GPU/长时间/所有显示器/全部巧解验收。
 ```powershell
