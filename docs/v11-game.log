@@ -1,0 +1,18 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PORTAL_HOP_READY
+PASS: Menu starts room
+PASS: Room 1 red visible from spawn
+PASS: Room 1 blue visible from spawn
+PASS: Room 1 physically crosses via floor portals
+PASS: Room 1 reaches goal using movement input
+PASS: Room 2 wall target has line of sight
+ROOM2_END (867.9208, 435.5686) speed=780.0 deaths=0
+PASS: Room 2 produces real horizontal launch
+PASS: Room 2 launch lands and reaches goal
+ROOM3_END (856.6264, 386.0493) deaths=0
+PASS: Room 3 ordinary action route reaches goal
+PASS: Downward contact stomps guard
+PASS: Death resets guard and portals
+PASS: Fast side contact is fatal
+GAME_TEST_FAILURES=0

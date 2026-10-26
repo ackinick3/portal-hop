@@ -104,9 +104,14 @@ func menu() -> void:
 	get_tree().paused = true
 	clear_panel()
 	backdrop()
-	var title := label_at("PORTAL HOP",Vector2(0,58),46)
-	title.size.x = 960
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var title := TextureRect.new()
+	title.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	title.texture = load("res://assets/menu-title.png")
+	title.position = Vector2(180,0)
+	title.size = Vector2(600,160)
+	title.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	panel.add_child(title)
 	button("START GAME",Vector2(340,170),func(): start_level(0))
 	button("LEVEL SELECT",Vector2(340,222),level_select)
 	button("SETTINGS",Vector2(340,274),settings)

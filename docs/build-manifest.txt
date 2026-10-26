@@ -1,18 +1,17 @@
-Portal Hop 1.0 — menu polish 2026-10-26
-Game: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop.exe
-GameBytes:116802240
-GameSHA256:5870691AA6BE438F5378F78C2FC33B36A19DFCC64FEEDDA16F48F6B0F8586D24
-Installer: D:/常用文件/codex_project/pop_Mario开发/builds/PortalHop-1.0-Windows-x64-Setup.exe
-InstallerBytes:35752824
-InstallerSHA256:66AA27270A8B2E5607D582E6420CBF2EAFA1C3190BF6FDB02F807C28DDD45B87
-Version:application1.0; Windows file/product1.0.0.0; installer1.0
-Change:remove footer beneath QUIT in both languages; title spans960px with horizontal center alignment; map/physics/settings untouched
-Source GPU:tests/localization.gd exit0 LOCALIZATION_FAILURES=0; Chinese/English menu screenshots visually inspected, docs/v1-zh_CN-menu.png and v1-en-menu.png; docs/menu-polish-language.log
-Export/build:installer/build.ps1 exit0; docs/menu-polish-build.log and docs/v1-export.log
-Final installer:install0, installed EXE SHA256 matches current build, embedded localization0, GPU start0, uninstall0, real save hash/mtime unchanged; docs/menu-polish-installer-validation.log
-Embedded language/font:docs/menu-polish-installed-language.log LOCALIZATION_FAILURES=0
-Installer behavior:Windows10+x64 per-user; start-menu, optional desktop shortcut, Apps uninstall, preserves save; unsigned game/setup
-Prior1.0 verification:47 suites/96 retry cases passed before this menu-only adjustment; not rerun this update; docs/v1-all-tests.log
-Prior1.0 pack controls/challenge and full installer shortcut/registry tests:docs/v1-pack-controls.log, v1-pack-challenge.log, v1-installer-validation.log; historical evidence
-Unique playable file:builds/PortalHop.exe; separate Setup.exe is the distributor, original desktop shortcut target retained
-Limits:no new map/physics regression or second physical PC/fresh Windows VM testing this update
+Portal Hop 1.1 — 2026-10-26
+Game:builds/PortalHop.exe
+GameBytes:117330688
+GameSHA256:374D0EDD95D37823F2A870642C539F740FF2366BD5EC4246A8337FCA1131964C
+Installer:builds/PortalHop-1.1-Windows-x64-Setup.exe
+InstallerBytes:36255047
+InstallerSHA256:FFF1602F456A5433310311C5B29DBB6A7D15B2F8D8C4B02745C612305D071910
+Version:application1.1; Windows FileVersion/ProductVersion1.1.0.0; installer1.1; AppId unchanged
+Title:approved v3 PNG, normal O/red T crossbar/blue H crossbar; assets/menu-title.png SHA256 8B2E0A94DBBEC96EEDB513E15552C4DD580AC6FA7DC3B813871A90B554CB536C
+Layout:TextureRect600x160 centered atx480, keep aspect, mouse ignore; source Chinese/English menu screenshots inspected
+Tests:localization/controls/curation/game exit0; docs/v11-*.log
+Upgrade:actual1.0.0.0→1.1.0.0 install/upgrade/readback, matching EXE hash, Apps registry1.1, embedded locale test0, GPU start0, uninstall0, real save hash+mtime unchanged; docs/v11-upgrade-validation.log
+Prior verification:full47suites/96retry cases belongs to1.0; not rerun for1.1
+GitHub:public ackinick3/portal-hop;1.0 tag final text-menu commit b153735;1.1 publication/remote verification pending
+Cleanup:old local installer/staging retained until both remote releases verified
+Single playable entry:builds/PortalHop.exe; default language Chinese,29maps/physics/portal formulas unchanged
+Limit:unsigned Windows game/setup; no second-machine/long-soak/all-old-room GPU recapture

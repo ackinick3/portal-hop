@@ -1,9 +1,9 @@
 [Setup]
 AppId={{71BF9072-A6BA-46F4-A0CD-E61AC0CD1F10}
 AppName=Portal Hop
-AppVersion=1.0
-AppVerName=Portal Hop 1.0
-VersionInfoVersion=1.0.0.0
+AppVersion=1.1
+AppVerName=Portal Hop 1.1
+VersionInfoVersion=1.1.0.0
 VersionInfoProductName=Portal Hop
 DefaultDirName={localappdata}\Programs\Portal Hop
 DefaultGroupName=Portal Hop
@@ -12,7 +12,7 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir=..\builds
-OutputBaseFilename=PortalHop-1.0-Windows-x64-Setup
+OutputBaseFilename=PortalHop-1.1-Windows-x64-Setup
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern

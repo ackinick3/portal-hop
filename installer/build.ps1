@@ -8,4 +8,4 @@ if (-not (Test-Path -LiteralPath $Compiler)) { throw 'Install Inno Setup 6.7.3 a
 if ($LASTEXITCODE -ne 0) { throw 'Godot export failed' }
 & $Compiler (Join-Path $PSScriptRoot 'PortalHop.iss')
 if ($LASTEXITCODE -ne 0) { throw 'Installer compilation failed' }
-Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $root 'builds/PortalHop.exe'),(Join-Path $root 'builds/PortalHop-1.0-Windows-x64-Setup.exe')
+Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $root 'builds/PortalHop.exe'),(Join-Path $root 'builds/PortalHop-1.1-Windows-x64-Setup.exe')

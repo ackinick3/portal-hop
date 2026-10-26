@@ -1,8 +1,10 @@
-# Portal Hop 1.0
+# Portal Hop 1.1
 
-Godot4.7.2 / GDScript，Windows x64，29关单机版。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
+Godot4.7.2 / GDScript，Windows x64，29关单机版。
 
-Windows 10及以上64位电脑可运行`builds/PortalHop-1.0-Windows-x64-Setup.exe`安装，默认安装到当前用户目录，带开始菜单入口和卸载功能，可选桌面快捷方式。开发目录仍双击`builds/PortalHop.exe`或原桌面Portal Hop快捷方式，持续使用同一个游戏文件。原50关中用户指定的27张图已删，保留23关后追加24–29，连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
+[下载1.1 Windows安装包](https://github.com/ackinick3/portal-hop/releases/tag/v1.1) · [1.0历史版本](https://github.com/ackinick3/portal-hop/releases/tag/v1.0)。1.1主菜单采用红蓝横笔标题图，保持居中；默认中文与既有存档兼容。开发接续先读[PROJECT_STATE.md](PROJECT_STATE.md)与AGENTS.md；换对话时再读[新对话交接总结](docs/新对话交接.md)。
+
+Windows 10及以上64位电脑可运行`builds/PortalHop-1.1-Windows-x64-Setup.exe`安装，默认安装到当前用户目录，带开始菜单入口和卸载功能，可选桌面快捷方式。开发目录仍双击`builds/PortalHop.exe`或原桌面Portal Hop快捷方式，持续使用同一个游戏文件。原50关中用户指定的27张图已删，保留23关后追加24–29，连续编号；[新旧编号对照](docs/编号对照.md)。游戏内教学卡、建议圈、教程和机关说明菜单均已移除，选关/NEXT直接开始。
 
 - A/D：移动；Space：跳跃。
 - 移动鼠标：瞄准；鼠标左/右键：红/蓝传送门。
@@ -42,4 +44,4 @@ Windows 10及以上64位电脑可运行`builds/PortalHop-1.0-Windows-x64-Setup.e
 
 第29关THE BORROWED EXIT（借来的出口）是用户要求助手原创的高难空间解谜，使用现有反射、激光机关与自由双门，不改普通物理或旧关。完成28后解锁29。可运行`builds/PortalHop.exe -- --challenge`直接试玩29；该进程不保存进度，正常双击仍沿用原存档。R重试、Esc暂停、F11全屏。[开发记录（含剧透）](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)。本轮实际通过结果见PROJECT_STATE及build-manifest。
 
-安装器构建与发布说明见[installer/README.md](installer/README.md)。Windows版本信息为1.0.0.0；安装/升级/卸载保留玩家存档。游戏及安装器未数字签名。
+安装器构建与发布说明见[installer/README.md](installer/README.md)。Windows版本信息为1.1.0.0；安装/升级/卸载保留玩家存档。游戏及安装器未数字签名。

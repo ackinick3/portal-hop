@@ -1,4 +1,4 @@
-# Portal Hop 1.0 Windows release
+# Portal Hop 1.1 Windows release
 
 Build from the repository root:
 
@@ -11,7 +11,7 @@ Requires Godot 4.7.2/templates in the existing tools directories and Inno Setup 
 
 Outputs:
 - `builds/PortalHop.exe`: the single current playable build.
-- `builds/PortalHop-1.0-Windows-x64-Setup.exe`: distributable installer.
+- `builds/PortalHop-1.1-Windows-x64-Setup.exe`: distributable installer.
 
 Installer: Windows 10+ x64, current-user installation, no elevation, start-menu shortcut, optional desktop shortcut, Windows Apps uninstall entry. Default installation directory `%LOCALAPPDATA%/Programs/Portal Hop`. Save data remains in `%APPDATA%/Godot/app_userdata/Portal Hop`; upgrading/uninstalling preserves it. Fresh or old settings without a language default to Simplified Chinese; a saved English selection remains English.
 

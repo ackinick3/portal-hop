@@ -1,4 +1,4 @@
-Portal Hop 1.0 — Windows x64
+Portal Hop 1.1 — Windows x64
 
 共29关，单人离线游戏。首次启动默认简体中文，主菜单“语言 / Language”可切换English并保存。
 

@@ -4,23 +4,19 @@
 
 ## 最新接续方向
 
-2026-10-26标题设计素材：按最新意见生成[PORTAL HOP标题v3](docs/title-art/portal-hop-title-v3.png)：不再使用传送门圆环，两个O恢复普通浅色字母，T顶部横笔为红线、H中部横笔为蓝线，呼应游戏实际线段门。2172×724透明PNG已视觉核对文字/结构并验证角落alpha=0；v1/v2保留。仍仅交付标题图供查看，未接入菜单或更新EXE/安装器，本轮未重新验证游戏运行。
+当前Portal Hop 1.1（Windows产品/文件1.1.0.0），已把用户确认的标题v3接入主菜单：普通O、T顶部红横笔/H中部蓝横笔。实际资产assets/menu-title.png与docs/title-art/portal-hop-title-v3.png SHA256相同；600×160 TextureRect在960px视口水平居中，保持比例，底部不显示小字。原29关、物理/传送规则、中文默认与语言/进度存档均保留。
 
-2026-10-26主菜单小修：删除退出按钮下的版本/关卡小字，标题改为960px全宽居中。版本仍1.0，版本信息保留在工程与Windows属性中。源码GPU中英文页面检查及截图已核对；更新安装包后，隔离安装、内嵌语言检查、GPU启动、卸载与存档保护均通过。日志docs/menu-polish-*.log；本轮未重跑完整47组/96例，以下全套结果属于此前1.0基础发行。
+唯一游戏入口builds/PortalHop.exe；安装器builds/PortalHop-1.1-Windows-x64-Setup.exe。AppId和存档位置保持，实际1.0→1.1覆盖升级、内嵌语言/版本/布局检查、GPU启动、卸载、玩家存档哈希/修改时间保护通过，日志docs/v11-upgrade-validation.log。源码localization/controls/curation/game通过，中英文菜单截图已查看；本轮未重跑完整47组/96例，旧1.0结果仅作历史。
 
-当前版本定为Portal Hop 1.0（Windows文件/产品版本1.0.0.0），29关。主菜单新增“语言 / Language”，支持简体中文与English；首次运行及无语言字段的旧存档默认中文，保存过的语言选择下次恢复。菜单、设置、键位说明、选关/29个关卡名称、暂停与结算均有中文。Noto Sans SC字体随包嵌入，不依赖目标电脑系统中文字体；原地图、物理与传送公式未改。
+用户明确要求公开GitHub仓库ackinick3/portal-hop，发布1.0和1.1，再删除本机旧版本安装包/临时二进制。1.0采用文字标题居中且无底部小字的最后版本b153735；此前v1.0标签未推送，已在首次推送前对齐该提交。1.1源码/版本标签/发行附件及远端哈希核验正在进行，确认远端完整后才清理本机旧包；不删除项目源码历史、用户存档或确认过的标题原图。
 
-交付仍使用唯一游戏入口builds/PortalHop.exe；新增builds/PortalHop-1.0-Windows-x64-Setup.exe为安装器，不是并列游戏版本。安装器支持Windows10+ x64、当前用户目录安装、开始菜单、可选桌面快捷方式及Windows应用卸载。卸载保留玩家存档。开发目录原桌面快捷方式仍指向builds/PortalHop.exe。安装构建源与说明见installer/README.md；最新文件大小和SHA256见docs/build-manifest.txt。
-
-1.0基础发行轮已通过源码GPU中英文/字体/布局/保存检查、内嵌包键位与隔离挑战入口、安装后的内嵌语言/字体检查与实际GPU启动；安装/卸载均退出0，已验证文件哈希、开始菜单目标、卸载项与实际存档哈希/修改时间不变。47组完整回归与96例重试压力全部通过，退出0且无SCRIPT ERROR/ERROR/退出泄漏。独立只读审阅无实质问题；英文最终结算已从PROTOTYPE COMPLETE调整为GAME COMPLETE。中英文截图docs/v1-*.png已查看主要页面；本轮未逐关重拍GPU或做人手难度验收。
-
-第29关THE BORROWED EXIT（借来的出口，稳定ID56）保留此前已交付的高难解谜。用户希望先自行探索，不加解法提示；详细解法仅在[开发设计记录](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)，试玩汇报不要剧透。命令行PortalHop.exe -- --challenge直接进入29且禁用该进程所有存档写入；正常完成28解锁29。第28关自由解法与移动机关见[28开发记录](docs/level-editor/designs/2026-10-25-kinetic-chamber/README.md)。不把自动路线通过当成人手难度认可。
+第29关THE BORROWED EXIT（稳定ID56）沿用已交付解谜。用户自行探索，不加解法提示；[开发记录（含剧透）](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)。--challenge直入29且该进程禁存档，普通完成28解锁29。1.0基础发行曾完整47组/96例通过，不能冒充当前新增验证。
 ## 当前版本与约束
 
-- Portal Hop 1.0；Godot4.7.2/GDScript，Windows x64，单人离线、960×540固定单屏、120Hz、Compatibility。
+- Portal Hop 1.1；Godot4.7.2/GDScript，Windows x64，单人离线、960×540固定单屏、120Hz、Compatibility。
 - 当前源码29关。原50关按用户指令删除27关、保留23关后追加24–29；[编号对照](docs/编号对照.md)保留原顺序，新增稳定ID56，不复用被删编号。
 - 选关3页（10/10/9），选关与NEXT直接入关。第28完成后NEXT到29，第29显示最终结算。无入关说明卡、建议圈、教程/机关说明菜单；准星、放门预览、枪线及机关反馈保留。
-- 唯一交付入口builds/PortalHop.exe；桌面C:\Users\XH\Desktop\Portal Hop.lnk指向它。禁止并列可玩游戏版本EXE（1.0安装器除外），不终止用户试玩来替换文件。
+- 唯一交付入口builds/PortalHop.exe；桌面C:\Users\XH\Desktop\Portal Hop.lnk指向它。禁止并列可玩游戏版本EXE（发行安装器除外），不终止用户试玩来替换文件。
 - 自动通关不代表人手难度认可或所有巧解已穷尽。后续按用户反馈改地图，不自动改手感或实装其他草图。
 
 ## 当前机制与操作
@@ -56,9 +52,9 @@ A/D移动、Space跳跃、鼠标瞄准、左右鼠标红/蓝门、R计死亡重�
 
 ## 验证与运行
 
-1.0基础发行轮（菜单小修前）：完整47组回归/96例重试压力通过，runner退出0，无运行错误或退出泄漏。源码GPU tests/localization.gd检查中英文页面/全部29个关卡译名、按钮宽度、内嵌字体字形、旧存档默认中文与隔离文件保存/恢复；LOCALIZATION_FAILURES=0。键位测试、内嵌challenge_entry及安装包内语言测试通过。安装后的GPU启动退出0；安装/卸载、开始菜单目标、Windows版本和存档保护检查见docs/v1-installer-validation.log。
+1.1本轮：源码localization（中英文/字体/保存/布局/1.1版本）、controls、curation（29关/3页/进度迁移）、game通过；GPU菜单截图已核对。安装测试先装1.0再覆盖1.1，版本读回1.0.0.0→1.1.0.0，EXE与构建哈希相同，注册项1.1，内嵌localization/实际GPU启动/卸载通过，真实存档未改。日志docs/v11-language.log、v11-controls.log、v11-curation.log、v11-game.log、v11-upgrade-validation.log、v11-installed-language.log、v11-installed-start.log；导出docs/v11-build.log（Godot子日志docs/v1-export.log）。
 
-源码日志docs/v1-all-tests.log、v1-language-test.log；导出docs/v1-export.log；包内docs/v1-pack-controls.log、v1-pack-challenge.log；实际安装docs/v1-install-test.log、v1-installed-language.log、v1-installed-start.log、v1-uninstall-test.log。中英文截图docs/v1-*.png。历史第29关45组/96例及第28关43组/93例不替代本轮结果；未做全部旧关GPU/长时间/所有显示器/全部巧解验收。
+此前1.0基础47组/96例完整回归见docs/v1-all-tests.log，本轮未重跑；未做全旧关GPU/小时级/第二台物理机/所有巧解验收。当前图形和安装身份见docs/build-manifest.txt。
 ```powershell
 ./tests/run.ps1
 & ./tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe --path . --script tests/kinetic_chamber.gd -- --capture

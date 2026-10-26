@@ -26,7 +26,7 @@ func run() -> void:
 	game.persistence_enabled = false
 	root.add_child(game)
 	check(game.language == "zh_CN","Fresh game defaults to Simplified Chinese")
-	check(ProjectSettings.get_setting("application/config/version","") == "1.0","Release version is 1.0")
+	check(ProjectSettings.get_setting("application/config/version","") == "1.1","Release version is 1.1")
 	check(find_button(game,"START GAME").text == "开始游戏","Default menu renders Chinese")
 	check(find_button(game,"LANGUAGE / 语言") != null,"Language entry exists on main menu")
 	var legacy := ConfigFile.new()
