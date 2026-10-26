@@ -1,0 +1,11 @@
+CURRENT_PRESERVED=PortalHop.exe
+CURRENT_PRESERVED=PortalHop-1.1-Windows-x64-Setup.exe
+CURRENT_PRESERVED=PortalHop-1.1-SHA256.txt
+OLD_FILE_ABSENT=builds/PortalHop-1.0-Windows-x64-Setup.exe
+OLD_FILE_ABSENT=builds/PortalHop-1.0-SHA256.txt
+OLD_FILE_ABSENT=tools/release-staging/v1.0/PortalHop.exe
+OLD_FILE_ABSENT=tools/release-staging/v1.0/PortalHop-1.0-Windows-x64-Setup.exe
+OLD_FILE_ABSENT=tools/release-staging/v1.0/PortalHop-1.0-SHA256.txt
+OLD_FILE_ABSENT=tools/release-verification/v1.0/PortalHop-1.0-SHA256.txt
+Both GitHub releases verified before deletion; hashes and public download HEAD200 recorded in v11-github-verification.log
+Initial batched cleanup command was blocked with no action; explicit literal-path file deletions succeeded. No source history/save files deleted.

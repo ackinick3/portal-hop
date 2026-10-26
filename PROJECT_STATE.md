@@ -8,7 +8,7 @@
 
 唯一游戏入口builds/PortalHop.exe；安装器builds/PortalHop-1.1-Windows-x64-Setup.exe。AppId和存档位置保持，实际1.0→1.1覆盖升级、内嵌语言/版本/布局检查、GPU启动、卸载、玩家存档哈希/修改时间保护通过，日志docs/v11-upgrade-validation.log。源码localization/controls/curation/game通过，中英文菜单截图已查看；本轮未重跑完整47组/96例，旧1.0结果仅作历史。
 
-用户明确要求公开GitHub仓库ackinick3/portal-hop，发布1.0和1.1，再删除本机旧版本安装包/临时二进制。1.0采用文字标题居中且无底部小字的最后版本b153735；此前v1.0标签未推送，已在首次推送前对齐该提交。1.1源码/版本标签/发行附件及远端哈希核验正在进行，确认远端完整后才清理本机旧包；不删除项目源码历史、用户存档或确认过的标题原图。
+用户确认公开仓库[ackinick3/portal-hop](https://github.com/ackinick3/portal-hop)。[1.0发行](https://github.com/ackinick3/portal-hop/releases/tag/v1.0)对应最终文字标题菜单b153735，[1.1发行](https://github.com/ackinick3/portal-hop/releases/tag/v1.1)对应图片标题源码5396bbb；两版源码/标签/EXE/安装器/SHA256附件均已发布。六个附件远端SHA256和大小与本机一致，两个公开安装包下载HEAD200，校验文件实际下载比对通过，标签指向已读回。随后已删除builds内1.0安装包/校验文件及临时1.0二进制备份，保留当前1.1、Git源码历史与标题原图。证据docs/v11-github-assets.json、v11-github-verification.log、v11-local-cleanup.log。
 
 第29关THE BORROWED EXIT（稳定ID56）沿用已交付解谜。用户自行探索，不加解法提示；[开发记录（含剧透）](docs/level-editor/designs/2026-10-25-borrowed-exit/README.md)。--challenge直入29且该进程禁存档，普通完成28解锁29。1.0基础发行曾完整47组/96例通过，不能冒充当前新增验证。
 ## 当前版本与约束

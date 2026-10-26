@@ -11,7 +11,7 @@ Layout:TextureRect600x160 centered atx480, keep aspect, mouse ignore; source Chi
 Tests:localization/controls/curation/game exit0; docs/v11-*.log
 Upgrade:actual1.0.0.0→1.1.0.0 install/upgrade/readback, matching EXE hash, Apps registry1.1, embedded locale test0, GPU start0, uninstall0, real save hash+mtime unchanged; docs/v11-upgrade-validation.log
 Prior verification:full47suites/96retry cases belongs to1.0; not rerun for1.1
-GitHub:public ackinick3/portal-hop;1.0 tag final text-menu commit b153735;1.1 publication/remote verification pending
-Cleanup:old local installer/staging retained until both remote releases verified
+GitHub:public https://github.com/ackinick3/portal-hop; v1.0=b153735, v1.1=5396bbb; both published releases contain EXE/Setup/SHA256; all six asset digests+sizes verified; both public setup HEAD200 and downloaded checksum files match; docs/v11-github-verification.log
+Cleanup:after both remote releases verified, removed local1.0 setup/checksum and temporary1.0 EXE/setup/checksum; current1.1 artifacts preserved; docs/v11-local-cleanup.log
 Single playable entry:builds/PortalHop.exe; default language Chinese,29maps/physics/portal formulas unchanged
 Limit:unsigned Windows game/setup; no second-machine/long-soak/all-old-room GPU recapture
